@@ -58,7 +58,8 @@ Data work happens in terminals, notebooks and cloud consoles. If those are new, 
 
 SQL is the one skill every data role uses every day. Learn it before any tool.
 
-- **Learn:** [SQL vs NoSQL](./concepts/sql-vs-nosql.md) for the big picture, then the [Databases topic index](../topics/databases.md) for where each engine fits.
+- **Learn:** [SQL vs NoSQL](./concepts/sql-vs-nosql.md) for the big picture, then [SQL joins explained](./concepts/sql-joins-explained.md) and [Window functions explained](./concepts/window-functions-explained.md) for the two skills every SQL interview tests.
+- **Then, how the database does it:** [Indexes explained](./concepts/indexes-explained.md), [Transactions and ACID](./concepts/transactions-and-acid.md), and [OLTP vs OLAP](./concepts/oltp-vs-olap.md) for why analytics gets its own database. The [Databases topic index](../topics/databases.md) shows where each engine fits.
 - **Do:** load a public CSV into SQLite or PostgreSQL. Write queries with `SELECT`, `WHERE`, `GROUP BY`, `JOIN`, and one window function (`ROW_NUMBER()` or `SUM() OVER`).
 - **After this phase:** you can answer a business question ("which product sold best last month, by region?") straight from raw tables.
 - **Certify (optional):** [Azure Data Fundamentals (DP-900)](../exams/azure/dp-900/) covers relational, non-relational and analytics basics at an entry level.
@@ -69,8 +70,8 @@ SQL is the one skill every data role uses every day. Learn it before any tool.
 
 Operational databases are shaped for writing one order at a time. Analytics wants the opposite: reading millions of rows at once. Modeling is how you bridge the two.
 
-- **Learn:** [Warehouses, lakes, and lakehouses](./concepts/warehouses-lakes-lakehouses.md), then [Data modeling for analytics](./concepts/data-modeling-for-analytics.md) (star schemas, facts and dimensions, slowly changing dimensions).
-- **Do:** take the tables from phase 1 and redesign them as one fact table and three dimension tables. Rewrite your phase 1 queries against the new model.
+- **Learn:** [Warehouses, lakes, and lakehouses](./concepts/warehouses-lakes-lakehouses.md), then [Data modeling for analytics](./concepts/data-modeling-for-analytics.md) (star schemas, facts and dimensions, grain) and [Slowly changing dimensions](./concepts/slowly-changing-dimensions.md) (keeping history honest).
+- **Do:** the [Design a star schema](../resources/hands-on-projects/design-star-schema.md) project (2-3 hours): from business questions to a bus matrix, declared grains, a Type 2 dimension, and SQL that proves the design. Then redesign your phase 1 tables the same way.
 - **After this phase:** you can explain why a warehouse is laid out differently from an app database, and design a star schema for a simple business.
 
 ---
@@ -79,7 +80,7 @@ Operational databases are shaped for writing one order at a time. Analytics want
 
 Data rarely starts where it is needed. A pipeline extracts it, cleans it, and lands it somewhere useful, on a schedule, without a human pressing a button.
 
-- **Learn:** [ETL vs ELT](./concepts/etl-vs-elt.md), [File formats and partitioning](./concepts/file-formats-and-partitioning.md) (why Parquet beats CSV at scale), and [Data pipelines and orchestration](./concepts/data-pipelines-and-orchestration.md).
+- **Learn:** [ETL vs ELT](./concepts/etl-vs-elt.md), [File formats and partitioning](./concepts/file-formats-and-partitioning.md) (why Parquet beats CSV at scale), [Data pipelines and orchestration](./concepts/data-pipelines-and-orchestration.md), and [Change data capture](./concepts/change-data-capture.md) (copying only what changed, deletes included).
 - **Do:** the [Build a data pipeline](../resources/hands-on-projects/build-data-pipeline.md) lab. It takes four to five hours and covers ingest, transform and load with scheduled runs.
 - **Read alongside:** the [Data pipeline and ETL pattern](../resources/architecture-patterns/data-pipeline-etl.md) for how the same shape looks on AWS, Azure and GCP.
 - **After this phase:** you can build a scheduled job that pulls data from a source, cleans it, and loads it into a warehouse, and rerun it safely when it fails halfway.
@@ -90,9 +91,10 @@ Data rarely starts where it is needed. A pipeline extracts it, cleans it, and la
 
 Batch pipelines run every hour or every night. Some data cannot wait that long: payments, sensor readings, clickstreams.
 
-- **Learn:** [Batch vs streaming](./concepts/batch-vs-streaming.md), [Queues vs streams](./concepts/queues-vs-streams.md), and [Eventual consistency](./concepts/eventual-consistency.md).
+- **Learn:** [Batch vs streaming](./concepts/batch-vs-streaming.md), [Queues vs streams](./concepts/queues-vs-streams.md), [Stream processing: windows and watermarks](./concepts/stream-processing-windows-and-watermarks.md), and [Eventual consistency](./concepts/eventual-consistency.md).
 - **Compare:** [Messaging and queue services across clouds](../resources/service-comparison-messaging-queues.md).
-- **Do:** run Kafka (or a managed equivalent) locally, produce a stream of fake events, and write a consumer that keeps a running count per key.
+- **Do:** the [Build a streaming pipeline](../resources/hands-on-projects/build-streaming-pipeline.md) project (4-6 hours): Kafka into a Parquet lake, event-time windows with a watermark, and a batch reconciliation that shows what the stream missed.
+- **Read alongside:** the [Streaming analytics pattern](../resources/architecture-patterns/streaming-analytics.md) for Lambda, Kappa and the lakehouse hybrid.
 - **After this phase:** you can tell when a problem needs a stream and when a nightly batch is the cheaper, simpler answer.
 - **Certify (optional):** [Confluent Certified Developer](../exams/confluent/certified-developer/) for Kafka application work, [Confluent Certified Administrator](../exams/confluent/certified-administrator/) for running clusters.
 
@@ -102,7 +104,7 @@ Batch pipelines run every hour or every night. Some data cannot wait that long: 
 
 A pipeline that runs on time with wrong numbers is worse than one that fails loudly. This phase is what separates hobby projects from production data.
 
-- **Learn:** [Data quality and lineage](./concepts/data-quality-and-lineage.md).
+- **Learn:** [Data quality and lineage](./concepts/data-quality-and-lineage.md), [Data governance and catalogs](./concepts/data-governance-and-catalogs.md), and [Data contracts](./concepts/data-contracts.md).
 - **Read:** the [Data mesh pattern](../resources/architecture-patterns/data-mesh.md), which treats each team's data as a product with an owner and a contract.
 - **Do:** add three checks to your phase 3 pipeline (row count not zero, no null primary keys, totals match the source) and make the pipeline stop when one fails.
 - **After this phase:** you can say where a number on a dashboard came from, and catch bad data before a stakeholder does.
@@ -130,7 +132,7 @@ The first six phases are shared. Here the three roles diverge. Pick the one clos
 
 You build and run the pipelines and platforms everyone else depends on.
 
-- **Go deeper on:** Spark and lakehouse engines, orchestration, streaming at scale, cost control.
+- **Go deeper on:** Spark and lakehouse engines, orchestration, streaming at scale, [CDC](./concepts/change-data-capture.md), cost control. If your platform also serves AI features, read [Vector databases for data engineers](./concepts/vector-databases-for-data-engineers.md).
 - **Certs, in a sensible order:** a cloud data engineer cert from phase 6, then [Databricks Data Engineer Associate](../exams/databricks/data-engineer-associate/) and [Professional](../exams/databricks/data-engineer-professional/), or [SnowPro Core](../exams/snowflake/snowpro-core/) and [SnowPro Advanced Data Engineer](../exams/snowflake/snowpro-advanced-data-engineer/).
 - **Full roadmap:** [Data engineer certification roadmap](../resources/certification-roadmap-data-engineer.md) and the [data engineering topic index](../topics/data-engineering.md).
 
@@ -138,15 +140,15 @@ You build and run the pipelines and platforms everyone else depends on.
 
 You turn raw tables into trusted models and the dashboards the business reads. More SQL and modeling, less infrastructure.
 
-- **Go deeper on:** dimensional modeling (phase 2), transformation-as-code with tests, semantic layers, BI tools.
+- **Go deeper on:** dimensional modeling (phase 2), transformation-as-code with tests ([Analytics engineering and dbt](./concepts/analytics-engineering-and-dbt.md)), semantic layers, BI tools.
 - **Certs:** [Power BI Data Analyst (PL-300)](../exams/azure/pl-300/), [Fabric Analytics Engineer (DP-600)](../exams/azure/dp-600/), [SnowPro Core](../exams/snowflake/snowpro-core/).
-- **Build:** take your phase 6 warehouse, add a tested model layer, and publish one dashboard that a non-technical friend can read without help.
+- **Build:** the [Build a dbt project](../resources/hands-on-projects/build-dbt-project.md) lab (4-5 hours), then point it at your phase 6 warehouse and publish one dashboard that a non-technical friend can read without help.
 
 ### Database administrator (DBA)
 
 You keep databases fast, available, backed up and secure. Fewer pipelines, more depth in one or two engines.
 
-- **Go deeper on:** indexing and query plans, backup and restore, replication and failover, migrations between engines.
+- **Go deeper on:** indexing and query plans ([Indexes explained](./concepts/indexes-explained.md)), isolation and locking ([Transactions and ACID](./concepts/transactions-and-acid.md)), backup and restore, replication and failover ([Replication and sharding](./concepts/replication-and-sharding.md)), migrations between engines.
 - **Certs:** [Azure Database Administrator (DP-300)](../exams/azure/dp-300/), [Google Cloud Professional Cloud Database Engineer](../exams/gcp/cloud-database-engineer/), [MongoDB Associate DBA](../exams/mongodb/associate-dba/), [Cosmos DB (DP-420)](../exams/azure/dp-420/) for globally distributed NoSQL.
 - **Read:** the [Database migration guide](../resources/migration-guides/database-migration.md) and the [Database specialist roadmap](../resources/certification-roadmap-database-specialist.md).
 

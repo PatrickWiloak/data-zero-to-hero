@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-21
 difficulty: any
 reading-time: 4 min
 ---
@@ -23,12 +23,20 @@ flowchart LR
 
 ## Learn
 
+- [SQL joins explained](../learn/concepts/sql-joins-explained.md) - join types, fan-out, and how engines execute joins
+- [Window functions explained](../learn/concepts/window-functions-explained.md) - latest row per key, running totals, rankings
+- [Indexes explained](../learn/concepts/indexes-explained.md) - B-trees, composite and covering indexes, reading a plan
+- [Transactions and ACID](../learn/concepts/transactions-and-acid.md) - isolation levels, write skew, MVCC
+- [OLTP vs OLAP](../learn/concepts/oltp-vs-olap.md) - row stores vs column stores, and why both exist
+- [Replication and sharding](../learn/concepts/replication-and-sharding.md) - replicas, failover, shard keys, distributed SQL
 - [Eventual consistency](../learn/concepts/eventual-consistency.md) - CAP, when EC is fine, when it bites
 - [Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/) - retries, idempotency keys, common patterns
 - [Queues vs streams](../learn/concepts/queues-vs-streams.md) - SQS vs Kinesis (and equivalents), ordering, replay
-- [Embeddings and vector search](https://ai.noblerworks.com/learn/concepts/embeddings-and-vector-search/) - vector DB basics
+- [Vector databases for data engineers](../learn/concepts/vector-databases-for-data-engineers.md) - where vectors can live and how to keep the index in sync
+- [Embeddings and vector search](https://ai.noblerworks.com/learn/concepts/embeddings-and-vector-search/) - vector DB basics, the AI side
 - [Warehouses, lakes, and lakehouses](../learn/concepts/warehouses-lakes-lakehouses.md) - the analytical stores
 - [Data modeling for analytics](../learn/concepts/data-modeling-for-analytics.md) - star schemas, grain, SCD types
+- [Change data capture](../learn/concepts/change-data-capture.md) - streaming every change out of an operational database
 
 For how data gets into these stores - pipelines, ETL/ELT, batch vs streaming, partitioning, quality - see the [Data engineering topic](./data-engineering.md).
 
@@ -54,6 +62,8 @@ For how data gets into these stores - pipelines, ETL/ELT, batch vs streaming, pa
 ## Build
 
 - [Build a data pipeline](../resources/hands-on-projects/build-data-pipeline.md)
+- [Design a star schema](../resources/hands-on-projects/design-star-schema.md) - dimensional design in DuckDB
+- [Build a dbt project](../resources/hands-on-projects/build-dbt-project.md) - the same model as tested code
 - [Build a RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/) - exercises pgvector
 
 ---

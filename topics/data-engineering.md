@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-09-17
+last-updated: 2026-10-21
 difficulty: any
 reading-time: 4 min
 ---
@@ -37,6 +37,14 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 - [File formats and partitioning](../learn/concepts/file-formats-and-partitioning.md) - Parquet, pruning, small files, and the bill
 - [Data pipelines and orchestration](../learn/concepts/data-pipelines-and-orchestration.md) - DAGs, retries, backfills, the silent zero
 - [Data quality and lineage](../learn/concepts/data-quality-and-lineage.md) - the assertions that catch a wrong number before a dashboard does
+- [Change data capture](../learn/concepts/change-data-capture.md) - reading the database log instead of re-reading tables
+- [Slowly changing dimensions](../learn/concepts/slowly-changing-dimensions.md) - Type 1 vs Type 2, and keeping history honest
+- [Stream processing: windows and watermarks](../learn/concepts/stream-processing-windows-and-watermarks.md) - when a streaming window is finished, and what to do with late data
+- [Analytics engineering and dbt](../learn/concepts/analytics-engineering-and-dbt.md) - transformation SQL with tests, code review and lineage
+- [Data governance and catalogs](../learn/concepts/data-governance-and-catalogs.md) - owners, classification, access and discovery
+- [Data contracts](../learn/concepts/data-contracts.md) - producer-consumer agreements enforced in CI
+- [OLTP vs OLAP](../learn/concepts/oltp-vs-olap.md) - why the data is copied out of the app database at all
+- [Vector databases for data engineers](../learn/concepts/vector-databases-for-data-engineers.md) - the embedding store as one more pipeline target
 - [SQL vs NoSQL](../learn/concepts/sql-vs-nosql.md) - the operational stores most of this data is copied from
 - [Queues vs streams](../learn/concepts/queues-vs-streams.md) - the transport underneath streaming pipelines
 - [Eventual consistency](../learn/concepts/eventual-consistency.md) - why a replica read can disagree with the source
@@ -58,6 +66,7 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 - [Architecture pattern: data pipeline / ETL](../resources/architecture-patterns/data-pipeline-etl.md)
 - [Architecture pattern: lakehouse](../resources/architecture-patterns/lakehouse-architecture.md)
 - [Architecture pattern: data mesh](../resources/architecture-patterns/data-mesh.md) - decentralized ownership, domain data products
+- [Architecture pattern: streaming analytics](../resources/architecture-patterns/streaming-analytics.md) - Lambda vs Kappa, and the lakehouse hybrid
 - [Architecture pattern: CQRS and event sourcing](https://cloud.noblerworks.com/resources/architecture-patterns/cqrs-event-sourcing/)
 - [Architecture pattern: event-driven architecture](https://cloud.noblerworks.com/resources/architecture-patterns/event-driven-architecture/)
 - [Architecture pattern: AI/ML pipeline](https://ai.noblerworks.com/build/patterns/ai-ml-pipeline/)
@@ -69,6 +78,9 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 ## Build
 
 - [Build a data pipeline](../resources/hands-on-projects/build-data-pipeline.md) - ingestion through to a queryable table
+- [Build a streaming pipeline](../resources/hands-on-projects/build-streaming-pipeline.md) - Kafka into a Parquet lake, watermarks, reconciliation
+- [Build a dbt project](../resources/hands-on-projects/build-dbt-project.md) - a tested star schema with snapshots, contracts and CI
+- [Design a star schema](../resources/hands-on-projects/design-star-schema.md) - from business questions to grain, facts and dimensions
 - [Build a RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/) - the embedding-and-retrieval variant
 - [Set up a monitoring stack](https://cloud.noblerworks.com/resources/hands-on-projects/setup-monitoring-stack/) - the observability half of the argument
 

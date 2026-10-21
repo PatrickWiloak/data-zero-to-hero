@@ -27,11 +27,11 @@ If you **do** want certifications, head to the **[Study Hub](../STUDY-HUB.md)** 
 - **[Data from Scratch](./data-from-scratch.md)** - eight phases from "what is a table?" to data engineer, analytics engineer or DBA. Each phase lists what to read, what to build, and what you can do once it is done.
 
 ### 💡 Bite-size concept pages
-- **[Concepts](./concepts/)** - 10 topic pages, 5-10 min each. SQL vs NoSQL, ETL vs ELT, batch vs streaming, queues vs streams, warehouses vs lakes vs lakehouses, modeling for analytics, file formats and partitioning, pipelines and orchestration, quality and lineage, eventual consistency.
+- **[Concepts](./concepts/)** - 23 topic pages, 5-15 min each. SQL joins, window functions, indexes, transactions and ACID, OLTP vs OLAP, replication and sharding, SQL vs NoSQL, ETL vs ELT, change data capture, batch vs streaming, windows and watermarks, queues vs streams, warehouses vs lakes vs lakehouses, modeling and slowly changing dimensions, dbt, file formats and partitioning, pipelines and orchestration, quality, governance, data contracts, vector databases, eventual consistency.
 
 ### 📖 Reference
-- **[Glossary](./glossary.md)** - technical terms in plain English
-- **[YouTube curation](./youtube.md)** - filtered videos worth your time
+- **[Glossary](./glossary.md)** - 200+ data terms in plain English
+- **[YouTube curation](./youtube.md)** - SQL, database and data engineering channels worth your time
 
 ---
 
