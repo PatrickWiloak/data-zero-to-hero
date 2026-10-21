@@ -94,7 +94,7 @@ All four are free, by Nobler Works.
 | | Pillar | What it is | Start here |
 |---|---|---|---|
 | 🎓 | **Learn** | Plain-English data concepts and the Data from Scratch path. No exam scaffolding. | [learn/](./learn/) |
-| 🛠️ | **Build** | Hands-on data builds and architecture patterns (pipelines, lakehouse, data mesh). | [resources/hands-on-projects/](./resources/hands-on-projects/) |
+| 🛠️ | **Build** | Hands-on data builds and architecture patterns (pipelines, streaming, dbt, star schemas, lakehouse, data mesh). | [resources/hands-on-projects/](./resources/hands-on-projects/) |
 | 🎯 | **Certify** | 24 cert study guides across 7 providers. Fact sheets, practice plans, scenarios, practice questions. | [STUDY-HUB.md](./STUDY-HUB.md) |
 | 📚 | **Reference** | Cross-cloud database and messaging comparisons, career roadmaps, migration and interview guides. | [resources/](./resources/) |
 
@@ -121,6 +121,7 @@ The **[topic indexes](./topics/)** tie all four pillars together by subject: dat
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
+- **2026-10-21** - Thirteen new concept pages (SQL joins, window functions, indexes, transactions and ACID, OLTP vs OLAP, replication and sharding, change data capture, slowly changing dimensions, stream windows and watermarks, dbt, governance and catalogs, data contracts, vector databases), three hands-on projects ([streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md), [star schema design](./resources/hands-on-projects/design-star-schema.md), [dbt project](./resources/hands-on-projects/build-dbt-project.md)), a [streaming analytics pattern](./resources/architecture-patterns/streaming-analytics.md), and a data-only glossary and YouTube list.
 - **2026-10-21** - Data Zero to Hero is now its own site at [data.noblerworks.com](https://data.noblerworks.com/), split by subject from the original combined cloud, data, AI and security repo. New: [Data from Scratch](./learn/data-from-scratch.md), an eight-phase path to data engineer, analytics engineer or DBA. Cloud, security and AI material moved to the sibling sites: [Cloud](https://cloud.noblerworks.com/), [Security](https://security.noblerworks.com/) and [AI](https://ai.noblerworks.com/).
 - **2026-09-18** - Every dead vendor link repaired, each replacement fetched and matched to the page the citation meant. The sweep also catches soft 404s and deep links that silently redirect to a homepage.
 - **2026-09-17** - Seven new data-engineering concept pages (batch vs streaming, ETL vs ELT, warehouses vs lakes vs lakehouses, file formats and partitioning, modeling for analytics, pipelines and orchestration, quality and lineage) and a [data engineering topic index](./topics/data-engineering.md).
@@ -131,12 +132,12 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 ## 🎯 What's Inside This Repository?
 
 - ✅ **[Data from Scratch](./learn/data-from-scratch.md)** - eight phases from zero to a data role
-- ✅ **[10 concept pages](./learn/concepts/)** - SQL vs NoSQL, ETL vs ELT, batch vs streaming, queues vs streams, warehouses vs lakes vs lakehouses, modeling, partitioning, orchestration, quality and lineage, eventual consistency
+- ✅ **[23 concept pages](./learn/concepts/)** - SQL joins, window functions, indexes, transactions, OLTP vs OLAP, replication and sharding, SQL vs NoSQL, ETL vs ELT, CDC, batch vs streaming, windows and watermarks, warehouses vs lakes vs lakehouses, modeling and slowly changing dimensions, dbt, partitioning, orchestration, quality, governance, data contracts, vector databases
 - ✅ **24 certification study guides** across 7 providers, with 2,000+ embedded vendor doc links
 - ✅ **[2 cross-pillar topic indexes](./topics/)** - databases and data engineering
 - ✅ **2 cross-cloud service comparisons** - databases, messaging and queues
-- ✅ **3 architecture patterns** - data pipeline and ETL, lakehouse, data mesh
-- ✅ **1 hands-on project** - build a data pipeline end to end
+- ✅ **4 architecture patterns** - data pipeline and ETL, lakehouse, data mesh, streaming analytics (Lambda vs Kappa)
+- ✅ **4 hands-on projects** - a batch data pipeline, a Kafka streaming pipeline, a star schema design, and a tested dbt project
 - ✅ **2 certification roadmaps** - data engineer, database specialist
 - ✅ **1 interview prep guide** - data engineer
 - ✅ **[Practice question banks](./resources/practice-questions/)** - one per certification, with explained answers
@@ -181,8 +182,8 @@ Other career paths live on the sibling sites: [cloud, DevOps and platform roadma
 ## 📚 Study Resources
 
 - **Service comparisons:** [Databases](./resources/service-comparison-databases.md) · [Messaging and queues](./resources/service-comparison-messaging-queues.md)
-- **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md)
-- **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Labs by certification](./resources/hands-on-projects/labs-by-cert.md)
+- **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md) · [Streaming analytics](./resources/architecture-patterns/streaming-analytics.md)
+- **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Build a streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md) · [Design a star schema](./resources/hands-on-projects/design-star-schema.md) · [Build a dbt project](./resources/hands-on-projects/build-dbt-project.md) · [Labs by certification](./resources/hands-on-projects/labs-by-cert.md)
 - **Migration:** [Database migration](./resources/migration-guides/database-migration.md)
 - **Interview prep:** [Data engineer](./resources/interview-prep/data-engineer-interview.md)
 - **Persona playlist:** [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md)
@@ -202,10 +203,10 @@ Other career paths live on the sibling sites: [cloud, DevOps and platform roadma
 
 - **Certifications:** 24
 - **Providers:** 7
-- **Concept pages:** 10
+- **Concept pages:** 23
 - **Service comparisons:** 2
-- **Architecture patterns:** 3
-- **Hands-on projects:** 1
+- **Architecture patterns:** 4
+- **Hands-on projects:** 4
 - **Topic indexes:** 2
 - **Career roadmaps:** 2
 - **Interview prep guides:** 1
@@ -221,7 +222,7 @@ data-zero-to-hero/
 ├── STUDY-HUB.md (full per-provider navigation)
 ├── CHANGELOG.md
 ├── learn/                # plain-English learning content
-│   ├── concepts/         # 10 bite-size concept pages
+│   ├── concepts/         # 23 bite-size concept pages
 │   ├── data-from-scratch.md
 │   └── glossary.md
 ├── exams/                # 24 certs across 7 providers

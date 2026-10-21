@@ -1,10 +1,10 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-21
 ---
 
 # 🎥 YouTube - Channels and Videos Worth Your Time
 
-> **A filtered list of YouTube content for learning cloud and AI/ML. No algorithmic slop, no engagement-bait thumbnails - just channels and individual videos that actually teach.**
+> **A filtered list of YouTube content for learning SQL, databases, data engineering and analytics engineering. No algorithmic slop, no engagement-bait thumbnails - just channels and individual videos that actually teach.**
 >
 > Curated by [Patrick Wiloak](https://patricklukewilson.com). If you find dead links or want to suggest additions, see [CONTRIBUTING.md](../CONTRIBUTING.md).
 
@@ -12,13 +12,15 @@ last-updated: 2026-05-03
 
 ## How to use this page
 
-YouTube is the single best free resource for learning cloud and AI - if you can find the signal in the noise. This page is the signal.
+YouTube is one of the best free resources for learning data work - if you can find the signal in the noise. This page is the signal.
 
 - **Channels** are sorted by what they're best for, not subscriber count.
-- **Single-video deep dives** are linked when one video is worth more than a whole playlist elsewhere.
-- I won't link a video unless it's still accurate today. Cloud content rots fast.
+- **Single-video deep dives** are linked when one video is worth more than a whole playlist elsewhere. Where a video gets re-uploaded or renamed, the link is a YouTube search so it does not rot.
+- Tools change fast (dbt, Fabric, Databricks rename things yearly). The fundamentals - SQL, modeling, how databases work - do not, so this page leans toward channels that teach those.
 
 If you want vendor-specific exam content, that lives in the [Study Hub](../STUDY-HUB.md). This page is for learning the **why** and **how**, not memorizing exam objectives.
+
+Cloud, security and AI channels moved to their own sites: **[Cloud YouTube picks](https://cloud.noblerworks.com/learn/youtube/)**, **[Security YouTube picks](https://security.noblerworks.com/learn/youtube/)**, and the AI channels on **[AI Zero to Hero](https://ai.noblerworks.com/)**.
 
 ---
 
@@ -32,164 +34,139 @@ If you're using this repo, subscribe - new content lands here first.
 
 ---
 
-## ☁️ Cloud Computing - Best Channels
+## 🧮 SQL - Best Channels
 
-### Foundations and certifications
+**[techTFQ](https://youtube.com/@techTFQ)**
+- Best for: SQL from beginner to interview level
+- Why: Each video takes one real problem (window functions, recursive CTEs, tricky joins) and works it through slowly, with the dataset on screen.
+- Use when: You are in [phase 1 of Data from Scratch](./data-from-scratch.md) or preparing for a SQL interview.
 
-**[Stephane Maarek](https://youtube.com/@StephaneMaarek)**
-- Best for: AWS certifications (CCP, SAA, DVA, SAP, Specialty)
-- Why: Tight, accurate, exam-aligned. The most-recommended AWS course author for a reason.
-- Use when: You have an AWS exam date.
+**[Ankit Bansal](https://youtube.com/@ankitbansal6)**
+- Best for: SQL interview problems, one per video
+- Why: Hundreds of real interview questions solved several ways, which teaches you to see the shape of a problem.
+- Use when: You can write SQL and want to get fast and fluent.
 
-**[Adrian Cantrill](https://youtube.com/@CantrillIO)**
-- Best for: AWS deep-dive understanding (SAA, SAP, Networking, Security)
-- Why: Goes deeper than Maarek. Architecture-first, not just exam-first. Free YouTube content + paid courses.
-- Use when: You want to understand AWS at the architecture level, not just pass.
-
-**[Tech with Nana](https://youtube.com/@TechWorldwithNana)**
-- Best for: DevOps fundamentals (Kubernetes, Docker, CI/CD, Terraform)
-- Why: Best beginner-friendly DevOps explanations on YouTube. The Kubernetes crash course alone is worth the visit.
-- Use when: You're new to DevOps tooling and need clear mental models.
+**[Alex The Analyst](https://youtube.com/@AlexTheAnalyst)**
+- Best for: SQL, Excel and BI for aspiring data analysts
+- Why: Friendly, structured bootcamp-style series with portfolio projects.
+- Use when: You are coming from a non-technical background.
 
 **[freeCodeCamp.org](https://youtube.com/@freecodecamp)**
-- Best for: Long-form (3-15 hour) full courses on every cloud topic
-- Why: Free, comprehensive, frequently refreshed. Their AWS Certified Cloud Practitioner and Terraform courses are classics.
-- Use when: You want a full course in one sitting (or weekend).
-
-### Specific cloud providers
-
-**[John Savill's Technical Training](https://youtube.com/@NTFAQGuy)**
-- Best for: Microsoft Azure (AZ-104, AZ-305, AZ-500, AZ-700, AZ-900)
-- Why: Ex-MSFT field engineer. The single best Azure cert resource on YouTube. His exam cram videos are a rite of passage.
-- Use when: You're prepping for any Azure exam.
-
-**[Google Cloud Tech](https://youtube.com/@googlecloudtech)**
-- Best for: Official GCP service deep dives, "Cloud OnAir" sessions
-- Why: GCP's own product teams explaining GCP. Higher signal than most vendor channels.
-- Use when: You want canonical GCP content from the source.
-
-**[AWS Events](https://youtube.com/@AWSEventsChannel)**
-- Best for: re:Invent talks, deep dives by AWS engineers
-- Why: The 300/400-level re:Invent talks are graduate-level cloud architecture content. Free.
-- Use when: You want senior-level architecture thinking, not basics.
-
-### Kubernetes and containers
-
-**[That DevOps Guy (Marcel Dempers)](https://youtube.com/@MarcelDempers)**
-- Best for: Hands-on Kubernetes, GitOps, observability
-- Why: Real implementations, not slide decks. Production-grade patterns.
-- Use when: You can deploy a pod but don't yet know how to run K8s in production.
-
-**[KubeSimplify](https://youtube.com/@kubesimplify)**
-- Best for: Kubernetes fundamentals, KCNA/CKA prep
-- Why: Beginner to intermediate K8s without the noise.
-- Use when: You're starting Kubernetes and want a guided path.
-
-### Networking
-
-**[NetworkChuck](https://youtube.com/@NetworkChuck)**
-- Best for: Networking fundamentals, CCNA, hands-on home lab content
-- Why: Energetic, practical, gets people excited about networking - a rare skill.
-- Use when: You're new to networking or studying CCNA / Network+.
-
-**[Practical Networking](https://youtube.com/@PracticalNetworking)**
-- Best for: TCP/IP, OSI, routing fundamentals taught rigorously
-- Why: When NetworkChuck is too fast or too hype, this is your channel. Calm, accurate, foundational.
-- Use when: You want to actually understand how the internet works.
-
-### Security
-
-**[John Hammond](https://youtube.com/@_JohnHammond)**
-- Best for: Offensive security, malware analysis, CTF walkthroughs
-- Why: Real-world security content, not vendor marketing.
-- Use when: You're going beyond defensive security into red-team territory.
-
-**[IppSec](https://youtube.com/@ippsec)**
-- Best for: HackTheBox walkthroughs, OSCP-style enumeration
-- Why: The standard for pentesting walkthroughs.
-- Use when: You're working through OSCP, HTB, or learning offensive security.
+- Best for: Long-form full courses (SQL, PostgreSQL, Python for data, Spark)
+- Why: Free, comprehensive, frequently refreshed.
+- Use when: You want a whole course in one sitting or one weekend.
 
 ---
 
-## 🤖 AI / Machine Learning - Best Channels
+## 🗄️ Databases - Best Channels
 
-### Foundations
+**[CMU Database Group](https://youtube.com/@CMUDatabaseGroup)**
+- Best for: How databases actually work inside - storage, indexes, query execution, concurrency control, recovery
+- Why: Andy Pavlo's Carnegie Mellon courses, recorded in full and free. The best university database material online.
+- Use when: You want to understand [indexes](./concepts/indexes-explained.md) and [transactions](./concepts/transactions-and-acid.md) properly, or you are going down the DBA lane.
 
-**[3Blue1Brown](https://youtube.com/@3blue1brown)**
-- Best for: The math behind machine learning and neural networks
-- Why: The "Neural Networks" series is the gold standard. If you've seen it, you understand backprop. If you haven't, watch it.
-- Use when: Equations are blocking your understanding and you need geometric intuition.
+**[Hussein Nasser](https://youtube.com/@hnasr)**
+- Best for: Database and backend internals explained by an engineer who clearly enjoys them
+- Why: Long, thoughtful videos on isolation levels, replication, sharding, connection pooling, and why PostgreSQL does what it does.
+- Use when: A concept page here made you want to go one level deeper.
 
-**[Andrej Karpathy](https://youtube.com/@AndrejKarpathy)**
-- Best for: Building ML/LLMs from scratch, in Python, with no abstractions
-- Why: Ex-Tesla AI / OpenAI co-founder. His "Neural Networks: Zero to Hero" series builds GPT from scratch in a Jupyter notebook. There is nothing better.
-- Use when: You want to build a transformer with your own hands.
+**[Martin Kleppmann](https://youtube.com/@kleppmann)**
+- Best for: Distributed systems, from the author of *Designing Data-Intensive Applications*
+- Why: His Cambridge distributed systems lecture series is free and the clearest treatment of replication, consensus and consistency anywhere.
+- Use when: You are reading [Replication and sharding](./concepts/replication-and-sharding.md) or [Eventual consistency](./concepts/eventual-consistency.md) and want the theory.
 
-**[StatQuest with Josh Starmer](https://youtube.com/@statquest)**
-- Best for: Classical ML algorithms explained step by step
-- Why: Random forests, SVMs, PCA, gradient boosting - all clearly explained. "BAM!"
-- Use when: You're getting into a classical ML algorithm and need it broken down.
+**[ByteByteGo](https://youtube.com/@ByteByteGo)**
+- Best for: Short animated system-design explainers, many on databases, caching and messaging
+- Why: Good diagrams, 5-10 minutes each. Breadth, not depth.
+- Use when: You need a quick mental model before a deeper read.
 
-### Modern AI / LLMs
+**[MongoDB](https://youtube.com/@MongoDB)**
+- Best for: Document modeling, Atlas, the MongoDB certifications
+- Use when: You are preparing for a [MongoDB exam](../exams/mongodb/).
 
-**[Yannic Kilcher](https://youtube.com/@YannicKilcher)**
-- Best for: Paper walkthroughs of frontier AI research
-- Why: Reads the paper with you. Best "research-level but accessible" coverage of AI.
-- Use when: A new paper drops (GPT-4, Claude, DeepSeek, etc.) and you want a deeper look.
+---
 
-**[Two Minute Papers](https://youtube.com/@TwoMinutePapers)**
-- Best for: Frontier ML/CV/graphics research, accessible
-- Why: Two Minutes ≠ Two minutes, but each video covers one paper, well.
-- Use when: You want to keep up with what's happening in research without reading every paper.
+## 🔧 Data Engineering - Best Channels
 
-**[AI Explained](https://youtube.com/@aiexplained-official)**
-- Best for: Frontier model news, evaluation, capability analysis
-- Why: Calm, well-sourced takes on what new models can actually do.
-- Use when: A new frontier model drops and you want signal, not hype.
+**[DataTalksClub](https://youtube.com/@DataTalksClub)**
+- Best for: The free **Data Engineering Zoomcamp** - Docker, orchestration, warehousing, dbt, Spark, Kafka - as a full course with homework
+- Why: The most complete free data engineering course on YouTube, refreshed every year, with a community behind it.
+- Use when: You want a structured course alongside [Data from Scratch](./data-from-scratch.md).
 
-**[Sam Witteveen](https://youtube.com/@samwitteveenai)**
-- Best for: Hands-on LLM tutorials (LangChain, LlamaIndex, agents, RAG)
-- Why: Builder-focused LLM content. Updated frequently as the ecosystem changes.
-- Use when: You're building with LLMs and need working code.
+**[Seattle Data Guy](https://youtube.com/@SeattleDataGuy)**
+- Best for: What data engineering actually looks like at work - careers, architecture, tool choices, consulting stories
+- Why: Ben Rogojan has done the job for years and talks about trade-offs, not hype.
+- Use when: You are deciding whether this career is for you, or preparing for a design interview.
 
-**[Anthropic](https://youtube.com/@anthropic-ai)**
-- Best for: Claude, Constitutional AI, alignment research
-- Why: Source-of-truth content about Claude. Great agent-building demos.
-- Use when: You're building with Claude or want to understand the model's design.
+**[Darshil Parmar](https://youtube.com/@DarshilParmar)**
+- Best for: End-to-end project walkthroughs on AWS, Azure and GCP
+- Why: Each project is a complete pipeline you can rebuild for a portfolio.
+- Use when: You finished [Build a data pipeline](../resources/hands-on-projects/build-data-pipeline.md) and want more builds.
 
-### Practical ML engineering
+**[Kahan Data Solutions](https://youtube.com/@KahanDataSolutions)**
+- Best for: Modern data stack tools - dbt, Snowflake, Airflow, Fivetran - in short, practical videos
+- Use when: You are setting up one specific tool and want to see it done.
 
-**[Aleksa Gordić - The AI Epiphany](https://youtube.com/@TheAIEpiphany)**
-- Best for: Paper walkthroughs with a code-and-math focus
-- Why: Goes deeper than Yannic, more code-heavy. Great for transformer internals.
-- Use when: You want to actually implement what's in a paper.
+**[Andreas Kretz - Plumbers of Data Science](https://youtube.com/@andreaskayy)**
+- Best for: Data engineering fundamentals and the platform-and-pipeline view of the job
+- Use when: You want the "how does it all fit together" picture.
 
-**[Umar Jamil](https://youtube.com/@umarjamilai)**
-- Best for: From-scratch implementations of transformers, LLaMA, Mistral, RAG, fine-tuning
-- Why: Multi-hour walkthroughs that build modern LLM components from PyTorch up.
-- Use when: You want to deeply understand how a specific model works internally.
+---
+
+## 🌊 Streaming and Kafka
+
+**[Confluent](https://youtube.com/@Confluent)**
+- Best for: Apache Kafka, Kafka Streams, Flink and stream processing concepts, from the company founded by Kafka's creators
+- Why: The "Apache Kafka 101" and stream processing course series are free, short, and accurate.
+- Use when: You are in [phase 4 of Data from Scratch](./data-from-scratch.md) or preparing for a [Confluent certification](../exams/confluent/).
+
+**[Stephane Maarek](https://youtube.com/@StephaneMaarek)**
+- Best for: Kafka for beginners, and AWS data certifications
+- Why: Tight, accurate, exam-aligned. His Kafka material is how many people first learned it.
+- Use when: You have a Kafka or AWS exam date.
+
+---
+
+## 🏛️ Platforms: lakehouse, warehouse, BI
+
+**[Databricks](https://youtube.com/@Databricks)**
+- Best for: Lakehouse, Delta Lake, Unity Catalog, Spark - plus every Data + AI Summit talk
+- Use when: You use Databricks at work or are preparing for a [Databricks exam](../exams/databricks/).
+
+**[Advancing Analytics](https://youtube.com/@AdvancingAnalytics)**
+- Best for: Independent, opinionated takes on Databricks, Fabric and lakehouse design
+- Why: Practitioners who will tell you when a feature is not ready yet.
+- Use when: You want a second opinion beyond the vendor's own channel.
+
+**[Bryan Cafferky](https://youtube.com/@BryanCafferky)**
+- Best for: Spark, Databricks and Python for data, taught carefully from the basics
+- Use when: Spark's mental model has not clicked yet.
+
+**[Guy in a Cube](https://youtube.com/@GuyInACube)**
+- Best for: Power BI and Microsoft Fabric
+- Why: Two Microsoft people answering real questions every week, for years.
+- Use when: You are on the analytics engineer lane, or preparing for [PL-300](../exams/azure/pl-300/) or [DP-600](../exams/azure/dp-600/).
+
+**[AWS Events](https://youtube.com/@AWSEventsChannel)**
+- Best for: re:Invent sessions on Redshift, Glue, Kinesis, Lake Formation and data architecture
+- Use when: You want the service team's own deep dive. Search the channel for the service plus "deep dive".
 
 ---
 
 ## 🎯 Single-Video Deep Dives
 
-These are individual videos that punch above their weight. If you only have an hour, watch one of these.
+### Databases
+- **[CMU Intro to Database Systems - full course](https://www.youtube.com/results?search_query=CMU+15-445+intro+to+database+systems)** - the whole semester; the lectures on indexes, joins and concurrency control are worth watching on their own.
+- **[Martin Kleppmann - Distributed Systems lecture series](https://www.youtube.com/results?search_query=kleppmann+distributed+systems+lecture)** - eight short lectures; watch the replication and consistency ones first.
+- **[Martin Kleppmann - "Turning the database inside-out"](https://www.youtube.com/results?search_query=kleppmann+turning+the+database+inside+out)** - the talk that explains why logs, CDC and stream processing belong together.
 
-### Cloud
-- **[AWS Networking Fundamentals (re:Invent NET201)](https://www.youtube.com/results?search_query=re%3AInvent+NET201+aws+networking)** - the canonical AWS networking primer.
-- **[KubeCon keynotes](https://youtube.com/@cncf)** - 2x/year, the state-of-the-art for cloud-native.
-- **[freeCodeCamp - Terraform for Beginners](https://youtube.com/results?search_query=freecodecamp+terraform)** - one of the better Terraform full-course intros.
+### Data engineering
+- **[Data Engineering Zoomcamp](https://www.youtube.com/results?search_query=data+engineering+zoomcamp)** - the full course playlist from DataTalksClub.
+- **[Jay Kreps - "I heart logs"](https://www.youtube.com/results?search_query=jay+kreps+i+heart+logs)** - the creator of Kafka on why the log is the core abstraction; the thinking behind the Kappa architecture.
+- **[Tyler Akidau - "The evolution of massive-scale data processing"](https://www.youtube.com/results?search_query=tyler+akidau+evolution+of+massive+scale+data+processing)** - from MapReduce to the Dataflow model, by the author of *Streaming Systems*. Watermarks finally make sense.
 
-### AI / ML
-- **[Andrej Karpathy - "Let's build GPT: from scratch, in code, spelled out"](https://www.youtube.com/watch?v=kCc8FmEb1nY)** - if you watch one AI video this year, watch this.
-- **[Andrej Karpathy - "Intro to Large Language Models"](https://www.youtube.com/watch?v=zjkBMFhNj_g)** - 1 hour, no code. Best mental model for what LLMs are.
-- **[3Blue1Brown - "But what is a neural network?"](https://www.youtube.com/watch?v=aircAruvnKk)** - the start of the Neural Networks series.
-- **[3Blue1Brown - "Attention in transformers, visually explained"](https://www.youtube.com/watch?v=eMlx5fFNoYc)** - attention finally clicked for me here.
-- **[Anthropic - "Building effective agents"](https://www.youtube.com/results?search_query=anthropic+building+effective+agents)** - the patterns post in video form. If you build agents, this is canon.
-
-### General CS / engineering
-- **[Crafting Interpreters playlist](https://youtube.com/results?search_query=crafting+interpreters)** - if you've ever wanted to write a programming language.
-- **[Computerphile](https://youtube.com/@Computerphile)** - any video. Single best general-CS YouTube channel.
+### SQL
+- **[techTFQ - window functions](https://www.youtube.com/results?search_query=techTFQ+window+functions)** - pairs with [Window functions explained](./concepts/window-functions-explained.md).
 
 ---
 
@@ -197,8 +174,9 @@ These are individual videos that punch above their weight. If you only have an h
 
 I'm not naming names, but be skeptical of:
 
-- **Cert farms** - channels that pump out new "AWS Cert Pass in 2 Weeks!" videos with engagement-bait thumbnails. Often outdated, sometimes wrong.
-- **AI hype channels** - daily "GPT-X is here and it's GAME OVER" content. Burns your time, teaches nothing.
+- **Cert farms** - channels that pump out new "Pass the exam in 2 weeks!" videos with engagement-bait thumbnails. Often outdated, sometimes wrong.
+- **"Become a data engineer in 30 days"** - the job takes months of SQL and modeling practice. Videos that skip to tools skip the part that gets you hired.
+- **Tool-of-the-week channels** - a new framework every video, no fundamentals. The tools will change; joins and grain will not.
 - **AI-narrated faceless channels** - if the voice is synthetic and the script reads like a Wikipedia summary, it probably is one. Quality is hit-or-miss; sources usually missing.
 
 Heuristic: if the thumbnail has a shocked face and red arrows, the actual content is probably thin.
@@ -207,32 +185,32 @@ Heuristic: if the thumbnail has a shocked face and red arrows, the actual conten
 
 ## 📺 Recommended watch order for total beginners
 
-If you've never touched cloud and never touched ML, here's a 10-hour starter sequence:
+If you have never written SQL, here is a starter sequence of about 12 hours:
 
-1. **NetworkChuck - "What is the cloud?"** (10 min) - frame the basics
-2. **freeCodeCamp - "AWS Cloud Practitioner full course"** (4 hours, watch at 1.5x) - basic AWS literacy
-3. **Tech with Nana - "Kubernetes Crash Course"** (1 hour) - containers and orchestration fundamentals
-4. **3Blue1Brown - Neural Networks series ep. 1-4** (1 hour) - what an NN actually is
-5. **Andrej Karpathy - "Intro to Large Language Models"** (1 hour) - what LLMs actually are
-6. **AI Explained - any recent capability deep-dive** (15 min) - what frontier AI can do today
+1. **freeCodeCamp - a full SQL or PostgreSQL course** (4 hours, watch at 1.5x) - basic SQL literacy
+2. **techTFQ - joins and window functions videos** (2 hours) - the two things every SQL interview tests
+3. **ByteByteGo - database and caching explainers** (1 hour) - the mental models around the database
+4. **Seattle Data Guy - "what does a data engineer do" videos** (1 hour) - what the job actually is
+5. **Data Engineering Zoomcamp - module 1** (3 hours) - Docker, PostgreSQL, your first pipeline
+6. **Confluent - Apache Kafka 101** (1 hour) - what streaming is for
 
-After this, you can navigate the rest of YouTube without getting lost. Come back here when you want to go deeper on a specific topic.
+After this, follow [Data from Scratch](./data-from-scratch.md) and come back here when a phase wants a video.
 
 ---
 
 ## 🔁 Companion docs
 
-- **[Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/)** - structured cloud learning path
-- **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** - structured AI learning path
+- **[Data from Scratch](./data-from-scratch.md)** - the structured path from SQL to a data role
 - **[Glossary](./glossary.md)** - look up any term you encounter in these videos
 - **[Concepts](./concepts/)** - bite-size written explanations of single topics
+- **[Cloud YouTube picks](https://cloud.noblerworks.com/learn/youtube/)** - cloud, Kubernetes and networking channels
 
 ---
 
 ## 🤝 Suggest an addition
 
 Found a channel or video that should be here? Open a PR or issue. Criteria:
-- Still accurate today (cloud rots fast)
+- Still accurate today (tool names rot fast; SQL does not)
 - Teaches you something, not just hype
 - Not a sponsorship-disguised-as-content video
 - Bonus: small or undiscovered creators teaching well

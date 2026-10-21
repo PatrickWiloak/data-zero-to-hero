@@ -6,6 +6,20 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-10-21] (2) - Thirteen concept pages, three builds, a streaming pattern, data-only glossary
+
+### Added
+
+- Concept pages: [SQL joins](./learn/concepts/sql-joins-explained.md), [window functions](./learn/concepts/window-functions-explained.md), [indexes](./learn/concepts/indexes-explained.md), [transactions and ACID](./learn/concepts/transactions-and-acid.md), [OLTP vs OLAP](./learn/concepts/oltp-vs-olap.md), [replication and sharding](./learn/concepts/replication-and-sharding.md), [change data capture](./learn/concepts/change-data-capture.md), [slowly changing dimensions](./learn/concepts/slowly-changing-dimensions.md), [stream windows and watermarks](./learn/concepts/stream-processing-windows-and-watermarks.md), [analytics engineering and dbt](./learn/concepts/analytics-engineering-and-dbt.md), [governance and catalogs](./learn/concepts/data-governance-and-catalogs.md), [data contracts](./learn/concepts/data-contracts.md), [vector databases for data engineers](./learn/concepts/vector-databases-for-data-engineers.md).
+- Hands-on projects: [Build a streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md) (Kafka, Parquet lake, watermarks, reconciliation), [Design a star schema](./resources/hands-on-projects/design-star-schema.md) (DuckDB) and [Build a dbt project](./resources/hands-on-projects/build-dbt-project.md) (dbt Core 1.12 + DuckDB). All three were run end to end before publishing.
+- Architecture pattern: [Streaming analytics](./resources/architecture-patterns/streaming-analytics.md) - Lambda vs Kappa and the lakehouse hybrid on AWS, Azure and GCP.
+
+### Changed
+
+- [Glossary](./learn/glossary.md) rewritten as a data glossary (230 terms); cloud, security and AI terms now point to the sibling glossaries. Every anchor another page links to was kept.
+- [YouTube](./learn/youtube.md) rewritten around SQL, database, data engineering and streaming channels.
+- Concepts index regrouped by data subject; Data from Scratch, both topic indexes, the Study Hub and the hands-on index link the new pages.
+
 ## [2026-10-21] - Data Zero to Hero becomes its own site
 
 ### Changed

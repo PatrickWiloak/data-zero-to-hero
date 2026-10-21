@@ -48,6 +48,19 @@ Each row shows when a page was last verified against its source of truth.
 | etl-vs-elt | 2026-09-17 | [learn/concepts/etl-vs-elt.md](../learn/concepts/etl-vs-elt.md) |
 | file-formats-and-partitioning | 2026-09-17 | [learn/concepts/file-formats-and-partitioning.md](../learn/concepts/file-formats-and-partitioning.md) |
 | warehouses-lakes-lakehouses | 2026-09-17 | [learn/concepts/warehouses-lakes-lakehouses.md](../learn/concepts/warehouses-lakes-lakehouses.md) |
+| analytics-engineering-and-dbt | 2026-10-21 | [learn/concepts/analytics-engineering-and-dbt.md](../learn/concepts/analytics-engineering-and-dbt.md) |
+| change-data-capture | 2026-10-21 | [learn/concepts/change-data-capture.md](../learn/concepts/change-data-capture.md) |
+| data-contracts | 2026-10-21 | [learn/concepts/data-contracts.md](../learn/concepts/data-contracts.md) |
+| data-governance-and-catalogs | 2026-10-21 | [learn/concepts/data-governance-and-catalogs.md](../learn/concepts/data-governance-and-catalogs.md) |
+| indexes-explained | 2026-10-21 | [learn/concepts/indexes-explained.md](../learn/concepts/indexes-explained.md) |
+| oltp-vs-olap | 2026-10-21 | [learn/concepts/oltp-vs-olap.md](../learn/concepts/oltp-vs-olap.md) |
+| replication-and-sharding | 2026-10-21 | [learn/concepts/replication-and-sharding.md](../learn/concepts/replication-and-sharding.md) |
+| slowly-changing-dimensions | 2026-10-21 | [learn/concepts/slowly-changing-dimensions.md](../learn/concepts/slowly-changing-dimensions.md) |
+| sql-joins-explained | 2026-10-21 | [learn/concepts/sql-joins-explained.md](../learn/concepts/sql-joins-explained.md) |
+| stream-processing-windows-and-watermarks | 2026-10-21 | [learn/concepts/stream-processing-windows-and-watermarks.md](../learn/concepts/stream-processing-windows-and-watermarks.md) |
+| transactions-and-acid | 2026-10-21 | [learn/concepts/transactions-and-acid.md](../learn/concepts/transactions-and-acid.md) |
+| vector-databases-for-data-engineers | 2026-10-21 | [learn/concepts/vector-databases-for-data-engineers.md](../learn/concepts/vector-databases-for-data-engineers.md) |
+| window-functions-explained | 2026-10-21 | [learn/concepts/window-functions-explained.md](../learn/concepts/window-functions-explained.md) |
 
 ## Hands-on projects
 
@@ -55,11 +68,14 @@ Each row shows when a page was last verified against its source of truth.
 |--------|---------------|------|
 | build-data-pipeline | 2026-05-03 | [resources/hands-on-projects/build-data-pipeline.md](../resources/hands-on-projects/build-data-pipeline.md) |
 | labs-by-cert | 2026-07-29 | [resources/hands-on-projects/labs-by-cert.md](../resources/hands-on-projects/labs-by-cert.md) |
+| build-dbt-project | 2026-10-21 | [resources/hands-on-projects/build-dbt-project.md](../resources/hands-on-projects/build-dbt-project.md) |
+| build-streaming-pipeline | 2026-10-21 | [resources/hands-on-projects/build-streaming-pipeline.md](../resources/hands-on-projects/build-streaming-pipeline.md) |
+| design-star-schema | 2026-10-21 | [resources/hands-on-projects/design-star-schema.md](../resources/hands-on-projects/design-star-schema.md) |
 
 ## Top-level learn pages
 
 | Page | Last verified | Path |
 |--------|---------------|------|
-| glossary | 2026-05-03 | [learn/glossary.md](../learn/glossary.md) |
-| youtube | 2026-05-03 | [learn/youtube.md](../learn/youtube.md) |
 | data-from-scratch | 2026-10-21 | [learn/data-from-scratch.md](../learn/data-from-scratch.md) |
+| glossary | 2026-10-21 | [learn/glossary.md](../learn/glossary.md) |
+| youtube | 2026-10-21 | [learn/youtube.md](../learn/youtube.md) |
