@@ -33,31 +33,30 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-SLUG = "PatrickWiloak/cloud-data-ai-security-zero-to-hero"
-SITE_URL = "https://cloud.noblerworks.com/"
+SLUG = "PatrickWiloak/data-zero-to-hero"
+SITE_URL = "https://data.noblerworks.com/"
 
 # The description GitHub shows. Every number is a token; none is typed. Keep it
 # under 350 characters, which is GitHub's limit.
 DESCRIPTION_TEMPLATE = (
-    "Cloud + Data + AI + Security from zero to hero. "
-    "{certifications} certs across {providers} providers, "
+    "Data Zero to Hero: data engineering, analytics and databases from absolute zero. "
+    "{certifications} data certs across {providers} providers, "
     "{concept_pages} plain-English concepts, "
-    "{hands_on_projects} hands-on builds, "
-    "cross-cloud + AI service comparisons."
+    "a path to data engineer, analytics engineer or DBA."
 )
 
 # Topics carry the repo in GitHub's own search and on topic pages, so a missing
 # one is lost traffic. This is a floor, not the whole set - extra topics are fine.
 REQUIRED_TOPICS = {
-    "ai",
     "aws",
     "azure",
     "certifications",
-    "cloud",
+    "data-engineering",
+    "databases",
+    "databricks",
     "gcp",
-    "kubernetes",
-    "llm",
-    "security",
+    "snowflake",
+    "sql",
 }
 
 

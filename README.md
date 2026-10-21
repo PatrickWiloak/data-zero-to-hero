@@ -44,36 +44,48 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 
 ---
 
-# ☁️📊🤖🔒 Cloud, Data, AI, and Security - From Zero to Hero
+# 📊 Data Zero to Hero
 
-> **The full modern stack: cloud, data, AI, and security. Concepts in plain English, hands-on builds, deep references, and the most comprehensive certification library on GitHub.**
+> **Data engineering, analytics and databases from absolute zero: plain-English concepts, hands-on builds, architecture patterns, and study guides for every major data certification.**
 >
-> Whether you've never opened a terminal or you're chasing your fifth cert, start here.
+> SQL, modeling, pipelines, streaming, lakehouses, warehouses and DBA work, on AWS, Azure, GCP, Databricks, Snowflake, Kafka and MongoDB. Free, no signup.
 >
 > Patrick: Ex-AWS Solutions Architect | 10 Years in Tech | 64 Certifications & Accreditations | 19x Multi Cloud Certified
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
 ![Certifications](https://img.shields.io/badge/Certifications-24-blue.svg)
-![Documentation Links](https://img.shields.io/badge/Documentation%20Links-12000+-green.svg)
 ![Providers](https://img.shields.io/badge/Providers-7-orange.svg)
-![Free to Use](https://img.shields.io/badge/Free%20to%20Use-Educational-green.svg)
+![Free to Use](https://img.shields.io/badge/Free%20to%20Use-Educational-0891b2.svg)
 
 <div align="center" markdown="1">
 
-[![Visit the website](https://img.shields.io/badge/Visit_the_website-cloud.noblerworks.com-FF9900?style=for-the-badge&logo=googlechrome&logoColor=white)](README.md)
+[![Visit the website](https://img.shields.io/badge/Visit_the_website-data.noblerworks.com-0891b2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://data.noblerworks.com/)
 
-**[→ cloud.noblerworks.com](README.md)**
-
-Full-text search across all 0.6M words, dark mode, mobile-friendly.
+**[→ data.noblerworks.com](https://data.noblerworks.com/)** - full-text search across all 0.6M words, dark mode, mobile-friendly.
 
 </div>
 
 ---
 
-> ### 🔎 Read this as a website: **[cloud.noblerworks.com](README.md)**
->
-> Every page in this repo is published as a searchable site with full-text search across all 0.6M words, dark mode, and mobile navigation. Browsing on GitHub works fine too - the site is generated from these same markdown files, so nothing is duplicated or out of date.
+## 🧭 Zero to Hero family
+
+Data Zero to Hero is one of four free sibling sites. Each covers one subject in depth and links to the others where the subjects meet.
+
+| Site | Covers | Repo | Website |
+|---|---|---|---|
+| ☁️ **Cloud Zero to Hero** | Cloud platforms, Kubernetes, DevOps, networking, FinOps | [cloud-zero-to-hero](https://github.com/PatrickWiloak/cloud-zero-to-hero) | **[cloud.noblerworks.com →](https://cloud.noblerworks.com/)** |
+| 📊 **Data Zero to Hero** (you are here) | Data engineering, analytics, databases | [data-zero-to-hero](https://github.com/PatrickWiloak/data-zero-to-hero) | **[data.noblerworks.com →](https://data.noblerworks.com/)** |
+| 🔒 **Security Zero to Hero** | Cloud and application security, identity, compliance | [security-zero-to-hero](https://github.com/PatrickWiloak/security-zero-to-hero) | **[security.noblerworks.com →](https://security.noblerworks.com/)** |
+| 🤖 **AI Zero to Hero** | LLMs, ML, agents, AI at work, AI governance, landmark papers | [ai-zero-to-hero](https://github.com/PatrickWiloak/ai-zero-to-hero) | **[ai.noblerworks.com →](https://ai.noblerworks.com/)** |
+
+All four are free, by Nobler Works.
+
+---
+
+## 🛤️ New to data? Start here
+
+**[Data from Scratch](./learn/data-from-scratch.md)** is the plain-English path from "what is a table?" to working as a **data engineer, analytics engineer or DBA**: eight phases (SQL, modeling, pipelines, streaming, quality, cloud, pick a lane, get hired), each ending with something you can do, and each linking the concept pages, labs and certs that go with it.
 
 ---
 
@@ -81,12 +93,12 @@ Full-text search across all 0.6M words, dark mode, mobile-friendly.
 
 | | Pillar | What it is | Start here |
 |---|---|---|---|
-| 🎓 | **Learn** | Plain-English concepts, beginner on-ramp, structured paths. No exam scaffolding. | [learn/](./learn/) |
-| 🛠️ | **Build** | Hands-on projects, architecture patterns, CLI cheat sheets. Practitioner reference. | [resources/hands-on-projects/](./resources/hands-on-projects/) |
-| 🎯 | **Certify** | 24 cert study guides across 7 providers, plus 3 self-directed study tracks. Fact sheets, practice plans, scenarios. | [STUDY-HUB.md](./STUDY-HUB.md) |
-| 📚 | **Reference** | Cross-cloud service comparisons, career roadmaps, compliance and FinOps guides. | [resources/](./resources/) |
+| 🎓 | **Learn** | Plain-English data concepts and the Data from Scratch path. No exam scaffolding. | [learn/](./learn/) |
+| 🛠️ | **Build** | Hands-on data builds and architecture patterns (pipelines, lakehouse, data mesh). | [resources/hands-on-projects/](./resources/hands-on-projects/) |
+| 🎯 | **Certify** | 24 cert study guides across 7 providers. Fact sheets, practice plans, scenarios, practice questions. | [STUDY-HUB.md](./STUDY-HUB.md) |
+| 📚 | **Reference** | Cross-cloud database and messaging comparisons, career roadmaps, migration and interview guides. | [resources/](./resources/) |
 
-Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certify together by subject (LLMs, IAM, networking, K8s, observability, security, databases).
+The **[topic indexes](./topics/)** tie all four pillars together by subject: databases and data engineering.
 
 ---
 
@@ -94,16 +106,14 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 
 | Goal | Go to |
 |------|-------|
-| 🌅 Start from absolute zero (terminal, git, HTTP) | **[Day One](https://cloud.noblerworks.com/learn/day-one/)** |
-| 💡 Look up a concept (RAG, MCP, agents, VPC, K8s) | **[Concepts](./learn/concepts/)** |
-| 🤖 Learn AI without an exam | **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** |
-| ☁️ Learn cloud without an exam | **[Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/)** |
-| 🛠️ Build something hands-on (RAG, agents, 3-tier app) | **[15 hands-on projects](./resources/hands-on-projects/)** (with time estimates) |
-| 📺 Learn from videos | **[Curated YouTube playlist](./learn/youtube.md)** |
-| 🔍 Compare AWS vs Azure vs GCP for a service | **[Service comparisons](./resources/)** |
-| 🎯 Pick the right certification | **[Study Hub decision tree](./STUDY-HUB.md#-decision-tree-find-your-cert)** |
+| 🛤️ Go from zero to a data job | **[Data from Scratch](./learn/data-from-scratch.md)** |
+| 💡 Understand one idea (ETL vs ELT, lakehouses, streaming) | **[Concepts](./learn/concepts/)** |
+| 🛠️ Build a pipeline end to end | **[Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md)** |
+| 🔍 Compare database or messaging services across clouds | **[Databases](./resources/service-comparison-databases.md)** · **[Messaging and queues](./resources/service-comparison-messaging-queues.md)** |
+| 🎯 Pick the right data certification | **[Study Hub](./STUDY-HUB.md)** |
 | 🚀 Follow a career path | **[Roadmaps](#-certification-roadmaps)** |
-| 📚 Browse all 148 cert guides | **[STUDY-HUB.md](./STUDY-HUB.md)** |
+| 🌅 Start from absolute zero (terminal, git, HTTP) | **[Day One](https://cloud.noblerworks.com/learn/day-one/)** on Cloud Zero to Hero |
+| 🤖 Move on to machine learning | **[AI Zero to Hero](https://ai.noblerworks.com/)** |
 
 ---
 
@@ -111,36 +121,26 @@ Cross-pillar **[topic index](./topics/)** ties Learn + Build + Reference + Certi
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
-- **2026-09-28** - New [CompTIA A+ (220-1201 and 220-1202)](https://cloud.noblerworks.com/exams/comptia/a-plus/) guide: nine notes across both Core exams, a fact sheet, study plan, scenarios, strategy and 20 [practice questions](https://cloud.noblerworks.com/resources/practice-questions/comptia-a-plus-220-1201-1202/). On the site, every page now has its own search description and a title led by its exam code, and deploys notify search engines through IndexNow.
-- **2026-09-18** - Every dead vendor link repaired: 783 URLs, each replacement fetched and matched to the page the citation meant. The sweep now also catches soft 404s and deep links that silently redirect to a homepage. The record of every old-to-new replacement is [docs/link-rot-2026-09-17.md](https://cloud.noblerworks.com/docs/link-rot-2026-09-17/).
-- **2026-09-17** - Audit pass. The weekly external link check turned out never to have run: it passed lychee a flag lychee had removed, so it checked zero URLs and reported success in 0.2 seconds. Fixed, with a guard that fails the job when lychee cannot run at all. The first real sweep found 701 dead vendor links; the most-cited are repaired and the rest are listed in [docs/link-rot-2026-09-17.md](https://cloud.noblerworks.com/docs/link-rot-2026-09-17/). Also: seven new data-engineering concept pages and a [data engineering topic index](./topics/data-engineering.md), closing the thinnest of the four subjects in the repo's name; Open Graph cards on every page of the site; and the GitHub repository description, which had drifted to "122+ certs across 22 providers", is now generated from `certs.json` and checked in CI like every other count.
-- **2026-08-14** - The site now opens on a landing page of its own rather than on the repo README, and every counted claim in the README is under CI. The per-provider table was stale in 8 of 22 rows and missing 5 providers entirely, five days after the Tier 1 batch added them; the 17 numbers in the statistics block had nothing watching them either. Both are checked by `check-readme-counts.py` now.
-- **2026-08-14** - The whole repo is now a searchable website: [cloud.noblerworks.com](README.md). Full-text search across 0.6M words, dark mode, mobile nav, generated from these same markdown files. The strict build also caught and fixed an unclosed code fence that was swallowing part of a GCP note, plus 14 broken heading anchors.
-- **2026-08-11** - Anthropic's official Claude certification program (launched March-July 2026) fully covered: new Claude Certified Associate - Foundations (CCAO-F) guide, existing guides retargeted to the real CCDV-F, CCAR-F, and CCAR-P exams with official domain blueprints, pricing, and Pearson VUE logistics. Anthropic promoted from study-track pseudo-provider to the 27th certification provider; repo now at 148 certs.
-- **2026-07-29** - Gap-analysis pass: notes drafted for the last 10 outline-stage certs (CySA+, Network+, CCNP ENCOR, CISA, CISM, OSCP, PCNSA, Salesforce PD2, ServiceNow CSA, VMware VCP-DCV); generated cert index (`docs/certs.json`) driving the provider tables and 27 provider index pages; per-cert Anki flashcards; lab-to-cert map; freshness rotation; fixed 383 broken internal links and made internal link-checking a blocking CI gate.
-- **2026-05-03** - Cloud + AI scope expansion: `learn/` pillar, AI concept pages, `topics/` cross-pillar index, AI service comparisons (vector DBs, GenAI platforms, agent frameworks, LLM observability), AI hands-on builds (RAG, MCP agents, vLLM, evals, LoRA), CI link/lint/structure checks, freshness ledger.
-- **2026-04-27** - Provider expansion: AWS DEA-C01, Red Hat (RHCSA, OpenShift), Cisco CCNA, Azure DP-700/AZ-700/MS-900, Salesforce Admin/PD1.
+- **2026-10-21** - Data Zero to Hero is now its own site at [data.noblerworks.com](https://data.noblerworks.com/), split by subject from the original combined cloud, data, AI and security repo. New: [Data from Scratch](./learn/data-from-scratch.md), an eight-phase path to data engineer, analytics engineer or DBA. Cloud, security and AI material moved to the sibling sites: [Cloud](https://cloud.noblerworks.com/), [Security](https://security.noblerworks.com/) and [AI](https://ai.noblerworks.com/).
+- **2026-09-18** - Every dead vendor link repaired, each replacement fetched and matched to the page the citation meant. The sweep also catches soft 404s and deep links that silently redirect to a homepage.
+- **2026-09-17** - Seven new data-engineering concept pages (batch vs streaming, ETL vs ELT, warehouses vs lakes vs lakehouses, file formats and partitioning, modeling for analytics, pipelines and orchestration, quality and lineage) and a [data engineering topic index](./topics/data-engineering.md).
+- **2026-08-14** - The repo became a searchable website, generated from these same markdown files. Every counted claim in the README is checked in CI.
 
 ---
 
 ## 🎯 What's Inside This Repository?
 
-A complete cloud + AI learning resource. Whether you're starting fresh, building production systems, or chasing certifications:
-
-- ✅ **[Day One on-ramp](https://cloud.noblerworks.com/learn/day-one/)** - terminal, git, HTTP, servers
-- ✅ **[10 concept pages](./learn/concepts/)** - LLMs, RAG, MCP, agents, tool use, multimodal, quantization, VPCs, K8s, IAM, observability, idempotency
-- ✅ **[Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/)** + **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** - structured 8-phase paths
-- ✅ **24 certification study guides** across 27 providers, 12,000+ embedded vendor doc links
-- ✅ **[2 cross-pillar topic indexes](./topics/)** - LLMs, AI/ML systems, AI security, IAM, networking, K8s, observability, security, databases, serverless, FinOps, platform engineering, SRE (find everything by topic, not provider)
-- ✅ **2 cross-cloud service comparisons** (12 cloud + 4 AI: vector DBs, GenAI platforms, agent frameworks, LLM observability)
-- ✅ **0 CLI cheat sheets** (AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI, multi-cloud)
-- ✅ **3 architecture patterns** with multi-cloud implementations
-- ✅ **1 hands-on projects** (10 cloud + 5 AI: RAG, MCP agents, vLLM, eval harness, LoRA fine-tune)
-- ✅ **2 certification roadmaps** by career path
-- ✅ **1 interview prep guides**
-- ✅ **Compliance, migration, cost optimization, troubleshooting** deep-dives
+- ✅ **[Data from Scratch](./learn/data-from-scratch.md)** - eight phases from zero to a data role
+- ✅ **[10 concept pages](./learn/concepts/)** - SQL vs NoSQL, ETL vs ELT, batch vs streaming, queues vs streams, warehouses vs lakes vs lakehouses, modeling, partitioning, orchestration, quality and lineage, eventual consistency
+- ✅ **24 certification study guides** across 7 providers, with 2,000+ embedded vendor doc links
+- ✅ **[2 cross-pillar topic indexes](./topics/)** - databases and data engineering
+- ✅ **2 cross-cloud service comparisons** - databases, messaging and queues
+- ✅ **3 architecture patterns** - data pipeline and ETL, lakehouse, data mesh
+- ✅ **1 hands-on project** - build a data pipeline end to end
+- ✅ **2 certification roadmaps** - data engineer, database specialist
+- ✅ **1 interview prep guide** - data engineer
+- ✅ **[Practice question banks](./resources/practice-questions/)** - one per certification, with explained answers
 - ✅ **[Freshness ledger](./docs/freshness.md)** - per-cert last-verified dates
-- ✅ **Free tier guides** to minimize study costs
 
 ---
 
@@ -152,14 +152,14 @@ Full per-provider breakdown lives in **[STUDY-HUB.md](./STUDY-HUB.md)**. Quick l
 
 | Provider | Certs | Highlights |
 |----------|------:|------------|
-| ☁️ [AWS](./exams/aws/) | 3 | CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, GenAI Developer (AIP-C01), Quantum (QPC-C01); 4 retired specialties retained |
-| ☁️ [Azure](./exams/azure/) | 7 | AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-100/200/300/401, PL-100/200/300, MS-900 |
-| ☁️ [GCP](./exams/gcp/) | 2 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI |
-| 🧱 [Databricks](./exams/databricks/) | 3 | Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin |
+| ☁️ [AWS](./exams/aws/) | 3 | **Data Engineer Associate (DEA-C01)**; retired Data Analytics (DAS-C01) and Database (DBS-C01) specialties retained for reference |
+| ☁️ [Azure](./exams/azure/) | 7 | DP-900, DP-300, DP-420 (Cosmos DB), DP-600 and DP-700 (Fabric), PL-300 (Power BI); retired DP-203 retained |
+| ☁️ [GCP](./exams/gcp/) | 2 | Professional Data Engineer, Professional Cloud Database Engineer |
+| 🧱 [Databricks](./exams/databricks/) | 3 | Data Engineer (Associate + Professional), Lakehouse Platform Administrator |
 | ❄️ [Snowflake](./exams/snowflake/) | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) |
 | 📊 [Confluent/Kafka](./exams/confluent/) | 2 | Certified Developer, Certified Administrator |
 | 🍃 [MongoDB](./exams/mongodb/) | 3 | Associate Developer, DBA, Atlas Administrator |
-| **Total** | **24** | across 7 providers, plus 0 self-directed study tracks |
+| **Total** | **24** | across 7 providers |
 
 Highlights are a sample, not the full list - the Certs column is the total. Open a provider for everything it covers.
 
@@ -171,130 +171,44 @@ Highlights are a sample, not the full list - the Certs column is the total. Open
 
 ## 🗺️ Certification Roadmaps
 
-Career-focused learning paths:
+- **[📊 Data Engineer](./resources/certification-roadmap-data-engineer.md)** - cloud data engineering, then Databricks or Snowflake depth
+- **[🗄️ Database Specialist](./resources/certification-roadmap-database-specialist.md)** - relational and NoSQL administration across AWS, Azure and GCP
 
-- **[☁️ Cloud Engineer](https://cloud.noblerworks.com/resources/certification-roadmap-cloud-engineer/)** | **[🏗️ Solutions Architect](https://cloud.noblerworks.com/resources/certification-roadmap-solutions-architect/)** | **[⚙️ DevOps/SRE](https://cloud.noblerworks.com/resources/certification-roadmap-devops-sre/)**
-- **[📊 Data Engineer](./resources/certification-roadmap-data-engineer.md)** | **[🔒 Security Engineer](https://security.noblerworks.com/resources/certification-roadmap-security-engineer/)** | **[🌐 Multi-Cloud](https://cloud.noblerworks.com/resources/certification-roadmap-multi-cloud/)**
-- **[☸️ Kubernetes Specialist](https://cloud.noblerworks.com/resources/certification-roadmap-kubernetes-specialist/)** | **[🛠️ Platform Engineer](https://cloud.noblerworks.com/resources/certification-roadmap-platform-engineer/)** | **[🤖 AI/ML Engineer](https://ai.noblerworks.com/careers/roles/ai-engineer-roadmap/)**
-- **[💰 FinOps](https://cloud.noblerworks.com/resources/certification-roadmap-finops/)** | **[🗄️ Database Specialist](./resources/certification-roadmap-database-specialist.md)**
+Other career paths live on the sibling sites: [cloud, DevOps and platform roadmaps](https://cloud.noblerworks.com/), [security roadmaps](https://security.noblerworks.com/), and the [AI engineer roadmap](https://ai.noblerworks.com/careers/roles/ai-engineer-roadmap/).
 
 ---
 
 ## 📚 Study Resources
 
-### **Service Comparisons** (cross-cloud + AI)
-**Cloud:** [Compute](https://cloud.noblerworks.com/resources/service-comparison-compute/) · [Storage](https://cloud.noblerworks.com/resources/service-comparison-storage/) · [Databases](./resources/service-comparison-databases.md) · [Networking](https://cloud.noblerworks.com/resources/service-comparison-networking/) · [AI/ML](https://ai.noblerworks.com/tools/comparisons/cloud-ai-ml-services/) · [Containers/K8s](https://cloud.noblerworks.com/resources/service-comparison-containers-kubernetes/) · [Security](https://security.noblerworks.com/resources/service-comparison-security-tools/) · [DevOps/CI/CD](https://cloud.noblerworks.com/resources/service-comparison-devops-cicd/) · [Observability](https://cloud.noblerworks.com/resources/service-comparison-observability-monitoring/) · [Serverless](https://cloud.noblerworks.com/resources/service-comparison-serverless/) · [Identity/IAM](https://security.noblerworks.com/resources/service-comparison-identity-iam/) · [Messaging](./resources/service-comparison-messaging-queues.md)
+- **Service comparisons:** [Databases](./resources/service-comparison-databases.md) · [Messaging and queues](./resources/service-comparison-messaging-queues.md)
+- **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md)
+- **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Labs by certification](./resources/hands-on-projects/labs-by-cert.md)
+- **Migration:** [Database migration](./resources/migration-guides/database-migration.md)
+- **Interview prep:** [Data engineer](./resources/interview-prep/data-engineer-interview.md)
+- **Persona playlist:** [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md)
 
-**AI:** [Vector databases](https://ai.noblerworks.com/tools/decisions/vector-database/) · [GenAI platforms](https://ai.noblerworks.com/tools/comparisons/genai-platforms/) · [Agent frameworks](https://ai.noblerworks.com/tools/comparisons/agent-frameworks/) · [LLM observability](https://ai.noblerworks.com/tools/comparisons/llm-observability/)
+### Practice & Strategy
 
-### **CLI Quick References**
-[AWS](https://cloud.noblerworks.com/resources/cli-cheat-sheet-aws/) | [Azure](https://cloud.noblerworks.com/resources/cli-cheat-sheet-azure/) | [GCP](https://cloud.noblerworks.com/resources/cli-cheat-sheet-gcp/) | [Multi-cloud](https://cloud.noblerworks.com/resources/cli-cheat-sheet-comparison/) | [kubectl](https://cloud.noblerworks.com/resources/cli-cheat-sheet-kubectl/) | [Terraform](https://cloud.noblerworks.com/resources/cli-cheat-sheet-terraform/) | [Docker](https://cloud.noblerworks.com/resources/cli-cheat-sheet-docker/) | [Helm](https://cloud.noblerworks.com/resources/cli-cheat-sheet-helm/) | [GitHub CLI](https://cloud.noblerworks.com/resources/cli-cheat-sheet-github-cli/)
-
-### **Architecture Patterns**
-17 multi-cloud patterns: [3-Tier Web App](https://cloud.noblerworks.com/resources/architecture-patterns/web-app-3-tier/) · [Serverless API](https://cloud.noblerworks.com/resources/architecture-patterns/serverless-api/) · [Microservices](https://cloud.noblerworks.com/resources/architecture-patterns/microservices-architecture/) · [Event-Driven](https://cloud.noblerworks.com/resources/architecture-patterns/event-driven-architecture/) · [Data Pipeline/ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Disaster Recovery](https://cloud.noblerworks.com/resources/architecture-patterns/disaster-recovery-patterns/) · [Zero Trust](https://security.noblerworks.com/resources/architecture-patterns/zero-trust-architecture/) · [Data Mesh](./resources/architecture-patterns/data-mesh.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [AI/ML Pipeline](https://ai.noblerworks.com/build/patterns/ai-ml-pipeline/) · [Multi-Region Active-Active](https://cloud.noblerworks.com/resources/architecture-patterns/multi-region-active-active/) · [CQRS/Event Sourcing](https://cloud.noblerworks.com/resources/architecture-patterns/cqrs-event-sourcing/) · [API Gateway](https://cloud.noblerworks.com/resources/architecture-patterns/api-gateway-pattern/) · [Strangler Fig](https://cloud.noblerworks.com/resources/architecture-patterns/strangler-fig-migration/) · [Cell-Based](https://cloud.noblerworks.com/resources/architecture-patterns/cell-based-architecture/) · [Chaos Engineering](https://cloud.noblerworks.com/resources/architecture-patterns/chaos-engineering-patterns/) · [Hybrid Cloud](https://cloud.noblerworks.com/resources/architecture-patterns/hybrid-cloud-connectivity/)
-
-### **Hands-on Projects**
-**Cloud:** [3-Tier App](https://cloud.noblerworks.com/resources/hands-on-projects/deploy-3-tier-app/) · [CI/CD Pipeline](https://cloud.noblerworks.com/resources/hands-on-projects/build-ci-cd-pipeline/) · [Monitoring Stack](https://cloud.noblerworks.com/resources/hands-on-projects/setup-monitoring-stack/) · [Zero Trust](https://security.noblerworks.com/resources/hands-on-projects/implement-zero-trust/) · [Data Pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Deploy ML Model](https://ai.noblerworks.com/build/projects/deploy-ml-model/) · [K8s Cluster](https://cloud.noblerworks.com/resources/hands-on-projects/kubernetes-cluster-setup/) · [Terraform Infra](https://cloud.noblerworks.com/resources/hands-on-projects/terraform-infrastructure/) · [Serverless App](https://cloud.noblerworks.com/resources/hands-on-projects/serverless-application/) · [DR Drill](https://cloud.noblerworks.com/resources/hands-on-projects/disaster-recovery-drill/)
-
-**AI:** [RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/) · [Claude agent with MCP](https://ai.noblerworks.com/build/projects/build-claude-agent-with-mcp/) · [Run Llama on single GPU](https://ai.noblerworks.com/build/projects/run-llama-on-single-gpu/) · [Eval harness](https://ai.noblerworks.com/build/projects/set-up-eval-harness/) · [LoRA fine-tune](https://ai.noblerworks.com/build/projects/fine-tune-with-lora/)
-
-### **Deep Dive Guides**
-- **Compliance:** [SOC 2](https://security.noblerworks.com/resources/compliance-guides/soc2/) | [HIPAA](https://security.noblerworks.com/resources/compliance-guides/hipaa/) | [PCI DSS](https://security.noblerworks.com/resources/compliance-guides/pci-dss/) | [GDPR](https://security.noblerworks.com/resources/compliance-guides/gdpr/) | [FedRAMP](https://security.noblerworks.com/resources/compliance-guides/fedramp/)
-- **Migration:** [On-Prem to AWS](https://cloud.noblerworks.com/resources/migration-guides/on-prem-to-aws/) | [to Azure](https://cloud.noblerworks.com/resources/migration-guides/on-prem-to-azure/) | [to GCP](https://cloud.noblerworks.com/resources/migration-guides/on-prem-to-gcp/) | [Cloud-to-Cloud](https://cloud.noblerworks.com/resources/migration-guides/cloud-to-cloud/) | [Database](./resources/migration-guides/database-migration.md)
-- **Well-Architected:** [AWS](https://cloud.noblerworks.com/resources/well-architected/aws-well-architected/) | [Azure](https://cloud.noblerworks.com/resources/well-architected/azure-well-architected/) | [GCP](https://cloud.noblerworks.com/resources/well-architected/gcp-well-architected/)
-- **Cost Optimization:** [AWS](https://cloud.noblerworks.com/resources/cost-optimization/aws-cost-optimization/) | [Azure](https://cloud.noblerworks.com/resources/cost-optimization/azure-cost-optimization/) | [GCP](https://cloud.noblerworks.com/resources/cost-optimization/gcp-cost-optimization/) | [FinOps Principles](https://cloud.noblerworks.com/resources/cost-optimization/finops-principles/)
-- **Troubleshooting:** [AWS](https://cloud.noblerworks.com/resources/troubleshooting/aws-troubleshooting/) | [Azure](https://cloud.noblerworks.com/resources/troubleshooting/azure-troubleshooting/) | [GCP](https://cloud.noblerworks.com/resources/troubleshooting/gcp-troubleshooting/) | [Kubernetes](https://cloud.noblerworks.com/resources/troubleshooting/kubernetes-troubleshooting/)
-- **Networking:** [Hybrid Connectivity](https://cloud.noblerworks.com/resources/networking-deep-dives/hybrid-connectivity/) | [Multi-Cloud](https://cloud.noblerworks.com/resources/networking-deep-dives/multi-cloud-networking/) | [DNS Deep Dive](https://cloud.noblerworks.com/resources/networking-deep-dives/dns-deep-dive/) | [Load Balancing](https://cloud.noblerworks.com/resources/networking-deep-dives/load-balancing-deep-dive/)
-
-### **Interview Prep**
-[Solutions Architect](https://cloud.noblerworks.com/resources/interview-prep/solutions-architect-interview/) | [DevOps](https://cloud.noblerworks.com/resources/interview-prep/devops-interview/) | [Cloud Engineer](https://cloud.noblerworks.com/resources/interview-prep/cloud-engineer-interview/) | [Data Engineer](./resources/interview-prep/data-engineer-interview.md) | [Security Engineer](https://security.noblerworks.com/resources/interview-prep/security-engineer-interview/) | [SRE](https://cloud.noblerworks.com/resources/interview-prep/sre-interview/)
-
-### **Decision Matrices** - score-driven product picks
-[Vector database](https://ai.noblerworks.com/tools/decisions/vector-database/) | [IaC tool](https://cloud.noblerworks.com/resources/decision-matrix-iac-tool/) | [LLM serving](https://ai.noblerworks.com/tools/decisions/llm-serving/)
-
-### **Postmortem Study Guides** - real public outages, mapped to exam domains
-[AWS S3 us-east-1, 2017](https://cloud.noblerworks.com/resources/postmortem-aws-s3-2017/) | [Cloudflare regex, 2019](https://cloud.noblerworks.com/resources/postmortem-cloudflare-regex-2019/) | [GCP networking, 2019](https://cloud.noblerworks.com/resources/postmortem-gcp-networking-2019/)
-
-### **Persona Playlists** - curated reading sequences
-[AI engineer in 30 min](https://ai.noblerworks.com/learn/start-here/ai-engineer-path/) | [Cloud security in 1 hour](https://security.noblerworks.com/resources/playlist-cloud-security-1hour/) | [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md) | [SRE in 1 hour](https://cloud.noblerworks.com/resources/playlist-sre-1hour/)
-
-### **Practice & Strategy**
-- [📝 Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification (151 of 151)
+- [📝 Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification
 - [🎯 Practice Resources Guide](./resources/practice-resources.md)
-- [💰 Free Tier Guides](https://cloud.noblerworks.com/resources/free-tier-guide/)
 - [📝 Study Tips & Strategies](./resources/study-strategies.md)
 - [✅ Exam Day Checklist](./resources/exam-day-checklist.md)
+- [💰 Budget Study Plan](./resources/budget-study-plan.md)
 - [📅 Freshness Ledger](./docs/freshness.md) - per-page last-verified dates
-
----
-
-## 🎓 Study Paths by Experience Level
-
-### **Beginner (0-6 months cloud experience)**
-1. Start with a **Fundamentals** cert: AWS Cloud Practitioner | Azure AZ-900 | GCP Cloud Digital Leader | Oracle OCI Foundations
-2. Follow [Study Strategies](./resources/study-strategies.md)
-3. Use [Free Tier](https://cloud.noblerworks.com/resources/free-tier-guide/) for hands-on practice
-
-### **Intermediate (6-18 months experience)**
-1. Pick an **Associate** cert: AWS SAA / DVA / SOA | Azure AZ-104 / AZ-204 | GCP Associate Cloud Engineer
-2. Study 2-3 hours daily for 2-3 months
-3. Complete 1000+ practice questions
-
-### **Advanced (18+ months experience)**
-1. Choose **Professional** or **Expert**: AWS SAP / DOP | Azure AZ-305 / AZ-400 | GCP PCA / Data Engineer
-2. Focus on complex scenarios and design patterns
-3. Build production-grade projects
-
----
-
-## 📈 What Makes These Materials Special?
-
-1. **Documentation-rich** - 12,000+ embedded vendor doc links, format `**[📖 Title](URL)** - description`
-2. **Multi-cloud + AI-native** - 27 providers, cross-cloud comparisons, AI-side comparisons (vector DBs, GenAI platforms)
-3. **Comprehensive + structured** - consistent format across all 148 certs (README → fact-sheet → notes → practice-plan → scenarios → strategy)
-4. **Practical + hands-on** - 15 guided builds with inline code, free-tier guides
-5. **Exam-focused** - exam tips, common scenarios, time management strategies
-
----
-
-## 💰 Cost-Effective Study Strategy
-
-| Item | Typical Cost |
-|------|-------------:|
-| All study materials in this repo | Free |
-| Official documentation | Free |
-| Free tier sandbox accounts | Free |
-| Video course (optional) | $15-50 |
-| Third-party practice tests (optional) | $15-30 |
-| Exam fee (per cert) | $100-700 |
-
-**[→ Detailed budget guide](./resources/budget-study-plan.md)**
-
----
-
-## 🤝 Community
-
-- **Reddit:** r/AWSCertifications, r/AZURE, r/googlecloud, r/kubernetes, r/cybersecurity
-- **Discord:** Cloud certification study servers ([community-resources.md](./resources/community-resources.md))
-- **LinkedIn:** Search for "[Cert name] Study Group"
-- **GitHub:** Star this repo and watch for updates
 
 ---
 
 ## 📊 Repository Statistics
 
-- **Certifications:** 24 (plus 0 self-directed study tracks)
-- **Documentation links:** 12,000+
+- **Certifications:** 24
 - **Providers:** 7
-- **Concept pages:** 10 (cloud + AI primitives)
-- **Service comparisons:** 2 (12 cloud + 4 AI)
-- **CLI cheat sheets:** 0
+- **Concept pages:** 10
+- **Service comparisons:** 2
 - **Architecture patterns:** 3
-- **Hands-on projects:** 1 (10 cloud + 5 AI)
-- **Topic indexes:** 2 (cross-pillar)
+- **Hands-on projects:** 1
+- **Topic indexes:** 2
 - **Career roadmaps:** 2
 - **Interview prep guides:** 1
-- **Compliance guides:** 0
 - **Migration guides:** 1
 
 ---
@@ -302,39 +216,23 @@ Career-focused learning paths:
 ## 🗂️ Repository Structure
 
 ```
-cloud-data-ai-security-zero-to-hero/
+data-zero-to-hero/
 ├── README.md (you are here)
 ├── STUDY-HUB.md (full per-provider navigation)
 ├── CHANGELOG.md
 ├── learn/                # plain-English learning content
 │   ├── concepts/         # 10 bite-size concept pages
-│   ├── day-one/          # absolute-beginner on-ramp
-│   ├── ai-from-scratch.md
-│   ├── cloud-from-scratch.md
+│   ├── data-from-scratch.md
 │   └── glossary.md
-├── exams/                # 24 certs across 7 providers, plus 0 study tracks
-├── resources/            # comparisons, cheat sheets, roadmaps, guides, projects
+├── exams/                # 24 certs across 7 providers
+├── resources/            # comparisons, patterns, roadmaps, projects, practice questions
 ├── topics/               # cross-pillar topic indexes
-├── assets/diagrams/      # PNG diagrams, for the few too dense for inline Mermaid
 └── docs/
     ├── ARCHITECTURE.md
     ├── certs.json        # generated cert index, source of truth for counts
     ├── freshness.md      # per-cert last-verified dates
-    ├── improvement-roadmap.md
     └── tag-taxonomy.md   # controlled vocabulary for the optional tags: field
 ```
-
----
-
-## 🎯 Quick Links
-
-- [📚 Study Hub](./STUDY-HUB.md) - main navigation
-- [🗂️ Topic indexes](./topics/) - browse by subject across pillars
-- [🆕 What's new](./CHANGELOG.md)
-- [📅 Freshness ledger](./docs/freshness.md)
-- [🧪 Labs by certification](./resources/hands-on-projects/labs-by-cert.md) - which hands-on build backs which exam
-- [🛠️ Improvement roadmap](https://cloud.noblerworks.com/docs/improvement-roadmap/) - known gaps and what is being done about them
-- [📝 Contributing](./CONTRIBUTING.md)
 
 ---
 
@@ -346,9 +244,9 @@ Found a typo? Have a suggestion? Want to add content? See **[CONTRIBUTING.md](./
 
 ## ⚖️ Usage & Disclaimer
 
-**Free to use for educational purposes with attribution.** All technical information is sourced from and linked to official cloud provider documentation (12,000+ embedded links throughout).
+**Free to use for educational purposes with attribution.** Technical information is sourced from and linked to official vendor documentation.
 
-**Disclaimer:** This repository is an independent educational resource and is not affiliated with, endorsed by, or sponsored by AWS, Microsoft, Google, Oracle, IBM, or any other vendor referenced. All trademarks and cloud technologies are the property of their respective owners.
+**Disclaimer:** This repository is an independent educational resource and is not affiliated with, endorsed by, or sponsored by AWS, Microsoft, Google, Databricks, Snowflake, Confluent, MongoDB, or any other vendor referenced. All trademarks are the property of their respective owners.
 
 ---
 
@@ -360,13 +258,7 @@ this repository and link the license.
 
 **Code samples: [MIT](./LICENSE-CODE).** The fenced code blocks throughout the content and
 the scripts under `.github/scripts/` are MIT, so you can paste a snippet into your own project
-without carrying an attribution obligation for ten lines of Terraform.
-
----
-
-## 🌟 Star This Repo!
-
-If these materials helped you pass a certification or advance your career, please **star this repository** ⭐ to help others discover these resources.
+without carrying an attribution obligation for ten lines of SQL.
 
 ---
 
@@ -374,11 +266,7 @@ If these materials helped you pass a certification or advance your career, pleas
 
 ### 🚀 Ready to Start?
 
-**[Get Started with the Study Hub →](./STUDY-HUB.md)** · **[Browse Topics →](./topics/)** · **[Day One →](https://cloud.noblerworks.com/learn/day-one/)**
-
----
-
-**Good luck on your learning and certification journey!** 🎉
+**[Data from Scratch →](./learn/data-from-scratch.md)** · **[Study Hub →](./STUDY-HUB.md)** · **[Browse Topics →](./topics/)**
 
 ---
 
@@ -388,11 +276,9 @@ Created and maintained by **[Patrick Wiloak](https://patricklukewilson.com)**
 
 **19x Multi Cloud Certified** | **64 Certifications & Accreditations** | **Prev @ AWS** | **14x AWS Certified** | **3x GCP** | **2x Azure**
 
-🎥 **[YouTube: @patrickwiloak](https://youtube.com/@patrickwiloak)** - Cloud certification tips and tutorials
-💼 **[LinkedIn: Patrick Luke Wilson](https://www.linkedin.com/in/patricklukewilson/)** - Let's connect
-🌐 **[Portfolio: patricklukewilson.com](https://patricklukewilson.com)**
+🎥 **[YouTube: @patrickwiloak](https://youtube.com/@patrickwiloak)** · 💼 **[LinkedIn](https://www.linkedin.com/in/patricklukewilson/)** · 🌐 **[patricklukewilson.com](https://patricklukewilson.com)**
 
-If this repository helped you, please ⭐ star it and share with others.
+If this repository helped you, please ⭐ star it and share it with others.
 
 </div>
 
@@ -413,7 +299,6 @@ Free, open-source projects from the [Nobler Works](https://noblerworks.com/) tea
 | 🛰️ **[IRONSIGHT](https://github.com/NoblerWorks-HQ/IRONSIGHT)** | Real-time OSINT command center - 50+ live intel feeds, no API keys | **[Website →](https://ironsight.noblerworks.com/)** |
 | 🌍 **[War Games](https://github.com/NoblerWorks-HQ/WarGames)** | NATO, Russia, and China on one map, each commanded by an LLM | **[Website →](https://wargames.noblerworks.com/)** |
 | ⛏️ **[Minecraft Agentic Builder](https://github.com/NoblerWorks-HQ/minecraft-agentic)** | A crew of AI agents builds Minecraft worlds live in your browser | [Repo →](https://github.com/NoblerWorks-HQ/minecraft-agentic) |
-| 📚 **[AI Zero to Hero](https://github.com/PatrickWiloak/ai-zero-to-hero)** | Everything AI in one place: learn, use at work, build, govern, get hired - plus 156 landmark papers in plain language | **[Website →](https://ai.noblerworks.com/)** |
 | 🧠 **[Bedrock RAG with S3 Vectors](https://github.com/PatrickWiloak/bedrock-rag-s3-vectors-tutorial)** | Deploy document Q&A on AWS Bedrock in under 10 minutes (CDK or Terraform) | [Repo →](https://github.com/PatrickWiloak/bedrock-rag-s3-vectors-tutorial) |
 | 🏃 **[Proper Training for Distance Running](https://github.com/PatrickWiloak/proper-distance-running-training-guidance)** | Evidence-based running guide with twelve 5K-to-marathon plans | **[Read online →](https://achilles.fit/guides)** |
 

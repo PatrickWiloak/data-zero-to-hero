@@ -9,18 +9,19 @@
 # Everything else in this file is hand-maintained. Build with:
 #   .venv-docs/bin/python .github/scripts/build-site.py --strict
 
-site_name: Cloud, Data, AI, and Security - Zero to Hero
+site_name: Data Zero to Hero
 # The home page's search snippet; every other page gets its own description from
 # .github/scripts/site_hooks.py. No counts here - nothing checks this file.
 site_description: >-
-  Free study guides for AWS, Azure, GCP, Kubernetes, CompTIA, CISSP and 100+
-  more cloud, data, AI and security certifications, plus plain-English concepts
-  and hands-on builds. From absolute zero.
+  Free data engineering, analytics and database learning from absolute zero:
+  plain-English concepts, a path to data engineer, analytics engineer or DBA,
+  hands-on builds, and study guides for AWS, Azure, GCP, Databricks, Snowflake,
+  Kafka and MongoDB data certifications.
 site_author: Patrick Wiloak
-site_url: https://cloud.noblerworks.com/
+site_url: https://data.noblerworks.com/
 
-repo_url: https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero
-repo_name: cloud-data-ai-security-zero-to-hero
+repo_url: https://github.com/PatrickWiloak/data-zero-to-hero
+repo_name: data-zero-to-hero
 edit_uri: edit/main/
 
 copyright: >-
@@ -79,8 +80,8 @@ theme:
     - content.action.edit
     - content.tooltips
   palette:
-    # Near-black plus one green accent, ported from gitgood.dev so the family
-    # of sites shares a language. `custom` opts out of Material's built-in
+    # Near-black plus one cyan accent (Data Zero to Hero's colour in the family;
+    # the layout was ported from gitgood.dev so the sites share a language). `custom` opts out of Material's built-in
     # colour palettes entirely; the actual values are defined in
     # .github/site/extra.css under the scheme selectors.
     # All three entries need it - this first one is what renders before the
@@ -180,13 +181,14 @@ validation:
   anchors: warn
 
 extra:
-  # Google Search Console URL-prefix verification token (HTML-tag method). Issued
-  # 2026-09-28 to the nobler-reporting service account, which verified the
-  # property; pat@noblerworks.com is a co-owner. Removing it un-verifies the site.
+  # Google Search Console HTML-tag token, inherited from the combined repo (issued
+  # 2026-09-28 to the nobler-reporting service account for the old cloud URL).
+  # Harmless here; the domain property sc-domain:noblerworks.com covers this host.
+  # If a data.noblerworks.com URL-prefix property is wanted, issue a token for it.
   google_site_verification: "IiZNJDxVVPECZMC0xTbmls7EdKJm0Bs5wgq7k3HEwPc"
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero
+      link: https://github.com/PatrickWiloak/data-zero-to-hero
       name: This repository on GitHub
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/@patrickwiloak

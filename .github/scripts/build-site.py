@@ -306,7 +306,7 @@ def stage() -> list[str]:
         staged.append(f"{key}.txt")
 
     # robots.txt at the domain root - possible since the move to the
-    # cloud.noblerworks.com custom domain (2026-10-21); a github.io project page
+    # noblerworks.com custom domain (2026-10-21); a github.io project page
     # has no root of its own. Sitemap URL follows site_url.
     m = re.search(r"^site_url:\s*(\S+)", (REPO / "mkdocs.yml").read_text(encoding="utf-8"), re.MULTILINE)
     if m:
@@ -400,15 +400,11 @@ def write_home_page() -> None:
     tokens: dict[str, object] = {
         "certifications": counts["certifications"],
         "providers": counts["providers"],
-        "study_tracks": counts["study_tracks"],
         "concept_pages": counts["concept_pages"],
         "topic_indexes": counts["topic_indexes"],
         "service_comparisons": counts["service_comparisons"],
-        "cli_cheat_sheets": counts["cli_cheat_sheets"],
         "architecture_patterns": counts["architecture_patterns"],
-        "hands_on_projects": counts["hands_on_projects"],
         "roadmaps": counts["roadmaps"],
-        "interview_prep": counts["interview_prep"],
         "words": f"{counts['words'] / 1_000_000:.1f}M",
         # A floor, like the README's, so removing a handful of links never makes
         # the page overstate itself.
@@ -488,7 +484,7 @@ SKIP_PREFIXES = ("http://", "https://", "mailto:", "tel:", "#", "//", "/")
 
 # Repo tooling that is deliberately not part of the site. Links to it are sent to
 # GitHub rather than dropped, because the pages they point at are real.
-GITHUB_BLOB = "https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero/blob/main/"
+GITHUB_BLOB = "https://github.com/PatrickWiloak/data-zero-to-hero/blob/main/"
 OFF_SITE_PREFIXES = (".github/", ".gitignore", ".markdownlint.json", ".cspell.json", "CODEOWNERS")
 
 

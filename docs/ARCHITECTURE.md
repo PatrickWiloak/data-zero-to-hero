@@ -1,15 +1,15 @@
 # Repository Architecture
 
-This document explains the structure and conventions of the cloud certification study guides repository. Read it before contributing or making non-trivial changes.
+This document explains the structure and conventions of Data Zero to Hero, the data engineering, analytics and database study repository. Read it before contributing or making non-trivial changes.
 
 ---
 
 ## At a glance
 
-This repo is a **markdown knowledge base** for cloud + AI learning - certifications, hands-on patterns, plain-English concepts, and a beginner on-ramp. There is no build step, no test suite, no deployment - it is a content repository served as Markdown via GitHub.
+This repo is a **markdown knowledge base** for data learning - certifications, hands-on patterns, plain-English concepts, and the Data from Scratch path. It reads as Markdown on GitHub and is also built into the site at data.noblerworks.com (see [The published site](#the-published-site)). It is one of four sibling Zero to Hero sites (cloud, data, security, AI), split by subject from the original combined repo on 2026-10-21; out-of-subject pages live on the sibling and are linked by absolute URL.
 
 ```
-cloud-data-ai-security-zero-to-hero/
+data-zero-to-hero/
 ├── README.md           # Top-level overview + pillars + provider table
 ├── STUDY-HUB.md        # Navigation hub: decision tree, career tracks, full provider table
 ├── CLAUDE.md           # Project context for Claude Code / AI tools
@@ -17,16 +17,14 @@ cloud-data-ai-security-zero-to-hero/
 ├── CHANGELOG.md        # User-visible / operationally-significant changes
 ├── .templates/         # Cross-cert resources hubs (resources-aws.md, resources-azure.md, resources-gcp.md)
 ├── assets/diagrams/    # PNG diagrams (draw.io exports), organized by topic subdir
-├── docs/               # Repo docs: ARCHITECTURE.md, certs.json (generated index), freshness.md, tag-taxonomy.md, improvement-roadmap.md
+├── docs/               # Repo docs: ARCHITECTURE.md, certs.json (generated index), freshness.md, tag-taxonomy.md
 ├── exams/              # All certification study guides, organized by provider
 ├── learn/              # Plain-English learning content for non-cert students
-│   ├── concepts/       # Bite-size topic pages (5-10 min reads): cloud + AI primitives
-│   ├── day-one/        # Strict beginner on-ramp (terminal, git, HTTP, servers)
-│   ├── ai-from-scratch.md
-│   ├── cloud-from-scratch.md
+│   ├── concepts/       # Bite-size topic pages (5-10 min reads): data primitives
+│   ├── data-from-scratch.md  # 8-phase path to data engineer, analytics engineer or DBA
 │   ├── glossary.md
 │   └── youtube.md
-└── resources/          # Cross-cert resources (roadmaps, comparisons, CLI cheat sheets, etc.)
+└── resources/          # Cross-cert resources (roadmaps, comparisons, patterns, practice questions)
 ```
 
 ---
@@ -41,16 +39,14 @@ cloud-data-ai-security-zero-to-hero/
 
 Use the lowercase, hyphen-free provider name when possible:
 
-- `aws`, `azure`, `gcp`, `kubernetes`, `nvidia`, `anthropic`, `hashicorp`, `databricks`, `snowflake`, `github`, `redhat`, `cisco`, `confluent`, `mongodb`, `finops`, `comptia`, `isc2`, `cloud-security-alliance`, `linux-foundation`, `oracle`, `ibm`
+- `aws`, `azure`, `gcp`, `databricks`, `snowflake`, `confluent`, `mongodb`
 
 #### AWS tier subdirectories
 
 AWS uses an extra layer because it has many tiers:
 
-- `exams/aws/foundational/` - CLF-C02 (Cloud Practitioner), AIF-C01 (AI Practitioner)
-- `exams/aws/associate/` - SAA-C03, DVA-C02, SOA-C03, MLA-C01, DEA-C01, SOA-C02 (retired but retained)
-- `exams/aws/professional/` - SAP-C02, DOP-C02
-- `exams/aws/specialty/` - SCS-C02, ANS-C01, PAS-C01, QPC-C01, MLS-C01 (retired), DAS-C01 (retired), DBS-C01 (retired)
+- `exams/aws/associate/` - DEA-C01
+- `exams/aws/specialty/` - DAS-C01 (retired), DBS-C01 (retired), retained for reference
 - `exams/aws/shared/services/` - shared service references (compute, storage, network, etc.)
 
 Other providers don't use tier subdirs - the cert dir sits directly under the provider dir.
@@ -109,16 +105,11 @@ When scaffolding a new cert, the validator's tier classification is the default;
 
 ```
 resources/
-├── architecture-patterns/      # Multi-cloud architecture write-ups (17 files)
-├── compliance-guides/          # SOC 2, HIPAA, PCI DSS, GDPR, FedRAMP (5 files)
-├── cost-optimization/          # Per-cloud cost optimization playbooks (4 files)
-├── hands-on-projects/          # 15 guided builds + generated labs-by-cert.md index
-├── interview-prep/             # Role-based interview prep (6 files)
-├── migration-guides/           # On-prem and cloud-to-cloud migration (5 files)
-├── networking-deep-dives/      # Hybrid, multi-cloud, DNS, load balancing (4 files)
-├── practice-questions/         # Per-cert question banks (34 files + template)
-├── troubleshooting/            # Per-platform troubleshooting (4 files)
-└── well-architected/           # AWS / Azure / GCP frameworks (3 files)
+├── architecture-patterns/      # Data pipeline / ETL, lakehouse, data mesh
+├── hands-on-projects/          # Guided builds + generated labs-by-cert.md index
+├── interview-prep/             # Data engineer interview prep
+├── migration-guides/           # Database migration
+└── practice-questions/         # One question bank per cert + template
 ```
 
 ### Top-level resource files
@@ -126,14 +117,13 @@ resources/
 ```
 resources/
 ├── budget-study-plan.md
-├── certification-roadmap-*.md          # 11 career-focused roadmaps
-├── cli-cheat-sheet-*.md                # 9 CLI quick references
+├── certification-roadmap-*.md          # data engineer, database specialist
 ├── community-resources.md
 ├── exam-day-checklist.md
-├── free-tier-guide.md
+├── playlist-data-engineer-1hour.md
 ├── practice-resources.md
 ├── recommended-courses.md
-├── service-comparison-*.md             # 12 cross-cloud comparisons
+├── service-comparison-*.md             # databases, messaging and queues
 └── study-strategies.md
 ```
 
@@ -158,7 +148,7 @@ On the published site these three pages appear under Reference as "Provider Reso
 ## The published site
 
 The repo is published as a MkDocs Material site at
-**[cloud.noblerworks.com](../README.md)**.
+**[data.noblerworks.com](https://data.noblerworks.com/)**.
 
 The guiding constraint: **the markdown tree is the source of truth and does not
 bend to the site generator.** Reading the repo on GitHub stays a first-class
@@ -305,7 +295,7 @@ Use relative paths:
 
 - Within a cert dir: `[fact-sheet](./fact-sheet.md)`
 - To another cert: `[SAA-C03](../../associate/solutions-architect-saa-c03/)`
-- To resources: `[Cloud Engineer Roadmap](../../../resources/certification-roadmap-cloud-engineer.md)`
+- To resources: `[Data Engineer Roadmap](../../../resources/certification-roadmap-data-engineer.md)`
 
 Link audits run with a code-block-aware scanner. See `CONTRIBUTING.md` for the doc-link policy.
 
@@ -363,10 +353,9 @@ Because a Mermaid diagram carries no alt text, give it a caption or a sentence o
 ### Where to add diagrams
 
 Highest-ROI pages for diagrams:
-- `learn/cloud-from-scratch.md`, `learn/ai-from-scratch.md` (foundational paths)
-- `learn/concepts/` AI pages: transformer-architecture, RAG, agents
+- `learn/data-from-scratch.md` (the foundational path)
+- `learn/concepts/` data pages: warehouses vs lakes vs lakehouses, pipelines and orchestration, batch vs streaming
 - `resources/architecture-patterns/` (every pattern benefits from a diagram)
-- `resources/networking-deep-dives/` (network topologies)
 
 Lower-ROI: cert fact-sheets, practice plans, study strategies. Don't force diagrams onto pages that read fine without them.
 
@@ -424,13 +413,7 @@ The README and STUDY-HUB call these out as "study tracks" separately from certif
 
 ## Counts and consistency
 
-The README, STUDY-HUB, and CLAUDE.md all claim specific counts:
-
-- 148 certifications
-- 3 study tracks
-- 27 providers
-
-When you add or remove a cert, update **all three** docs to keep counts consistent. The provider table in STUDY-HUB is the canonical source - everything else should match it.
+Counts are generated, not typed. `docs/certs.json` (from `build-certs-index.py`) is the source for cert and provider totals; the provider tables in README and STUDY-HUB are generated from it by `build-provider-indexes.py`; every other README number is checked by `check-readme-counts.py`. When you add or remove a cert, rerun the generators and `check-readme-counts.py --fix` - never hand-edit a count.
 
 For verification:
 

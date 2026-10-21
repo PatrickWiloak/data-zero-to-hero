@@ -121,7 +121,10 @@ def gather() -> dict[str, int]:
 
 
 # Each claim is (label, regex with ONE capturing group for the number, key).
-# The regex must match the README exactly once.
+# The regex must match the README exactly once. Data Zero to Hero (split
+# 2026-10-21) has no CLI cheat sheets, compliance guides or study tracks, so
+# those claims went with the README lines that made them; re-add both together
+# if that content returns.
 CLAIMS: list[tuple[str, str, str]] = [
     ("certifications badge", r"badge/Certifications-(\d+)-blue", "certifications"),
     ("providers badge", r"badge/Providers-(\d+)-orange", "providers"),
@@ -131,33 +134,28 @@ CLAIMS: list[tuple[str, str, str]] = [
     ("topic indexes", r"\*\*\[(\d+) cross-pillar topic indexes\]", "topic_indexes"),
     ("cert study guides", r"\*\*(\d+) certification study guides\*\*", "certifications"),
     ("service comparisons", r"\*\*(\d+) cross-cloud service comparisons\*\*", "service_comparisons"),
-    ("CLI cheat sheets", r"\*\*(\d+) CLI cheat sheets\*\*", "cli_cheat_sheets"),
     ("architecture patterns", r"\*\*(\d+) architecture patterns\*\*", "architecture_patterns"),
-    ("hands-on projects", r"\*\*(\d+) hands-on projects\*\*", "hands_on_projects"),
-    ("certification roadmaps", r"\*\*(\d+) certification roadmaps\*\*", "roadmaps"),
-    ("interview prep guides", r"\*\*(\d+) interview prep guides\*\*", "interview_prep"),
+    ("hands-on projects", r"\*\*(\d+) hands-on projects?\*\*", "hands_on_projects"),
+    ("certification roadmaps", r"\*\*(\d+) certification roadmaps?\*\*", "roadmaps"),
+    ("interview prep guides", r"\*\*(\d+) interview prep guides?\*\*", "interview_prep"),
     # The "Repository Statistics" block. Unchecked until 2026-08-14, by which
     # point it claimed 37 concept pages against 46 and 8 topic indexes against
     # 13 - the same drift the rest of this script exists to stop, in the one
     # section of the README that is nothing but counts.
     ("stats certifications", r"\*\*Certifications:\*\* (\d+)", "certifications"),
-    ("stats study tracks", r"\*\*Certifications:\*\* \d+ \(plus (\d+) self-directed", "study_tracks"),
     ("stats providers", r"\*\*Providers:\*\* (\d+)", "providers"),
     ("stats concept pages", r"\*\*Concept pages:\*\* (\d+)", "concept_pages"),
     ("stats service comparisons", r"\*\*Service comparisons:\*\* (\d+)", "service_comparisons"),
-    ("stats CLI cheat sheets", r"\*\*CLI cheat sheets:\*\* (\d+)", "cli_cheat_sheets"),
     ("stats architecture patterns", r"\*\*Architecture patterns:\*\* (\d+)", "architecture_patterns"),
     ("stats hands-on projects", r"\*\*Hands-on projects:\*\* (\d+)", "hands_on_projects"),
     ("stats topic indexes", r"\*\*Topic indexes:\*\* (\d+)", "topic_indexes"),
     ("stats career roadmaps", r"\*\*Career roadmaps:\*\* (\d+)", "roadmaps"),
     ("stats interview prep", r"\*\*Interview prep guides:\*\* (\d+)", "interview_prep"),
-    ("stats compliance guides", r"\*\*Compliance guides:\*\* (\d+)", "compliance_guides"),
     ("stats migration guides", r"\*\*Migration guides:\*\* (\d+)", "migration_guides"),
     # The repository-structure code block restates three of them again.
     ("tree concept pages", r"# (\d+) bite-size concept pages", "concept_pages"),
     ("tree certifications", r"# (\d+) certs across \d+ providers", "certifications"),
     ("tree providers", r"# \d+ certs across (\d+) providers", "providers"),
-    ("tree study tracks", r"# \d+ certs across \d+ providers, plus (\d+) study tracks", "study_tracks"),
 ]
 
 # The same treatment for learn/README.md, which advertises its own count of

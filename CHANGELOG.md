@@ -1,10 +1,23 @@
 # Changelog
 
-All notable changes to the cloud certification study guides repository.
+All notable changes to Data Zero to Hero. Entries before 2026-10-21 come from the original combined cloud, data, AI and security repo and describe content that now partly lives on the sibling sites.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project uses calendar-based dating.
 
 ---
+
+## [2026-10-21] - Data Zero to Hero becomes its own site
+
+### Changed
+
+- The combined repo was split by subject into four sibling sites: [Cloud](https://cloud.noblerworks.com/), Data (this repo, published at [data.noblerworks.com](https://data.noblerworks.com/)), [Security](https://security.noblerworks.com/) and [AI](https://ai.noblerworks.com/). This repo keeps the data certifications, data concept pages, data architecture patterns and data reference material; links to the other subjects now point at the sibling site.
+- README, Study Hub, landing page, CONTRIBUTING, CLAUDE.md and docs rewritten for the data scope, with a "Zero to Hero family" table and a "More Zero to Hero" section on the home page.
+- Site accent switched from green to cyan (`#0891b2`; `#0e7490` for text and primary buttons on white, 5.4:1 contrast). New social card. New IndexNow key for the new host, and `notify-indexnow.py` now reads the site URL and host from `mkdocs.yml` (the host had still named the old github.io domain).
+- Provider tables: AWS, Azure, GCP and Databricks highlights now list only the data exams this repo carries, and the "study tracks" and "outline stage" legend lines appear only when the repo has some.
+
+### Added
+
+- [Data from Scratch](./learn/data-from-scratch.md): an eight-phase plain-English path to data engineer, analytics engineer or DBA.
 
 ## [2026-10-16] (2) - Seven more exams flagged from a vendor check of all providers
 
@@ -102,7 +115,7 @@ GitHub's traffic view for the 14 days to 2026-09-28 showed Google sending 5 visi
 ### Fixed
 
 - **All 2,041 pages shared one meta description**, the site-wide `site_description`. Google treats a repeated description as boilerplate and writes its own snippet. `.github/scripts/site_hooks.py` now gives each page its own: the first prose paragraph, or for cert landing pages, fact sheets, study plans, scenarios and strategy pages a summary built from `docs/certs.json` (those open with fact lists, and they are what people search for by exam code). Result: 2,041 distinct descriptions.
-- **Titles ended in the 45-character site name**, so "AWS Certified Solutions Architect - Associate (SAA-C03) - Cloud, Data, AI, and Security - Zero to Hero" was cut off in results. Titles are now the page's H1, with the exam code appended inside a cert directory ("Core Data Concepts - DP-900") and a short "| Zero to Hero" suffix only when it fits. Cert landing pages read "... Study Guide".
+- **Titles ended in the 45-character site name**, so "AWS Certified Solutions Architect - Associate (SAA-C03) - <the full site name>" was cut off in results. Titles are now the page's H1, with the exam code appended inside a cert directory ("Core Data Concepts - DP-900") and a short "| Zero to Hero" suffix only when it fits. Cert landing pages read "... Study Guide".
 - **No search engine was ever told the site existed.** Deploys now send the changed page URLs to IndexNow (`notify-indexnow.py`). Google reads the sitemap instead; its Search Console property is a manual step, listed in TODO.md, and `mkdocs.yml` has an `extra.google_site_verification` slot for the token.
 
 ### Added

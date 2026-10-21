@@ -35,12 +35,26 @@ import re
 import subprocess
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-SITE = "https://cloud.noblerworks.com/"
-HOST = "patrickwiloak.github.io"
+
+
+def _site_url() -> str:
+    """The published site's base URL, read from mkdocs.yml `site_url` so a domain
+    move is one edit, not two. Before the 2026-10-21 split this was hard-coded and
+    HOST still named the old github.io host, which IndexNow rejects because it does
+    not match the URLs submitted."""
+    m = re.search(r"^site_url:\s*(\S+)", (REPO / "mkdocs.yml").read_text(encoding="utf-8"), re.MULTILINE)
+    if not m:
+        sys.exit("notify-indexnow: no site_url in mkdocs.yml")
+    return m.group(1).rstrip("/") + "/"
+
+
+SITE = _site_url()
+HOST = urllib.parse.urlparse(SITE).netloc
 KEY = (REPO / ".github" / "site" / "indexnow-key.txt").read_text(encoding="utf-8").strip()
 ENDPOINT = "https://api.indexnow.org/indexnow"
 

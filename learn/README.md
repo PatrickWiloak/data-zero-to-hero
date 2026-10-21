@@ -1,6 +1,6 @@
-# 🎓 Learn Cloud + AI - Without Chasing a Certification
+# 🎓 Learn Data - Without Chasing a Certification
 
-> **Plain-English explanations of cloud computing and AI/ML for people who want to understand the technology, not just pass an exam.**
+> **Plain-English explanations of data engineering, analytics and databases for people who want to understand the work, not just pass an exam.**
 >
 > Built and maintained by [Patrick Wiloak](https://patricklukewilson.com) - Ex-AWS Solutions Architect, 19x multi cloud certified, 64 certifications and accreditations, 10 years in tech. If certs aren't your goal, start here.
 >
@@ -10,70 +10,63 @@
 
 ## Who this is for
 
-You want to understand cloud and AI, but:
+You want to understand data work, but:
 
 - You're not preparing for an exam (or not yet)
 - You want context and intuition, not 200-question fact dumps
-- You'd rather learn the **why** before drilling into vendor-specific details
-- You're a developer, founder, PM, analyst, or curious technologist
+- You'd rather learn the **why** before drilling into one vendor's tools
+- You're an analyst, developer, founder, PM, or career changer eyeing a data role
 
-If you **do** want certifications, head back to the **[Study Hub](../STUDY-HUB.md)** - 148 certs across 27 providers, fully indexed.
+If you **do** want certifications, head to the **[Study Hub](../STUDY-HUB.md)** - every data cert on this site, indexed by provider.
 
 ---
 
 ## What's in this hub
 
-### 🌅 Brand new to all of this?
-- **[Day One](https://cloud.noblerworks.com/learn/day-one/)** - terminal, git, HTTP, servers. The pages assume nothing. If you've never opened a terminal, start here.
+### 🛤️ The path
+- **[Data from Scratch](./data-from-scratch.md)** - eight phases from "what is a table?" to data engineer, analytics engineer or DBA. Each phase lists what to read, what to build, and what you can do once it is done.
 
 ### 💡 Bite-size concept pages
-- **[Concepts](./concepts/)** - 10 topic pages, 5-10 min each. Cloud primitives (VPC, K8s, serverless), DevOps (CI/CD, Terraform), networking (DNS, TLS), and AI (LLMs, RAG, agents, transformers, embeddings, prompt engineering, evals).
-
-### 🛤️ Structured learning paths
-- **[Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/)** - 8-phase path from "what is cloud?" to designing real systems
-- **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** - LLMs, RAG, agents, and production AI apps
+- **[Concepts](./concepts/)** - 10 topic pages, 5-10 min each. SQL vs NoSQL, ETL vs ELT, batch vs streaming, queues vs streams, warehouses vs lakes vs lakehouses, modeling for analytics, file formats and partitioning, pipelines and orchestration, quality and lineage, eventual consistency.
 
 ### 📖 Reference
-- **[Glossary](./glossary.md)** - 200+ cloud, AI, DevOps, networking, and security terms in plain English
+- **[Glossary](./glossary.md)** - technical terms in plain English
 - **[YouTube curation](./youtube.md)** - filtered videos worth your time
 
 ---
 
 ## How to use this
 
-There's no "right order." Pick what fits:
+There's no single right order. Pick what fits:
 
 | If you want to... | Start here |
 |------------------|------------|
-| Start from absolute zero | [Day One](https://cloud.noblerworks.com/learn/day-one/) |
+| Go from zero to a data job | [Data from Scratch](./data-from-scratch.md) |
+| Understand one concept (ETL, lakehouse, streaming, ...) | [Concepts](./concepts/) |
 | Look up a term you keep seeing | [Glossary](./glossary.md) |
-| Understand one concept (RAG, VPC, agents, ...) | [Concepts](./concepts/) |
-| Build a foundation in cloud | [Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/) |
-| Build a foundation in AI/LLMs | [AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) |
-| Compare AWS vs Azure vs GCP | [Service comparisons](../resources/) |
-| See real architectures | [Architecture patterns](../resources/architecture-patterns/) |
-| Try hands-on labs | [Hands-on projects](../resources/hands-on-projects/) |
+| See how real data platforms are laid out | [Architecture patterns](../resources/architecture-patterns/) |
+| Build a pipeline end to end | [Build a data pipeline](../resources/hands-on-projects/build-data-pipeline.md) |
+| Compare database services across clouds | [Database comparison](../resources/service-comparison-databases.md) |
+
+---
+
+## Before and after this hub
+
+- **Never used a terminal?** Start with [Day One](https://cloud.noblerworks.com/learn/day-one/) on Cloud Zero to Hero - terminal, git, HTTP and servers, assuming nothing.
+- **Need cloud basics for phase 6?** [Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/) covers compute, storage, networking and identity.
+- **Ready for machine learning?** [AI Zero to Hero](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) picks up where data engineering hands off.
 
 ---
 
 ## Why this exists
 
-Most cloud and AI content is either:
+Most data content is either:
 
 1. **Cert-shaped** - exam objectives, fact sheets, practice questions (great if you have an exam date, useless if you just want to understand)
-2. **Vendor marketing** - "transform your business with the cloud!" (no actual technical content)
-3. **Deeply specialized** - PhD-level papers, engineering postmortems (skip the fundamentals you'd need to follow them)
+2. **Vendor marketing** - "unlock the power of your data!" (no actual technical content)
+3. **Tool tutorials** - click-by-click in one product, with no explanation of why the design looks the way it does
 
 This hub is the missing middle: technical, accurate, plain-English, no exam scaffolding.
-
----
-
-## Companion resources
-
-- **[Main Study Hub](../STUDY-HUB.md)** - if you decide to certify
-- **[Architecture Patterns](../resources/architecture-patterns/)** - 17 real-world patterns
-- **[CLI Cheat Sheets](../resources/)** - AWS, Azure, GCP, kubectl, Terraform, Docker, Helm, GitHub CLI
-- **[Service Comparisons](../resources/)** - cross-cloud equivalents
 
 ---
 

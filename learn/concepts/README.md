@@ -20,7 +20,7 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 
 **Brand new to all of this?** Start with **[Day One](https://cloud.noblerworks.com/learn/day-one/)** - terminal, git, HTTP, and servers - then come back here once that vocabulary feels familiar.
 
-**Want a curated path through these?** Try **[Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/)** or **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)**, which order the concepts into 8-phase paths.
+**Want a curated path through these?** Try **[Data from Scratch](../data-from-scratch.md)**, which orders the data concepts into an eight-phase path to a data role. For cloud and AI, see [Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/) and [AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/).
 
 **Want them grouped by subject across the whole repo?** See the **[topic indexes](../../topics/)**.
 

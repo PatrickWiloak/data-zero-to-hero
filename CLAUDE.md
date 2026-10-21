@@ -1,24 +1,23 @@
-# Cloud + AI Learning Resource - Project Instructions
+# Data Zero to Hero - Project Instructions
 
 ## Overview
-A learning resource for cloud and AI - concepts, hands-on builds, deep references, and certification prep. Covers certifications from providers including AWS, Azure, GCP, Kubernetes/CNCF, NVIDIA, Anthropic, HashiCorp, Databricks, Snowflake, GitHub, Red Hat, Cisco, Salesforce, Confluent/Kafka, MongoDB, FinOps, CompTIA, ISC2, ISACA, Cloud Security Alliance, Offensive Security, Palo Alto Networks, Linux Foundation, Oracle, IBM, ServiceNow and VMware, plus self-directed study tracks (Anthropic prompt engineering, plus Azure and GCP GenAI). Cert, provider and track counts live in `docs/certs.json` (`totals`), not here - don't type them into this file. Certifications are one pillar; the repo also serves non-cert learners.
+A free learning site for data engineering, analytics engineering and database administration - plain-English concepts, the Data from Scratch path, hands-on builds, architecture patterns, and certification prep for AWS, Azure, GCP, Databricks, Snowflake, Confluent (Kafka) and MongoDB data exams. Cert and provider counts live in `docs/certs.json` (`totals`), not here - don't type them into this file. Certifications are one pillar; the site also serves non-cert learners.
+
+One of four sibling sites (the Zero to Hero family, all by Nobler Works): [Cloud](https://cloud.noblerworks.com/) (`~/coding/cloud-zero-to-hero`), **Data** (this repo), [Security](https://security.noblerworks.com/) (`~/coding/security-zero-to-hero`), [AI](https://ai.noblerworks.com/) (`~/coding/ai-zero-to-hero`). Out-of-subject content lives on the sibling and is linked by absolute URL, never copied back. History: split from cloud-data-ai-security-zero-to-hero on 2026-10-21.
 
 ## Structure
 ```
-cloud-data-ai-security-zero-to-hero/
+data-zero-to-hero/
 ├── exams/              # Cert-specific study guides (the certify pillar)
 ├── learn/              # Plain-English learning content (the learn pillar)
-│   ├── concepts/       # Bite-size topic pages (5-10 min): cloud + AI primitives
-│   ├── day-one/        # Strict beginner on-ramp: terminal, git, HTTP, servers
-│   ├── ai-from-scratch.md
-│   ├── cloud-from-scratch.md
+│   ├── concepts/       # Bite-size topic pages (5-10 min): data primitives
+│   ├── data-from-scratch.md  # The zero-to-data-role path; linked from README, STUDY-HUB, home
 │   ├── glossary.md
 │   └── youtube.md
 ├── resources/          # Cross-cert reference (build + reference pillars)
-├── topics/             # Cross-pillar topic indexes (LLMs, IAM, networking, K8s, ...)
-├── assets/diagrams/    # PNG diagrams (draw.io exports), organized by topic
-├── docs/               # Repo-level docs (ARCHITECTURE.md, certs.json, freshness.md, tag-taxonomy.md, improvement-roadmap.md)
-├── .github/site/       # Site chrome: extra.css (staged to assets/site/) + home.md (the site's landing page)
+├── topics/             # Cross-pillar topic indexes (databases, data engineering)
+├── docs/               # Repo-level docs (ARCHITECTURE.md, certs.json, freshness.md, tag-taxonomy.md)
+├── .github/site/       # Site chrome: extra.css, home.md (landing page), indexnow-key.txt
 ├── mkdocs.yml          # Site config; nav is generated, not written here
 ├── README.md           # Top-level overview
 ├── STUDY-HUB.md        # Navigation hub
@@ -26,15 +25,16 @@ cloud-data-ai-security-zero-to-hero/
 ```
 
 ## Purpose / Usage
-- Personal study notes and exam prep materials (cert pillar)
-- Plain-English learning content for non-cert students (learn pillar)
-- Reference documentation for architecture, comparison, troubleshooting (build + reference pillars)
+- Study notes and exam prep for data certifications (cert pillar)
+- Plain-English data learning for non-cert students (learn pillar)
+- Reference: data architecture patterns, cross-cloud database and messaging comparisons, roadmaps, migration and interview guides (build + reference pillars)
 - Markdown-based knowledge base; `STUDY-HUB.md` is the navigation hub.
-- **Also published as a website**: <https://cloud.noblerworks.com/>, built by `.github/workflows/docs-site.yml` on push to `main`. The site is generated from the markdown as-is - **never restructure content or add frontmatter to satisfy the site build.** Site-only fixes go in `.github/scripts/build-site.py`, which transforms a staged copy in `.site-src/` and never touches the repo's markdown. Theme colour lives in `.github/site/extra.css` (near-black plus the green accent, ported from gitGood.dev so the Nobler Works sites share a language; `mkdocs.yml` sets `primary: custom` so Material's palettes are bypassed).
+- **Also published as a website**: <https://data.noblerworks.com/>, built by `.github/workflows/docs-site.yml` on push to `main`. The site is generated from the markdown as-is - **never restructure content or add frontmatter to satisfy the site build.** Site-only fixes go in `.github/scripts/build-site.py`, which transforms a staged copy in `.site-src/` and never touches the repo's markdown. Theme colour lives in `.github/site/extra.css` (near-black plus the **cyan** accent - `#0891b2`, `#0e7490` for text on white - each family site has its own accent; `mkdocs.yml` sets `primary: custom` so Material's palettes are bypassed).
+- **Family bar:** the top announce block in `.github/site-overrides/main.html` and its CSS at the end of `extra.css` are identical across all four sites - edit all four repos together or not at all.
 - **The site's home page is `.github/site/home.md`, not `README.md`.** A repo front page (banner, badges, repo structure, "star this repo") and a website landing page want different things, so the build renders `home.md` over the staged `README.md`. Editing the README does not change the site's front door - except for the "What's new" bullets, which are extracted from it. Every number on that page is a `{{token}}` filled from `certs.json` and `check-readme-counts.py`; never type a figure into it. See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md#the-home-page-is-not-the-readme).
+- **Site URL lives in `mkdocs.yml` `site_url` only.** `notify-indexnow.py` and the robots.txt step derive from it. `.github/site/indexnow-key.txt` is this site's own IndexNow key - never copy a sibling's.
 - Organized by purpose (learn / certify / reference) and within each, by provider.
 - Each cert dir has: `README.md`, `fact-sheet.md`, `notes/`, `practice-plan.md`, `scenarios.md`, `strategy.md`.
-- Resources include: architecture patterns, service comparisons, CLI cheat sheets, roadmaps, compliance guides, migration guides, interview prep, troubleshooting guides, hands-on projects.
 
 ## House style / conventions
 
@@ -70,7 +70,7 @@ Backfill is opportunistic. Don't add frontmatter to thousands of files in one PR
 - See [docs/freshness.md](./docs/freshness.md) for the per-cert verification ledger.
 
 ### Counts are checked, not remembered
-Every number advertised in `README.md` and `STUDY-HUB.md` is verified by CI. Cert and provider counts come from `docs/certs.json` via `build-certs-index.py --check`. The per-provider tables in both files are **generated** from that index by `build-provider-indexes.py`, between `<!-- BEGIN GENERATED: ... -->` markers - don't hand-edit inside a marked block. Everything else (concept pages, topic indexes, comparisons, cheat sheets, projects, word count, doc-link floor, the Repository Statistics block) is verified by `check-readme-counts.py --check`.
+Every number advertised in `README.md` and `STUDY-HUB.md` is verified by CI. Cert and provider counts come from `docs/certs.json` via `build-certs-index.py --check`. The per-provider tables in both files are **generated** from that index by `build-provider-indexes.py`, between `<!-- BEGIN GENERATED: ... -->` markers - don't hand-edit inside a marked block. Everything else (concept pages, topic indexes, comparisons, patterns, projects, word count, doc-link floor, the Repository Statistics block) is verified by `check-readme-counts.py --check`.
 
 **When you add or remove content, run `python3 .github/scripts/check-readme-counts.py --fix` in the same change.** Hand-kept counts drift, and a dated snapshot restated elsewhere reads as a current fact. If you add a new counted claim to the README, add a matching entry to `CLAIMS` in that script - an unchecked number goes stale.
 

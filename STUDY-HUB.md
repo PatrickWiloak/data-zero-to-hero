@@ -1,19 +1,14 @@
-# 📚 Study Hub - Cloud + AI Learning Hub
+# 📚 Study Hub - Data Zero to Hero
 
-> **Your navigation hub for the whole repo: 148 certifications across 27 providers, plus the [Learn](./learn/) pillar for non-cert students - bite-size concepts, beginner on-ramp, and structured cloud + AI paths.**
+> **The navigation hub for every data certification on this site: data engineering, analytics, and database administration across AWS, Azure, GCP, Databricks, Snowflake, Confluent (Kafka) and MongoDB.**
+>
+> Not chasing a cert? Start with **[Data from Scratch](./learn/data-from-scratch.md)**, the plain-English path from zero to a data role.
 
 <!-- markdown="1" lets the documentation site render the markdown inside this
      centered block. GitHub ignores the attribute, so rendering there is unchanged. -->
 <div align="center" markdown="1">
 
-![Total Certifications](https://img.shields.io/badge/Certifications-148-blue.svg)
-![Documentation Links](https://img.shields.io/badge/Docs%20Links-12000+-green.svg)
-![Providers](https://img.shields.io/badge/Providers-27-orange.svg)
-![Career Roadmaps](https://img.shields.io/badge/Career%20Roadmaps-11-purple.svg)
-
-**Welcome. Whether you're new to all this or chasing your fifth cert, this is the entry point.**
-
-**[Browse it as a searchable site](README.md)** - full-text search across every page, which is faster than this index once you know what you are looking for.
+**[Browse it as a searchable site](https://data.noblerworks.com/)** - full-text search across every page, which is faster than this index once you know what you are looking for.
 
 </div>
 
@@ -26,7 +21,6 @@
 - [Decision Tree: Find Your Cert](#-decision-tree-find-your-cert)
 - [Study Tracks by Career Path](#-study-tracks-by-career-path)
 - [Certifications by Provider](#-certifications-by-provider)
-- [Most Popular Certifications](#-most-popular-certifications)
 - [Study Timeline Estimates](#-study-timeline-estimates)
 - [Resource Library](#-resource-library)
 - [Cost Planning](#-cost-planning)
@@ -37,36 +31,29 @@
 
 | I Want To... | Go To... |
 |--------------|----------|
-| 🌅 Start from absolute zero (terminal, git, HTTP) | [Day One](https://cloud.noblerworks.com/learn/day-one/) |
-| 💡 Look up a concept (RAG, MCP, agents, VPC, K8s) | [Concepts](./learn/concepts/) |
+| 🛤️ Go from zero to a data job | [Data from Scratch](./learn/data-from-scratch.md) |
+| 💡 Understand one data concept | [Concepts](./learn/concepts/) |
 | 🗂️ Browse by topic across pillars | [Topic indexes](./topics/) |
-| 🎓 Learn cloud without an exam | [Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/) |
-| 🤖 Learn AI/LLMs without an exam | [AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) |
-| 🆕 Start my cloud cert journey | [Beginner Fundamentals](#beginner-fundamentals) |
 | 🎯 Choose the right cert | [Decision Tree](#-decision-tree-find-your-cert) |
 | 🚀 Follow a career path | [Study Tracks](#-study-tracks-by-career-path) |
-| 🔒 Specialize in security | [Security Track](#security-track) |
-| 🤖 Specialize in AI/ML | [AI/ML Track](#aiml-track) |
-| 💰 Specialize in FinOps | [FinOps Track](#finops-track) |
-| ☸️ Specialize in Kubernetes | [Kubernetes Track](#kubernetes-track) |
-| 📚 Browse all materials | [Resource Library](#-resource-library) |
-| 📅 Per-cert last-verified dates | [Freshness ledger](./docs/freshness.md) |
 | 🧪 Find the lab for my cert | [Labs by certification](./resources/hands-on-projects/labs-by-cert.md) |
-| 🃏 Flashcards for a cert | `flashcards.csv` in each cert dir (Anki-importable) |
+| 📝 Practice for an exam | [Practice question banks](./resources/practice-questions/) |
+| 📅 Per-cert last-verified dates | [Freshness ledger](./docs/freshness.md) |
+| 🃏 Flashcards for a cert | `flashcards.csv` in each cert dir that has one (Anki-importable) |
+| ☁️ Learn cloud basics first | [Cloud Zero to Hero](https://cloud.noblerworks.com/) |
+| 🤖 Move on to machine learning | [AI Zero to Hero](https://ai.noblerworks.com/) |
 
 ---
 
 ## 🎓 Not chasing a certification?
 
-The **[Learn](./learn/)** pillar is for everyone who wants to understand cloud and AI without an exam date:
+The **[Learn](./learn/)** pillar is for anyone who wants to understand data work without an exam date:
 
-- **[Day One](https://cloud.noblerworks.com/learn/day-one/)** - terminal, git, HTTP, servers. Strict beginner on-ramp.
-- **[Concepts](./learn/concepts/)** - 46 bite-size pages (5-10 min each) on cloud + AI primitives.
-- **[Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/)** + **[AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/)** - structured 8-phase paths.
-- **[Glossary](./learn/glossary.md)** - 200+ terms in plain English.
-- **[YouTube curation](./learn/youtube.md)** - filtered videos worth your time.
+- **[Data from Scratch](./learn/data-from-scratch.md)** - eight phases from "what is a table?" to data engineer, analytics engineer or DBA.
+- **[Concepts](./learn/concepts/)** - bite-size pages (5-10 min each) on SQL vs NoSQL, ETL vs ELT, batch vs streaming, lakehouses, modeling and more.
+- **[Topic indexes](./topics/)** - databases and data engineering, each tying concepts, comparisons, builds and certs together.
 
-Come back when you decide to certify. Many do, after using the Learn pillar to figure out which direction.
+Come back when you decide to certify. Many do, after the Learn pillar helps them pick a direction.
 
 ---
 
@@ -75,94 +62,53 @@ Come back when you decide to certify. Many do, after using the Learn pillar to f
 ```
 What's your starting point?
 │
-├─ New to cloud (0-6 months)
-│  └─> AWS Cloud Practitioner | Azure AZ-900 | GCP Cloud Digital Leader | OCI Foundations
+├─ New to data (0-6 months)
+│  └─> Azure DP-900 (data fundamentals) | SnowPro Core | MongoDB Associate Developer
 │
-├─ Have some cloud experience (6-18 months)
-│  ├─ Want infrastructure focus → AWS SAA-C03 | Azure AZ-104 | GCP Cloud Engineer
-│  ├─ Want development focus  → AWS DVA-C02 | Azure AZ-204
-│  ├─ Want operations focus   → AWS CloudOps SOA-C03 | Azure AZ-104 | RHCSA
-│  └─ Want data focus         → AWS DEA-C01 | Azure DP-203 | GCP Data Engineer | Databricks DE Assoc
+├─ Building pipelines and platforms (data engineer)
+│  ├─ On AWS        → AWS DEA-C01
+│  ├─ On Azure      → Azure DP-700 (Fabric Data Engineer)
+│  ├─ On GCP        → GCP Professional Data Engineer
+│  ├─ On Databricks → Databricks Data Engineer Associate → Professional
+│  ├─ On Snowflake  → SnowPro Core → SnowPro Advanced Data Engineer / Architect
+│  └─ Streaming     → Confluent Certified Developer / Administrator (Kafka)
 │
-├─ Senior practitioner (18+ months)
-│  ├─ Architecture        → AWS SAP-C02 | Azure AZ-305 | GCP PCA
-│  ├─ DevOps              → AWS DOP-C02 | Azure AZ-400 | GCP Cloud DevOps
-│  ├─ Security            → AWS SCS-C02 | Azure AZ-500 | GCP Cloud Security | CISSP | CCSP
-│  └─ Specialty           → AWS Adv Networking | AWS Quantum | Databricks ML Pro | OpenShift EX280
+├─ Models, dashboards and BI (analytics engineer / analyst)
+│  └─> Azure PL-300 (Power BI) → Azure DP-600 (Fabric Analytics Engineer) | SnowPro Core
 │
-└─ Cross-cutting specializations
-   ├─ Kubernetes          → KCNA → CKA → CKAD → CKS → ICA (Istio) | OpenShift EX280
-   ├─ Terraform/IaC       → Terraform Associate → Terraform Authoring & Operations Pro
-   ├─ AI/ML platform      → AWS MLA-C01 | Azure AI-102 | NVIDIA AI Infra Pro
-   ├─ Generative AI       → AWS AI Practitioner | Azure GenAI | NVIDIA GenAI/LLM | Anthropic Claude certs
-   ├─ Networking          → CCNA → CCNP | AWS Adv Networking | GCP Cloud Network Engineer
-   ├─ Linux / Platform    → LFCS | RHCSA → RHCE / OpenShift EX280
-   ├─ Security specialty  → CISSP | CCSP | CCSK v5 | Security+ | SC-200
-   └─ FinOps              → FinOps Practitioner → Engineer/Analyst → Professional
+└─ Running databases (DBA / database engineer)
+   ├─ Relational    → Azure DP-300 | GCP Professional Cloud Database Engineer
+   ├─ NoSQL         → MongoDB Associate DBA / Atlas Administrator | Azure DP-420 (Cosmos DB)
+   └─ Platform admin → SnowPro Advanced Administrator | Databricks Lakehouse Platform Administrator
 ```
+
+Retired exams (AWS DAS-C01 and DBS-C01, Azure DP-203) keep their guides for reference but are not recommended for new candidates.
 
 ---
 
 ## 🚀 Study Tracks by Career Path
 
-### Cloud Architect Track
-**Foundations → Associate → Professional**
-1. AWS Cloud Practitioner *or* Azure AZ-900 *or* GCP Cloud Digital Leader
-2. AWS Solutions Architect Associate (SAA-C03) *or* Azure AZ-104 *or* GCP Cloud Engineer
-3. AWS Solutions Architect Professional (SAP-C02) *or* Azure AZ-305 *or* GCP PCA
-4. Multi-cloud add-on: Terraform Associate, Kubernetes CKA
-
-### DevOps / SRE Track
-1. Foundational cloud cert in your primary cloud
-2. AWS DVA-C02 / Azure AZ-204 / GCP Cloud Developer
-3. AWS DOP-C02 *or* Azure AZ-400 *or* GCP Cloud DevOps Engineer
-4. Specialization: Kubernetes CKA → CKAD → CKS, Terraform Associate, Prometheus PCA
-
-### Security Track <a id="security-track"></a>
-1. CompTIA Security+ (SY0-701) *or* AWS Cloud Practitioner
-2. AWS SCS-C02 *or* Azure SC-200 *or* GCP Cloud Security
-3. CCSK v5 (vendor-neutral cloud security) → CCSP
-4. Capstone: CISSP (8 domains, gold standard)
-5. Add: Kubernetes CKS, HashiCorp Vault Associate, Boundary Associate
-
 ### Data Engineering Track
-1. Foundational cert in your primary cloud
-2. AWS Data Engineer Associate (DEA-C01) *or* Azure DP-203 *or* GCP Data Engineer
-3. Databricks Data Engineer Associate → Professional
-4. Snowflake SnowPro Core → Advanced Data Engineer
-5. Specialization: Confluent (Kafka), MongoDB DBA
+1. A foundation in your primary cloud (see [Cloud Zero to Hero](https://cloud.noblerworks.com/)) or Azure DP-900
+2. AWS Data Engineer Associate (DEA-C01) *or* Azure DP-700 *or* GCP Professional Data Engineer
+3. Databricks Data Engineer Associate → Professional, *or* SnowPro Core → Advanced Data Engineer
+4. Streaming specialization: Confluent Certified Developer (Kafka)
 
-### AI/ML Track <a id="aiml-track"></a>
-1. AWS AI Practitioner *or* Azure AI-900 *or* AWS Cloud Practitioner
-2. AWS MLA-C01 *or* Azure AI-102 *or* GCP ML Engineer
-3. Databricks ML Associate → Professional
-4. NVIDIA AI Infrastructure & Operations Associate → Professional
-5. Generative AI: NVIDIA GenAI/LLM, plus the Anthropic Claude certifications (Associate, Developer, Architect Foundations → Professional)
+Full roadmap: [Data engineer certification roadmap](./resources/certification-roadmap-data-engineer.md)
 
-### Kubernetes Track <a id="kubernetes-track"></a>
-1. KCNA (Kubernetes and Cloud Native Associate)
-2. CKA (Administrator)
-3. CKAD (Application Developer) *or* CKS (Security Specialist)
-4. OpenShift Administrator (EX280) for Red Hat-specific path
-5. Specialization: PCA (Prometheus), ICA (Istio), KCSA (Security Associate)
+### Analytics Engineering Track
+1. Azure DP-900 for the vocabulary
+2. Azure PL-300 (Power BI Data Analyst)
+3. Azure DP-600 (Fabric Analytics Engineer) *or* SnowPro Core
+4. Add: SnowPro Advanced Architect for warehouse design depth
 
-### FinOps Track <a id="finops-track"></a>
-1. FinOps Certified Practitioner
-2. FinOps Certified Engineer *or* FinOps Certified Analyst
-3. FinOps Certified Professional (advanced, FOCUS-aware)
-4. Cloud-specific: AWS Cost optimization, Azure Cost Management, GCP billing
+### Database Administration Track
+1. Azure DP-900 for the vocabulary
+2. Azure DP-300 *or* GCP Professional Cloud Database Engineer
+3. NoSQL: MongoDB Associate DBA → Atlas Administrator, *or* Azure DP-420 (Cosmos DB)
+4. Platform admin: SnowPro Advanced Administrator, Databricks Lakehouse Platform Administrator
 
-### Platform Engineering Track
-1. Linux Foundation LFCS *or* RHCSA *or* CompTIA Cloud+
-2. Cloud associate cert (your primary cloud)
-3. Kubernetes CKA + HashiCorp Terraform Associate (or OpenShift EX280 for Red Hat shops)
-4. GitHub Actions + Administration certifications
-5. Add: Boundary Associate, Vault Associate, Nomad Associate
-
-### Networking Track
-1. Cisco CCNA (200-301) - foundational networking and routing/switching
-2. AWS Advanced Networking Specialty *or* GCP Cloud Network Engineer (cloud-side)
-3. CCNP Enterprise (350-401 ENCOR) for advanced Cisco networking
+Full roadmap: [Database specialist certification roadmap](./resources/certification-roadmap-database-specialist.md)
 
 ---
 
@@ -172,39 +118,18 @@ What's your starting point?
 
 | Provider | Certs | Highlights | Browse |
 |----------|------:|------------|--------|
-| **AWS** | 3 | CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, GenAI Developer (AIP-C01), Quantum (QPC-C01); 4 retired specialties retained | [exams/aws/](./exams/aws/) |
-| **Azure** | 7 | AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-100/200/300/401, PL-100/200/300, MS-900 | [exams/azure/](./exams/azure/) |
-| **GCP** | 2 | Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI | [exams/gcp/](./exams/gcp/) |
-| **Databricks** | 3 | Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin | [exams/databricks/](./exams/databricks/) |
+| **AWS** | 3 | **Data Engineer Associate (DEA-C01)**; retired Data Analytics (DAS-C01) and Database (DBS-C01) specialties retained for reference | [exams/aws/](./exams/aws/) |
+| **Azure** | 7 | DP-900, DP-300, DP-420 (Cosmos DB), DP-600 and DP-700 (Fabric), PL-300 (Power BI); retired DP-203 retained | [exams/azure/](./exams/azure/) |
+| **GCP** | 2 | Professional Data Engineer, Professional Cloud Database Engineer | [exams/gcp/](./exams/gcp/) |
+| **Databricks** | 3 | Data Engineer (Associate + Professional), Lakehouse Platform Administrator | [exams/databricks/](./exams/databricks/) |
 | **Snowflake** | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) | [exams/snowflake/](./exams/snowflake/) |
 | **Confluent/Kafka** | 2 | Certified Developer, Certified Administrator | [exams/confluent/](./exams/confluent/) |
 | **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |
 | **CERTIFICATIONS TOTAL** | **24** | across 7 providers | |
 
-The Certs column counts real exams. This repo also carries 0 self-directed study tracks (the Anthropic prompt engineering track plus the Azure and GCP GenAI tracks), which are study guides spanning several exams or none, not certifications in their own right.
-
-◇ = outline stage: README, fact-sheet, and practice plan are written; topic notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting queue.
+The Certs column counts real exams, retired ones included.
 
 <!-- END GENERATED: provider-table -->
-
----
-
-## 🔥 Most Popular Certifications
-
-Top picks based on industry demand and salary impact:
-
-1. [AWS Solutions Architect Associate (SAA-C03)](https://cloud.noblerworks.com/exams/aws/associate/solutions-architect-saa-c03/) - the gateway AWS cert
-2. [Azure Administrator (AZ-104)](https://cloud.noblerworks.com/exams/azure/az-104/) - core Azure operations
-3. [GCP Associate Cloud Engineer](https://cloud.noblerworks.com/exams/gcp/cloud-engineer/) - foundational GCP
-4. [CKA (Certified Kubernetes Administrator)](https://cloud.noblerworks.com/exams/kubernetes/cka/) - Kubernetes ops
-5. [Terraform Associate](https://cloud.noblerworks.com/exams/hashicorp/terraform-associate/) - IaC standard
-6. [AWS Solutions Architect Professional (SAP-C02)](https://cloud.noblerworks.com/exams/aws/professional/solutions-architect-pro-sap-c02/) - senior architect
-7. [CISSP](https://security.noblerworks.com/exams/isc2/cissp/) - security gold standard
-8. [Azure DevOps Engineer (AZ-400)](https://cloud.noblerworks.com/exams/azure/az-400/) - Azure expert DevOps
-9. [AWS Data Engineer Associate (DEA-C01)](./exams/aws/associate/data-engineer-dea-c01/) - modern AWS data certification
-10. [FinOps Certified Practitioner](https://cloud.noblerworks.com/exams/finops/certified-practitioner/) - cloud cost discipline
-11. [Cisco CCNA (200-301)](https://cloud.noblerworks.com/exams/cisco/ccna-200-301/) - foundational networking
-12. [Red Hat RHCSA (EX200)](https://cloud.noblerworks.com/exams/redhat/rhcsa-ex200/) - Linux administration foundation
 
 ---
 
@@ -212,55 +137,31 @@ Top picks based on industry demand and salary impact:
 
 | Cert Tier | Typical Prep Time | Daily Study | Examples |
 |-----------|-------------------|-------------|----------|
-| **Fundamentals** | 2-4 weeks | 1-2 hr | CLF-C02, AZ-900, GCP Digital Leader, KCNA |
-| **Associate** | 6-10 weeks | 2-3 hr | SAA-C03, AZ-104, CKA, DEA-C01, RHCSA |
-| **Professional** | 10-16 weeks | 2-4 hr | SAP-C02, AZ-305, AZ-400, GCP PCA |
-| **Specialty** | 8-14 weeks | 2-4 hr | AWS Security, ML, Networking, Quantum |
-| **Security capstone** | 12-26 weeks | 2-4 hr | CISSP (16wk), CCSP (10wk) |
-
-### Beginner Fundamentals
-First-cert path with no cloud background:
-1. Pick one provider you'll use most often
-2. Take its foundational cert (4 weeks of evenings)
-3. Build a small free-tier project
-4. Decide on Associate-level direction
+| **Fundamentals** | 2-4 weeks | 1-2 hr | DP-900 |
+| **Associate** | 6-10 weeks | 2-3 hr | DEA-C01, DP-700, DP-300, PL-300, Databricks DE Associate |
+| **Professional** | 10-16 weeks | 2-4 hr | GCP Data Engineer, Databricks DE Professional, SnowPro Advanced |
+| **Specialty** | 8-14 weeks | 2-4 hr | GCP Cloud Database Engineer, DP-420 |
 
 ---
 
 ## 📚 Resource Library
 
-### Service Comparisons (cross-cloud)
-**Cloud:** [Compute](https://cloud.noblerworks.com/resources/service-comparison-compute/) · [Storage](https://cloud.noblerworks.com/resources/service-comparison-storage/) · [Databases](./resources/service-comparison-databases.md) · [Networking](https://cloud.noblerworks.com/resources/service-comparison-networking/) · [AI/ML](https://ai.noblerworks.com/tools/comparisons/cloud-ai-ml-services/) · [Containers/K8s](https://cloud.noblerworks.com/resources/service-comparison-containers-kubernetes/) · [Security](https://security.noblerworks.com/resources/service-comparison-security-tools/) · [DevOps/CI/CD](https://cloud.noblerworks.com/resources/service-comparison-devops-cicd/) · [Observability](https://cloud.noblerworks.com/resources/service-comparison-observability-monitoring/) · [Serverless](https://cloud.noblerworks.com/resources/service-comparison-serverless/) · [Identity/IAM](https://security.noblerworks.com/resources/service-comparison-identity-iam/) · [Messaging](./resources/service-comparison-messaging-queues.md)
-
-**AI:** [Vector databases](https://ai.noblerworks.com/tools/decisions/vector-database/) · [GenAI platforms](https://ai.noblerworks.com/tools/comparisons/genai-platforms/) · [Agent frameworks](https://ai.noblerworks.com/tools/comparisons/agent-frameworks/) · [LLM observability](https://ai.noblerworks.com/tools/comparisons/llm-observability/)
-
-### CLI Cheat Sheets
-[AWS](https://cloud.noblerworks.com/resources/cli-cheat-sheet-aws/) · [Azure](https://cloud.noblerworks.com/resources/cli-cheat-sheet-azure/) · [GCP](https://cloud.noblerworks.com/resources/cli-cheat-sheet-gcp/) · [Multi-cloud](https://cloud.noblerworks.com/resources/cli-cheat-sheet-comparison/) · [kubectl](https://cloud.noblerworks.com/resources/cli-cheat-sheet-kubectl/) · [Terraform](https://cloud.noblerworks.com/resources/cli-cheat-sheet-terraform/) · [Docker](https://cloud.noblerworks.com/resources/cli-cheat-sheet-docker/) · [Helm](https://cloud.noblerworks.com/resources/cli-cheat-sheet-helm/) · [GitHub CLI](https://cloud.noblerworks.com/resources/cli-cheat-sheet-github-cli/)
-
-### Architecture Patterns
-17 multi-cloud patterns covering 3-tier apps, serverless, microservices, event-driven, lakehouse, AI/ML pipelines, zero-trust, multi-region active-active, cell-based, chaos engineering, hybrid cloud and more. [Browse all](./resources/architecture-patterns/)
-
-### Career Roadmaps
-[Cloud Engineer](https://cloud.noblerworks.com/resources/certification-roadmap-cloud-engineer/) · [Solutions Architect](https://cloud.noblerworks.com/resources/certification-roadmap-solutions-architect/) · [DevOps/SRE](https://cloud.noblerworks.com/resources/certification-roadmap-devops-sre/) · [Data Engineer](./resources/certification-roadmap-data-engineer.md) · [Security Engineer](https://security.noblerworks.com/resources/certification-roadmap-security-engineer/) · [Multi-Cloud](https://cloud.noblerworks.com/resources/certification-roadmap-multi-cloud/) · [Kubernetes Specialist](https://cloud.noblerworks.com/resources/certification-roadmap-kubernetes-specialist/) · [Platform Engineer](https://cloud.noblerworks.com/resources/certification-roadmap-platform-engineer/) · [AI/ML Engineer](https://ai.noblerworks.com/careers/roles/ai-engineer-roadmap/) · [FinOps](https://cloud.noblerworks.com/resources/certification-roadmap-finops/) · [Database Specialist](./resources/certification-roadmap-database-specialist.md)
-
-### Deep-Dive Guides
-- **Compliance:** SOC 2, HIPAA, PCI DSS, GDPR, FedRAMP - [resources/compliance-guides/](https://security.noblerworks.com/resources/compliance-guides/)
-- **Migration:** On-prem to AWS/Azure/GCP, cloud-to-cloud, database migration - [resources/migration-guides/](./resources/migration-guides/)
-- **Well-Architected:** AWS, Azure, GCP frameworks - [resources/well-architected/](https://cloud.noblerworks.com/resources/well-architected/)
-- **Cost Optimization:** Per-cloud playbooks + FinOps principles - [resources/cost-optimization/](https://cloud.noblerworks.com/resources/cost-optimization/)
-- **Troubleshooting:** AWS, Azure, GCP, Kubernetes - [resources/troubleshooting/](https://cloud.noblerworks.com/resources/troubleshooting/)
-- **Networking Deep Dives:** Hybrid connectivity, multi-cloud, DNS, load balancing - [resources/networking-deep-dives/](https://cloud.noblerworks.com/resources/networking-deep-dives/)
-- **Hands-on Projects:** 15 guided builds. Cloud: 3-tier app, CI/CD, monitoring, zero trust, ML model, K8s cluster, Terraform infra, serverless, DR drill, data pipeline. AI: RAG pipeline, Claude agent with MCP, run Llama on a single GPU, eval harness, LoRA fine-tune. - [resources/hands-on-projects/](./resources/hands-on-projects/)
-- **Interview Prep:** SA, DevOps, Cloud Engineer, Data Engineer, Security, SRE - [resources/interview-prep/](./resources/interview-prep/)
+- **Service comparisons:** [Databases](./resources/service-comparison-databases.md) · [Messaging and queues](./resources/service-comparison-messaging-queues.md)
+- **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md)
+- **Career roadmaps:** [Data Engineer](./resources/certification-roadmap-data-engineer.md) · [Database Specialist](./resources/certification-roadmap-database-specialist.md)
+- **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md)
+- **Migration:** [Database migration](./resources/migration-guides/database-migration.md)
+- **Interview prep:** [Data engineer](./resources/interview-prep/data-engineer-interview.md)
+- **Persona playlist:** [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md)
 
 ### Practice & Strategy
-- [Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification (151 of 151)
+- [Practice Question Banks](./resources/practice-questions/) - scenario questions with explained answers, one bank per certification
 - [Practice Resources Guide](./resources/practice-resources.md)
-- [Free Tier Guides](https://cloud.noblerworks.com/resources/free-tier-guide/)
 - [Study Strategies](./resources/study-strategies.md)
 - [Exam Day Checklist](./resources/exam-day-checklist.md)
 - [Budget Study Plan](./resources/budget-study-plan.md)
 - [Community Resources](./resources/community-resources.md)
+- [Recommended Courses](./resources/recommended-courses.md)
 
 ---
 
@@ -268,36 +169,23 @@ First-cert path with no cloud background:
 
 | Item | Typical Cost |
 |------|-------------:|
-| **All study materials in this repo** | Free |
+| **All study materials on this site** | Free |
 | **Official documentation** | Free |
-| **Free tier sandbox accounts** | Free |
+| **Free tier and trial accounts** | Free |
 | **Video course (optional)** | $15-50 |
 | **Third-party practice tests (optional)** | $15-30 |
-| **Exam fee (per cert)** | $100-700 |
-| **CISSP/CCSP exam fee** | $749/$599 |
-| **Total per Associate cert** | $150-300 |
-| **Total per Professional cert** | $300-500 |
-| **Total per Security capstone** | $700-900 |
+| **Exam fee (per cert)** | Varies by vendor; see each cert's fact sheet |
 
-See the [budget study plan](./resources/budget-study-plan.md) for detailed cost-minimization strategies.
-
----
-
-## 🤝 Community
-
-- **Reddit:** r/AWSCertifications, r/AZURE, r/googlecloud, r/kubernetes, r/cybersecurity
-- **Discord:** Cloud certification study servers (links in [community-resources.md](./resources/community-resources.md))
-- **LinkedIn:** Search for "[Cert name] Study Group"
-- **GitHub:** Star this repo and watch for updates
+See the [budget study plan](./resources/budget-study-plan.md) for cost-minimization strategies.
 
 ---
 
 ## 📝 How to Use This Hub
 
-1. Start at [Decision Tree](#-decision-tree-find-your-cert) to identify your cert
+1. Start at the [Decision Tree](#-decision-tree-find-your-cert) to identify your cert
 2. Open that cert's directory: `exams/<provider>/<cert>/`
 3. Read in order: `README.md` → `fact-sheet.md` → `practice-plan.md` → `notes/` → `scenarios.md` → `strategy.md`
-4. Cross-reference with [Resource Library](#-resource-library) for cross-cloud knowledge
+4. Cross-reference with the [Resource Library](#-resource-library) and the [concept pages](./learn/concepts/)
 5. Take practice exams when consistently scoring 80%+ on practice questions
 6. Schedule the real exam when you hit 85%+ twice in a row
 
@@ -305,8 +193,8 @@ See the [budget study plan](./resources/budget-study-plan.md) for detailed cost-
 
 <div align="center" markdown="1">
 
-**Ready to start? [Browse the AWS catalog](./exams/aws/) · [Browse Azure](./exams/azure/) · [Browse GCP](./exams/gcp/) · [Browse Kubernetes](https://cloud.noblerworks.com/exams/kubernetes/)**
+**Ready to start? [Data from Scratch](./learn/data-from-scratch.md) · [Browse AWS](./exams/aws/) · [Browse Azure](./exams/azure/) · [Browse GCP](./exams/gcp/) · [Browse Databricks](./exams/databricks/) · [Browse Snowflake](./exams/snowflake/)**
 
-*Maintained by [Patrick Wiloak](https://patricklukewilson.com) - Star this repo if it helps you pass.*
+*Maintained by [Patrick Wiloak](https://patricklukewilson.com) - one of the four free [Zero to Hero](https://noblerworks.com/) sites by Nobler Works.*
 
 </div>

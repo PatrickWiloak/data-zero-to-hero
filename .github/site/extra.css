@@ -10,8 +10,8 @@
    value below is therefore the single source of truth for the site's colour.
 
    The system is ported from gitgood.dev (src/app/globals.css): pure #000000
-   page in dark mode, slate-on-white in light, and a single green accent
-   (#22c55e) carrying links, CTAs, hover borders, and glow shadows. Cards are
+   page in dark mode, slate-on-white in light, and a single accent - cyan on Data Zero to Hero, each sibling site has its own
+   (#0891b2 light, #06b6d4 dark) carrying links, CTAs, hover borders, and glow shadows. Cards are
    NOT raised surfaces - they sit on the same black as the page and separate
    with a 1px border; the signature hover is accent border + accent-tinted
    shadow + a 2px lift at 200ms. */
@@ -23,12 +23,12 @@
 
 /* ---- Light ---- */
 [data-md-color-scheme="default"] {
-  --nw-accent:            #16a34a;
-  --nw-accent-text:       #15803d;               /* darkened for contrast on white */
-  --nw-accent-dark:       #15803d;
-  --nw-accent-glow:       rgba(34, 197, 94, 0.3);
-  --nw-accent-glow-faint: rgba(34, 197, 94, 0.12);
-  --nw-accent-border:     rgba(22, 163, 74, 0.4);
+  --nw-accent:            #0891b2;
+  --nw-accent-text:       #0e7490;               /* darkened for contrast on white */
+  --nw-accent-dark:       #0e7490;
+  --nw-accent-glow:       rgba(6, 182, 212, 0.3);
+  --nw-accent-glow-faint: rgba(6, 182, 212, 0.12);
+  --nw-accent-border:     rgba(8, 145, 178, 0.4);
   --nw-border:            #e2e8f0;
   --nw-border-hover:      #cbd5e1;
   --nw-surface:           #f1f5f9;               /* inputs, kbd - never cards */
@@ -42,7 +42,7 @@
   --md-primary-bg-color--light:   rgba(255, 255, 255, 0.7);
 
   --md-accent-fg-color:           var(--nw-accent-dark);
-  --md-accent-fg-color--transparent: rgba(34, 197, 94, 0.1);
+  --md-accent-fg-color--transparent: rgba(6, 182, 212, 0.1);
   --md-accent-bg-color:           #ffffff;
   --md-accent-bg-color--light:    rgba(255, 255, 255, 0.7);
 
@@ -65,12 +65,12 @@
      is neutral black rather than its default blue-grey. */
   --md-hue: 0;
 
-  --nw-accent:            #22c55e;
-  --nw-accent-text:       #22c55e;
-  --nw-accent-dark:       #16a34a;
-  --nw-accent-glow:       rgba(34, 197, 94, 0.5);
-  --nw-accent-glow-faint: rgba(34, 197, 94, 0.2);
-  --nw-accent-border:     rgba(34, 197, 94, 0.4);
+  --nw-accent:            #06b6d4;
+  --nw-accent-text:       #06b6d4;
+  --nw-accent-dark:       #0891b2;
+  --nw-accent-glow:       rgba(6, 182, 212, 0.5);
+  --nw-accent-glow-faint: rgba(6, 182, 212, 0.2);
+  --nw-accent-border:     rgba(6, 182, 212, 0.4);
   --nw-border:            rgba(255, 255, 255, 0.1);
   --nw-border-hover:      rgba(255, 255, 255, 0.2);
   --nw-surface:           #111111;
@@ -83,8 +83,8 @@
   --md-primary-bg-color:          #ffffff;
   --md-primary-bg-color--light:   rgba(255, 255, 255, 0.7);
 
-  --md-accent-fg-color:           #4ade80;
-  --md-accent-fg-color--transparent: rgba(34, 197, 94, 0.1);
+  --md-accent-fg-color:           #22d3ee;
+  --md-accent-fg-color--transparent: rgba(6, 182, 212, 0.1);
   --md-accent-bg-color:           #000000;
   --md-accent-bg-color--light:    rgba(0, 0, 0, 0.7);
 
@@ -208,8 +208,11 @@
 
 /* Primary: accent fill, white text, accent glow shadow that deepens on
    hover. */
+/* The fill is cyan-700, not the accent itself: white text on #0891b2 is 3.7:1
+   and on #06b6d4 2.4:1, both under WCAG AA's 4.5:1. #0e7490 gives 5.4:1 and
+   #155e75 (hover) 7.3:1, in both schemes. */
 .md-typeset .md-button--primary {
-  background-color: var(--nw-accent);
+  background-color: #0e7490;
   box-shadow: 0 10px 15px -3px var(--nw-accent-glow-faint);
   color: #ffffff;
   font-weight: 700;
@@ -217,7 +220,7 @@
 
 .md-typeset .md-button--primary:hover,
 .md-typeset .md-button--primary:focus {
-  background-color: var(--nw-accent-dark);
+  background-color: #155e75;
   box-shadow: 0 10px 15px -3px var(--nw-accent-glow);
   color: #ffffff;
 }
@@ -280,7 +283,7 @@
    pymdownx.details styles fenced admonition-style details, but not these, so
    they render as an unstyled disclosure triangle. Give them the same treatment
    as a success admonition: obvious, but not shouting the answer. The accent
-   border-left now reads as the site's green. */
+   border-left now reads as the site's cyan. */
 .md-typeset details:not([class]) {
   border: none;
   border-left: 0.2rem solid var(--nw-accent);
@@ -640,3 +643,16 @@
     gap: 0 1.4rem;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Zero to Hero family bar (announce block in site-overrides/main.html) */
+/* Identical in cloud / data / security / ai zero-to-hero - edit all four. */
+/* ------------------------------------------------------------------ */
+.md-banner { background: #0a0a0a; color: #a3a3a3; border-bottom: 1px solid #262626; }
+.md-banner__inner { margin: 0 auto; padding: 0.35rem 0.8rem; font-size: 0.68rem; }
+.z2h-family { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 1.1rem; justify-content: center; }
+.z2h-family__brand { font-weight: 700; color: #fafafa; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.62rem; }
+.z2h-family a { color: #d4d4d4; text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; padding-bottom: 1px; }
+.z2h-family a:hover { color: #fff; border-bottom-color: var(--fam, #fff); }
+.z2h-family a[aria-current="page"] { color: var(--fam); border-bottom-color: var(--fam); }
+.z2h-family a.z2h-family__nw { font-weight: 400; color: #737373; }

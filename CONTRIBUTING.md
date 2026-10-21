@@ -1,17 +1,17 @@
 # Contributing
 
-Thanks for your interest in improving this repo. It's a markdown knowledge base for cloud and AI - concepts, hands-on builds, references, and certification prep. The goal is accurate, well-linked, exam-aligned material that respects readers' time. Plain-English, no fluff.
+Thanks for your interest in improving Data Zero to Hero. It's a markdown knowledge base for data engineering, analytics and databases - concepts, hands-on builds, references, and certification prep. Cloud, security and AI material belongs on the sibling sites ([cloud](https://github.com/PatrickWiloak/cloud-zero-to-hero), [security](https://github.com/PatrickWiloak/security-zero-to-hero), [AI](https://github.com/PatrickWiloak/ai-zero-to-hero)); link to them rather than adding it here. The goal is accurate, well-linked, exam-aligned material that respects readers' time. Plain-English, no fluff.
 
 ## What kinds of contributions are welcome
 
 - **Typo / grammar fixes** in any markdown file.
-- **Broken-link repairs** when AWS, Azure, GCP, or other vendors reorganize their docs.
+- **Broken-link repairs** when AWS, Azure, GCP, Databricks, Snowflake or other vendors reorganize their docs.
 - **Doc-link additions**: high-quality vendor documentation links that strengthen an existing section.
 - **Domain-weight or exam-detail updates** when a vendor publishes a refreshed exam blueprint.
-- **New cert scaffolds** for missing in-demand certifications (open an issue first to confirm scope and naming).
+- **New cert scaffolds** for missing in-demand data certifications (open an issue first to confirm scope and naming).
 - **Resource updates**: better practice questions, scenarios, or hands-on lab walkthroughs.
 - **Roadmap additions** for under-served career paths.
-- **`learn/` content**: new concept pages (`learn/concepts/<topic>.md`), day-one onramp expansions, glossary additions. Keep concept pages 5-10 minute reads, plain English, no exam framing.
+- **`learn/` content**: new data concept pages (`learn/concepts/<topic>.md`), improvements to `learn/data-from-scratch.md`, glossary additions. Keep concept pages 5-10 minute reads, plain English, no exam framing.
 - **Diagrams**: inline Mermaid in the page that needs it (the default), or a PNG under `assets/diagrams/<topic>/` when the diagram is too dense to read inline. See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md#visual-content-standards).
 
 ## What is out of scope
@@ -32,31 +32,21 @@ exams/<provider>/<cert-dir>/
     scenarios.md        # exam-style scenarios with explanations (optional but recommended)
     strategy.md         # exam day approach, time allocation (optional)
 learn/
-    concepts/           # bite-size topic pages (5-10 min reads), cloud + AI
-    day-one/            # strict beginner on-ramp (terminal, git, HTTP, servers)
-    ai-from-scratch.md  # 8-phase non-cert AI path
-    cloud-from-scratch.md  # 8-phase non-cert cloud path
-    glossary.md         # 200+ term reference
+    concepts/           # bite-size data topic pages (5-10 min reads)
+    data-from-scratch.md  # 8-phase non-cert path to a data role
+    glossary.md         # term reference
     youtube.md          # curated video resources
 resources/
-    architecture-patterns/      # multi-cloud architecture write-ups
+    architecture-patterns/      # data architecture write-ups (pipeline, lakehouse, data mesh)
     certification-roadmap-*.md  # career-focused learning paths
-    cli-cheat-sheet-*.md        # tool quick references
-    compliance-guides/          # SOC 2, HIPAA, PCI DSS, GDPR, FedRAMP
-    cost-optimization/          # per-cloud cost playbooks
-    decision-matrix-*.md        # score-driven product picks (vector DB, IaC, LLM serving)
     hands-on-projects/          # guided builds
     interview-prep/             # role-based interview prep
-    migration-guides/           # cloud migration playbooks
-    networking-deep-dives/      # hybrid, multi-cloud, DNS, load balancing
-    playlist-*.md               # persona reading sequences (AI engineer, SRE, etc.)
-    postmortem-*.md             # real-incident study guides mapped to cert domains
+    migration-guides/           # database migration playbooks
+    playlist-*.md               # persona reading sequences
     practice-questions/         # per-cert question banks
-    service-comparison-*.md     # cross-cloud service comparisons
-    troubleshooting/            # per-platform troubleshooting
-    well-architected/           # AWS, Azure, GCP frameworks
-topics/                 # cross-pillar topic indexes (one per major subject area)
-assets/diagrams/        # PNG diagrams (draw.io exports), organized by topic
+    service-comparison-*.md     # cross-cloud service comparisons (databases, messaging)
+topics/                 # cross-pillar topic indexes (databases, data engineering)
+assets/                 # brand images and any PNG diagrams
 README.md           # top-level overview and provider table
 STUDY-HUB.md        # navigation hub with decision tree and roadmaps
 CLAUDE.md           # project-level guidance for AI-assisted edits
@@ -79,10 +69,10 @@ Keep early files (`README.md`, `fact-sheet.md`) compact and accurate. Depth live
 
 The repo has a few specialized content shapes beyond the core cert dirs and concept pages. Each follows a stable template - if you author a new one, match the existing pattern.
 
-- **`resources/decision-matrix-*.md`** - score-driven product picks. Lead paragraph (when you'd reach for this matrix), criteria-by-product table, per-product strengths / limitations, default pick, alternatives by use case. Examples: `decision-matrix-vector-database.md`, `decision-matrix-iac-tool.md`, `decision-matrix-llm-serving.md`.
-- **`resources/postmortem-*.md`** - real-incident study guides. Lead paragraph (incident summary in one sentence), timeline, root cause, what would have caught it, mapped cert exam domains, lessons cross-linked to repo concepts. Examples: `postmortem-aws-s3-2017.md`, `postmortem-cloudflare-regex-2019.md`, `postmortem-gcp-networking-2019.md`.
-- **`resources/playlist-*.md`** - persona reading sequences. Frontmatter with `persona` + `time-budget`, ordered list of repo links with one-sentence justifications, "what you'll be able to do at the end" summary. Examples: `playlist-ai-engineer-30min.md`, `playlist-sre-1hour.md`.
-- **`topics/<topic>.md`** - cross-pillar topic index. Mermaid "topic at a glance" diagram, then sections linking Learn / Compare / Reference / Build / Certify pages relevant to that topic. Existing topics: ai-ml-systems, databases, finops, iam, kubernetes, llms-and-genai, networking, observability, security, serverless, sre-and-reliability.
+- **`resources/decision-matrix-*.md`** - score-driven product picks (none on this site yet; the shape is shared with the sibling sites). Lead paragraph (when you'd reach for this matrix), criteria-by-product table, per-product strengths / limitations, default pick, alternatives by use case.
+- **`resources/postmortem-*.md`** - real-incident study guides (none on this site yet). Lead paragraph (incident summary in one sentence), timeline, root cause, what would have caught it, mapped cert exam domains, lessons cross-linked to repo concepts.
+- **`resources/playlist-*.md`** - persona reading sequences. Frontmatter with `persona` + `time-budget`, ordered list of repo links with one-sentence justifications, "what you'll be able to do at the end" summary. Example: `playlist-data-engineer-1hour.md`.
+- **`topics/<topic>.md`** - cross-pillar topic index. Mermaid "topic at a glance" diagram, then sections linking Learn / Compare / Reference / Build / Certify pages relevant to that topic. Existing topics: databases, data-engineering.
 
 ## Documentation link format
 
@@ -101,7 +91,8 @@ For example:
 Other conventions:
 
 - Use markdown links, not bare URLs.
-- For internal repo links, use relative paths: `[fact-sheet](./fact-sheet.md)` or `[Solutions Architect Roadmap](../../resources/certification-roadmap-solutions-architect.md)`.
+- For internal repo links, use relative paths: `[fact-sheet](./fact-sheet.md)` or `[Data Engineer Roadmap](../../resources/certification-roadmap-data-engineer.md)`.
+- For a page on a sibling site, use its absolute URL (`https://cloud.noblerworks.com/...`, `https://security.noblerworks.com/...`, `https://ai.noblerworks.com/...`).
 - Don't link to URL-shorteners. Link to the canonical URL so readers can see where they're going.
 - When a vendor doc URL changes, fix all references in one PR (use `grep -rn "old-path"` to find them).
 
@@ -171,7 +162,7 @@ Several scripts live under `.github/scripts/`. The validators run in CI on every
 
 **Glossary autolink (one-shot maintenance scripts):**
 
-- `glossary-autolink.py` - parses `learn/glossary.md` for bolded terms and links the first occurrence in scoped pages. Caps at 5 links per file; skips code blocks, headings, and existing links. Currently scopes: `learn/concepts/`, `topics/`, `resources/hands-on-projects/`, `resources/architecture-patterns/`, `resources/networking-deep-dives/`, plus decision-matrix / postmortem / playlist files.
+- `glossary-autolink.py` - parses `learn/glossary.md` for bolded terms and links the first occurrence in scoped pages. Caps at 5 links per file; skips code blocks, headings, and existing links. Currently scopes: `learn/concepts/`, `topics/`, `resources/hands-on-projects/`, `resources/architecture-patterns/`, plus playlist files.
 - `glossary-add-anchors.py` - prepends `<a id="term-slug"></a>` to each bolded term in the glossary so links can target individual terms (not just sections). Idempotent. Run when the glossary gains new terms.
 - `glossary-upgrade-existing-links.py` - upgrades old section-level glossary links to per-term anchors when an anchor is available.
 
@@ -190,7 +181,7 @@ See [.github/AUTOMATION.md](./.github/AUTOMATION.md) for a one-page map of every
 
 ## Previewing the documentation site
 
-The repo is published at **[cloud.noblerworks.com](README.md)**. The site is generated from the markdown tree by `.github/scripts/build-site.py`, so there is no second copy of any page: write markdown as normal and the site picks it up.
+The repo is published at **[data.noblerworks.com](https://data.noblerworks.com/)**. The site is generated from the markdown tree by `.github/scripts/build-site.py`, so there is no second copy of any page: write markdown as normal and the site picks it up.
 
 ```bash
 python3 -m venv .venv-docs

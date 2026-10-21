@@ -55,13 +55,13 @@ STATUS_LABEL = {
 # A sample of what the provider covers, not an exhaustive list - the Certs column
 # carries the total, and both tables say so underneath.
 PROVIDER_HIGHLIGHTS = {
-    "aws": "CLF-C02, SAA-C03, SAP-C02, DOP-C02, MLA-C01, **DEA-C01**, SCS-C02, AI Practitioner, GenAI Developer (AIP-C01), Quantum (QPC-C01); 4 retired specialties retained",
-    "azure": "AZ-900/104/204/305/400/500/700, AI-102, DP-203/600/700, SC-100/200/300/401, PL-100/200/300, MS-900",
-    "gcp": "Cloud Engineer, Cloud Architect, Data Engineer, ML Engineer, DevOps, Security, GenAI",
+    "aws": "**Data Engineer Associate (DEA-C01)**; retired Data Analytics (DAS-C01) and Database (DBS-C01) specialties retained for reference",
+    "azure": "DP-900, DP-300, DP-420 (Cosmos DB), DP-600 and DP-700 (Fabric), PL-300 (Power BI); retired DP-203 retained",
+    "gcp": "Professional Data Engineer, Professional Cloud Database Engineer",
     "kubernetes": "KCNA, KCSA, CKA, CKAD, CKS, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA)",
     "nvidia": "AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD",
     "hashicorp": "Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad",
-    "databricks": "Data Engineer (A/P), ML (A/P), GenAI Engineer, Lakehouse Admin",
+    "databricks": "Data Engineer (Associate + Professional), Lakehouse Platform Administrator",
     "snowflake": "SnowPro Core + 3 Advanced (Architect, Data Eng, Admin)",
     "github": "Foundations, Actions, Administration, Advanced Security, Copilot",
     "redhat": "RHCSA (EX200), OpenShift Administrator (EX280)",
@@ -236,10 +236,15 @@ def build_readme_table(index):
             f"| {PROVIDER_EMOJI[provider]} [{entry['name']}](./{entry['path']}) "
             f"| {entry['count']} | {PROVIDER_HIGHLIGHTS[provider]} |"
         )
+    # Study tracks are named only when the repo has some; "plus 0 study tracks"
+    # reads as a claim about content the site does not carry.
+    tracks = (
+        f", plus {totals['study_tracks']} self-directed study tracks"
+        if totals["study_tracks"] else ""
+    )
     rows.append(
         f"| **Total** | **{totals['certifications']}** "
-        f"| across {totals['certification_providers']} providers, plus "
-        f"{totals['study_tracks']} self-directed study tracks |"
+        f"| across {totals['certification_providers']} providers{tracks} |"
     )
     return "\n".join(rows) + (
         "\n\nHighlights are a sample, not the full list - the Certs column is the "
@@ -277,15 +282,23 @@ def build_hub_table(index):
         f"| **CERTIFICATIONS TOTAL** | **{totals['certifications']}** "
         f"| across {totals['certification_providers']} providers | |"
     )
-    legend_text = (
-        f"\n\nThe Certs column counts real exams. This repo also carries "
-        f"{totals['study_tracks']} self-directed study tracks (the Anthropic prompt "
-        f"engineering track plus the Azure and GCP GenAI tracks), which are study guides "
-        f"spanning several exams or none, not certifications in their own right."
-        "\n\n◇ = outline stage: README, fact-sheet, and practice plan are written; topic "
-        "notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting "
-        "queue."
-    )
+    # Each legend line appears only when the table can show what it explains.
+    legend_text = ""
+    if totals["study_tracks"]:
+        legend_text += (
+            f"\n\nThe Certs column counts real exams. This repo also carries "
+            f"{totals['study_tracks']} self-directed study tracks, which are study guides "
+            f"spanning several exams or none, not certifications in their own right."
+        )
+    if any(c["status"] == "outline" for c in index["certs"]):
+        legend_text += (
+            "\n\n◇ = outline stage: README, fact-sheet, and practice plan are written; topic "
+            "notes are outlined but not yet drafted. See [TODO.md](./TODO.md) for the drafting "
+            "queue."
+        )
+    if not legend_text:
+        legend_text = "\n\nThe Certs column counts real exams, retired ones included."
+
     return "\n".join(rows) + legend_text
 
 

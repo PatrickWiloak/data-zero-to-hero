@@ -24,13 +24,13 @@
 
 <div class="home-hero" markdown>
 
-# Cloud, Data, AI, and Security - From Zero to Hero { .home-title }
+# Data Zero to Hero { .home-title }
 
-<p class="home-intro">Plain-English concepts, hands-on builds, deep references, and the most comprehensive certification library on GitHub - free, no signup, nothing gated.</p>
+<p class="home-intro">Data engineering, analytics and databases from absolute zero: plain-English concepts, hands-on builds, architecture patterns, and study guides for every major data certification - free, no signup, nothing gated.</p>
 
-<p class="home-sub">Never opened a terminal, or chasing your fifth cert - both start here. Press <kbd>/</kbd> to search all {{words}} words.</p>
+<p class="home-sub">Never written a SQL query, or chasing your next data cert - both start here. Press <kbd>/</kbd> to search all {{words}} words.</p>
 
-[Start from zero](https://cloud.noblerworks.com/learn/day-one/){ .md-button .md-button--primary }
+[Start from zero](learn/data-from-scratch.md){ .md-button .md-button--primary }
 [Browse {{certifications}} certifications](STUDY-HUB.md){ .md-button }
 [Look up a concept](learn/concepts/){ .md-button }
 
@@ -41,11 +41,19 @@
 - **{{words}}** words
 - **{{doc_links}}** vendor doc links
 - **{{concept_pages}}** concept pages
-- **{{hands_on_projects}}** hands-on builds
+- **{{architecture_patterns}}** architecture patterns
 
 </div>
 
 </div>
+
+<p class="home-kicker">The path</p>
+
+## Data from Scratch
+
+**[Data from Scratch](learn/data-from-scratch.md)** is the plain-English route from "what is a table?" to a data job. Eight phases - SQL, modeling for analytics, pipelines, streaming, quality and governance, data in the cloud, then a fork into **data engineer**, **analytics engineer** or **DBA**, and finally interview prep. Each phase says what you can do once it is done, and links the concept pages, labs and certs that go with it.
+
+[:octicons-arrow-right-24: Start the path](learn/data-from-scratch.md){ .md-button }
 
 <p class="home-kicker">The four pillars</p>
 
@@ -57,7 +65,7 @@
 
     ---
 
-    Plain English, no exam scaffolding. A strict-beginner on-ramp, {{concept_pages}} bite-size concept pages, and two structured paths through cloud and AI.
+    Plain English, no exam scaffolding. {{concept_pages}} bite-size concept pages - ETL vs ELT, batch vs streaming, lakehouses, modeling - and the Data from Scratch path.
 
     [:octicons-arrow-right-24: Start learning](learn/)
 
@@ -65,7 +73,7 @@
 
     ---
 
-    {{hands_on_projects}} guided builds with inline code and time estimates, {{architecture_patterns}} architecture patterns, {{cli_cheat_sheets}} CLI cheat sheets.
+    A guided end-to-end pipeline build and {{architecture_patterns}} architecture patterns: data pipeline and ETL, lakehouse, data mesh.
 
     [:octicons-arrow-right-24: Build something](resources/hands-on-projects/)
 
@@ -73,7 +81,7 @@
 
     ---
 
-    {{certifications}} cert guides across {{providers}} providers, each with a fact sheet, practice plan, scenarios, and exam-day strategy.
+    {{certifications}} cert guides across {{providers}} providers, each with a fact sheet, practice plan, scenarios, practice questions and exam-day strategy.
 
     [:octicons-arrow-right-24: Find your cert](STUDY-HUB.md)
 
@@ -81,7 +89,7 @@
 
     ---
 
-    {{service_comparisons}} cross-cloud service comparisons, {{roadmaps}} career roadmaps, plus compliance, FinOps, migration and troubleshooting deep dives.
+    {{service_comparisons}} cross-cloud service comparisons, {{roadmaps}} career roadmaps, plus database migration and data engineer interview prep.
 
     [:octicons-arrow-right-24: Browse reference](resources/)
 
@@ -93,18 +101,16 @@
 
 <div class="home-links" markdown>
 
-- [Day One](https://cloud.noblerworks.com/learn/day-one/) - terminal, git, HTTP and servers, assuming nothing
-- [Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/) - compute, storage, networking, identity
-- [AI from Scratch](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) - LLMs, RAG, agents, evals, fine-tuning
+- [Data from Scratch](learn/data-from-scratch.md) - zero to data engineer, analytics engineer or DBA
 - [Concepts](learn/concepts/) - {{concept_pages}} five-minute explainers, one idea each
 - [Topic indexes](topics/) - {{topic_indexes}} subjects tied across all four pillars
-- [Glossary](learn/glossary.md) - the vocabulary, defined once
-- [Hands-on projects](resources/hands-on-projects/) - {{hands_on_projects}} builds you can finish in a sitting
+- [Build a data pipeline](resources/hands-on-projects/build-data-pipeline.md) - ingest, transform, load, on a schedule
+- [Lakehouse architecture](resources/architecture-patterns/lakehouse-architecture.md) - the pattern most data platforms now follow
+- [Database services compared](resources/service-comparison-databases.md) - AWS, Azure and GCP side by side
 - [Labs by certification](resources/hands-on-projects/labs-by-cert.md) - which build backs which exam
 - [Practice questions](resources/practice-questions/) - scenario banks with explained answers
-- [Interview prep](resources/interview-prep/) - {{interview_prep}} role-specific guides
+- [Data engineer interview prep](resources/interview-prep/data-engineer-interview.md) - pipeline design, modeling and SQL questions
 - [Freshness ledger](docs/freshness.md) - what was last verified, and when
-- [Curated YouTube](learn/youtube.md) - the videos worth your time
 
 </div>
 
@@ -124,10 +130,44 @@
 
 {{whats_new}}
 
+<p class="home-kicker">The family</p>
+
+## More Zero to Hero
+
+<div class="grid cards" markdown>
+
+-   :material-cloud-outline:{ .lg .middle } **Cloud Zero to Hero**
+
+    ---
+
+    AWS, Azure, GCP, Kubernetes, DevOps and FinOps - from your first terminal command to architect-level certs.
+
+    [:octicons-arrow-right-24: cloud.noblerworks.com](https://cloud.noblerworks.com/)
+
+-   :material-shield-lock-outline:{ .lg .middle } **Security Zero to Hero**
+
+    ---
+
+    Cloud and application security, identity, compliance, and the security certifications that prove it.
+
+    [:octicons-arrow-right-24: security.noblerworks.com](https://security.noblerworks.com/)
+
+-   :material-robot-outline:{ .lg .middle } **AI Zero to Hero**
+
+    ---
+
+    LLMs, machine learning, agents and AI at work - learn it, build with it, govern it, get hired for it.
+
+    [:octicons-arrow-right-24: ai.noblerworks.com](https://ai.noblerworks.com/)
+
+</div>
+
+All four are free, by Nobler Works.
+
 ## Who made this
 
 Built by **[Patrick Wiloak](https://patricklukewilson.com)** - ex-AWS Solutions Architect, 10 years in tech, multi-cloud certified.
-[YouTube](https://youtube.com/@patrickwiloak) · [LinkedIn](https://www.linkedin.com/in/patricklukewilson/) · [Website](https://patricklukewilson.com) · [Source on GitHub](https://github.com/PatrickWiloak/cloud-data-ai-security-zero-to-hero)
+[YouTube](https://youtube.com/@patrickwiloak) · [LinkedIn](https://www.linkedin.com/in/patricklukewilson/) · [Website](https://patricklukewilson.com) · [Source on GitHub](https://github.com/PatrickWiloak/data-zero-to-hero)
 
 We build custom software and products at **[Nobler Works](https://noblerworks.com/)**. Open-source training like this is how we give back - we are nothing without the community that supports us. If you need software built, [get in touch](https://noblerworks.com/).
 

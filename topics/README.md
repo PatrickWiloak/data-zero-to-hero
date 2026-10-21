@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-21
 difficulty: any
 reading-time: 2 min
 ---
@@ -8,24 +8,22 @@ reading-time: 2 min
 
 The topic index. The four pillars (Learn / Build / Certify / Reference) are organized by **purpose**. This index is organized by **subject**.
 
-If you want everything the repo has on a given subject - the plain-English explainer, the cross-cloud comparisons, the hands-on builds, the cert notes that go deepest - start here.
+If you want everything this site has on a given subject - the plain-English explainer, the cross-cloud comparisons, the hands-on builds, the cert notes that go deepest - start here.
 
 ## Browse by topic
 
-- **[LLMs and GenAI](https://ai.noblerworks.com/learn/)** - language models, RAG, agents, MCP, fine-tuning, eval, inference, the whole AI stack
-- **[AI/ML systems](https://ai.noblerworks.com/build/)** - production ML, training infra, MLOps, model deployment, GPU certs (broader than just LLMs)
-- **[Identity and IAM](https://security.noblerworks.com/topics/iam/)** - authentication, authorization, federation, roles vs policies, SSO, RBAC vs ABAC
-- **[Networking](https://cloud.noblerworks.com/topics/networking/)** - VPCs, hybrid connectivity, DNS, load balancing, multi-cloud networking
 - **[Databases](./databases.md)** - SQL, NoSQL, vector DBs, data warehouses, lakehouses, choosing per workload
 - **[Data engineering](./data-engineering.md)** - pipelines, ETL/ELT, batch vs streaming, modeling, partitioning, quality and lineage
-- **[Observability](https://cloud.noblerworks.com/topics/observability/)** - logs, metrics, traces, dashboards, alerting, the three pillars of observability
-- **[SRE and reliability](https://cloud.noblerworks.com/topics/sre-and-reliability/)** - SLOs, chaos engineering, DR, multi-region, blast-radius reduction
-- **[Security](https://security.noblerworks.com/topics/security/)** - shared responsibility, zero trust, secrets, threat detection, compliance
-- **[AI security](https://ai.noblerworks.com/safety/)** - prompt injection, agent and tool security, model supply chain, AI governance
-- **[Serverless](https://cloud.noblerworks.com/topics/serverless/)** - functions, container-based serverless, event-driven, scale-to-zero
-- **[FinOps](https://cloud.noblerworks.com/topics/finops/)** - cloud cost accountability, optimization, the FinOps cert family
-- **[Kubernetes](https://cloud.noblerworks.com/topics/kubernetes/)** - K8s primitives, distributions, security, operations, certs
-- **[Platform engineering](https://cloud.noblerworks.com/topics/platform-engineering/)** - internal platforms as products, golden paths, self-service, IDPs
+
+New to the subject? **[Data from Scratch](../learn/data-from-scratch.md)** walks through both topics in order.
+
+## Topics on the sibling sites
+
+Subjects outside data have their own topic indexes on the other Zero to Hero sites:
+
+- **Cloud** - [networking](https://cloud.noblerworks.com/topics/networking/), [serverless](https://cloud.noblerworks.com/topics/serverless/), [Kubernetes](https://cloud.noblerworks.com/topics/kubernetes/), [observability](https://cloud.noblerworks.com/topics/observability/), [SRE and reliability](https://cloud.noblerworks.com/topics/sre-and-reliability/), [FinOps](https://cloud.noblerworks.com/topics/finops/), [platform engineering](https://cloud.noblerworks.com/topics/platform-engineering/)
+- **Security** - [security](https://security.noblerworks.com/topics/security/), [identity and IAM](https://security.noblerworks.com/topics/iam/)
+- **AI** - [learn AI](https://ai.noblerworks.com/learn/), [build with AI](https://ai.noblerworks.com/build/), [AI safety and security](https://ai.noblerworks.com/safety/)
 
 ## Pattern per topic page
 
@@ -42,4 +40,4 @@ Use these pages as a starting jumppoint. They're aggregators, not source-of-trut
 
 ## Don't see a topic you want?
 
-The topics here cover the densest cross-pillar threads. Other subjects (edge computing, for instance) have their own home in [resources/](../resources/) but don't yet have a topic index. Contributions welcome - see [CONTRIBUTING.md](../CONTRIBUTING.md).
+The topics here cover the densest cross-pillar threads. Other data subjects (streaming or BI on their own, for instance) have material in [resources/](../resources/) and the [concept pages](../learn/concepts/) but don't yet have a topic index. Contributions welcome - see [CONTRIBUTING.md](../CONTRIBUTING.md).

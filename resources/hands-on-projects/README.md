@@ -1,43 +1,26 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-21
 ---
 
 # Hands-on projects
 
-Fifteen guided builds: ten cloud, five AI. Each has an estimated time, a goal you can articulate to an interviewer, and inline code or commands. Most run on free-tier accounts; the AI builds list cheap cloud-GPU options where local hardware isn't enough.
+Guided builds with an estimated time, a goal you can explain to an interviewer, and inline code or commands. Most run on free-tier or trial accounts.
 
-## Cloud builds (10)
+## Data builds
 
 | Build | Time | What you'll have at the end |
 |---|---|---|
-| [Deploy a 3-tier app](https://cloud.noblerworks.com/resources/hands-on-projects/deploy-3-tier-app/) | 3-4 hours | LB → app servers → DB on AWS, Azure, or GCP |
-| [Build a CI/CD pipeline](https://cloud.noblerworks.com/resources/hands-on-projects/build-ci-cd-pipeline/) | 4-5 hours | Auto-build, test, and deploy on commit |
-| [Set up a monitoring stack](https://cloud.noblerworks.com/resources/hands-on-projects/setup-monitoring-stack/) | 3-4 hours | Prometheus + Grafana + alertmanager wired end-to-end |
-| [Implement zero-trust security](https://security.noblerworks.com/resources/hands-on-projects/implement-zero-trust/) | 4-5 hours | Identity-aware access, no-implicit-trust networking |
 | [Build a data pipeline](./build-data-pipeline.md) | 4-5 hours | Ingest → transform → load with scheduled runs |
-| [Deploy an ML model](https://ai.noblerworks.com/build/projects/deploy-ml-model/) | 3-4 hours | Trained model behind an API endpoint |
-| [Set up a Kubernetes cluster](https://cloud.noblerworks.com/resources/hands-on-projects/kubernetes-cluster-setup/) | 4-5 hours | Production-shaped cluster, ingress, observability |
-| [Build infra with Terraform](https://cloud.noblerworks.com/resources/hands-on-projects/terraform-infrastructure/) | 3-4 hours | VPC + compute + DB declared as code, with state |
-| [Build a serverless app](https://cloud.noblerworks.com/resources/hands-on-projects/serverless-application/) | 3-4 hours | API + queue + function + storage, event-driven |
-| [Run a DR drill](https://cloud.noblerworks.com/resources/hands-on-projects/disaster-recovery-drill/) | 4-6 hours | Tested failover, measured RTO/RPO |
 
-## AI builds (5)
+The [Data from Scratch](../../learn/data-from-scratch.md) path also sets a small "Do" exercise in every phase - a SQL warm-up, a star schema redesign, a streaming consumer, data-quality checks - that build up to the same pipeline.
 
-| Build | Time | What you'll have at the end |
-|---|---|---|
-| [Build a RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/) | ~30 min | Docs → chunks → pgvector → Claude with retrieval + evals |
-| [Build a Claude agent with MCP](https://ai.noblerworks.com/build/projects/build-claude-agent-with-mcp/) | ~30 min | Agent SDK + custom MCP server reading files + SQLite |
-| [Run Llama on a single GPU](https://ai.noblerworks.com/build/projects/run-llama-on-single-gpu/) | ~45 min | Open-weights model serving locally or on a cheap rented GPU |
-| [Set up an eval harness](https://ai.noblerworks.com/build/projects/set-up-eval-harness/) | ~30 min | Reproducible eval suite for prompt and model comparisons |
-| [Fine-tune with LoRA](https://ai.noblerworks.com/build/projects/fine-tune-with-lora/) | 1-2 hours | LoRA-trained small model, merged + served + benchmarked |
+## Builds on the sibling sites
 
-## How to pick
+Hands-on projects outside data live with their subject:
 
-- **First-ever cloud build:** [Deploy a 3-tier app](https://cloud.noblerworks.com/resources/hands-on-projects/deploy-3-tier-app/). Touches networking, compute, identity, and storage in one project.
-- **First-ever AI build:** [Build a RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/). Most hireable AI pattern in 2026.
-- **Interview prep:** [Set up a Kubernetes cluster](https://cloud.noblerworks.com/resources/hands-on-projects/kubernetes-cluster-setup/), [Build infra with Terraform](https://cloud.noblerworks.com/resources/hands-on-projects/terraform-infrastructure/), [Build a CI/CD pipeline](https://cloud.noblerworks.com/resources/hands-on-projects/build-ci-cd-pipeline/). These map to the most common practitioner questions.
-- **Cheapest to run:** the five AI builds (under $5 each on rented GPUs); serverless and Terraform on the cloud side (free-tier friendly).
-- **Most production-shaped:** [Implement zero-trust](https://security.noblerworks.com/resources/hands-on-projects/implement-zero-trust/), [Run a DR drill](https://cloud.noblerworks.com/resources/hands-on-projects/disaster-recovery-drill/), [Set up a monitoring stack](https://cloud.noblerworks.com/resources/hands-on-projects/setup-monitoring-stack/).
+- **Cloud** - [3-tier app](https://cloud.noblerworks.com/resources/hands-on-projects/deploy-3-tier-app/), [CI/CD pipeline](https://cloud.noblerworks.com/resources/hands-on-projects/build-ci-cd-pipeline/), [Terraform infrastructure](https://cloud.noblerworks.com/resources/hands-on-projects/terraform-infrastructure/), [serverless app](https://cloud.noblerworks.com/resources/hands-on-projects/serverless-application/) and more on [Cloud Zero to Hero](https://cloud.noblerworks.com/)
+- **Security** - [implement zero trust](https://security.noblerworks.com/resources/hands-on-projects/implement-zero-trust/) on [Security Zero to Hero](https://security.noblerworks.com/)
+- **AI** - [RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/), [deploy an ML model](https://ai.noblerworks.com/build/projects/deploy-ml-model/) and more on [AI Zero to Hero](https://ai.noblerworks.com/)
 
 ## Related
 
