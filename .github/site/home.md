@@ -24,7 +24,7 @@
 
 <div class="home-hero" markdown>
 
-# Data Zero to Hero { .home-title }
+# Data, from zero to hero { .home-title }
 
 <p class="home-intro">Data engineering, analytics and databases from absolute zero: plain-English concepts, hands-on builds, architecture patterns, and study guides for every major data certification - free, no signup, nothing gated.</p>
 
