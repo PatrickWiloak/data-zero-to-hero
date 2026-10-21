@@ -11,8 +11,11 @@ Guided builds with an estimated time, a goal you can explain to an interviewer, 
 | Build | Time | What you'll have at the end |
 |---|---|---|
 | [Build a data pipeline](./build-data-pipeline.md) | 4-5 hours | Ingest → transform → load with scheduled runs |
+| [Design a star schema](./design-star-schema.md) | 2-3 hours | A bus matrix, declared grains, a Type 2 dimension and SQL that proves the design |
+| [Build a dbt project](./build-dbt-project.md) | 4-5 hours | A tested star schema in dbt: snapshots, an incremental fact with a contract, unit tests, CI selection |
+| [Build a streaming pipeline](./build-streaming-pipeline.md) | 4-6 hours | Kafka into a Parquet lake, event-time windows with a watermark, and a batch reconciliation |
 
-The [Data from Scratch](../../learn/data-from-scratch.md) path also sets a small "Do" exercise in every phase - a SQL warm-up, a star schema redesign, a streaming consumer, data-quality checks - that build up to the same pipeline.
+The [Data from Scratch](../../learn/data-from-scratch.md) path also sets a small "Do" exercise in every phase - a SQL warm-up, a star schema redesign, a streaming consumer, data-quality checks - that build up to the same pipeline. A sensible order for the builds: star schema design, then the batch pipeline, then dbt, then streaming.
 
 ## Builds on the sibling sites
 
@@ -37,5 +40,8 @@ Each lab maps to the certs it exercises. The reverse index lives in [labs-by-cer
 | Lab | Certs it supports |
 |------|-------------------|
 | [Hands-On Project: Build a Data Pipeline](./build-data-pipeline.md) | [DEA-C01](../../exams/aws/associate/data-engineer-dea-c01/), [DP-203](../../exams/azure/dp-203/), [Professional Data Engineer](../../exams/gcp/data-engineer/), [Databricks Certified Data Engineer Associate](../../exams/databricks/data-engineer-associate/) |
+| [Hands-On Project: Build a dbt Project](./build-dbt-project.md) | [DP-600](../../exams/azure/dp-600/), [COF-C02](../../exams/snowflake/snowpro-core/), [SnowPro Advanced - Data Engineer Certification](../../exams/snowflake/snowpro-advanced-data-engineer/), [Databricks Certified Data Engineer Associate](../../exams/databricks/data-engineer-associate/) |
+| [Hands-On Project: Build a Streaming Pipeline](./build-streaming-pipeline.md) | [Confluent Certified Developer for Apache Kafka](../../exams/confluent/certified-developer/), [DEA-C01](../../exams/aws/associate/data-engineer-dea-c01/), [Professional Data Engineer](../../exams/gcp/data-engineer/), [Databricks Certified Data Engineer Associate](../../exams/databricks/data-engineer-associate/) |
+| [Hands-On Project: Design a Star Schema](./design-star-schema.md) | [PL-300](../../exams/azure/pl-300/), [DP-600](../../exams/azure/dp-600/), [COF-C02](../../exams/snowflake/snowpro-core/), [DEA-C01](../../exams/aws/associate/data-engineer-dea-c01/) |
 
 <!-- END GENERATED: lab-cert-map -->

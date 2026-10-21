@@ -105,6 +105,7 @@
 - [Concepts](learn/concepts/) - {{concept_pages}} five-minute explainers, one idea each
 - [Topic indexes](topics/) - {{topic_indexes}} subjects tied across all four pillars
 - [Build a data pipeline](resources/hands-on-projects/build-data-pipeline.md) - ingest, transform, load, on a schedule
+- [Build a dbt project](resources/hands-on-projects/build-dbt-project.md) - a tested star schema, step by step
 - [Lakehouse architecture](resources/architecture-patterns/lakehouse-architecture.md) - the pattern most data platforms now follow
 - [Database services compared](resources/service-comparison-databases.md) - AWS, Azure and GCP side by side
 - [Labs by certification](resources/hands-on-projects/labs-by-cert.md) - which build backs which exam

@@ -50,7 +50,7 @@
 The **[Learn](./learn/)** pillar is for anyone who wants to understand data work without an exam date:
 
 - **[Data from Scratch](./learn/data-from-scratch.md)** - eight phases from "what is a table?" to data engineer, analytics engineer or DBA.
-- **[Concepts](./learn/concepts/)** - bite-size pages (5-10 min each) on SQL vs NoSQL, ETL vs ELT, batch vs streaming, lakehouses, modeling and more.
+- **[Concepts](./learn/concepts/)** - bite-size pages (5-10 min each) on joins, window functions, indexes, transactions, CDC, modeling, streaming, dbt, governance and more.
 - **[Topic indexes](./topics/)** - databases and data engineering, each tying concepts, comparisons, builds and certs together.
 
 Come back when you decide to certify. Many do, after the Learn pillar helps them pick a direction.
@@ -147,9 +147,9 @@ The Certs column counts real exams, retired ones included.
 ## 📚 Resource Library
 
 - **Service comparisons:** [Databases](./resources/service-comparison-databases.md) · [Messaging and queues](./resources/service-comparison-messaging-queues.md)
-- **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md)
+- **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md) · [Streaming analytics](./resources/architecture-patterns/streaming-analytics.md)
 - **Career roadmaps:** [Data Engineer](./resources/certification-roadmap-data-engineer.md) · [Database Specialist](./resources/certification-roadmap-database-specialist.md)
-- **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md)
+- **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Build a streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md) · [Design a star schema](./resources/hands-on-projects/design-star-schema.md) · [Build a dbt project](./resources/hands-on-projects/build-dbt-project.md)
 - **Migration:** [Database migration](./resources/migration-guides/database-migration.md)
 - **Interview prep:** [Data engineer](./resources/interview-prep/data-engineer-interview.md)
 - **Persona playlist:** [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md)
