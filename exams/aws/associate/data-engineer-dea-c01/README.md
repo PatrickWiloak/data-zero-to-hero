@@ -135,7 +135,7 @@ If you held the retired DAS-C01 or DBS-C01, your DEA-C01 prep will compress sign
 ## Companion Materials in This Repo
 
 - **[Practice Questions](../../../../resources/practice-questions/aws-data-engineer-associate.md)** - sample questions
-- **[AWS CLI Cheat Sheet](../../../../resources/cli-cheat-sheet-aws.md)** - common Glue, S3, Redshift commands
+- **[AWS CLI Cheat Sheet](https://cloud.noblerworks.com/resources/cli-cheat-sheet-aws/)** - common Glue, S3, Redshift commands
 - **[Data Engineer Roadmap](../../../../resources/certification-roadmap-data-engineer.md)** - career path that includes DEA-C01
 - **[Data Pipeline Architecture Pattern](../../../../resources/architecture-patterns/data-pipeline-etl.md)** - cross-cloud pipeline reference
 - **[Lakehouse Architecture Pattern](../../../../resources/architecture-patterns/lakehouse-architecture.md)** - lakehouse design

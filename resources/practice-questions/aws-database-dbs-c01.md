@@ -286,7 +286,7 @@ D. A global secondary index with the alternate partition key and its own capacit
 ## Where to go deeper
 
 - [DBS-C01 cert page](../../exams/aws/specialty/database-dbs-c01/) - notes, practice plan, strategy
-- [Solutions Architect Professional practice questions](./aws-solutions-architect-professional.md) - database choice in architecture context
+- [Solutions Architect Professional practice questions](https://cloud.noblerworks.com/resources/practice-questions/aws-solutions-architect-professional/) - database choice in architecture context
 - [SQL vs NoSQL](../../learn/concepts/sql-vs-nosql.md) - the decision in plain English
 - [Databases topic index](../../topics/databases.md) - cross-cloud comparisons
 - **[📖 AWS Certification](https://aws.amazon.com/certification/)** - official exam guides

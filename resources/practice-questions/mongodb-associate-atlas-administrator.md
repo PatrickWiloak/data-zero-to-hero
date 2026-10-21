@@ -286,5 +286,5 @@ D. Use organizations, projects, and cluster tags, since billing reports break do
 - [Atlas Administrator cert page](../../exams/mongodb/associate-atlas-administrator/) - notes, practice plan, strategy
 - [MongoDB Associate DBA practice questions](./mongodb-associate-dba.md) - the self-managed counterpart
 - [MongoDB Associate Developer practice questions](./mongodb-associate-developer.md) - the application-side view
-- [Embeddings and vector search](../../learn/concepts/embeddings-and-vector-search.md) - context for Atlas Vector Search
+- [Embeddings and vector search](https://ai.noblerworks.com/learn/concepts/embeddings-and-vector-search/) - context for Atlas Vector Search
 - **[📖 MongoDB University](https://learn.mongodb.com/)** - official courses and exam pages

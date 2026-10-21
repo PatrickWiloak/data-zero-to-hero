@@ -843,7 +843,7 @@ Phase 4: Cutover (1-4 hours)
 ---
 
 **Related Guides:**
-- [Compute Service Comparison](./service-comparison-compute.md)
-- [Storage Service Comparison](./service-comparison-storage.md)
-- [Networking Service Comparison](./service-comparison-networking.md)
-- [Serverless Service Comparison](./service-comparison-serverless.md)
+- [Compute Service Comparison](https://cloud.noblerworks.com/resources/service-comparison-compute/)
+- [Storage Service Comparison](https://cloud.noblerworks.com/resources/service-comparison-storage/)
+- [Networking Service Comparison](https://cloud.noblerworks.com/resources/service-comparison-networking/)
+- [Serverless Service Comparison](https://cloud.noblerworks.com/resources/service-comparison-serverless/)

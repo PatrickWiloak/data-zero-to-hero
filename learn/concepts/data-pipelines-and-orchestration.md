@@ -45,7 +45,7 @@ Because the dependencies are declared, the orchestrator can also answer "what br
 
 ## The properties that matter
 
-**Idempotency.** Re-running a task must produce the same result, not a doubled one. Write to a partition you overwrite rather than appending blindly. This is the property that makes everything else safe, and [Idempotency explained](./idempotency-explained.md) covers the patterns.
+**Idempotency.** Re-running a task must produce the same result, not a doubled one. Write to a partition you overwrite rather than appending blindly. This is the property that makes everything else safe, and [Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/) covers the patterns.
 
 **Backfills.** Re-running a date range through the current code. Pipelines are usually parameterized by an execution date rather than reading "now", precisely so a backfill is the same code with a different parameter. A pipeline that calls `today()` internally cannot be backfilled, and you will find that out on the day you need to.
 
@@ -80,8 +80,8 @@ Both matter more than they look, because neither produces an error message. Arou
 
 - **[ETL vs ELT](./etl-vs-elt.md)** - the steps an orchestrator is sequencing
 - **[Batch vs streaming](./batch-vs-streaming.md)** - when there is no schedule to orchestrate
-- **[Idempotency explained](./idempotency-explained.md)** - the property retries and backfills depend on
+- **[Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/)** - the property retries and backfills depend on
 - **[Data quality and lineage](./data-quality-and-lineage.md)** - the assertions worth attaching to each step
-- **[Observability basics](./observability-basics.md)** - the same discipline for services
+- **[Observability basics](https://cloud.noblerworks.com/learn/concepts/observability-basics/)** - the same discipline for services
 - **[Build a data pipeline](../../resources/hands-on-projects/build-data-pipeline.md)** - build one end to end
 - **[Data engineering topic](../../topics/data-engineering.md)** - everything in the repo on this subject

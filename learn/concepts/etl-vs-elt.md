@@ -63,7 +63,7 @@ It exists because the warehouse became the place where the best version of the t
 Whichever order you choose, the same three things cause most incidents:
 
 1. **Schema drift.** The source adds, renames or retypes a column and the pipeline either fails or, much worse, silently writes nulls. Assert on schema, do not assume it.
-2. **Late and duplicate data.** Records arrive after the window that should have contained them, or arrive twice after a retry. Design the load to be [idempotent](./idempotency-explained.md) so re-running a batch cannot double-count.
+2. **Late and duplicate data.** Records arrive after the window that should have contained them, or arrive twice after a retry. Design the load to be [idempotent](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/) so re-running a batch cannot double-count.
 3. **Full reloads that quietly became too slow.** A nightly full refresh works until the table is large, then runs past the point people need it. Moving to incremental loads means deciding how to detect change, which is harder than it sounds.
 
 ## Incremental loading, briefly
@@ -83,7 +83,7 @@ CDC tools such as Debezium, AWS DMS or Fivetran read the transaction log rather 
 - **[Data pipelines and orchestration](./data-pipelines-and-orchestration.md)** - what actually runs these steps, in order, on a schedule
 - **[Warehouses, lakes, and lakehouses](./warehouses-lakes-lakehouses.md)** - where the data lands
 - **[Batch vs streaming](./batch-vs-streaming.md)** - the same question about timing rather than order
-- **[Idempotency explained](./idempotency-explained.md)** - why a re-run has to be safe
+- **[Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/)** - why a re-run has to be safe
 - **[Data quality and lineage](./data-quality-and-lineage.md)** - catching the wrong number before a dashboard shows it
 - **[Build a data pipeline](../../resources/hands-on-projects/build-data-pipeline.md)** - the hands-on version
 - **[Architecture pattern: data pipeline / ETL](../../resources/architecture-patterns/data-pipeline-etl.md)** - the reference implementation

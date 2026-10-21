@@ -286,7 +286,7 @@ D. Each table can have many primary keys, one for every column that must stay un
 ## Where to go deeper
 
 - [DP-900 cert page](../../exams/azure/dp-900/) - notes, practice plan, strategy
-- [AZ-900 practice questions](./azure-fundamentals-az-900.md) - the cloud fundamentals sibling
+- [AZ-900 practice questions](https://cloud.noblerworks.com/resources/practice-questions/azure-fundamentals-az-900/) - the cloud fundamentals sibling
 - [SQL vs NoSQL](../../learn/concepts/sql-vs-nosql.md) - the choice in plain English
 - [Databases topic index](../../topics/databases.md) - everything the repo has on data stores
 - **[📖 DP-900 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-900)** - official skills outline

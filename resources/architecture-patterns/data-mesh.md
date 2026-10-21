@@ -478,4 +478,4 @@ Every data product should include:
 **Related Guides:**
 - [Data Pipeline ETL Architecture](./data-pipeline-etl.md)
 - [Lakehouse Architecture](./lakehouse-architecture.md)
-- [Event-Driven Architecture](./event-driven-architecture.md)
+- [Event-Driven Architecture](https://cloud.noblerworks.com/resources/architecture-patterns/event-driven-architecture/)

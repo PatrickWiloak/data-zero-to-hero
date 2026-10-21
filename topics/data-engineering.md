@@ -40,7 +40,7 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 - [SQL vs NoSQL](../learn/concepts/sql-vs-nosql.md) - the operational stores most of this data is copied from
 - [Queues vs streams](../learn/concepts/queues-vs-streams.md) - the transport underneath streaming pipelines
 - [Eventual consistency](../learn/concepts/eventual-consistency.md) - why a replica read can disagree with the source
-- [Idempotency explained](../learn/concepts/idempotency-explained.md) - the property that makes a retry or a backfill safe
+- [Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/) - the property that makes a retry or a backfill safe
 
 ---
 
@@ -48,8 +48,8 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 
 - [Databases (cloud-native)](../resources/service-comparison-databases.md) - BigQuery vs Redshift vs Synapse, and the operational stores
 - [Messaging and queues](../resources/service-comparison-messaging-queues.md) - Kafka, Kinesis, Pub/Sub, Event Hubs, SQS
-- [Vector databases](../resources/service-comparison-vector-databases.md) - the analytical store for embeddings
-- [AI and ML services](../resources/service-comparison-ai-ml.md) - where the feature pipelines end up
+- [Vector databases](https://ai.noblerworks.com/tools/decisions/vector-database/) - the analytical store for embeddings
+- [AI and ML services](https://ai.noblerworks.com/tools/comparisons/cloud-ai-ml-services/) - where the feature pipelines end up
 
 ---
 
@@ -58,19 +58,19 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 - [Architecture pattern: data pipeline / ETL](../resources/architecture-patterns/data-pipeline-etl.md)
 - [Architecture pattern: lakehouse](../resources/architecture-patterns/lakehouse-architecture.md)
 - [Architecture pattern: data mesh](../resources/architecture-patterns/data-mesh.md) - decentralized ownership, domain data products
-- [Architecture pattern: CQRS and event sourcing](../resources/architecture-patterns/cqrs-event-sourcing.md)
-- [Architecture pattern: event-driven architecture](../resources/architecture-patterns/event-driven-architecture.md)
-- [Architecture pattern: AI/ML pipeline](../resources/architecture-patterns/ai-ml-pipeline.md)
+- [Architecture pattern: CQRS and event sourcing](https://cloud.noblerworks.com/resources/architecture-patterns/cqrs-event-sourcing/)
+- [Architecture pattern: event-driven architecture](https://cloud.noblerworks.com/resources/architecture-patterns/event-driven-architecture/)
+- [Architecture pattern: AI/ML pipeline](https://ai.noblerworks.com/build/patterns/ai-ml-pipeline/)
 - [Migration: database](../resources/migration-guides/database-migration.md)
-- [Compliance guides](../resources/compliance-guides/) - GDPR and the rest, where lineage stops being optional
+- [Compliance guides](https://security.noblerworks.com/resources/compliance-guides/) - GDPR and the rest, where lineage stops being optional
 
 ---
 
 ## Build
 
 - [Build a data pipeline](../resources/hands-on-projects/build-data-pipeline.md) - ingestion through to a queryable table
-- [Build a RAG pipeline](../resources/hands-on-projects/build-rag-pipeline.md) - the embedding-and-retrieval variant
-- [Set up a monitoring stack](../resources/hands-on-projects/setup-monitoring-stack.md) - the observability half of the argument
+- [Build a RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/) - the embedding-and-retrieval variant
+- [Set up a monitoring stack](https://cloud.noblerworks.com/resources/hands-on-projects/setup-monitoring-stack/) - the observability half of the argument
 
 ---
 
@@ -102,12 +102,12 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 - [Power BI Data Analyst (PL-300)](../exams/azure/pl-300/) - the consumption end
 - [Azure Database Administrator (DP-300)](../exams/azure/dp-300/)
 - [GCP Cloud Database Engineer](../exams/gcp/cloud-database-engineer/)
-- [NVIDIA Accelerated Data Science (NCP-ADS)](../exams/nvidia/accelerated-data-science-professional/)
+- [NVIDIA Accelerated Data Science (NCP-ADS)](https://ai.noblerworks.com/certifications/nvidia/accelerated-data-science-professional/)
 
 ---
 
 ## Roadmap
 
-The ordered path through these is the **[Data Engineer roadmap](../resources/certification-roadmap-data-engineer.md)**. For the storage-administration side, see the **[Database Specialist roadmap](../resources/certification-roadmap-database-specialist.md)**; for cost control over the warehouse bill, **[FinOps](./finops.md)**.
+The ordered path through these is the **[Data Engineer roadmap](../resources/certification-roadmap-data-engineer.md)**. For the storage-administration side, see the **[Database Specialist roadmap](../resources/certification-roadmap-database-specialist.md)**; for cost control over the warehouse bill, **[FinOps](https://cloud.noblerworks.com/topics/finops/)**.
 
-Related topics: **[Databases](./databases.md)** for choosing a store per workload, **[AI/ML systems](./ai-ml-systems.md)** for what consumes the feature tables, and **[Observability](./observability.md)** for the monitoring discipline the quality checks borrow from.
+Related topics: **[Databases](./databases.md)** for choosing a store per workload, **[AI/ML systems](https://ai.noblerworks.com/build/)** for what consumes the feature tables, and **[Observability](https://cloud.noblerworks.com/topics/observability/)** for the monitoring discipline the quality checks borrow from.

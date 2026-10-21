@@ -264,7 +264,7 @@ Note: Pricing varies significantly based on message size, retention, and data tr
 ---
 
 **Related Guides:**
-- [Serverless Service Comparison](./service-comparison-serverless.md)
+- [Serverless Service Comparison](https://cloud.noblerworks.com/resources/service-comparison-serverless/)
 - [Database Service Comparison](./service-comparison-databases.md)
-- [Compute Service Comparison](./service-comparison-compute.md)
+- [Compute Service Comparison](https://cloud.noblerworks.com/resources/service-comparison-compute/)
 - [Queues vs Streams](../learn/concepts/queues-vs-streams.md)

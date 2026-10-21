@@ -90,7 +90,7 @@ Three flavors, in increasing strength:
 - **At-least-once** - message will be delivered; may be duplicated under retry. The default for SQS Standard, Kafka with default settings.
 - **Exactly-once** - the holy grail. Available with constraints: SQS FIFO with deduplication, Kafka with idempotent producers + transactional consumers, Pub/Sub with `enable_exactly_once_delivery`.
 
-Default to **at-least-once** semantics in your design and make consumers idempotent. See [Idempotency explained](./idempotency-explained.md). Trying to guarantee exactly-once across system boundaries is hard and rarely worth it.
+Default to **at-least-once** semantics in your design and make consumers idempotent. See [Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/). Trying to guarantee exactly-once across system boundaries is hard and rarely worth it.
 
 ## Common pitfalls
 
@@ -135,8 +135,8 @@ A poison message (malformed payload) keeps failing. Without a dead-letter queue,
 
 ## What to look at next
 
-- **[Idempotency explained](./idempotency-explained.md)** - why every consumer should be idempotent
+- **[Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/)** - why every consumer should be idempotent
 - **[Eventual consistency](./eventual-consistency.md)** - the world streams produce
 - **[Topic: databases](../../topics/databases.md)** - cross-pillar
-- **[Architecture pattern: Event-driven](../../resources/architecture-patterns/event-driven-architecture.md)**
+- **[Architecture pattern: Event-driven](https://cloud.noblerworks.com/resources/architecture-patterns/event-driven-architecture/)**
 - **[Service comparison: Messaging and queues](../../resources/service-comparison-messaging-queues.md)**

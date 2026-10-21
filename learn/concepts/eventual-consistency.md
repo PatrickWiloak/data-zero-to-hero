@@ -103,7 +103,7 @@ Knowing which level you need per call is part of design. Cassandra's defaults ar
 
 ## Idempotency: EC's best friend
 
-Eventual consistency mixes badly with non-idempotent operations under retry. A retry might land on a replica that already has the write; the operation runs again. Make consumers idempotent so duplicate processing is safe. See [Idempotency explained](./idempotency-explained.md).
+Eventual consistency mixes badly with non-idempotent operations under retry. A retry might land on a replica that already has the write; the operation runs again. Make consumers idempotent so duplicate processing is safe. See [Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/).
 
 ## Common pitfalls
 
@@ -138,7 +138,7 @@ Default to eventual; opt into strong where needed; design for retries and duplic
 
 ## What to look at next
 
-- **[Idempotency explained](./idempotency-explained.md)** - the partner concept
+- **[Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/)** - the partner concept
 - **[Queues vs streams](./queues-vs-streams.md)** - delivery semantics under retry
 - **[Topic: databases](../../topics/databases.md)** - where consistency models live
 - **[Service comparison: Databases](../../resources/service-comparison-databases.md)** - per-store consistency models

@@ -74,7 +74,7 @@ Modern engines blur this: Spark Structured Streaming, Flink and Databricks Delta
 
 Systems advertise **exactly-once processing**. What they actually provide is at-least-once delivery plus deduplication and transactional commits, so the *observable effect* is exactly once, within that system's boundary.
 
-Once your job writes to something outside that boundary, a payment API or a third-party webhook, you are back to needing [idempotency](./idempotency-explained.md) on your side. "Exactly-once" is a property of a closed pipeline, not a promise about the outside world.
+Once your job writes to something outside that boundary, a payment API or a third-party webhook, you are back to needing [idempotency](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/) on your side. "Exactly-once" is a property of a closed pipeline, not a promise about the outside world.
 
 ## The managed options
 
@@ -89,7 +89,7 @@ Once your job writes to something outside that boundary, a payment API or a thir
 - **[Queues vs streams](./queues-vs-streams.md)** - the transport layer underneath, and why a stream is replayable
 - **[ETL vs ELT](./etl-vs-elt.md)** - the batch world's equivalent question
 - **[Data pipelines and orchestration](./data-pipelines-and-orchestration.md)** - scheduling, retries, and backfills
-- **[Idempotency explained](./idempotency-explained.md)** - what exactly-once does not cover
+- **[Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/)** - what exactly-once does not cover
 - **[Eventual consistency](./eventual-consistency.md)** - the same "when is it settled" problem in storage
 - **[Service comparison: messaging and queues](../../resources/service-comparison-messaging-queues.md)** - the services side by side
 - **[Data engineering topic](../../topics/data-engineering.md)** - everything in the repo on this subject

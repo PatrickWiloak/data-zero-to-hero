@@ -285,5 +285,5 @@ D. Increase the storage quota for the account
 
 - [Lakehouse Platform Administrator cert page](../../exams/databricks/lakehouse-platform-administrator/) - notes, practice plan, strategy
 - [Data Engineer Professional practice questions](./databricks-data-engineer-professional.md) - the pipelines this platform runs
-- [Cloud cost basics](../../learn/concepts/cloud-cost-basics.md) - the cost domain in plain English
+- [Cloud cost basics](https://cloud.noblerworks.com/learn/concepts/cloud-cost-basics/) - the cost domain in plain English
 - **[📖 Databricks certification](https://www.databricks.com/learn/certification)** - official exam guides

@@ -96,6 +96,6 @@ Lineage tooling comes after those. A perfect graph of a pipeline nobody is check
 - **[Data pipelines and orchestration](./data-pipelines-and-orchestration.md)** - where the checks get run
 - **[ETL vs ELT](./etl-vs-elt.md)** - schema drift, the most common thing these tests catch
 - **[Warehouses, lakes, and lakehouses](./warehouses-lakes-lakehouses.md)** - why a lake without this becomes a swamp
-- **[Observability basics](./observability-basics.md)** - the same argument for services
-- **[Compliance guides](../../resources/compliance-guides/)** - where lineage stops being good practice and becomes a requirement
+- **[Observability basics](https://cloud.noblerworks.com/learn/concepts/observability-basics/)** - the same argument for services
+- **[Compliance guides](https://security.noblerworks.com/resources/compliance-guides/)** - where lineage stops being good practice and becomes a requirement
 - **[Data engineering topic](../../topics/data-engineering.md)** - everything in the repo on this subject

@@ -94,5 +94,5 @@ This is why "the warehouse is expensive" is usually a layout problem rather than
 - **[Warehouses, lakes, and lakehouses](./warehouses-lakes-lakehouses.md)** - what sits on top of these files
 - **[ETL vs ELT](./etl-vs-elt.md)** - where the format conversion happens
 - **[Batch vs streaming](./batch-vs-streaming.md)** - why streaming writes create small files
-- **[Cloud cost basics](./cloud-cost-basics.md)** - bytes scanned as a billing model
+- **[Cloud cost basics](https://cloud.noblerworks.com/learn/concepts/cloud-cost-basics/)** - bytes scanned as a billing model
 - **[Data engineering topic](../../topics/data-engineering.md)** - everything in the repo on this subject

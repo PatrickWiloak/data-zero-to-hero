@@ -12,20 +12,20 @@ If you want everything the repo has on a given subject - the plain-English expla
 
 ## Browse by topic
 
-- **[LLMs and GenAI](./llms-and-genai.md)** - language models, RAG, agents, MCP, fine-tuning, eval, inference, the whole AI stack
-- **[AI/ML systems](./ai-ml-systems.md)** - production ML, training infra, MLOps, model deployment, GPU certs (broader than just LLMs)
-- **[Identity and IAM](./iam.md)** - authentication, authorization, federation, roles vs policies, SSO, RBAC vs ABAC
-- **[Networking](./networking.md)** - VPCs, hybrid connectivity, DNS, load balancing, multi-cloud networking
+- **[LLMs and GenAI](https://ai.noblerworks.com/learn/)** - language models, RAG, agents, MCP, fine-tuning, eval, inference, the whole AI stack
+- **[AI/ML systems](https://ai.noblerworks.com/build/)** - production ML, training infra, MLOps, model deployment, GPU certs (broader than just LLMs)
+- **[Identity and IAM](https://security.noblerworks.com/topics/iam/)** - authentication, authorization, federation, roles vs policies, SSO, RBAC vs ABAC
+- **[Networking](https://cloud.noblerworks.com/topics/networking/)** - VPCs, hybrid connectivity, DNS, load balancing, multi-cloud networking
 - **[Databases](./databases.md)** - SQL, NoSQL, vector DBs, data warehouses, lakehouses, choosing per workload
 - **[Data engineering](./data-engineering.md)** - pipelines, ETL/ELT, batch vs streaming, modeling, partitioning, quality and lineage
-- **[Observability](./observability.md)** - logs, metrics, traces, dashboards, alerting, the three pillars of observability
-- **[SRE and reliability](./sre-and-reliability.md)** - SLOs, chaos engineering, DR, multi-region, blast-radius reduction
-- **[Security](./security.md)** - shared responsibility, zero trust, secrets, threat detection, compliance
-- **[AI security](./ai-security.md)** - prompt injection, agent and tool security, model supply chain, AI governance
-- **[Serverless](./serverless.md)** - functions, container-based serverless, event-driven, scale-to-zero
-- **[FinOps](./finops.md)** - cloud cost accountability, optimization, the FinOps cert family
-- **[Kubernetes](./kubernetes.md)** - K8s primitives, distributions, security, operations, certs
-- **[Platform engineering](./platform-engineering.md)** - internal platforms as products, golden paths, self-service, IDPs
+- **[Observability](https://cloud.noblerworks.com/topics/observability/)** - logs, metrics, traces, dashboards, alerting, the three pillars of observability
+- **[SRE and reliability](https://cloud.noblerworks.com/topics/sre-and-reliability/)** - SLOs, chaos engineering, DR, multi-region, blast-radius reduction
+- **[Security](https://security.noblerworks.com/topics/security/)** - shared responsibility, zero trust, secrets, threat detection, compliance
+- **[AI security](https://ai.noblerworks.com/safety/)** - prompt injection, agent and tool security, model supply chain, AI governance
+- **[Serverless](https://cloud.noblerworks.com/topics/serverless/)** - functions, container-based serverless, event-driven, scale-to-zero
+- **[FinOps](https://cloud.noblerworks.com/topics/finops/)** - cloud cost accountability, optimization, the FinOps cert family
+- **[Kubernetes](https://cloud.noblerworks.com/topics/kubernetes/)** - K8s primitives, distributions, security, operations, certs
+- **[Platform engineering](https://cloud.noblerworks.com/topics/platform-engineering/)** - internal platforms as products, golden paths, self-service, IDPs
 
 ## Pattern per topic page
 

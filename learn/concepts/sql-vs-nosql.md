@@ -53,7 +53,7 @@ Three properties follow from this design and explain most of what SQL databases 
 | **Wide-column** | Rows with flexible column families | Very high write volume, time-series | Cassandra, Bigtable, HBase |
 | **Graph** | Nodes and edges | Relationship traversal many hops deep | Neo4j, Neptune |
 
-Plus, increasingly relevant, **vector databases** for similarity search over embeddings. See [Embeddings and vector search](./embeddings-and-vector-search.md).
+Plus, increasingly relevant, **vector databases** for similarity search over embeddings. See [Embeddings and vector search](https://ai.noblerworks.com/learn/concepts/embeddings-and-vector-search/).
 
 ## The real trade-off
 
@@ -120,8 +120,8 @@ That is normal and usually correct. The cost is operational: each system needs b
 ## What to look at next
 
 - **[Eventual consistency](./eventual-consistency.md)** - what "eventually" actually means for your code
-- **[Embeddings and vector search](./embeddings-and-vector-search.md)** - the vector database family
+- **[Embeddings and vector search](https://ai.noblerworks.com/learn/concepts/embeddings-and-vector-search/)** - the vector database family
 - **[Queues vs streams](./queues-vs-streams.md)** - the other big "which one" data question
-- **[Caching explained](./caching-explained.md)** - the layer usually sitting in front of the database
+- **[Caching explained](https://cloud.noblerworks.com/learn/concepts/caching-explained/)** - the layer usually sitting in front of the database
 - **[Service comparison: databases](../../resources/service-comparison-databases.md)** - AWS, Azure, and GCP equivalents
 - **[Databases topic](../../topics/databases.md)** - everything in the repo on this subject

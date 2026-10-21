@@ -24,9 +24,9 @@ flowchart LR
 ## Learn
 
 - [Eventual consistency](../learn/concepts/eventual-consistency.md) - CAP, when EC is fine, when it bites
-- [Idempotency explained](../learn/concepts/idempotency-explained.md) - retries, idempotency keys, common patterns
+- [Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/) - retries, idempotency keys, common patterns
 - [Queues vs streams](../learn/concepts/queues-vs-streams.md) - SQS vs Kinesis (and equivalents), ordering, replay
-- [Embeddings and vector search](../learn/concepts/embeddings-and-vector-search.md) - vector DB basics
+- [Embeddings and vector search](https://ai.noblerworks.com/learn/concepts/embeddings-and-vector-search/) - vector DB basics
 - [Warehouses, lakes, and lakehouses](../learn/concepts/warehouses-lakes-lakehouses.md) - the analytical stores
 - [Data modeling for analytics](../learn/concepts/data-modeling-for-analytics.md) - star schemas, grain, SCD types
 
@@ -37,7 +37,7 @@ For how data gets into these stores - pipelines, ETL/ELT, batch vs streaming, pa
 ## Compare
 
 - [Databases (cloud-native)](../resources/service-comparison-databases.md) - RDS vs Cloud SQL vs SQL Database, DynamoDB vs Cosmos DB vs Firestore, BigQuery vs Redshift vs Synapse
-- [Vector databases](../resources/service-comparison-vector-databases.md) - Pinecone, Weaviate, Qdrant, Milvus, pgvector, OpenSearch, Vertex Vector Search
+- [Vector databases](https://ai.noblerworks.com/tools/decisions/vector-database/) - Pinecone, Weaviate, Qdrant, Milvus, pgvector, OpenSearch, Vertex Vector Search
 
 ---
 
@@ -46,7 +46,7 @@ For how data gets into these stores - pipelines, ETL/ELT, batch vs streaming, pa
 - [Architecture pattern: Data Pipeline / ETL](../resources/architecture-patterns/data-pipeline-etl.md)
 - [Architecture pattern: Lakehouse](../resources/architecture-patterns/lakehouse-architecture.md)
 - [Architecture pattern: Data Mesh](../resources/architecture-patterns/data-mesh.md)
-- [Architecture pattern: CQRS / Event Sourcing](../resources/architecture-patterns/cqrs-event-sourcing.md)
+- [Architecture pattern: CQRS / Event Sourcing](https://cloud.noblerworks.com/resources/architecture-patterns/cqrs-event-sourcing/)
 - [Migration: database](../resources/migration-guides/database-migration.md)
 
 ---
@@ -54,7 +54,7 @@ For how data gets into these stores - pipelines, ETL/ELT, batch vs streaming, pa
 ## Build
 
 - [Build a data pipeline](../resources/hands-on-projects/build-data-pipeline.md)
-- [Build a RAG pipeline](../resources/hands-on-projects/build-rag-pipeline.md) - exercises pgvector
+- [Build a RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/) - exercises pgvector
 
 ---
 

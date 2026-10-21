@@ -67,7 +67,7 @@ Licensing is a frequent hidden constraint in distribution questions. If content 
 
 - **Row-level security**: roles are defined in Desktop, members are assigned in the service. Test as a Viewer.
 - **Object-level security**: hides tables and columns from a role.
-- **Sensitivity labels** from Microsoft Purview apply to Power BI content and flow through to exported files, which is where [SC-401](../../sc-401/) material connects.
+- **Sensitivity labels** from Microsoft Purview apply to Power BI content and flow through to exported files, which is where [SC-401](https://security.noblerworks.com/exams/azure/sc-401/) material connects.
 - **Tenant settings** in the admin portal govern export, sharing with external users, publish to web, and custom visuals. Publish to web makes content publicly accessible on the internet and is a common misconfiguration.
 - **Service principals** for automation, where supported by tenant settings.
 
@@ -120,4 +120,4 @@ Licensing is a frequent hidden constraint in distribution questions. If content 
 - [Notes 01: prepare the data](./01-prepare-the-data.md)
 - [Scenarios](../scenarios.md) - scenario 7
 - [DP-600 Fabric Analytics Engineer](../../dp-600/)
-- [SC-401](../../sc-401/) - sensitivity labels applied to Power BI content
+- [SC-401](https://security.noblerworks.com/exams/azure/sc-401/) - sensitivity labels applied to Power BI content

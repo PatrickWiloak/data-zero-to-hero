@@ -286,5 +286,5 @@ D. Leave `unclean.leader.election.enable` false by default, accepting unavailabi
 - [CCAAK cert page](../../exams/confluent/certified-administrator/) - notes, practice plan, strategy
 - [Confluent Developer practice questions](./confluent-certified-developer.md) - the application counterpart
 - [Queues vs streams](../../learn/concepts/queues-vs-streams.md) - plain-English primer on the model
-- [Observability basics](../../learn/concepts/observability-basics.md) - what to monitor and why
+- [Observability basics](https://cloud.noblerworks.com/learn/concepts/observability-basics/) - what to monitor and why
 - **[📖 Confluent certification](https://www.confluent.io/certification/)** - official exam guides

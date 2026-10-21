@@ -288,5 +288,5 @@ D. A windowed aggregation with a tumbling window, plus a grace period for late-a
 - [CCDAK cert page](../../exams/confluent/certified-developer/) - notes, practice plan, strategy
 - [Confluent Administrator practice questions](./confluent-certified-administrator.md) - the operations counterpart
 - [Queues vs streams](../../learn/concepts/queues-vs-streams.md) - plain-English primer on the model
-- [Idempotency explained](../../learn/concepts/idempotency-explained.md) - why at-least-once needs idempotent consumers
+- [Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/) - why at-least-once needs idempotent consumers
 - **[📖 Confluent certification](https://www.confluent.io/certification/)** - official exam guides

@@ -23,7 +23,7 @@ Seven reads in order, ~60 minutes. By the end you have working mental models for
 5. **[Service comparison: databases](./service-comparison-databases.md)** (~10 min)
    When to pick relational, NoSQL, document, wide-column, graph. AWS / Azure / GCP equivalents at each tier.
 
-6. **[Decision matrix: vector database](./decision-matrix-vector-database.md)** (~8 min)
+6. **[Decision matrix: vector database](https://ai.noblerworks.com/tools/decisions/vector-database/)** (~8 min)
    The AI side of the data stack. Vector search is increasingly part of the data engineer's surface area.
 
 7. **[Databases topic index](../topics/databases.md)** (~7 min)
@@ -41,12 +41,12 @@ Seven reads in order, ~60 minutes. By the end you have working mental models for
 
 **If you want to build:**
 - [Build a data pipeline](./hands-on-projects/build-data-pipeline.md) - hands-on ETL
-- [Build a RAG pipeline](./hands-on-projects/build-rag-pipeline.md) - the AI / vector data layer
+- [Build a RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/) - the AI / vector data layer
 
 **If you want to go deeper:**
 - [Service comparison: messaging and queues](./service-comparison-messaging-queues.md) - the layer above queues / streams
-- [Service comparison: GenAI platforms](./service-comparison-genai-platforms.md) - the LLM-serving side
-- [Architecture pattern: CQRS / event sourcing](./architecture-patterns/cqrs-event-sourcing.md) - advanced data architecture
+- [Service comparison: GenAI platforms](https://ai.noblerworks.com/tools/comparisons/genai-platforms/) - the LLM-serving side
+- [Architecture pattern: CQRS / event sourcing](https://cloud.noblerworks.com/resources/architecture-patterns/cqrs-event-sourcing/) - advanced data architecture
 
 **If you want a cert:**
 - [AWS Data Engineer Associate (DEA-C01)](../exams/aws/associate/data-engineer-dea-c01/)
@@ -58,6 +58,6 @@ Seven reads in order, ~60 minutes. By the end you have working mental models for
 
 ## Related playlists
 
-- [AI engineer in 30 min](./playlist-ai-engineer-30min.md)
-- [Cloud security in 1 hour](./playlist-cloud-security-1hour.md)
-- [SRE in 1 hour](./playlist-sre-1hour.md)
+- [AI engineer in 30 min](https://ai.noblerworks.com/learn/start-here/ai-engineer-path/)
+- [Cloud security in 1 hour](https://security.noblerworks.com/resources/playlist-cloud-security-1hour/)
+- [SRE in 1 hour](https://cloud.noblerworks.com/resources/playlist-sre-1hour/)
