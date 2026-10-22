@@ -58,7 +58,7 @@
 ### Official MongoDB Resources
 - **[📖 MongoDB University](https://learn.mongodb.com/)** - Free courses and certifications
 - **[📖 MongoDB Documentation](https://www.mongodb.com/docs/)** - Complete reference
-- **[📖 MongoDB Developer Center](https://www.mongodb.com/developer/)** - Tutorials and articles
+- **[📖 MongoDB Resources](https://www.mongodb.com/resources)** - Tutorials, articles and guides (the Developer Center URL now 404s)
 - **[📖 MongoDB Playground](https://mongoplayground.net/)** - Online query playground
 
 ### Recommended Courses
