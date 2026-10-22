@@ -56,15 +56,15 @@ D. Auto Loader with directory listing mode and no schema evolution
 
 ---
 
-## Scenario 3: Data Quality with Delta Live Tables
+## Scenario 3: Data Quality with Lakeflow Spark Declarative Pipelines
 
 ### Scenario
-A pipeline processes financial transaction data through Bronze, Silver, and Gold layers. At the Silver layer, the team needs to enforce the following rules:
+Lakeflow Spark Declarative Pipelines were called Delta Live Tables (DLT), and the `dlt` Python module used below still works. A pipeline processes financial transaction data through Bronze, Silver, and Gold layers. At the Silver layer, the team needs to enforce the following rules:
 1. Transaction IDs must not be null (critical - pipeline should fail)
 2. Transaction amounts must be positive (important - drop invalid records)
 3. Currency codes should be in the allowed list (informational - log but keep)
 
-**Question:** Which DLT expectation configuration correctly implements these rules?
+**Question:** Which pipeline expectation configuration correctly implements these rules?
 
 **Options:**
 A.
