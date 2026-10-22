@@ -30,11 +30,9 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 
 Confidence in brackets: H = vendor page read, M = vendor page plus search, L = third-party.
 
-- [ ] Judge 2026-11-01: Azure DP-420 renamed Cosmos DB AI Developer Associate (effective 2026-10-06, AI/RAG scope) [H]; DP-600/DP-700 (10-19) and DP-300 (10-27) content updates [H] - rebuild or date each.
-- [ ] Snowflake codes: COF-C02 -> COF-C03 [M], ADA-C01 -> ADA-C02 [H], Advanced Data Engineer code looks wrong (catalog lists DEA-C02) [H]. Confirm, then fix.
-- [ ] Databricks Lakehouse Platform Administrator is now an accreditation [M] - confirm and relabel.
+- [ ] 2026-11-15: Snowflake COF-C03 / ADA-C02 / DEA-C02 objective-level outlines - get the form-gated study guide PDFs and remap topic sections.
+- [ ] 2026-11-15: DP-300 notes still lack database watcher, SQL DB in Fabric, elastic jobs, Resource Governor, IQP, compression, log shipping.
 - [ ] DP-203 is retired: decide whether its guide, practice bank and `labs-by-cert` entry stay as reference or go.
-- [ ] By 2026-10-31: spot-check retired-product replacements - QLDB notes in `exams/aws/specialty/database-dbs-c01` and `exams/aws/shared/services/database/qldb.md`, and the AWS Data Analytics specialty notes.
 - [ ] "Vertex AI" still appears in `exams/gcp/data-engineer` (renamed Gemini Enterprise Agent Platform 2026-04-22). Sweep with Google's rename table once names settle.
 - [ ] New-guide candidates (verify codes first): Databricks Data Analyst and Apache Spark Developer, Google Associate Data Practitioner, Confluent CCAC, MongoDB Associate Data Modeler [L]. Snowflake SPS-C01 retires 2026-11-01 and SEA-C01 / DAA-C01 2026-12-01 [M]; no guides here.
 
