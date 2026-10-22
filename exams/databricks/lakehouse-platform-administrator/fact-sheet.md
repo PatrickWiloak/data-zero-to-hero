@@ -1,20 +1,22 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
 ---
 
-# Databricks Lakehouse Platform Administrator - Fact Sheet
+# Databricks Data + AI Platform Administrator Accreditation - Fact Sheet
 
 ## Exam Overview
 
-**Exam Name:** Databricks Certified Lakehouse Platform Administrator
-**Duration:** 90 minutes
-**Questions:** 45 multiple-choice questions
-**Passing Score:** 70% (approximately 32 correct)
-**Cost:** $200 USD
-**Delivery:** Online proctored
-**Valid For:** 2 years
+**Exam Name:** Databricks Data + AI Platform Administrator Accreditation
+**Duration:** Unlimited time
+**Questions:** 25 multiple-choice questions
+**Passing Score:** Not stated on the current page (80% per Databricks' 2022 launch post)
+**Cost:** Free for Databricks customers and partners
+**Delivery:** Online, not proctored (Databricks Academy)
+**Valid For:** 1 year
 
-**[📖 Official Exam Page](https://www.databricks.com/learn/training/certification)** - Registration and exam details
+An **accreditation**, not a proctored certification. Details from the [official accreditation page](https://www.databricks.com/learn/certification/platform-administrator-accreditation), read 2026-10-22. Databricks publishes topic areas but no domain weights; the section headings below are this guide's grouping.
+
+**[📖 Official Accreditation Page](https://www.databricks.com/learn/certification/platform-administrator-accreditation)** - Format, topics, validity
 **[📖 Databricks Academy](https://www.databricks.com/learn)** - Administration learning paths
 **[📖 Administration Guide](https://docs.databricks.com/en/admin/index.html)** - Admin documentation
 
@@ -27,7 +29,7 @@ This certification is designed for:
 - IT administrators transitioning to Databricks
 - Professionals with 6+ months Databricks administration experience
 
-## Domain 1: Workspace Administration (30%)
+## Workspace Administration
 
 ### Workspace Configuration
 
@@ -75,7 +77,7 @@ This certification is designed for:
 - Serverless compute has different pricing model
 - Spot instances reduce compute costs (but may be interrupted)
 
-## Domain 2: Identity and Access (25%)
+## Identity and Access
 
 ### Identity Federation
 
@@ -123,7 +125,7 @@ This certification is designed for:
 - Admin permissions override object-level ACLs
 - Default permissions for new objects: creator is owner
 
-## Domain 3: Data Management (20%)
+## Data Management
 
 ### Unity Catalog Administration
 
@@ -170,7 +172,7 @@ This certification is designed for:
 - Query with SQL for custom dashboards and alerts
 - Retention policies for system table data
 
-## Domain 4: Cluster and Warehouse Management (15%)
+## Cluster and Warehouse Management
 
 ### Cluster Configuration
 
@@ -223,7 +225,7 @@ This certification is designed for:
 - Pricing: based on DBU consumption
 - No cluster policies needed for serverless
 
-## Domain 5: Security (10%)
+## Security
 
 ### Network Security
 
@@ -271,7 +273,7 @@ This certification is designed for:
 
 ## Exam Tips
 
-1. **Workspace admin (30%)** is the largest domain - know settings and configurations
+1. **Workspace and account administration** - know settings and where they are configured
 2. **Identity management** - SCIM, SSO, service principals are essential topics
 3. **Unity Catalog administration** - not just usage, but setup and governance
 4. **Cluster policies** - know how to restrict and set defaults

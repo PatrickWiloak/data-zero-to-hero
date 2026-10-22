@@ -1,8 +1,8 @@
-# Security - Databricks Lakehouse Platform Administrator
+# Security - Databricks Platform Administrator Accreditation
 
 ## Overview
 
-Security covers 10% of the exam. This domain focuses on network security, encryption, audit logging, and compliance for Databricks deployments.
+This topic area focuses on network security, encryption, audit logging, and compliance for Databricks deployments.
 
 **[📖 Security Guide](https://docs.databricks.com/en/security/index.html)** - Security documentation hub
 

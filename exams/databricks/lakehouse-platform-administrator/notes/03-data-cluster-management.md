@@ -1,8 +1,8 @@
-# Data and Cluster Management - Databricks Lakehouse Platform Administrator
+# Data and Cluster Management - Databricks Platform Administrator Accreditation
 
 ## Overview
 
-This domain combines cluster/warehouse management (15%) and data management (20%), covering cluster policies, SQL warehouses, auto-scaling, spot instances, and Unity Catalog data objects.
+This topic area combines cluster/warehouse management and data management, covering cluster policies, SQL warehouses, auto-scaling, spot instances, and Unity Catalog data objects.
 
 ## Cluster Management
 

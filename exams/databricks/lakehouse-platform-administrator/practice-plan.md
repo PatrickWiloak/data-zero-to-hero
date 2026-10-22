@@ -1,4 +1,4 @@
-# Databricks Lakehouse Platform Administrator - Practice Plan
+# Databricks Platform Administrator Accreditation - Practice Plan
 
 ## Week 1: Workspace and Identity Fundamentals
 

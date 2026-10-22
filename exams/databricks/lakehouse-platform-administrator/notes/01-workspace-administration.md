@@ -1,8 +1,8 @@
-# Workspace Administration - Databricks Lakehouse Platform Administrator
+# Workspace Administration - Databricks Platform Administrator Accreditation
 
 ## Overview
 
-Workspace administration covers 30% of the exam - the largest domain. This covers workspace setup, account console management, workspace settings, repos, and notebook management.
+Workspace administration covers workspace setup, account console management, workspace settings, repos, and notebook management.
 
 **[📖 Administration Guide](https://docs.databricks.com/en/admin/index.html)** - Admin documentation hub
 

@@ -1,4 +1,4 @@
-# Databricks Lakehouse Platform Administrator High-Yield Scenarios
+# Databricks Platform Administrator Accreditation High-Yield Scenarios
 
 ## Scenario 1: Cost Control for Data Science Team
 

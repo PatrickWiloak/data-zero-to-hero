@@ -1,10 +1,10 @@
 Question,Answer,Tags
-How long is the Databricks Certified Lakehouse Platform Administrator exam?,90 minutes,exam-logistics
-How many questions are on the Databricks Certified Lakehouse Platform Administrator exam?,45 multiple-choice questions,exam-logistics
-What is the passing score for Databricks Certified Lakehouse Platform Administrator?,70% (approximately 32 correct),exam-logistics
-What does the Databricks Certified Lakehouse Platform Administrator exam cost?,$200 USD,exam-logistics
-How long is Databricks Certified Lakehouse Platform Administrator valid for?,2 years,exam-logistics
-How is the Databricks Certified Lakehouse Platform Administrator exam delivered?,Online proctored,exam-logistics
+How long is the Databricks Data + AI Platform Administrator Accreditation exam?,Unlimited time,exam-logistics
+How many questions are on the Databricks Data + AI Platform Administrator Accreditation exam?,25 multiple-choice questions,exam-logistics
+What is the passing score for Databricks Data + AI Platform Administrator Accreditation?,Not stated on the current page (80% per Databricks' 2022 launch post),exam-logistics
+What does the Databricks Data + AI Platform Administrator Accreditation exam cost?,Free for Databricks customers and partners,exam-logistics
+How long is Databricks Data + AI Platform Administrator Accreditation valid for?,1 year,exam-logistics
+How is the Databricks Data + AI Platform Administrator Accreditation exam delivered?,"Online, not proctored (Databricks Academy)",exam-logistics
 Enable/disable features (workspace administration),"Repos, SQL warehouses, Jobs, MLflow, etc.","notes,workspace-administration"
 Default language (workspace administration),"Python, SQL, Scala, R for new notebooks","notes,workspace-administration"
 Results download (workspace administration),Enable/disable downloading query results,"notes,workspace-administration"

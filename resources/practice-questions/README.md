@@ -43,7 +43,7 @@ Scenario-based practice question banks, one per certification. Every bank follow
 
 - [Databricks Certified Data Engineer Associate](./databricks-data-engineer-associate.md)
 - [Databricks Certified Data Engineer Professional](./databricks-data-engineer-professional.md)
-- [Databricks Certified Lakehouse Platform Administrator](./databricks-lakehouse-platform-administrator.md)
+- [Databricks Data + AI Platform Administrator Accreditation](./databricks-lakehouse-platform-administrator.md)
 
 ### Snowflake
 

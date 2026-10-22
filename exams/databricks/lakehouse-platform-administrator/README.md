@@ -1,22 +1,26 @@
-# Databricks Certified Lakehouse Platform Administrator
+# Databricks Data + AI Platform Administrator Accreditation
+
+> **This is an accreditation, not a proctored certification.** Databricks lists it under "Accreditations" on its [certification page](https://www.databricks.com/learn/training/certification), separate from the Certified Associate and Professional exams, and calls it "the final assessment in the Databricks Data + AI Platform Administrator specialty learning pathway". This guide used to describe a "Databricks Certified Lakehouse Platform Administrator" exam with 45 questions, 90 minutes, $200 and two-year validity; those details were wrong and are corrected below from the [official accreditation page](https://www.databricks.com/learn/certification/platform-administrator-accreditation), read 2026-10-22. The directory keeps its old name so existing links keep working.
 
 ## Exam Overview
 
-The Databricks Certified Lakehouse Platform Administrator certification validates the ability to administer and manage the Databricks Lakehouse Platform. This certification covers workspace administration, identity and access management, data management, cluster and warehouse configuration, and security best practices.
+The accreditation tests your knowledge of managing and administering the Databricks platform with Unity Catalog. Databricks' page names the areas: user and group administration; compute resource management (clusters, SQL warehouses, MLflow, orchestration); and governance and security (permissions, data governance, secrets, Delta Sharing, model governance). The learning pathway's modules cover platform administration fundamentals, identity administration, workspace administration and security, compute resource administration, data administration, and CI/CD administration.
 
 **Exam Details:**
-- **Exam Code:** Databricks Certified Lakehouse Platform Administrator
-- **Duration:** 90 minutes
-- **Number of Questions:** 45 multiple-choice questions
-- **Passing Score:** 70% (approximately 32 correct answers)
-- **Cost:** $200 USD
-- **Delivery:** Online proctored
-- **Validity:** 2 years
-- **Prerequisites:** None (6+ months Databricks administration experience recommended)
+- **Credential:** Databricks Accredited Platform Administrator (badge and certificate)
+- **Number of Questions:** 25 multiple-choice questions
+- **Duration:** Unlimited time
+- **Passing Score:** Not stated on the current page; Databricks' 2022 launch post gave 80%
+- **Cost:** Free for Databricks customers and partners
+- **Delivery:** Online, not proctored, in Databricks Academy
+- **Validity:** 1 year
+- **Prerequisites:** The "Platform Administration with Databricks" course in the Platform Administrator learning pathway; working knowledge of Python or Scala is expected but not tested
 
 ## Exam Domains
 
-### Domain 1: Workspace Administration (30%)
+Databricks publishes topic areas but **no domain weights** for this accreditation. The topic areas below are this guide's grouping of the official areas; the percentages this guide used to show were not Databricks figures and have been removed.
+
+### Topic area: Workspace Administration
 - Configure and manage Databricks workspaces
 - Manage workspace settings and features
 - Implement workspace-level governance
@@ -34,7 +38,7 @@ The Databricks Certified Lakehouse Platform Administrator certification validate
 - Workspace monitoring and audit logs
 - Cost management and budgets
 
-### Domain 2: Identity and Access (25%)
+### Topic area: Identity and Access
 - Configure identity providers and SSO
 - Manage users, groups, and service principals
 - Implement role-based access control
@@ -51,7 +55,7 @@ The Databricks Certified Lakehouse Platform Administrator certification validate
 - Entitlements (workspace access, cluster creation, SQL access)
 - Admin roles (account admin, workspace admin, metastore admin)
 
-### Domain 3: Data Management (20%)
+### Topic area: Data Management
 - Administer Unity Catalog
 - Manage data access and permissions
 - Configure external data sources
@@ -69,7 +73,7 @@ The Databricks Certified Lakehouse Platform Administrator certification validate
 - Catalog federation
 - Information schema queries
 
-### Domain 4: Cluster and Warehouse Management (15%)
+### Topic area: Cluster and Warehouse Management
 - Configure and manage compute resources
 - Implement cluster policies
 - Manage SQL warehouses
@@ -87,7 +91,7 @@ The Databricks Certified Lakehouse Platform Administrator certification validate
 - Runtime version management
 - Init scripts and cluster libraries
 
-### Domain 5: Security (10%)
+### Topic area: Security
 - Implement network security
 - Configure data encryption
 - Manage compliance requirements
@@ -145,21 +149,21 @@ The Databricks Certified Lakehouse Platform Administrator certification validate
 
 ### Phase 3: Exam Prep (Week 5-6)
 1. Take practice exams and review incorrect answers
-2. Focus on workspace admin and identity (55% of exam)
+2. Focus on identity, Unity Catalog permissions and compute governance
 3. Review security and network configuration
 4. Practice scenario-based administration questions
 
 ## Study Resources
 
 - **[Databricks Academy](https://www.databricks.com/learn)** - Platform administration learning path
-- **[Exam Guide](https://www.databricks.com/learn/training/certification)** - Official exam page
+- **[📖 Accreditation page](https://www.databricks.com/learn/certification/platform-administrator-accreditation)** - Official details and topic areas
 - **[Administration Guide](https://docs.databricks.com/en/admin/index.html)** - Admin documentation
 - **[Unity Catalog Documentation](https://docs.databricks.com/en/data-governance/unity-catalog/index.html)** - Unity Catalog guide
 - **[Security Guide](https://docs.databricks.com/en/security/index.html)** - Security best practices
 
 ## Tips for Success
 
-1. **Workspace admin is the largest domain** - 30% covers workspace configuration
+1. **Workspace and account administration** - know which settings live in the account console and which in the workspace
 2. **Identity management is critical** - SCIM, SSO, and service principals are key topics
 3. **Unity Catalog administration** - Not just using UC, but administering it
 4. **Cluster policies** - Know how to create and enforce governance

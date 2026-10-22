@@ -79,7 +79,7 @@ What's your starting point?
 └─ Running databases (DBA / database engineer)
    ├─ Relational    → Azure DP-300 | GCP Professional Cloud Database Engineer
    ├─ NoSQL         → MongoDB Associate DBA / Atlas Administrator | Azure DP-420 (Cosmos DB)
-   └─ Platform admin → SnowPro Advanced Administrator | Databricks Lakehouse Platform Administrator
+   └─ Platform admin → SnowPro Advanced Administrator | Databricks Platform Administrator (accreditation)
 ```
 
 Retired exams (AWS DAS-C01 and DBS-C01, Azure DP-203) keep their guides for reference but are not recommended for new candidates.
@@ -106,7 +106,7 @@ Full roadmap: [Data engineer certification roadmap](./resources/certification-ro
 1. Azure DP-900 for the vocabulary
 2. Azure DP-300 *or* GCP Professional Cloud Database Engineer
 3. NoSQL: MongoDB Associate DBA → Atlas Administrator, *or* Azure DP-420 (Cosmos DB)
-4. Platform admin: SnowPro Advanced Administrator, Databricks Lakehouse Platform Administrator
+4. Platform admin: SnowPro Advanced Administrator, Databricks Platform Administrator (accreditation)
 
 Full roadmap: [Database specialist certification roadmap](./resources/certification-roadmap-database-specialist.md)
 
@@ -121,7 +121,7 @@ Full roadmap: [Database specialist certification roadmap](./resources/certificat
 | **AWS** | 3 | **Data Engineer Associate (DEA-C01)**; retired Data Analytics (DAS-C01) and Database (DBS-C01) specialties retained for reference | [exams/aws/](./exams/aws/) |
 | **Azure** | 7 | DP-900, DP-300, DP-420 (Cosmos DB), DP-600 and DP-700 (Fabric), PL-300 (Power BI); retired DP-203 retained | [exams/azure/](./exams/azure/) |
 | **GCP** | 2 | Professional Data Engineer, Professional Cloud Database Engineer | [exams/gcp/](./exams/gcp/) |
-| **Databricks** | 3 | Data Engineer (Associate + Professional), Lakehouse Platform Administrator | [exams/databricks/](./exams/databricks/) |
+| **Databricks** | 3 | Data Engineer (Associate + Professional), Platform Administrator accreditation | [exams/databricks/](./exams/databricks/) |
 | **Snowflake** | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) | [exams/snowflake/](./exams/snowflake/) |
 | **Confluent/Kafka** | 2 | Certified Developer, Certified Administrator | [exams/confluent/](./exams/confluent/) |
 | **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |

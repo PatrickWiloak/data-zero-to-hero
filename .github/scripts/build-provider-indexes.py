@@ -61,7 +61,7 @@ PROVIDER_HIGHLIGHTS = {
     "kubernetes": "KCNA, KCSA, CKA, CKAD, CKS, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA)",
     "nvidia": "AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD",
     "hashicorp": "Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad",
-    "databricks": "Data Engineer (Associate + Professional), Lakehouse Platform Administrator",
+    "databricks": "Data Engineer (Associate + Professional), Platform Administrator accreditation",
     "snowflake": "SnowPro Core + 3 Advanced (Architect, Data Eng, Admin)",
     "github": "Foundations, Actions, Administration, Advanced Security, Copilot",
     "redhat": "RHCSA (EX200), OpenShift Administrator (EX280)",

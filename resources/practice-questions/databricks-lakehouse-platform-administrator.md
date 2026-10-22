@@ -3,9 +3,9 @@ last-updated: 2026-08-09
 difficulty: intermediate
 ---
 
-# Databricks Certified Lakehouse Platform Administrator - Practice Questions
+# Databricks Data + AI Platform Administrator Accreditation - Practice Questions
 
-15 questions for this exam, weighted toward workspace administration (30%) and identity and access (25%), then data management (20%), cluster and warehouse management (15%), and security (10%).
+15 questions across workspace administration, identity and access, data management, cluster and warehouse management, and security. Databricks publishes no domain weights for this accreditation (the real assessment is 25 unproctored questions); the spread here is this guide's choice.
 
 > **Cert page:** [exams/databricks/lakehouse-platform-administrator/](../../exams/databricks/lakehouse-platform-administrator/)
 
@@ -283,7 +283,7 @@ D. Increase the storage quota for the account
 
 ## Where to go deeper
 
-- [Lakehouse Platform Administrator cert page](../../exams/databricks/lakehouse-platform-administrator/) - notes, practice plan, strategy
+- [Platform Administrator accreditation page](../../exams/databricks/lakehouse-platform-administrator/) - notes, practice plan, strategy
 - [Data Engineer Professional practice questions](./databricks-data-engineer-professional.md) - the pipelines this platform runs
 - [Cloud cost basics](https://cloud.noblerworks.com/learn/concepts/cloud-cost-basics/) - the cost domain in plain English
 - **[📖 Databricks certification](https://www.databricks.com/learn/certification)** - official exam guides

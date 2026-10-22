@@ -1,4 +1,4 @@
-# Databricks Lakehouse Platform Administrator Study Strategy
+# Databricks Platform Administrator Accreditation Study Strategy
 
 ## Study Approach
 
@@ -67,7 +67,7 @@
 
 ### Time Management
 - 90 minutes for 45 questions - 2 minutes per question
-- Workspace admin and Unity Catalog questions are most frequent (55% combined)
+- Unity Catalog permissions, identity and compute governance are the core of the official topic list
 - Security questions are fewer but detail-oriented
 - Eliminate obvious wrong answers first
 

@@ -10,6 +10,6 @@ Study guides for Databricks in this repo. For the full picture across every prov
 |------|------|-------|--------|------:|
 | [Databricks Certified Data Engineer Associate](data-engineer-associate/) | - | Associate | Ready | 5 |
 | [Databricks Certified Data Engineer Professional](data-engineer-professional/) | - | Professional | Ready | 5 |
-| [Databricks Certified Lakehouse Platform Administrator](lakehouse-platform-administrator/) | - | - | Ready | 4 |
+| [Databricks Data + AI Platform Administrator Accreditation](lakehouse-platform-administrator/) | - | - | Ready | 4 |
 
 <!-- END GENERATED: provider-certs -->

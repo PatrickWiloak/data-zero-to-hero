@@ -1,8 +1,8 @@
-# Identity and Access Management - Databricks Lakehouse Platform Administrator
+# Identity and Access Management - Databricks Platform Administrator Accreditation
 
 ## Overview
 
-Identity and access covers 25% of the exam. This domain focuses on Unity Catalog principals, groups, SCIM provisioning, identity federation, and access control.
+This topic area focuses on Unity Catalog principals, groups, SCIM provisioning, identity federation, and access control.
 
 **[📖 Identity and Access Management](https://docs.databricks.com/en/admin/users-groups/index.html)** - User management
 

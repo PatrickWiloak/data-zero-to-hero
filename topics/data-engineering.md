@@ -101,7 +101,7 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 
 - [Databricks Data Engineer Associate](../exams/databricks/data-engineer-associate/)
 - [Databricks Data Engineer Professional](../exams/databricks/data-engineer-professional/)
-- [Databricks Lakehouse Platform Administrator](../exams/databricks/lakehouse-platform-administrator/)
+- [Databricks Data + AI Platform Administrator Accreditation](../exams/databricks/lakehouse-platform-administrator/)
 - [Snowflake SnowPro Core (COF-C03)](../exams/snowflake/snowpro-core/)
 - [Snowflake SnowPro Advanced Data Engineer](../exams/snowflake/snowpro-advanced-data-engineer/)
 - [Snowflake SnowPro Advanced Architect](../exams/snowflake/snowpro-advanced-architect/)
