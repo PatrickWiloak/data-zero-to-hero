@@ -107,7 +107,7 @@ If you're using this repo, subscribe - new content lands here first.
 - Best for: Modern data stack tools - dbt, Snowflake, Airflow, Fivetran - in short, practical videos
 - Use when: You are setting up one specific tool and want to see it done.
 
-**[Andreas Kretz - Plumbers of Data Science](https://youtube.com/@andreaskayy)**
+**[Andreas Kretz](https://youtube.com/@andreaskayy)**
 - Best for: Data engineering fundamentals and the platform-and-pipeline view of the job
 - Use when: You want the "how does it all fit together" picture.
 
@@ -116,7 +116,7 @@ If you're using this repo, subscribe - new content lands here first.
 ## 🌊 Streaming and Kafka
 
 **[Confluent](https://youtube.com/@Confluent)**
-- Best for: Apache Kafka, Kafka Streams, Flink and stream processing concepts, from the company founded by Kafka's creators
+- Best for: Apache Kafka, Kafka Streams, Flink and stream processing concepts, from the company founded by Kafka's creators (now an IBM company)
 - Why: The "Apache Kafka 101" and stream processing course series are free, short, and accurate.
 - Use when: You are in [phase 4 of Data from Scratch](./data-from-scratch.md) or preparing for a [Confluent certification](../exams/confluent/).
 

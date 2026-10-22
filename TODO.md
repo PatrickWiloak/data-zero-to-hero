@@ -17,7 +17,7 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 ## Content (2026-10-21 expansion)
 
 - [ ] Judge 2026-11-21: rerun `build-dbt-project.md` on the current dbt release; if dbt v2 is the pip default by then, retest and update the pinned `dbt-core<2`.
-- [ ] Judge 2026-11-21: first lychee run covers the new pages' vendor and YouTube links (handles in `learn/youtube.md` were not fetched); fix any 404s.
+- [ ] Judge 2026-11-21: first lychee run covers the new pages' vendor links; fix any 404s. (All 22 `learn/youtube.md` handles fetched and confirmed 2026-10-22.)
 - [ ] Next concept candidates: query plans in depth, backup and point-in-time restore, Spark execution (shuffles, skew), semantic layers.
 
 ## Patrick
