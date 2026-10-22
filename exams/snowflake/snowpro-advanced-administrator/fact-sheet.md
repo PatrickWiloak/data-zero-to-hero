@@ -1,12 +1,13 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
+exam-version: ADA-C02
 ---
 
-# SnowPro Advanced - Administrator - Fact Sheet
+# SnowPro Advanced: Administrator (ADA-C02) - Fact Sheet
 
 ## Quick Reference
 
-**Exam Code:** ADA-C01
+**Exam Code:** ADA-C02
 **Duration:** 115 minutes
 **Questions:** 65 questions
 **Passing Score:** 750/1000
@@ -19,11 +20,14 @@ last-updated: 2026-05-03
 
 | Domain | Weight | Key Focus |
 |--------|--------|-----------|
-| Account and Organization Management | 20-25% | ORGADMIN, parameters, replication |
-| Security and Access Control | 25-30% | RBAC, network security, governance |
-| Resource Management and Cost Control | 20-25% | Resource monitors, warehouses, credits |
-| Performance Monitoring and Tuning | 15-20% | Query Profile, caching, clustering |
-| Data Management and Compliance | 10-15% | Time Travel, Fail-safe, audit |
+| 1.0 Snowflake Security, RBAC, and User Administration | 31% | Roles, grants, users, authentication, network policies |
+| 2.0 Account Management & Data Governance | 18% | ORGADMIN, parameters, masking, tagging, audit |
+| 3.0 Data and Object Management | 15% | Databases, schemas, tables, warehouses |
+| 4.0 Performance Monitoring & Tuning | 20% | Query Profile, ACCOUNT_USAGE, caching, clustering, resource monitors |
+| 5.0 Data Sharing and Snowflake Marketplace | 7% | Shares, reader accounts, listings |
+| 6.0 Disaster Recovery, Backup & Data Replication | 9% | Replication and failover groups, Time Travel, Fail-safe |
+
+ADA-C02 domains and weights from the [official exam page](https://learn.snowflake.com/en/certifications/snowpro-advanced-administrator-c02/), read 2026-10-22. Key-focus column is this guide's mapping, not Snowflake's; objective-level detail not yet checked against the form-gated study guide PDF.
 
 ## Organization-Level Management
 
@@ -290,11 +294,12 @@ SELECT * FROM TABLE(INFORMATION_SCHEMA.TAG_REFERENCES(
 ## Exam Tips
 
 ### High-Value Topics
-1. **Security (25-30%):** RBAC design, network policies, governance, audit
-2. **Account Management (20-25%):** ORGADMIN, parameters, organization structure
-3. **Resource Management (20-25%):** Monitors, warehouse strategy, cost control
-4. **Performance (15-20%):** Query Profile, ACCOUNT_USAGE views, caching
-5. **Compliance (10-15%):** Time Travel, Fail-safe, data classification
+1. **Security, RBAC and users (31%):** RBAC design, network policies, authentication
+2. **Performance monitoring and tuning (20%):** Query Profile, ACCOUNT_USAGE views, caching, monitors
+3. **Account management and governance (18%):** ORGADMIN, parameters, masking, tagging, audit
+4. **Data and object management (15%):** objects, warehouses, storage
+5. **DR, backup and replication (9%):** replication and failover groups, Time Travel, Fail-safe
+6. **Data sharing and Marketplace (7%):** shares, reader accounts, listings
 
 ### Common Exam Traps
 - Confusing SECURITYADMIN (manages grants) with USERADMIN (creates users/roles)

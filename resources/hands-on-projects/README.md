@@ -40,8 +40,8 @@ Each lab maps to the certs it exercises. The reverse index lives in [labs-by-cer
 | Lab | Certs it supports |
 |------|-------------------|
 | [Hands-On Project: Build a Data Pipeline](./build-data-pipeline.md) | [DEA-C01](../../exams/aws/associate/data-engineer-dea-c01/), [DP-203](../../exams/azure/dp-203/), [Professional Data Engineer](../../exams/gcp/data-engineer/), [Databricks Certified Data Engineer Associate](../../exams/databricks/data-engineer-associate/) |
-| [Hands-On Project: Build a dbt Project](./build-dbt-project.md) | [DP-600](../../exams/azure/dp-600/), [COF-C02](../../exams/snowflake/snowpro-core/), [SnowPro Advanced - Data Engineer Certification](../../exams/snowflake/snowpro-advanced-data-engineer/), [Databricks Certified Data Engineer Associate](../../exams/databricks/data-engineer-associate/) |
+| [Hands-On Project: Build a dbt Project](./build-dbt-project.md) | [DP-600](../../exams/azure/dp-600/), [COF-C03](../../exams/snowflake/snowpro-core/), [DEA-C02](../../exams/snowflake/snowpro-advanced-data-engineer/), [Databricks Certified Data Engineer Associate](../../exams/databricks/data-engineer-associate/) |
 | [Hands-On Project: Build a Streaming Pipeline](./build-streaming-pipeline.md) | [Confluent Certified Developer for Apache Kafka](../../exams/confluent/certified-developer/), [DEA-C01](../../exams/aws/associate/data-engineer-dea-c01/), [Professional Data Engineer](../../exams/gcp/data-engineer/), [Databricks Certified Data Engineer Associate](../../exams/databricks/data-engineer-associate/) |
-| [Hands-On Project: Design a Star Schema](./design-star-schema.md) | [PL-300](../../exams/azure/pl-300/), [DP-600](../../exams/azure/dp-600/), [COF-C02](../../exams/snowflake/snowpro-core/), [DEA-C01](../../exams/aws/associate/data-engineer-dea-c01/) |
+| [Hands-On Project: Design a Star Schema](./design-star-schema.md) | [PL-300](../../exams/azure/pl-300/), [DP-600](../../exams/azure/dp-600/), [COF-C03](../../exams/snowflake/snowpro-core/), [DEA-C01](../../exams/aws/associate/data-engineer-dea-c01/) |
 
 <!-- END GENERATED: lab-cert-map -->

@@ -1,22 +1,23 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
+exam-version: COF-C03
 ---
 
 # SnowPro Core Certification Fact Sheet
 
 ## Exam Overview
 
-**Exam Code:** COF-C02
+**Exam Code:** COF-C03
 **Exam Name:** SnowPro Core Certification
 **Duration:** 115 minutes
-**Questions:** 100 multiple choice
+**Questions:** 100 (multiple choice and multiple select)
 **Passing Score:** 750/1000
 **Cost:** $175 USD
 **Valid For:** 2 years
-**Delivery:** Online proctored
+**Delivery:** Online proctored or onsite testing center
 **Prerequisites:** None
 
-**[📖 Official Exam Page](https://learn.snowflake.com/en/certifications/)** - Registration and official details
+**[📖 Official Exam Page (COF-C03)](https://learn.snowflake.com/en/certifications/snowpro-core-c03/)** - Exam format, domain weights, registration
 **[📖 Exam Study Guide](https://learn.snowflake.com/en/certifications/)** - Domain breakdown and objectives
 **[📖 Snowflake Documentation](https://docs.snowflake.com/)** - Primary reference material
 
@@ -32,7 +33,19 @@ This certification is designed for:
 **[📖 Certification Overview](https://learn.snowflake.com/en/certifications/)** - All Snowflake certifications
 **[📖 Snowflake University](https://learn.snowflake.com/)** - Free training courses
 
-## Domain 1: Snowflake Cloud Data Platform Features and Architecture (25%)
+## COF-C03 Domain Weights
+
+| Domain | Weight |
+|---|---|
+| 1.0 Snowflake AI Data Cloud Features & Architecture | 31% |
+| 2.0 Account Management and Data Governance | 20% |
+| 3.0 Data Loading, Unloading, and Connectivity | 18% |
+| 4.0 Performance Optimization, Querying, and Transformation | 21% |
+| 5.0 Data Collaboration | 10% |
+
+From the official COF-C03 page, read 2026-10-22. The sections below were written for COF-C02 and are labelled with the COF-C03 domain they feed; objective-level detail is not yet checked against the COF-C03 study guide PDF (form-gated).
+
+## Features and Architecture (domain 1.0, 31%)
 
 This is the most heavily weighted domain covering Snowflake's unique architecture.
 
@@ -101,7 +114,7 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 **[📖 Connecting to Snowflake](https://docs.snowflake.com/en/user-guide/connecting)** - All connection methods
 **[📖 Snowsight](https://docs.snowflake.com/en/user-guide/ui-snowsight)** - Web interface guide
 
-## Domain 2: Account Access and Security (20%)
+## Account Access and Security (domain 2.0, 20%)
 
 ### Role-Based Access Control (RBAC)
 
@@ -157,7 +170,7 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 **[📖 Encryption](https://docs.snowflake.com/en/user-guide/security-encryption-end-to-end)** - Encryption overview
 **[📖 Tri-Secret Secure](https://docs.snowflake.com/en/user-guide/security-encryption-manage)** - Customer-managed keys
 
-## Domain 3: Performance Concepts (15%)
+## Performance Concepts (part of domain 4.0, 21%)
 
 ### Caching
 
@@ -221,7 +234,7 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 
 **[📖 Resource Monitors](https://docs.snowflake.com/en/user-guide/resource-monitors)** - Credit monitoring
 
-## Domain 4: Data Loading and Unloading (10%)
+## Data Loading and Unloading (domain 3.0, 18%)
 
 ### Stages
 
@@ -286,7 +299,7 @@ HEADER = TRUE;
 
 **[📖 COPY INTO Location](https://docs.snowflake.com/en/sql-reference/sql/copy-into-location)** - Unloading syntax
 
-## Domain 5: Data Transformations (20%)
+## Data Transformations (part of domain 4.0, 21%)
 
 ### Semi-Structured Data
 
@@ -358,7 +371,7 @@ LATERAL FLATTEN(input => raw_data:items) f;
 
 **[📖 Views](https://docs.snowflake.com/en/user-guide/views-introduction)** - View types and usage
 
-## Domain 6: Data Protection and Data Sharing (10%)
+## Data Protection and Data Sharing (domain 5.0 Data Collaboration, 10%)
 
 ### Time Travel
 

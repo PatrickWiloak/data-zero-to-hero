@@ -3,7 +3,7 @@ last-updated: 2026-08-09
 difficulty: advanced
 ---
 
-# SnowPro Advanced: Administrator (ADA-C01) - Practice Questions
+# SnowPro Advanced: Administrator (ADA-C02) - Practice Questions
 
 15 questions weighted toward security and access control (25-30%), account and organization management and resource management (20-25% each), then performance monitoring (15-20%) and data management and compliance (10-15%).
 
@@ -283,7 +283,7 @@ D. Move to a smaller warehouse
 
 ## Where to go deeper
 
-- [ADA-C01 cert page](../../exams/snowflake/snowpro-advanced-administrator/) - notes, practice plan, strategy
+- [ADA-C02 cert page](../../exams/snowflake/snowpro-advanced-administrator/) - notes, practice plan, strategy
 - [SnowPro Core practice questions](./snowflake-snowpro-core.md) - the prerequisite
 - [SnowPro Advanced Architect practice questions](./snowflake-snowpro-advanced-architect.md) - the design counterpart
 - [SQL vs NoSQL](../../learn/concepts/sql-vs-nosql.md) - plain-English data foundation

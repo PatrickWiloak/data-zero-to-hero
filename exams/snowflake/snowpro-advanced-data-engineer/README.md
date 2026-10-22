@@ -1,22 +1,32 @@
-# SnowPro Advanced - Data Engineer Certification
+# SnowPro Advanced: Data Engineer Certification (DEA-C02)
 
 ## Exam Overview
 
 The SnowPro Advanced - Data Engineer Certification validates expertise in building and managing data pipelines on Snowflake. This certification targets data engineers who design, build, and maintain data ingestion, transformation, and orchestration workflows using Snowflake's native capabilities including Snowpipe, tasks, streams, dynamic tables, and Snowpark.
 
 **Exam Details:**
-- **Exam Code:** ADE-C01
+- **Exam Code:** DEA-C02
 - **Duration:** 115 minutes
-- **Number of Questions:** 65 multiple choice / multiple select
+- **Number of Questions:** 65 (multiple select, multiple choice, interactive)
 - **Passing Score:** 750 out of 1000
 - **Cost:** $375 USD
-- **Delivery:** Online proctored
+- **Delivery:** Online proctored or onsite testing center
 - **Validity:** 2 years
 - **Prerequisites:** SnowPro Core Certification (active)
 
-## Exam Domains
+## Exam Domains (DEA-C02)
 
-### Domain 1: Data Movement (25-30%)
+> **The exam code is DEA-C02.** This guide previously listed "ADE-C01", which is not a Snowflake code. The domain names and weights below are from Snowflake's official DEA-C02 exam page. Source: the official exam page on [learn.snowflake.com](https://learn.snowflake.com/en/certifications/), read 2026-10-22. The topic sections that follow keep their original grouping; objective-level detail has not yet been checked against the DEA-C02 study guide PDF, which Snowflake serves only through a sign-up form.
+
+| Domain | Weight |
+|---|---|
+| 1.0 Data Movement | 28% |
+| 2.0 Performance Optimization | 19% |
+| 3.0 Storage and Data Protection | 14% |
+| 4.0 Data Governance | 14% |
+| 5.0 Data Transformation | 25% |
+
+### Topic area: Data Movement (domain 1.0, 28%)
 - Snowpipe continuous loading architecture
 - Snowpipe Streaming for low-latency ingestion
 - Bulk data loading with COPY INTO
@@ -32,7 +42,7 @@ The SnowPro Advanced - Data Engineer Certification validates expertise in buildi
 - COPY INTO options and transformations during load
 - Kafka connector with Snowpipe Streaming mode
 
-### Domain 2: Data Pipelines and Transformations (25-30%)
+### Topic area: Data Pipelines and Transformations (domain 5.0 Data Transformation, 25%)
 - Tasks and DAG orchestration
 - Streams for change data capture (CDC)
 - Dynamic tables for declarative pipelines
@@ -48,7 +58,7 @@ The SnowPro Advanced - Data Engineer Certification validates expertise in buildi
 - Python, Java, and Scala UDF development
 - TASK_HISTORY and PIPE_USAGE_HISTORY monitoring
 
-### Domain 3: Performance and Optimization (20-25%)
+### Topic area: Performance and Optimization (domain 2.0, 19%)
 - Warehouse sizing for data engineering workloads
 - Clustering strategies for pipeline output tables
 - Query optimization for transformation queries
@@ -62,7 +72,7 @@ The SnowPro Advanced - Data Engineer Certification validates expertise in buildi
 - Resource monitors for pipeline cost control
 - Serverless task credit management
 
-### Domain 4: Data Governance and Security (15-20%)
+### Topic area: Data Governance and Security (domain 4.0, 14%; Time Travel, cloning and replication fall under 3.0 Storage and Data Protection, 14%)
 - Role-based access control for pipeline objects
 - Dynamic data masking in pipeline outputs
 - Object tagging for pipeline data classification

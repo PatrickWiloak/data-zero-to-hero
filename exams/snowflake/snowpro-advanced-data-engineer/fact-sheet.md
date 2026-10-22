@@ -1,12 +1,13 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
+exam-version: DEA-C02
 ---
 
-# SnowPro Advanced - Data Engineer - Fact Sheet
+# SnowPro Advanced: Data Engineer (DEA-C02) - Fact Sheet
 
-## Quick Reference
+## Exam Overview
 
-**Exam Code:** ADE-C01
+**Exam Code:** DEA-C02
 **Duration:** 115 minutes
 **Questions:** 65 questions
 **Passing Score:** 750/1000
@@ -19,10 +20,13 @@ last-updated: 2026-05-03
 
 | Domain | Weight | Key Focus |
 |--------|--------|-----------|
-| Data Movement | 25-30% | Snowpipe, Streaming, COPY INTO, Kafka |
-| Data Pipelines and Transformations | 25-30% | Tasks, streams, dynamic tables, Snowpark |
-| Performance and Optimization | 20-25% | Warehouse sizing, clustering, cost |
-| Data Governance and Security | 15-20% | RBAC, masking, tagging, audit |
+| 1.0 Data Movement | 28% | Snowpipe, Snowpipe Streaming, COPY INTO, Kafka, external sources |
+| 2.0 Performance Optimization | 19% | Warehouse sizing, clustering, query tuning, cost |
+| 3.0 Storage and Data Protection | 14% | Time Travel, Fail-safe, cloning, replication |
+| 4.0 Data Governance | 14% | RBAC, masking, row access policies, tagging, audit |
+| 5.0 Data Transformation | 25% | Tasks, streams, dynamic tables, Snowpark, UDFs and procedures |
+
+DEA-C02 domains and weights from the [official exam page](https://learn.snowflake.com/en/certifications/snowpro-advanced-dataengineer-C02/), read 2026-10-22. Key-focus column is this guide's mapping, not Snowflake's; objective-level detail not yet checked against the form-gated study guide PDF.
 
 ## Data Loading Methods
 
@@ -308,10 +312,11 @@ SELECT * FROM TABLE(INFORMATION_SCHEMA.DYNAMIC_TABLE_REFRESH_HISTORY());
 ## Exam Tips
 
 ### High-Value Topics
-1. **Data Movement (25-30%):** Snowpipe vs Streaming, COPY INTO options, Kafka connector
-2. **Pipelines (25-30%):** Tasks/streams vs dynamic tables, Snowpark procedures
-3. **Performance (20-25%):** Warehouse sizing, clustering for pipeline outputs
-4. **Governance (15-20%):** Pipeline permissions, masking, audit
+1. **Data Movement (28%):** Snowpipe vs Streaming, COPY INTO options, Kafka connector
+2. **Data Transformation (25%):** Tasks/streams vs dynamic tables, Snowpark procedures
+3. **Performance Optimization (19%):** Warehouse sizing, clustering for pipeline outputs
+4. **Storage and Data Protection (14%):** Time Travel, cloning, replication
+5. **Data Governance (14%):** Pipeline permissions, masking, audit
 
 ### Common Exam Traps
 - Confusing Snowpipe (file-based) with Snowpipe Streaming (API-based)

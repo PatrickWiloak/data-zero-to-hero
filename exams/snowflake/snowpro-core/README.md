@@ -1,22 +1,33 @@
-# SnowPro Core Certification (COF-C02)
+# SnowPro Core Certification (COF-C03)
 
 ## Exam Overview
 
 The SnowPro Core Certification validates a candidate's foundational knowledge of Snowflake's cloud data platform. This certification demonstrates understanding of Snowflake's architecture, key features, and core functionality needed to work effectively with the platform. It serves as a prerequisite for all SnowPro Advanced certifications.
 
 **Exam Details:**
-- **Exam Code:** COF-C02
+- **Exam Code:** COF-C03
 - **Duration:** 115 minutes
-- **Number of Questions:** 100 multiple choice
+- **Number of Questions:** 100 (multiple choice and multiple select)
 - **Passing Score:** 750 out of 1000
 - **Cost:** $175 USD
-- **Delivery:** Online proctored
+- **Delivery:** Online proctored or onsite testing center
+- **Languages:** English, Japanese, Korean, French, Spanish
 - **Validity:** 2 years
 - **Prerequisites:** None (Snowflake hands-on experience recommended)
 
-## Exam Domains
+## Exam Domains (COF-C03)
 
-### Domain 1: Snowflake Cloud Data Platform Features and Architecture (25%)
+> **COF-C03 replaced COF-C02.** The domain names and weights below are from Snowflake's official COF-C03 exam page. Source: the official exam page on [learn.snowflake.com](https://learn.snowflake.com/en/certifications/), read 2026-10-22. The topic sections that follow were written against COF-C02 and are now labelled with the COF-C03 domain they feed; the objective-level detail has not yet been checked against the COF-C03 study guide PDF, which Snowflake serves only through a sign-up form.
+
+| Domain | Weight |
+|---|---|
+| 1.0 Snowflake AI Data Cloud Features & Architecture | 31% |
+| 2.0 Account Management and Data Governance | 20% |
+| 3.0 Data Loading, Unloading, and Connectivity | 18% |
+| 4.0 Performance Optimization, Querying, and Transformation | 21% |
+| 5.0 Data Collaboration | 10% |
+
+### Topic area: Features and Architecture (domain 1.0, 31%)
 - Overview of Snowflake's cloud data platform
 - Snowflake's unique multi-cluster shared data architecture
 - Virtual warehouses and compute layer
@@ -36,7 +47,7 @@ The SnowPro Core Certification validates a candidate's foundational knowledge of
 - Snowflake editions: Standard, Enterprise, Business Critical, VPS
 - Support for multiple cloud providers (AWS, Azure, GCP)
 
-### Domain 2: Account Access and Security (20%)
+### Topic area: Account Access and Security (domain 2.0, 20%)
 - User and role management
 - Role-Based Access Control (RBAC)
 - Discretionary Access Control (DAC)
@@ -57,7 +68,7 @@ The SnowPro Core Certification validates a candidate's foundational knowledge of
 - OAuth integration
 - SCIM provisioning
 
-### Domain 3: Performance Concepts (15%)
+### Topic area: Performance Concepts (part of domain 4.0, 21%)
 - Query performance optimization
 - Warehouse configuration for performance
 - Clustering keys and micro-partition pruning
@@ -77,7 +88,7 @@ The SnowPro Core Certification validates a candidate's foundational knowledge of
 - Resource monitors and credit usage tracking
 - Materialized views for pre-computed results
 
-### Domain 4: Data Loading and Unloading (10%)
+### Topic area: Data Loading and Unloading (domain 3.0, 18%)
 - COPY INTO command for bulk loading
 - Snowpipe for continuous loading
 - Stage types (internal, external)
@@ -97,7 +108,7 @@ The SnowPro Core Certification validates a candidate's foundational knowledge of
 - Data unloading with COPY INTO location
 - VARIANT data type for semi-structured data
 
-### Domain 5: Data Transformations (20%)
+### Topic area: Data Transformations (part of domain 4.0, 21%)
 - SQL functions and operations
 - Stored procedures and UDFs
 - Streams and tasks
@@ -122,7 +133,7 @@ The SnowPro Core Certification validates a candidate's foundational knowledge of
 - Secure views vs regular views
 - Recursive CTEs
 
-### Domain 6: Data Protection and Data Sharing (10%)
+### Topic area: Data Protection and Data Sharing (domain 5.0 Data Collaboration, 10%; protection features may sit under 2.0)
 - Time Travel
 - Fail-safe
 - Data sharing

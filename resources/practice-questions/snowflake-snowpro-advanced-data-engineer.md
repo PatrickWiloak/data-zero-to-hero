@@ -3,7 +3,7 @@ last-updated: 2026-08-09
 difficulty: advanced
 ---
 
-# SnowPro Advanced: Data Engineer - Practice Questions
+# SnowPro Advanced: Data Engineer (DEA-C02) - Practice Questions
 
 15 questions weighted toward data movement and data pipelines and transformations (25-30% each), then performance and optimization (20-25%) and data governance and security (15-20%).
 

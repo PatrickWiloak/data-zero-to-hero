@@ -23,16 +23,16 @@ Each row shows when a page was last verified against its source of truth.
 | mongodb/associate-atlas-administrator | 2026-05-03 | [exams/mongodb/associate-atlas-administrator](../exams/mongodb/associate-atlas-administrator/) |
 | mongodb/associate-dba | 2026-05-03 | [exams/mongodb/associate-dba](../exams/mongodb/associate-dba/) |
 | mongodb/associate-developer | 2026-05-03 | [exams/mongodb/associate-developer](../exams/mongodb/associate-developer/) |
-| snowflake/snowpro-advanced-administrator | 2026-05-03 | [exams/snowflake/snowpro-advanced-administrator](../exams/snowflake/snowpro-advanced-administrator/) |
 | snowflake/snowpro-advanced-architect | 2026-05-03 | [exams/snowflake/snowpro-advanced-architect](../exams/snowflake/snowpro-advanced-architect/) |
-| snowflake/snowpro-advanced-data-engineer | 2026-05-03 | [exams/snowflake/snowpro-advanced-data-engineer](../exams/snowflake/snowpro-advanced-data-engineer/) |
-| snowflake/snowpro-core | 2026-05-03 | [exams/snowflake/snowpro-core](../exams/snowflake/snowpro-core/) |
 | azure/pl-300 | 2026-08-09 | [exams/azure/pl-300](../exams/azure/pl-300/) |
 | azure/dp-203 | 2026-10-16 | [exams/azure/dp-203](../exams/azure/dp-203/) |
 | azure/dp-300 | 2026-10-22 | [exams/azure/dp-300](../exams/azure/dp-300/) |
 | azure/dp-420 | 2026-10-22 | [exams/azure/dp-420](../exams/azure/dp-420/) |
 | azure/dp-600 | 2026-10-22 | [exams/azure/dp-600](../exams/azure/dp-600/) |
 | azure/dp-700 | 2026-10-22 | [exams/azure/dp-700](../exams/azure/dp-700/) |
+| snowflake/snowpro-advanced-administrator | 2026-10-22 | [exams/snowflake/snowpro-advanced-administrator](../exams/snowflake/snowpro-advanced-administrator/) |
+| snowflake/snowpro-advanced-data-engineer | 2026-10-22 | [exams/snowflake/snowpro-advanced-data-engineer](../exams/snowflake/snowpro-advanced-data-engineer/) |
+| snowflake/snowpro-core | 2026-10-22 | [exams/snowflake/snowpro-core](../exams/snowflake/snowpro-core/) |
 
 ## Concept pages
 

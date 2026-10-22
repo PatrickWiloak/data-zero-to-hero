@@ -1,22 +1,33 @@
-# SnowPro Advanced - Administrator Certification
+# SnowPro Advanced: Administrator Certification (ADA-C02)
 
 ## Exam Overview
 
 The SnowPro Advanced - Administrator Certification validates expertise in managing and administering Snowflake environments at an enterprise level. This certification targets Snowflake administrators responsible for account management, security configuration, performance monitoring, resource optimization, and compliance across large-scale Snowflake deployments.
 
 **Exam Details:**
-- **Exam Code:** ADA-C01
+- **Exam Code:** ADA-C02
 - **Duration:** 115 minutes
-- **Number of Questions:** 65 multiple choice / multiple select
+- **Number of Questions:** 65 (multiple select, multiple choice, interactive)
 - **Passing Score:** 750 out of 1000
 - **Cost:** $375 USD
-- **Delivery:** Online proctored
+- **Delivery:** Online proctored or onsite testing center
 - **Validity:** 2 years
 - **Prerequisites:** SnowPro Core Certification (active)
 
-## Exam Domains
+## Exam Domains (ADA-C02)
 
-### Domain 1: Account and Organization Management (20-25%)
+> **ADA-C02 replaced ADA-C01.** The domain names and weights below are from Snowflake's official ADA-C02 exam page. Source: the official exam page on [learn.snowflake.com](https://learn.snowflake.com/en/certifications/), read 2026-10-22. The topic sections that follow were written against ADA-C01 and keep their original grouping; objective-level detail has not yet been checked against the ADA-C02 study guide PDF, which Snowflake serves only through a sign-up form.
+
+| Domain | Weight |
+|---|---|
+| 1.0 Snowflake Security, RBAC, and User Administration | 31% |
+| 2.0 Account Management & Data Governance | 18% |
+| 3.0 Data and Object Management | 15% |
+| 4.0 Performance Monitoring & Tuning | 20% |
+| 5.0 Data Sharing and Snowflake Marketplace | 7% |
+| 6.0 Disaster Recovery, Backup & Data Replication | 9% |
+
+### Topic area: Account and Organization Management
 - Organization-level administration with ORGADMIN
 - Account creation, configuration, and lifecycle
 - Cross-account management and replication
@@ -29,7 +40,7 @@ The SnowPro Advanced - Administrator Certification validates expertise in managi
 - Account usage and billing monitoring
 - Multi-account governance patterns
 
-### Domain 2: Security and Access Control (25-30%)
+### Topic area: Security and Access Control
 - Advanced RBAC design and implementation
 - Network security (network policies, Private Link)
 - Authentication (MFA, SSO, SCIM, key pair)
@@ -43,7 +54,7 @@ The SnowPro Advanced - Administrator Certification validates expertise in managi
 - ACCESS_HISTORY and LOGIN_HISTORY for auditing
 - Compliance features by Snowflake edition
 
-### Domain 3: Resource Management and Cost Control (20-25%)
+### Topic area: Resource Management and Cost Control
 - Resource monitor configuration and monitoring
 - Warehouse management and optimization
 - Credit usage tracking and attribution
@@ -57,7 +68,7 @@ The SnowPro Advanced - Administrator Certification validates expertise in managi
 - Storage optimization (Time Travel, Fail-safe, transient tables)
 - Credit consumption by compute type
 
-### Domain 4: Performance Monitoring and Tuning (15-20%)
+### Topic area: Performance Monitoring and Tuning
 - Query profiling and optimization
 - Warehouse performance monitoring
 - Clustering and search optimization management
@@ -70,7 +81,7 @@ The SnowPro Advanced - Administrator Certification validates expertise in managi
 - Clustering key management and monitoring
 - Auto-suspend impact on cache effectiveness
 
-### Domain 5: Data Management and Compliance (10-15%)
+### Topic area: Data Management and Compliance
 - Time Travel and Fail-safe configuration
 - Data retention policies
 - Data classification and tagging

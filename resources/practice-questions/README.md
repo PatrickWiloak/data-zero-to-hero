@@ -47,10 +47,10 @@ Scenario-based practice question banks, one per certification. Every bank follow
 
 ### Snowflake
 
-- [SnowPro Advanced - Administrator Certification](./snowflake-snowpro-advanced-administrator.md)
+- [SnowPro Advanced: Administrator Certification (ADA-C02)](./snowflake-snowpro-advanced-administrator.md)
 - [SnowPro Advanced - Architect Certification](./snowflake-snowpro-advanced-architect.md)
-- [SnowPro Advanced - Data Engineer Certification](./snowflake-snowpro-advanced-data-engineer.md)
-- [SnowPro Core Certification (COF-C02)](./snowflake-snowpro-core.md)
+- [SnowPro Advanced: Data Engineer Certification (DEA-C02)](./snowflake-snowpro-advanced-data-engineer.md)
+- [SnowPro Core Certification (COF-C03)](./snowflake-snowpro-core.md)
 
 ### MongoDB
 

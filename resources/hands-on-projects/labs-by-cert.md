@@ -46,7 +46,7 @@ Which [hands-on projects](./README.md) back up which certification. Doing the la
 
 | Cert | Labs |
 |------|------|
-| [SnowPro Advanced - Data Engineer Certification](../../exams/snowflake/snowpro-advanced-data-engineer/) | [Hands-On Project: Build a dbt Project](./build-dbt-project.md) |
-| [SnowPro Core Certification (COF-C02)](../../exams/snowflake/snowpro-core/) | [Hands-On Project: Build a dbt Project](./build-dbt-project.md), [Hands-On Project: Design a Star Schema](./design-star-schema.md) |
+| [SnowPro Advanced: Data Engineer Certification (DEA-C02)](../../exams/snowflake/snowpro-advanced-data-engineer/) | [Hands-On Project: Build a dbt Project](./build-dbt-project.md) |
+| [SnowPro Core Certification (COF-C03)](../../exams/snowflake/snowpro-core/) | [Hands-On Project: Build a dbt Project](./build-dbt-project.md), [Hands-On Project: Design a Star Schema](./design-star-schema.md) |
 
 <!-- END GENERATED: labs-by-cert -->
