@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: advanced
 ---
 
-# Azure Cosmos DB Developer Specialty (DP-420) - Practice Questions
+# Azure Cosmos DB AI Developer Associate (DP-420) - Practice Questions
 
-15 questions for DP-420 prep, weighted toward data modeling and partitioning, which is where most of the exam's difficulty and most real-world Cosmos DB failure lives.
+23 questions for DP-420 prep. Questions 1-15 cover data modeling, partitioning, queries and operations; 16-23 cover the AI retrieval, agent memory, Fabric, change feed, masking and failover skills added on 2026-10-06, when the certification became the Azure Cosmos DB AI Developer Associate.
 
 > **Cert page:** [exams/azure/dp-420/](../../exams/azure/dp-420/)
 
@@ -277,6 +277,150 @@ D. IP firewall rules that allow only the application's subnet
 **Correct: B**
 
 **Why:** Data plane RBAC lets you grant read or write on specific databases and containers to an Entra identity, with no shared secret to rotate. Read-only keys are still account-wide shared secrets. Firewall rules restrict where a key can be used, which is a useful layer but not authentication.
+</details>
+
+---
+
+### Question 16
+**Scenario:** A RAG app searches 3 million product-manual chunks. Each search is scoped to one product line of about 400,000 chunks, and a small loss of recall is acceptable in exchange for low latency and RU cost.
+
+A. A `flat` vector index, because brute force guarantees exact top K results for every query
+B. No vector index, relying on the `WHERE` filter on product line to narrow the full scan
+C. A `diskANN` vector index with `vectorIndexShardKey` set to the product line property
+D. A `quantizedFlat` vector index, because it compresses vectors and keeps searches exact
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Each search covers far more than the roughly 50,000 vectors where quantizedFlat stops being the better fit, so diskANN's approximate graph search is the right index, and sharding it by product line gives each search a smaller, focused index with lower RU cost and better recall. `flat` is limited to 505 dimensions and scans everything. quantizedFlat is still brute force over 400,000 vectors. No index means a full scan on every query.
+</details>
+
+---
+
+### Question 17
+**Scenario:** A support bot uses pure vector search. Users who type an exact error code such as "E-1173" get articles about similar errors instead of the one that names the code.
+
+A. Increase `searchListSizeMultiplier` so the DiskANN walk considers more candidates per query
+B. Add a full-text policy and index on the article text and rank with `RRF(VectorDistance(...), FullTextScore(...))`
+C. Switch the vector data type from float16 to float32 so the embeddings keep more precision
+D. Change the distance function from cosine to Euclidean so exact matches score as zero distance
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A rare alphanumeric code carries little semantic signal, so embeddings place it near other errors. BM25 full-text scoring rewards exactly such rare tokens, and hybrid search with Reciprocal Rank Fusion combines both rankings. More candidates, more precision or a different distance function still compare meaning, not the literal token.
+</details>
+
+---
+
+### Question 18
+**Scenario:** A developer loads 600 test vectors into a container with a `quantizedFlat` index and is surprised that each search costs more RUs per item than production does.
+
+A. quantizedFlat requires at least 1,000 vectors before the index is used, so the query falls back to a full scan
+B. The test container uses Session consistency, which charges extra RUs for each vector comparison
+C. quantizedFlat stores full-precision vectors for small containers, which doubles the size of every read
+D. Vector search is billed per dimension, so the 1,536-dimension test vectors cost more than production's
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** quantizedFlat and diskANN need at least 1,000 vectors so quantization is accurate; below that the engine does a full scan and RU charges can be higher. Consistency level does not price vector comparisons, quantizedFlat does not switch storage modes, and there is no per-dimension billing.
+</details>
+
+---
+
+### Question 19
+**Scenario:** An agent stores each conversation thread as one item and appends every new turn to it. Write RUs grow week over week and some long threads start failing to update.
+
+A. Move the thread items to a container with a larger autoscale maximum so the appends stop throttling
+B. Store one item per message, partitioned by message ID, so every write lands on a different partition
+C. Keep one item per thread but compress the turns array so the item stays below the size limit
+D. Store one item per turn (prompt plus reply), partitioned by thread ID, with a TTL on short-term turns
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Microsoft's recommended agent memory model is one document per turn: small constant-size writes, per-turn TTL, one embedding per exchange, and "latest N turns" as a single-partition query on thread ID. More throughput only pays for the growing rewrites. One item per message splits questions from answers and a message-ID key makes every thread query fan out. Compression postpones the size limit without fixing the cost.
+</details>
+
+---
+
+### Question 20
+**Scenario:** Analysts run month-end Power BI reports directly against an Azure Cosmos DB for NoSQL orders container and the application starts receiving 429 responses.
+
+A. Enable the analytical store on the container and point Power BI at the transactional endpoint
+B. Raise the container's autoscale maximum for the last three days of every month
+C. Enable continuous backup and mirror the database into Microsoft Fabric, then report from OneLake
+D. Read the container from a Fabric notebook with the Spark connector and cache the result in memory
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Fabric mirroring replicates into OneLake as Delta in near real time without consuming the container's RUs, giving full workload isolation; continuous backup is its prerequisite. Pointing Power BI at the transactional endpoint keeps the contention. More RU/s pays for the contention instead of removing it. The Spark connector reads the transactional container and consumes RUs.
+</details>
+
+---
+
+### Question 21
+**Scenario:** A service keeps a search projection in sync using the change feed processor. Products deleted from the container never disappear from the projection.
+
+A. Read the change feed in all versions and deletes mode, which requires continuous backup
+B. Move the lease container to the same database as the monitored container so deletes are tracked
+C. Switch from the change feed processor to the pull model so deleted items are returned
+D. Set a default TTL on the container so expired items appear in latest version mode
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Latest version mode captures only creates and updates. All versions and deletes mode records deletes, including TTL expirations, with the operation type, and needs continuous backup on the account. The lease container location and the push or pull consumption model do not change what the mode captures, and TTL deletes are also invisible in latest version mode.
+</details>
+
+---
+
+### Question 22
+**Scenario:** Support engineers query a customer container through a tool that authenticates with the account primary key. Compliance wants card numbers partially masked for them.
+
+A. Rotate to the read-only key, because dynamic data masking applies automatically to read-only keys
+B. Move the tool to Entra ID with data plane RBAC, enable dynamic data masking, and give support a role without unmask
+C. Exclude the card number path from the indexing policy so the value is not returned to queries
+D. Create a stored procedure that replaces card digits with X before returning items to the tool
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Dynamic data masking is enforced through data plane RBAC and requires Microsoft Entra ID; account keys, read-only or not, carry no role to evaluate. Users without the unmask data action see masked values. Index exclusion affects querying cost, not what is returned, and a stored procedure is application logic the tool could bypass.
+</details>
+
+---
+
+### Question 23
+**Scenario:** A single-write-region account must recover write availability for affected data within minutes during a regional outage, without the conflict handling of multi-region writes. It uses serverless capacity and Bounded Staleness.
+
+A. Enable per-partition automatic failover as configured; it supports every capacity mode and level
+B. Enable multi-region writes, which gives per-partition recovery without conflict resolution
+C. Keep the settings and rely on service-managed account-level failover, which has the same recovery time
+D. Move to provisioned or autoscale throughput and a supported consistency level, then enable per-partition automatic failover
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Per-partition automatic failover moves only affected partitions, with an RTO under 3 minutes at P99, but it cannot be used on serverless accounts or with Bounded Staleness. Multi-region writes bring conflict resolution, and account-level failover moves every partition and typically takes 15-30 minutes or more.
 </details>
 
 ---

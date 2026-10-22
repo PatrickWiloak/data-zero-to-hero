@@ -1,11 +1,12 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
+exam-version: skills measured as of 2026-10-06
 ---
 
-# Azure DP-420 Certification Fact Sheet
-## Designing and Implementing Cloud-Native Applications Using Microsoft Azure Cosmos DB
+# Azure Cosmos DB AI Developer Associate (DP-420) Fact Sheet
+## Building AI Applications with Azure Cosmos DB
 
-> Comprehensive quick reference guide with embedded documentation links for hands-on developers preparing for the DP-420 certification exam.
+> Quick reference with embedded documentation links for the DP-420 exam. Renamed and re-scoped on 2026-10-06: formerly the Azure Cosmos DB Developer Specialty, now an Associate certification with AI retrieval, agent memory and Microsoft Fabric in scope.
 
 ---
 
@@ -25,29 +26,32 @@ last-updated: 2026-05-03
 13. [Monitoring and Diagnostics](#monitoring-and-diagnostics)
 14. [Cost Optimization](#cost-optimization)
 15. [Integration Patterns](#integration-patterns)
+16. [AI Retrieval and Agent Memory](#ai-retrieval-and-agent-memory)
+17. [Fabric, Fleets and Resilience](#fabric-fleets-and-resilience)
 
 ---
 
 ## Exam Overview
 
-### Essential Information
-- **Exam Code:** DP-420
-- **Duration:** 180 minutes
-- **Questions:** 40-60 questions
-- **Passing Score:** 700/1000
-- **Cost:** $165 USD
+**Exam Code:** DP-420
+**Exam Name:** Building AI Applications with Azure Cosmos DB
+**Level:** Associate (was Specialty until 2026-10-06)
+**Duration:** 100 minutes
+**Passing Score:** 700/1000
+**Cost:** $165 USD (US price; varies by country)
+**Valid For:** 1 year, free online renewal
 
 ### Official Exam Resources
-- **[📖 DP-420 Official Exam Page](https://learn.microsoft.com/en-us/certifications/exams/dp-420/)** - Complete exam details, registration, and skills measured
-- **[📖 DP-420 Study Guide](https://learn.microsoft.com/en-us/certifications/resources/study-guides/dp-420)** - Official study guide with exam objectives
-- **[📖 DP-420 Learning Path](https://learn.microsoft.com/en-us/training/courses/dp-420t00)** - Microsoft's official training course materials
+- **[📖 Certification page](https://learn.microsoft.com/en-us/credentials/certifications/azure-cosmos-db-developer-specialty/)** - Exam details, registration, renewal, and the 2026-10-06 rename notice
+- **[📖 DP-420 Study Guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-420)** - Skills measured as of 2026-10-06 and the change log against the old outline
+- **[📖 DP-420 Course](https://learn.microsoft.com/en-us/training/courses/dp-420t00)** - Microsoft's official training course materials
 
 ### Exam Domain Breakdown
-1. **Design and Implement Data Models (35-40%)** - Data modeling, API selection, document design
-2. **Design and Implement Data Distribution (5-10%)** - Partitioning, global distribution
-3. **Integrate Azure Cosmos DB Solutions (5-10%)** - Change feed, Azure services integration
-4. **Optimize Azure Cosmos DB Solutions (15-20%)** - Performance, cost optimization
-5. **Maintain Azure Cosmos DB Solutions (25-30%)** - Monitoring, security, backup/recovery
+1. **Design and develop database solutions (40-45%)** - Resource model and SDK, database operations, data models and partitioning, change feed, Agent Kit
+2. **Secure, optimize, and deploy database solutions (30-35%)** - Security controls incl. dynamic data masking, availability and recovery incl. per-partition failover, performance and monitoring, fleets
+3. **Implement AI and analytics capabilities (20-25%)** - Full-text, vector and hybrid search, RAG, agent memory stores, Fabric mirroring and Cosmos DB in Fabric
+
+**Removed on 2026-10-06:** server-side JavaScript (stored procedures, triggers, UDFs), data movement, DevOps, and the separate data distribution and integration domains. Links on those topics below are kept as background.
 
 ---
 
@@ -332,6 +336,61 @@ last-updated: 2026-05-03
 
 ---
 
+## AI Retrieval and Agent Memory
+
+Domain 3 is new on the 2026-10-06 outline. Deep dive: [AI retrieval and agent memory](notes/cosmos-db-ai-retrieval-agent-memory.md).
+
+### Vector Search
+- **[📖 Vector indexing and search](https://learn.microsoft.com/en-us/azure/cosmos-db/vector-search)** - Container vector policy (path, dataType, dimensions, distanceFunction), flat / quantizedFlat / diskANN indexes, `VectorDistance`
+- **[📖 Sharded DiskANN](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/sharded-diskann)** - `vectorIndexShardKey` splits one DiskANN index into one index per property value (per tenant, per category)
+- **[📖 Vector search performance tips](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/vector-search-performance-tips)** - TOP N, exclude vector paths from the range index, filters, recall tuning
+- **[📖 Multi-tenancy for vector search](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/multi-tenancy-vector-search)** - Partition key, hierarchical keys and shard keys for tenant isolation
+
+**Key Facts:**
+- Vector data types: float32, float16, int8, uint8. Default dimensions 1536. Distance: cosine (default), dotproduct, euclidean
+- flat: exact, max 505 dimensions. quantizedFlat: compressed brute force, max 4096, suggested for up to about 50,000 vectors in scope. diskANN: approximate nearest neighbor, max 4096, best above about 50,000
+- quantizedFlat and diskANN need at least 1,000 vectors before the index is used; below that the query does a full scan
+- Vector policies and vector indexes cannot be modified in place: drop and re-add (or create a new container)
+- Always use `TOP N` with `ORDER BY VectorDistance(...)`
+
+### Full-Text and Hybrid Search
+- **[📖 Full-text search](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/full-text-search)** - Full-text policy plus full-text index; `FullTextContains`, `FullTextContainsAll`, `FullTextContainsAny`, `FullTextScore` (BM25)
+- **[📖 Hybrid search](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/hybrid-search)** - `ORDER BY RANK RRF(VectorDistance(...), FullTextScore(...), [weights])`
+- **[📖 RAG in Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/rag)** - Ingest, retrieve, ground, generate
+
+### Agent Memory
+- **[📖 Agent memories](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/agentic-memories)** - Short-term vs long-term memory, partition key choices (GUID, thread ID, tenant + thread HPK), one document per turn as the recommended model
+- **[📖 Agent Memory Toolkit (preview)](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/agent-memory-toolkit)** - Python SDK for turns, summaries, facts and user summaries, processed via change feed
+
+---
+
+## Fabric, Fleets and Resilience
+
+New or reworked skills on the 2026-10-06 outline. Deep dive: [Fabric, fleets and resilience](notes/cosmos-db-fabric-fleets-resilience.md).
+
+### Operational Analytics with Microsoft Fabric
+- **[📖 Mirroring Azure Cosmos DB](https://learn.microsoft.com/en-us/fabric/database/mirrored-database/azure-cosmos-db)** - Near real-time, no-ETL replication into OneLake as Delta; no RU consumption; continuous backup required; NoSQL accounts only
+- **[📖 Cosmos DB in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/database/cosmos-db/overview)** - Same engine as Azure Cosmos DB for NoSQL, managed inside a Fabric workspace, data surfaced in OneLake automatically
+- **[📖 Spark notebooks with Cosmos DB in Fabric](https://learn.microsoft.com/en-us/fabric/database/cosmos-db/how-to-use-spark-notebooks)** - `cosmos.oltp` format for read and write
+
+### Fleets
+- **[📖 Fleets overview](https://learn.microsoft.com/en-us/azure/cosmos-db/fleet)** - Fleet = one multitenant app; fleetspace = group of accounts; one account per tenant
+- **[📖 Fleet pools](https://learn.microsoft.com/en-us/azure/cosmos-db/fleet-pools)** - Shared RU/s across accounts; dedicated RU/s are consumed first, then the pool
+- **[📖 Fleet analytics (preview)](https://learn.microsoft.com/en-us/azure/cosmos-db/fleet-analytics)** - Hourly cost, usage and settings data as Delta tables in Fabric OneLake or ADLS Gen2
+
+### Security and Availability Additions
+- **[📖 Dynamic data masking](https://learn.microsoft.com/en-us/azure/cosmos-db/dynamic-data-masking)** - Query-time masking by data plane RBAC; needs Entra ID (not keys); cannot be turned off once enabled
+- **[📖 Per-partition automatic failover](https://learn.microsoft.com/en-us/azure/cosmos-db/per-partition-automatic-failover)** - Single-write-region NoSQL accounts; only affected partitions move; RTO under 3 minutes at P99
+
+### Change Feed Modes and Copy Jobs
+- **[📖 Change feed modes](https://learn.microsoft.com/en-us/azure/cosmos-db/change-feed-modes)** - Latest version vs all versions and deletes (needs continuous backup)
+- **[📖 Container copy jobs (preview)](https://learn.microsoft.com/en-us/azure/cosmos-db/container-copy)** - Online and offline copies; change a partition key, adopt hierarchical keys, rename containers
+
+### AI-Assisted Tools
+- **[📖 Agent Kit overview](https://learn.microsoft.com/en-us/azure/cosmos-db/gen-ai/agent-kit/overview)** - Agent Skills for AI coding assistants that encode Cosmos DB best practices
+
+---
+
 ## Additional Resources
 
 ### Backup and Disaster Recovery
@@ -433,33 +492,22 @@ last-updated: 2026-05-03
 
 ## Summary
 
-This fact sheet provides a comprehensive reference for the Azure DP-420 certification exam with **100 embedded documentation links** covering all major exam domains:
+This fact sheet is a link-first reference for DP-420 on the 2026-10-06 outline:
 
-1. **Design and Implement Data Models** - NoSQL modeling, APIs, document design
-2. **Data Distribution** - Partitioning strategies, global distribution
-3. **Integration** - Change feed, Azure services, migration
-4. **Optimization** - Performance tuning, RU management, analytical store
-5. **Maintenance** - Monitoring, security, backup/recovery
+1. **Design and develop database solutions (40-45%)** - SDK and resource model, operations, data modeling, partitioning, change feed, Agent Kit
+2. **Secure, optimize, and deploy (30-35%)** - Entra ID and RBAC, network security, dynamic data masking, backup, multi-region and per-partition failover, monitoring, fleets
+3. **AI and analytics (20-25%)** - Vector, full-text and hybrid search, RAG, agent memory, Fabric mirroring and Cosmos DB in Fabric
 
 ### Study Approach
-1. Work through each documentation link systematically
-2. Create hands-on labs for each major topic
-3. Build sample applications using the SDKs
-4. Practice query optimization and troubleshooting
-5. Understand cost implications of design decisions
+1. Work through each documentation link, newest domain first if you studied the old outline
+2. Build one small RAG app end to end on a container with vector and full-text indexes
+3. Practice query optimization and troubleshooting with query and index metrics
+4. Understand cost implications of design decisions, including vector index choice
 
 ### Success Tips
-- Focus on hands-on experience with Cosmos DB
-- Understand partition key selection deeply - it appears in many scenarios
-- Know when to use each consistency level
-- Practice optimizing RU consumption
+- Partition key selection still shows up everywhere, now including agent memory and vector shard keys
+- Know when each vector index type fits and why diskANN results are approximate
+- Know which features need continuous backup (all versions and deletes change feed, Fabric mirroring, online copy jobs)
 - Be comfortable with change feed implementation patterns
-- Understand the trade-offs between different approaches
 
 **Good luck with your DP-420 certification exam!**
-
----
-
-*Last Updated: 2025-10-13*
-*Total Documentation Links: 100*
-*Exam Version: Current as of October 2025*

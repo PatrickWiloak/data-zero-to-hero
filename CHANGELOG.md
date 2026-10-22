@@ -6,6 +6,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-10-22] - Exam currency: DP-420 rebuild, Microsoft outline updates, Snowflake and Databricks codes, retired AWS products
+
+### Changed
+
+- **DP-420** rebuilt for the 2026-10-06 outline: the certification is now the Azure Cosmos DB AI Developer Associate (was Specialty), exam "Building AI Applications with Azure Cosmos DB", 100 minutes, three domains (40-45 / 30-35 / 20-25%). Two new notes: [AI retrieval and agent memory](./exams/azure/dp-420/notes/cosmos-db-ai-retrieval-agent-memory.md) and [Fabric, fleets and resilience](./exams/azure/dp-420/notes/cosmos-db-fabric-fleets-resilience.md); README, fact sheet and practice plan rewritten to the new skills; 8 new [practice questions](./resources/practice-questions/azure-cosmos-db-dp-420.md). Source: Microsoft's DP-420 study guide change log.
+
 ## [2026-10-21] (2) - Thirteen concept pages, three builds, a streaming pattern, data-only glossary
 
 ### Added

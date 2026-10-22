@@ -1,13 +1,13 @@
-# Azure Cosmos DB Developer Specialty (DP-420) Practice Plan
+# Azure Cosmos DB AI Developer Associate (DP-420) Practice Plan
 
 ## Overview
 
-**Exam:** DP-420 - Azure Cosmos DB Developer Specialty
+**Exam:** DP-420 - Building AI Applications with Azure Cosmos DB (Azure Cosmos DB AI Developer Associate since 2026-10-06)
 **Timeline:** 8-10 weeks
 **Study Time:** 8-12 hours per week
-**Difficulty:** Specialty/Associate level
+**Difficulty:** Associate level
 
-This practice plan targets developers who design, implement, and monitor Azure Cosmos DB solutions.
+This practice plan targets developers who design, build and optimize applications on Azure Cosmos DB, including AI retrieval and agent memory. Weeks 5-8 were rebuilt for the 2026-10-06 outline: stored procedures, triggers, UDFs and DevOps left the exam; vector, full-text and hybrid search, agent memory, Fabric, fleets, dynamic data masking and per-partition failover arrived.
 
 ## Prerequisites
 
@@ -18,7 +18,10 @@ This practice plan targets developers who design, implement, and monitor Azure C
 
 ## Study Resources
 
-- [ ] [Official Microsoft Learn DP-420 Path](https://learn.microsoft.com/en-us/certifications/azure-cosmos-db-developer-specialty/) (FREE)
+- [ ] [Official certification page and learning paths](https://learn.microsoft.com/en-us/credentials/certifications/azure-cosmos-db-developer-specialty/) (FREE)
+- [ ] [DP-420 study guide and change log](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-420)
+- [ ] [AI retrieval and agent memory note](notes/cosmos-db-ai-retrieval-agent-memory.md) and [Fabric, fleets and resilience note](notes/cosmos-db-fabric-fleets-resilience.md)
+- [ ] [Practice questions](../../../resources/practice-questions/azure-cosmos-db-dp-420.md)
 - [ ] [Cosmos DB Documentation](https://docs.microsoft.com/en-us/azure/cosmos-db/)
 - [ ] [Complete Azure Study Resources](../../../.templates/resources-azure.md)
 - [ ] README.md in this directory
@@ -82,92 +85,78 @@ This practice plan targets developers who design, implement, and monitor Azure C
 **Practice Questions:**
 - [ ] Complete 50-60 questions on implementation
 
-### Week 5-6: Integration and Query Optimization
+### Week 5-6: Change Feed, Query Optimization and AI Retrieval
 
 **Learning Objectives:**
-- Master SQL queries in Cosmos DB
-- Implement change feed
-- Integrate with Azure services
-- Optimize query performance
+- Implement change feed in both modes
+- Optimize queries with query and index metrics
+- Configure vector, full-text and hybrid search
+- Build a RAG retrieval path
 
 **Daily Tasks:**
-- [ ] Learn SQL query syntax for Core API
-- [ ] Implement change feed processor
-- [ ] Integrate with Azure Functions
-- [ ] Connect to Azure Search
-- [ ] Implement stored procedures
-- [ ] Create user-defined functions (UDFs)
-- [ ] Optimize queries with query metrics
+- [ ] Change feed processor vs pull model; lease containers
+- [ ] Latest version vs all versions and deletes mode (needs continuous backup)
+- [ ] Container copy jobs: online vs offline, prerequisites
+- [ ] Vector embedding policy: data types, dimensions, distance functions
+- [ ] flat vs quantizedFlat vs diskANN; sharded DiskANN with `vectorIndexShardKey`
+- [ ] Full-text policy and index; `FullTextContains*` and `FullTextScore`
+- [ ] Hybrid search with `RRF` and weights
 
 **Hands-on Labs:**
-- [ ] Write complex SQL queries
-- [ ] Implement change feed with Functions
-- [ ] Create stored procedures and triggers
-- [ ] Build aggregation pipelines
-- [ ] Optimize queries using metrics
-- [ ] Implement continuation tokens for pagination
-- [ ] Connect Cosmos DB to Synapse Analytics
+- [ ] Implement the change feed processor and read deletes in all versions and deletes mode
+- [ ] Create a container with vector and full-text policies and indexes
+- [ ] Run `VectorDistance`, `FullTextScore` and `RRF` queries; compare RU charges
+- [ ] Measure recall with brute force (`VectorDistance(..., true)`) vs diskANN
+- [ ] Optimize a slow query using query metrics and index metrics
 
 **Practice Questions:**
-- [ ] Complete 40-50 questions on integration
+- [ ] Complete 40-50 questions on change feed, queries and retrieval
 
-### Week 7: Performance Optimization
+### Week 7: Agent Memory, Fabric and Performance
 
 **Learning Objectives:**
-- Optimize throughput provisioning
-- Implement caching strategies
-- Monitor and troubleshoot performance
-- Manage costs
+- Design agent memory stores
+- Choose between Azure Cosmos DB and Cosmos DB in Fabric
+- Monitor latency and cost
 
 **Daily Tasks:**
-- [ ] Learn autoscale vs manual throughput
-- [ ] Implement caching with Redis
-- [ ] Monitor with Application Insights
-- [ ] Analyze query execution plans
-- [ ] Optimize partition key selection
-- [ ] Implement retry policies
-- [ ] Calculate and optimize costs
+- [ ] One document per turn; thread ID or tenant + thread partition keys; TTL for short-term memory
+- [ ] Semantic memory: embeddings on turns or summaries
+- [ ] Fabric mirroring prerequisites and limits; SQL analytics endpoint; Spark connector (`cosmos.oltp`)
+- [ ] Autoscale vs manual vs serverless; Azure Monitor alerts; diagnostic logs in Log Analytics
+- [ ] Fleets, fleetspaces, pools and fleet analytics
 
 **Hands-on Labs:**
-- [ ] Configure autoscale throughput
-- [ ] Implement direct mode connectivity
-- [ ] Set up monitoring dashboards
-- [ ] Analyze slow queries
-- [ ] Implement connection pooling
-- [ ] Configure retry policies
-- [ ] Optimize for hot partitions
+- [ ] Store and retrieve chat turns (latest N, semantic, hybrid)
+- [ ] Mirror a database into Fabric and query nested JSON with T-SQL
+- [ ] Write data back to a container from a Fabric notebook
+- [ ] Set up a Log Analytics query for high-RU requests
 
 **Practice Questions:**
-- [ ] Complete 40-50 questions on optimization
+- [ ] Complete 40-50 questions on memory, analytics and optimization
 
-### Week 8: Maintenance and Security
+### Week 8: Security and Availability
 
 **Learning Objectives:**
-- Implement security best practices
-- Configure backup and restore
-- Manage access control
-- Implement compliance
+- Implement authentication, authorization and network security
+- Configure dynamic data masking
+- Configure backup, restore and failover
 
 **Daily Tasks:**
-- [ ] Configure firewall rules
-- [ ] Implement managed identities
-- [ ] Set up Key Vault integration
-- [ ] Configure RBAC
-- [ ] Learn backup and restore options
-- [ ] Implement data encryption
-- [ ] Configure private endpoints
+- [ ] Entra ID and data plane RBAC; built-in Data Reader vs Data Contributor
+- [ ] Firewall, private endpoints, managed identities
+- [ ] Dynamic data masking: strategies, unmask action, one-way enablement
+- [ ] Periodic vs continuous backup; point-in-time restore
+- [ ] Multi-region reads and writes; per-partition automatic failover and its guardrails
 
 **Hands-on Labs:**
-- [ ] Configure network security
-- [ ] Implement managed identity access
-- [ ] Store connection strings in Key Vault
-- [ ] Perform point-in-time restore
-- [ ] Configure continuous backup
-- [ ] Set up private link
-- [ ] Implement resource tokens
+- [ ] Configure a custom role with and without unmask; compare query results
+- [ ] Perform a point-in-time restore
+- [ ] Configure private link
+- [ ] Review per-partition automatic failover settings on a test account
 
 **Practice Questions:**
-- [ ] Complete 40-50 questions on maintenance
+- [ ] Complete 40-50 questions on security and availability
 
 ### Week 9-10: Practice and Review
 
@@ -189,44 +178,31 @@ This practice plan targets developers who design, implement, and monitor Azure C
 
 ## Key Topics Checklist
 
-### Data Models (35-40%)
-- [ ] NoSQL data modeling patterns
-- [ ] Embedding vs referencing
-- [ ] Partition key selection
-- [ ] Hierarchical partition keys
-- [ ] Container design
-- [ ] Item schema design
-- [ ] Indexing policies
-- [ ] Composite indexes
+### Design and develop database solutions (40-45%)
+- [ ] Consistency levels, RU evaluation, throughput, account and container settings
+- [ ] SDK client initialization (singleton client, preferred regions)
+- [ ] Queries, parameters, paging, continuation tokens, point reads
+- [ ] Create, replace, patch, delete; bulk, batch and transactional operations
+- [ ] TTL and optimistic concurrency with ETags
+- [ ] Data modeling, embed vs reference, partition keys, hierarchical and synthetic keys
+- [ ] Partitioning anti-patterns and cost estimates
+- [ ] Change feed modes, processor vs pull, lease containers, copy jobs
+- [ ] Agent Kit
 
-### Data Distribution (5-10%)
-- [ ] Multi-region configuration
-- [ ] Consistency levels
-- [ ] Conflict resolution policies
-- [ ] Automatic failover
-- [ ] Multi-region writes
+### Secure, optimize, and deploy database solutions (30-35%)
+- [ ] Authentication, authorization, network security
+- [ ] Dynamic data masking
+- [ ] Backup and restore; multi-region reads and writes; per-partition automatic failover
+- [ ] Query and index metrics; end-to-end latency; Azure Monitor alerts; Log Analytics
+- [ ] Fleet pools and fleet analytics
 
-### Integration (5-10%)
-- [ ] Azure Functions integration
-- [ ] Change feed implementation
-- [ ] Azure Search integration
-- [ ] Synapse Link
-- [ ] Event-driven architectures
-
-### Optimization (15-20%)
-- [ ] Throughput provisioning
-- [ ] Query optimization
-- [ ] Partition strategy optimization
-- [ ] Cost optimization
-- [ ] Performance monitoring
-- [ ] Connection mode configuration
-
-### Maintenance (25-30%)
-- [ ] Backup and restore
-- [ ] Security configuration
-- [ ] RBAC and access control
-- [ ] Monitoring and alerting
-- [ ] Troubleshooting
+### Implement AI and analytics capabilities (20-25%)
+- [ ] Full-text search and BM25
+- [ ] Vector data types, dimensions, indexes, sharded DiskANN
+- [ ] Vector search, hybrid search (RRF), performance tuning
+- [ ] RAG design
+- [ ] Agent memory: durable stores, conversation state, semantic memory
+- [ ] Azure Cosmos DB vs Cosmos DB in Fabric; mirroring; T-SQL and Spark over mirrored data; Spark connector
 
 ## Hands-on Lab Checklist
 
@@ -234,16 +210,16 @@ This practice plan targets developers who design, implement, and monitor Azure C
 - [ ] Implement change feed processor
 - [ ] Create globally distributed app
 - [ ] Optimize queries with indexing
-- [ ] Implement caching layer
-- [ ] Build event-driven architecture
+- [ ] Build a RAG app with hybrid search
+- [ ] Build an agent memory store with TTL and semantic recall
 - [ ] Monitor and troubleshoot issues
 
 ## Additional Resources
 
-- [DP-420 Exam Page](https://learn.microsoft.com/en-us/certifications/exams/dp-420/)
+- [DP-420 certification page](https://learn.microsoft.com/en-us/credentials/certifications/azure-cosmos-db-developer-specialty/)
 - [Cosmos DB Best Practices](https://learn.microsoft.com/en-us/azure/well-architected/service-guides/cosmos-db)
 - [Cosmos DB SDKs](https://learn.microsoft.com/en-us/azure/cosmos-db/sdk-dotnet-v3)
 
 ---
 
-**Success Strategy:** Focus on hands-on development with Cosmos DB SDKs and understanding NoSQL data modeling patterns.
+**Success Strategy:** Hands-on development with the SDKs, NoSQL data modeling, and building at least one retrieval app end to end.

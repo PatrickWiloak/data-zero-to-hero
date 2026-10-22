@@ -76,7 +76,7 @@ For how data gets into these stores - pipelines, ETL/ELT, batch vs streaming, pa
 - [AWS Data Analytics Specialty (DAS-C01)](../exams/aws/specialty/data-analytics-das-c01/) - retired, retained
 - [Azure Data Engineer (DP-203)](../exams/azure/dp-203/)
 - [Azure Database Administrator (DP-300)](../exams/azure/dp-300/)
-- [Azure Cosmos DB Developer (DP-420)](../exams/azure/dp-420/)
+- [Azure Cosmos DB AI Developer Associate (DP-420)](../exams/azure/dp-420/)
 - [Azure Fabric Analytics Engineer (DP-600)](../exams/azure/dp-600/)
 - [Azure Fabric Data Engineer (DP-700)](../exams/azure/dp-700/)
 - [GCP Data Engineer](../exams/gcp/data-engineer/)

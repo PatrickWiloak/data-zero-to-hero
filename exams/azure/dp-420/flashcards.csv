@@ -1,8 +1,17 @@
 Question,Answer,Tags
+How long is the Microsoft Certified: Azure Cosmos DB AI Developer Associate (DP-420) exam?,100 minutes,exam-logistics
+What is the passing score for Microsoft Certified: Azure Cosmos DB AI Developer Associate (DP-420)?,700/1000,exam-logistics
+What does the Microsoft Certified: Azure Cosmos DB AI Developer Associate (DP-420) exam cost?,$165 USD (US price; varies by country),exam-logistics
+How long is Microsoft Certified: Azure Cosmos DB AI Developer Associate (DP-420) valid for?,"1 year, free online renewal",exam-logistics
+path (cosmos db ai retrieval agent memory),the property that holds the vector. Each path gets at most one policy entry; a container can hold several vector paths (for example a text embedding and an image embedding) with separate entries. Wildcards and vector paths nested inside arrays are not supported.,"notes,cosmos-db-ai-retrieval-agent-memory"
+dataType (cosmos db ai retrieval agent memory),"float32, float16, int8 or uint8. Most embedding models emit float32. Storing as float16 halves the storage footprint for a small recall cost on typical text workloads; int8 quarters it with a more noticeable recall cost. Microsoft's tuning guidance is to try float16 first and move to int8 only after measuring recall on your own test set.","notes,cosmos-db-ai-retrieval-agent-memory"
+dimensions (cosmos db ai retrieval agent memory),"the length of every vector at that path, default 1536. It must match the embedding model's output. Many current models let you choose a smaller output dimension; fewer dimensions mean cheaper inserts and searches but may miss fine distinctions.","notes,cosmos-db-ai-retrieval-agent-memory"
+distanceFunction (cosmos db ai retrieval agent memory),"cosine (default, range -1 to +1, higher is more similar), dotproduct (higher is more similar) or euclidean (0 is identical, higher is less similar). Use what the embedding model was trained for; for normalized text embeddings cosine is the usual choice.","notes,cosmos-db-ai-retrieval-agent-memory"
 id (cosmos db data modeling partitioning),Unique within partition (required),"notes,cosmos-db-data-modeling-partitioning"
 _rid (cosmos db data modeling partitioning),Resource ID (internal),"notes,cosmos-db-data-modeling-partitioning"
 _etag (cosmos db data modeling partitioning),Concurrency control,"notes,cosmos-db-data-modeling-partitioning"
 _ts (cosmos db data modeling partitioning),Last modified timestamp,"notes,cosmos-db-data-modeling-partitioning"
+Pull model (cosmos db fabric fleets resilience),"you request pages with a continuation token and manage state yourself. Use it when you need full control of pacing, or to read a specific range.","notes,cosmos-db-fabric-fleets-resilience"
 Apache Cassandra compatible (cosmos db fundamentals),CQL (Cassandra Query Language),"notes,cosmos-db-fundamentals"
 Gremlin query language (cosmos db fundamentals),"Best for: Social networks, recommendations","notes,cosmos-db-fundamentals"
 Key-value store (cosmos db fundamentals),Upgrade from Azure Table Storage,"notes,cosmos-db-fundamentals"

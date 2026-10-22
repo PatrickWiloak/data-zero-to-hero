@@ -138,9 +138,9 @@ The Certs column counts real exams, retired ones included.
 | Cert Tier | Typical Prep Time | Daily Study | Examples |
 |-----------|-------------------|-------------|----------|
 | **Fundamentals** | 2-4 weeks | 1-2 hr | DP-900 |
-| **Associate** | 6-10 weeks | 2-3 hr | DEA-C01, DP-700, DP-300, PL-300, Databricks DE Associate |
+| **Associate** | 6-10 weeks | 2-3 hr | DEA-C01, DP-700, DP-300, DP-420, PL-300, Databricks DE Associate |
 | **Professional** | 10-16 weeks | 2-4 hr | GCP Data Engineer, Databricks DE Professional, SnowPro Advanced |
-| **Specialty** | 8-14 weeks | 2-4 hr | GCP Cloud Database Engineer, DP-420 |
+| **Specialty** | 8-14 weeks | 2-4 hr | GCP Cloud Database Engineer |
 
 ---
 

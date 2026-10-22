@@ -22,7 +22,7 @@ Scenario-based practice question banks, one per certification. Every bank follow
 
 - [Microsoft Azure Data Engineer Associate (DP-203)](./azure-data-engineer-dp-203.md)
 - [Microsoft Azure Database Administrator Associate (DP-300)](./azure-database-administrator-dp-300.md)
-- [Microsoft Azure Cosmos DB Developer Specialty (DP-420)](./azure-cosmos-db-dp-420.md)
+- [Microsoft Azure Cosmos DB AI Developer Associate (DP-420)](./azure-cosmos-db-dp-420.md)
 - [Microsoft Fabric Analytics Engineer Associate (DP-600)](./azure-fabric-analytics-dp-600.md)
 - [Microsoft Certified: Fabric Data Engineer Associate (DP-700)](./azure-fabric-data-engineer-dp-700.md)
 - [Microsoft Azure Data Fundamentals (DP-900)](./azure-data-fundamentals-dp-900.md)

@@ -48,7 +48,7 @@ This roadmap guides you through database-focused certifications across AWS, Azur
 |--------------|----------|-------|-----------|
 | AWS Data Engineer Associate | AWS | Associate | DEA-C01 |
 | AWS Database Specialty (RETIRED Apr 2024) | AWS | Specialty | DBS-C01 |
-| Azure Cosmos DB Developer Specialty | Microsoft | Specialty | DP-420 |
+| Azure Cosmos DB AI Developer Associate (Specialty until 2026-10-06) | Microsoft | Associate | DP-420 |
 | Google Cloud Professional Data Engineer | Google | Professional | PDE |
 
 **Focus Areas:**
