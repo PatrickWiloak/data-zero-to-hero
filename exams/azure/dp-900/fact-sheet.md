@@ -72,7 +72,7 @@ The DP-900 exam validates foundational knowledge of core data concepts and Azure
 
 ---
 
-## Domain 2: Relational Data on Azure (25-30%)
+## Domain 2: Relational Data on Azure (20-25%)
 
 ### Azure SQL Database
 
@@ -148,7 +148,7 @@ The DP-900 exam validates foundational knowledge of core data concepts and Azure
 
 ---
 
-## Domain 3: Non-Relational Data on Azure (25-30%)
+## Domain 3: Non-Relational Data on Azure (15-20%)
 
 ### Azure Cosmos DB
 
@@ -548,14 +548,14 @@ The DP-900 exam validates foundational knowledge of core data concepts and Azure
 - Batch and streaming data
 - Data roles and services
 
-### Describe relational data workloads (25-30%)
+### Describe relational data workloads (20-25%)
 - Relational data characteristics
 - Relational database concepts (normalization, keys)
 - SQL statement types (DDL, DML, DCL)
 - Azure SQL Database, Managed Instance, SQL on VMs
 - Azure Database for PostgreSQL, MySQL, MariaDB
 
-### Describe non-relational data workloads (25-30%)
+### Describe non-relational data workloads (15-20%)
 - Non-relational data types (key-value, document, graph, column-family)
 - Azure Cosmos DB capabilities and APIs
 - Azure Blob Storage features and tiers

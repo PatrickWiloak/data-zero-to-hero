@@ -1,11 +1,11 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-10-22
 difficulty: intermediate
 ---
 
 # Microsoft Fabric Data Engineer Associate (DP-700) - Practice Questions
 
-15 questions for DP-700 prep across ingestion, transformation, real-time intelligence, orchestration, security, and operational monitoring in Microsoft Fabric.
+30 questions for DP-700 prep across ingestion, transformation, real-time intelligence, orchestration, security, and operational monitoring in Microsoft Fabric.
 
 DP-700 is the engineering counterpart to DP-600: more pipelines and Spark, less semantic modeling.
 
@@ -279,6 +279,276 @@ D. Use the Capacity Metrics app to find the heavy items, then reschedule, optimi
 **Correct: D**
 
 **Why:** Fabric smooths background operations over time but sustained overuse leads to throttling that affects interactive users. The metrics app attributes consumption per item, which is the only way to decide between optimizing a job, moving it, or buying capacity. DirectQuery would add load rather than remove it.
+</details>
+
+---
+
+### Question 16 - Domain 1: Implement and manage an analytics solution
+**Scenario:** You promote notebooks from a Dev workspace to Test and Prod with a deployment pipeline. In each stage the notebook must read that stage's own lakehouse, not the Dev one.
+
+A. Edit each notebook by hand after every deployment to point it at the right lakehouse
+B. Keep one shared lakehouse for all three stages so the notebooks never need to change
+C. Set deployment rules on the Test and Prod stages that swap the notebook's default lakehouse
+D. Copy the Dev lakehouse into Test and Prod before each deployment so the names match
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Deployment rules let each stage override settings such as a notebook's default lakehouse, so the same item deploys unchanged and binds to the right data in each stage. A is manual, error-prone, and gets overwritten on the next deploy. B mixes test and production data, which defeats the point of stages. D copies data needlessly and still leaves the notebook pointed at the Dev item.
+</details>
+
+---
+
+### Question 17 - Domain 1: Implement and manage an analytics solution
+**Scenario:** Support agents query a warehouse `Customers` table. They must see that an email address exists but not the full value. Finance analysts must still see the real emails.
+
+A. Apply dynamic data masking to the email column and grant UNMASK only to the finance role
+B. Remove the email column from the table and store it in a separate warehouse for finance
+C. Encrypt the email column in the notebook that loads it and share the key with finance
+D. Add row-level security so support agents cannot see any rows that contain an email
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Dynamic data masking returns a masked value such as `aXXX@XXXX.com` to users without UNMASK, while the stored data stays intact for those who have it. B splits the data and adds a second item to secure and maintain. C pushes key management into code and breaks normal querying. D hides whole rows, so support would lose the customers they need to help, not just the email value.
+</details>
+
+---
+
+### Question 18 - Domain 1: Implement and manage an analytics solution
+**Scenario:** Every notebook in a workspace needs the same two Python libraries and the same Spark settings. Today each engineer installs them at the top of their own notebooks and versions drift.
+
+A. Add a `%pip install` cell to each notebook and agree on versions in a team wiki
+B. Create an environment with the libraries and Spark properties and set it as the workspace default
+C. Upload the library wheel files to the lakehouse Files area and let each notebook import them
+D. Ask the capacity admin to raise the node size so the installs finish faster
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** A Fabric environment bundles libraries, Spark properties, and the compute choice in one item, and the workspace default applies it to every notebook and Spark job definition. A keeps the drift problem because each notebook still pins its own versions. C works for one notebook but has no central version control and nothing enforces it. D changes speed, not consistency.
+</details>
+
+---
+
+### Question 19 - Domain 1: Implement and manage an analytics solution
+**Scenario:** A partner drops files into a OneLake folder at unpredictable times. A pipeline must start as soon as each file arrives, not on a fixed schedule.
+
+A. Schedule the pipeline every minute and exit early when there is no new file
+B. Have the partner email the team so someone can start the pipeline by hand
+C. Add a Wait activity loop at the start of a long-running pipeline that checks the folder
+D. Add an event-based trigger on the file-created event for that folder that runs the pipeline
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Event-based triggers react to storage events such as a file being created, so the pipeline runs once per arrival with no polling. A burns capacity on hundreds of empty runs a day and still adds up to a minute of delay. B depends on a person and does not scale. C keeps a pipeline running for hours just to wait, which wastes capacity and hits run time limits.
+</details>
+
+---
+
+### Question 20 - Domain 1: Implement and manage an analytics solution
+**Scenario:** Three engineers edit notebooks and pipelines in one shared workspace and keep overwriting each other's changes. The team wants change history and code review before work reaches the main workspace.
+
+A. Connect the workspace to a Git repo and have each engineer work in their own branch and workspace, merging by pull request
+B. Use a deployment pipeline between two workspaces, which records every edit with its author
+C. Export the items to OneDrive each evening so earlier copies can be recovered
+D. Give only one engineer Contributor rights so that only one person edits at a time
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Fabric Git integration with Azure DevOps or GitHub gives branches, history, and pull requests, and a private workspace per branch stops engineers from overwriting each other. B moves content between stages but is not version control and has no review step. C gives backups, not history per change or review. D removes the conflict by removing two thirds of the team's ability to work.
+</details>
+
+---
+
+### Question 21 - Domain 2: Ingest and transform data
+**Scenario:** Analysts need a near real-time, read-only copy of an Azure SQL Database in Fabric for reporting. The team wants no pipelines or ETL code to maintain.
+
+A. A pipeline Copy activity scheduled every five minutes with a watermark column
+B. Database mirroring of the Azure SQL Database into Fabric
+C. A notebook that reads the change feed through JDBC every few minutes
+D. A Dataflow Gen2 that refreshes the tables on a short schedule
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Mirroring continuously replicates the source into OneLake as Delta tables with no ETL code, and the data is queryable through a SQL analytics endpoint. A and D are scheduled batch loads that need their own logic and still lag by the schedule interval. C is custom code that the team would have to build, schedule, and support.
+</details>
+
+---
+
+### Question 22 - Domain 2: Ingest and transform data
+**Scenario:** A dashboard must show the count of sensor readings per device for each fixed five-minute block, with no overlap between blocks and every event counted exactly once.
+
+A. A hopping window of five minutes that advances every minute
+B. A session window that closes after five minutes without events
+C. A tumbling window of five minutes
+D. A sliding window that emits a result whenever an event arrives
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Tumbling windows are fixed-size, contiguous, and non-overlapping, so each event falls in exactly one block. A overlaps, so one event is counted in up to five windows. B groups by gaps in activity, so window length varies with traffic. D also overlaps and emits on every event, which gives a running view rather than fixed blocks.
+</details>
+
+---
+
+### Question 23 - Domain 2: Ingest and transform data
+**Scenario:** A daily source extract sometimes contains the same order several times with different `modified_at` values. Only the latest version of each order should reach the silver table.
+
+A. Use `SELECT DISTINCT` on all columns before loading the silver table
+B. Load everything and ask report authors to filter for the newest row
+C. Drop any order ID that appears more than once in the extract
+D. Rank rows with `ROW_NUMBER()` over the order ID ordered by `modified_at` descending and keep rank 1
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** A window function partitioned by the business key and ordered by the change timestamp keeps exactly one row per key, and the newest one. A removes only rows that are identical in every column, so versions with different timestamps survive. B pushes data quality onto every consumer and guarantees inconsistent numbers. C throws away orders that changed, which is real data loss.
+</details>
+
+---
+
+### Question 24 - Domain 2: Ingest and transform data
+**Scenario:** You are building a customer dimension for a star schema. When a customer moves, sales before the move must still report against the old region.
+
+A. Slowly changing dimension Type 2: expire the current row and insert a new row with effective dates
+B. Slowly changing dimension Type 1: overwrite the region on the existing row
+C. Store only the latest region and recompute history from the fact table at query time
+D. Add a new column for each region change, such as `region_2` and `region_3`
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** Type 2 keeps a new row per version with a surrogate key, valid-from and valid-to dates, and a current flag, so old facts keep pointing at the old version. B rewrites history, so past sales move to the new region. C has nothing to recompute from, because the old region is gone. D is a limited Type 3 pattern that breaks after a few changes and is hard to query.
+</details>
+
+---
+
+### Question 25 - Domain 2: Ingest and transform data
+**Scenario:** An eventhouse needs to query a large Delta table that already lives in a lakehouse. Queries must be fast, and the data must not be copied into a second ingestion process.
+
+A. Ingest the Delta table into a native eventhouse table with a nightly pipeline
+B. Create a OneLake shortcut to the table in the KQL database with query acceleration enabled
+C. Export the Delta table to CSV and use an external table over the files
+D. Create a standard OneLake shortcut and add more capacity to make it faster
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** An accelerated shortcut keeps the data in place in OneLake while the eventhouse indexes and caches it, so query performance gets close to native tables without a separate ingestion job. A duplicates the data and adds a pipeline to run and monitor. C loses Delta's schema and transaction log and is slower. D works, but a standard shortcut reads the files on every query, and extra capacity does not fix that.
+</details>
+
+---
+
+### Question 26 - Domain 3: Monitor and optimize an analytics solution
+**Scenario:** A lakehouse table is written by a streaming job every minute. After a few weeks, reads are slow and the table folder holds tens of thousands of small Parquet files.
+
+A. Increase the streaming trigger frequency so each write finishes sooner
+B. Convert the table to CSV so the SQL analytics endpoint reads it faster
+C. Run `OPTIMIZE` on the table, with V-Order, on a regular schedule to compact the small files
+D. Delete the transaction log so the engine stops tracking old file versions
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** Frequent small writes cause a small-file problem, and `OPTIMIZE` compacts them into fewer, larger files, while V-Order improves read speed for the SQL engine and Power BI. A makes the problem worse by writing even more small files. B gives up columnar storage, compression, and Delta features. D corrupts the table, because the log is what defines which files make up the current version.
+</details>
+
+---
+
+### Question 27 - Domain 3: Monitor and optimize an analytics solution
+**Scenario:** The on-call engineer must be notified in Teams within minutes whenever a critical pipeline run fails, without anyone watching the Monitor hub.
+
+A. Check the Monitor hub every morning and post failures in the team channel by hand
+B. Add a Teams post at the end of the pipeline that runs only on the Success path
+C. Ask the capacity admin to email a weekly usage report from the Capacity Metrics app
+D. Create an Activator rule on the pipeline's job events that sends a Teams message when a run fails
+
+<details>
+<summary>Answer</summary>
+
+**Correct: D**
+
+**Why:** Fabric emits job events for item runs, and an Activator rule can watch for a failed status and send a Teams message or email straight away. A depends on someone remembering and can lag by a full day. B is wired to the wrong outcome, so it fires on success and stays silent on failure. C reports capacity use, not individual run failures, and only weekly.
+</details>
+
+---
+
+### Question 28 - Domain 3: Monitor and optimize an analytics solution
+**Scenario:** A lakehouse shortcut to an Azure Data Lake Storage Gen2 container worked for months. Since this morning, queries through it fail with an authorization error. The security team rotated service principal secrets overnight.
+
+A. Update the shortcut's cloud connection with the new service principal secret
+B. Delete the lakehouse and recreate it with a new shortcut
+C. Copy the container's data into OneLake so the shortcut is no longer needed
+D. Grant the analysts Owner on the storage account so their own identities are used
+
+<details>
+<summary>Answer</summary>
+
+**Correct: A**
+
+**Why:** The shortcut authenticates through its connection, and the timing points straight at the rotated secret, so updating that credential fixes every item that uses the connection. B throws away a working lakehouse for a credential problem. C changes the architecture and duplicates data to avoid a one-line fix. D over-grants access and does not change the identity the shortcut connection uses.
+</details>
+
+---
+
+### Question 29 - Domain 3: Monitor and optimize an analytics solution
+**Scenario:** Users say a Fabric warehouse "got slow last week". You need to find which queries ran longest and how often they ran, before deciding what to tune.
+
+A. Run the slowest report again and time it with a stopwatch
+B. Query the warehouse's `queryinsights` views for historical request duration and frequency
+C. Read the Fabric roadmap for known warehouse performance issues
+D. Open the pipeline run history in the Monitor hub for the load jobs
+
+<details>
+<summary>Answer</summary>
+
+**Correct: B**
+
+**Why:** Query insights keeps history of completed requests, including duration and long-running and frequently run queries, so you can rank the real offenders over the period users mention. A measures one query at one moment and tells you nothing about last week. C lists features, not your workload. D shows load jobs, not the read queries users are complaining about.
+</details>
+
+---
+
+### Question 30 - Domain 3: Monitor and optimize an analytics solution
+**Scenario:** An eventhouse table keeps a year of telemetry. Nearly all dashboard queries look at the last 30 days, but the hot cache is set to 7 days and queries beyond that are slow.
+
+A. Shorten the retention policy to 30 days so the older data is deleted
+B. Move the dashboard queries to a lakehouse SQL analytics endpoint
+C. Set the table's caching policy so the hot cache covers 30 days
+D. Re-ingest the last 30 days every night so the data is always new
+
+<details>
+<summary>Answer</summary>
+
+**Correct: C**
+
+**Why:** The caching policy decides how much recent data sits in fast hot storage, and matching it to the query pattern is the direct fix while the full year stays queryable. A deletes eleven months of data that may still be needed for audits or trends. B moves a real-time workload to an engine built for batch analytics. D creates duplicate data and ingestion cost without changing what is cached.
 </details>
 
 ---
