@@ -1,0 +1,23 @@
+Question,Answer,Tags
+How long is the Databricks Certified Data Engineer Professional exam?,120 minutes,exam-logistics
+How many questions are on the Databricks Certified Data Engineer Professional exam?,"59 scored multiple-choice questions (exam page; the guide PDF says 60), plus possible unscored items",exam-logistics
+What is the passing score for Databricks Certified Data Engineer Professional?,Not published by Databricks,exam-logistics
+What does the Databricks Certified Data Engineer Professional exam cost?,"$200 USD, plus applicable taxes",exam-logistics
+How long is Databricks Certified Data Engineer Professional valid for?,2 years,exam-logistics
+How is the Databricks Certified Data Engineer Professional exam delivered?,Online proctored or test center,exam-logistics
+Iceberg (data ingestion acquisition),"Unity Catalog supports managed Iceberg tables (created USING ICEBERG), which Databricks and external Iceberg engines can both read and write through the Unity Catalog Iceberg REST catalog. A Delta table can also be made readable as Iceberg with UniForm (delta.universalFormat.enabledFormats = 'iceberg'), which writes Iceberg metadata alongside the Delta log.","notes,data-ingestion-acquisition"
+Bearer token (data sharing federation),"you create the recipient, Databricks issues an activation link, and the recipient downloads a one-time credential file. Tokens have a lifetime you set; rotate them.","notes,data-sharing-federation"
+OIDC federation (data sharing federation),"the recipient authenticates with its own identity provider (for example Entra ID or Okta), so no long-lived token is shared. This is the more secure option where available.","notes,data-sharing-federation"
+"""Notify when..."" (monitoring alerting)",job failure means job notifications; a threshold on data means a SQL alert.,"notes,monitoring-alerting"
+Row-level concurrency (cost performance optimisation),two writers touching different rows of the same file can both succeed.,"notes,cost-performance-optimisation"
+Compliance catch (cost performance optimisation),a deleted row still physically exists in the old file until it is purged and vacuumed (see Section 7).,"notes,cost-performance-optimisation"
+"""Reduce maintenance overhead"" (cost performance optimisation)",managed tables + Predictive Optimization (+ Liquid Clustering or CLUSTER BY AUTO).,"notes,cost-performance-optimisation"
+"""Frequent small updates and deletes"" (cost performance optimisation)",deletion vectors. Partitioning by primary key and VACUUM with zero retention are the traps.,"notes,cost-performance-optimisation"
+"""Changing or unknown query patterns"" (cost performance optimisation)","CLUSTER BY AUTO. ""Known filter columns"": explicit Liquid Clustering keys.","notes,cost-performance-optimisation"
+"""Only process what changed downstream"" (cost performance optimisation)",change data feed.,"notes,cost-performance-optimisation"
+Crypto-shredding (security compliance),encrypt each person's PII with a per-person key and delete the key to make the data unreadable everywhere at once.,"notes,security-compliance"
+Retention (security compliance),"set delta.deletedFileRetentionDuration and delta.logRetentionDuration to match policy (and keep VACUUM running, which Predictive Optimization does for managed tables). Shorter retention means faster erasure but less time travel.","notes,security-compliance"
+Inheritance (data governance),"a grant on a catalog or schema covers objects created later. ""They must be granted again for each new table"" is the trap.","notes,data-governance"
+USE privileges (data governance),SELECT without USE CATALOG and USE SCHEMA does not work.,"notes,data-governance"
+Override parameters (debugging deploying),"change job parameters (or a task's parameters on legacy jobs) for the repair, for example correct a wrong run_date that caused the failure.","notes,debugging-deploying"
+Symptom to tool (debugging deploying),skew and spill are Spark UI or query profile; start failures are the compute event log; trends across runs are system tables; the exception is in the task output.,"notes,debugging-deploying"

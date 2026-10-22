@@ -35,7 +35,8 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 
 - [ ] 2026-11-15: Snowflake COF-C03 / ADA-C02 / DEA-C02 objective-level outlines - get the form-gated study guide PDFs and remap topic sections.
 - [ ] 2026-11-15: DP-300 notes still lack database watcher, SQL DB in Fabric, elastic jobs, Resource Governor, IQP, compression, log shipping.
-- [ ] Databricks DE Professional: README + fact sheet still show the old 5 domains and $300; the 2026-10-09 guide has 10 sections, $200, 59 items. Bank Q16-30 already use the new sections.
+- [x] 2026-10-22 Databricks DE Professional rebuilt for the 2026-10-09 outline: 10 section notes, README, fact sheet, strategy, plan; bank fully retagged. Page says 10 sections / 59 items, guide PDF 9 / 60.
+- [ ] 2026-11-15: Databricks DE Associate - rework notes/domains to the May 2026 7-section guide (Lakeflow Connect, Jobs triggers, CI/CD with bundles); README + fact sheet carry a notice only.
 - [ ] DP-203 is retired: decide whether its guide, practice bank and `labs-by-cert` entry stay as reference or go.
 - [ ] "Vertex AI" still appears in `exams/gcp/data-engineer` (renamed Gemini Enterprise Agent Platform 2026-04-22). Sweep with Google's rename table once names settle.
 - [ ] New-guide candidates (verify codes first): Databricks Data Analyst and Apache Spark Developer, Google Associate Data Practitioner, Confluent CCAC, MongoDB Associate Data Modeler [L]. Snowflake SPS-C01 retires 2026-11-01 and SEA-C01 / DAA-C01 2026-12-01 [M]; no guides here.

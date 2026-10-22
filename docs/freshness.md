@@ -15,8 +15,6 @@ Each row shows when a page was last verified against its source of truth.
 | azure/dp-900 | 2026-05-03 | [exams/azure/dp-900](../exams/azure/dp-900/) |
 | confluent/certified-administrator | 2026-05-03 | [exams/confluent/certified-administrator](../exams/confluent/certified-administrator/) |
 | confluent/certified-developer | 2026-05-03 | [exams/confluent/certified-developer](../exams/confluent/certified-developer/) |
-| databricks/data-engineer-associate | 2026-05-03 | [exams/databricks/data-engineer-associate](../exams/databricks/data-engineer-associate/) |
-| databricks/data-engineer-professional | 2026-05-03 | [exams/databricks/data-engineer-professional](../exams/databricks/data-engineer-professional/) |
 | gcp/cloud-database-engineer | 2026-05-03 | [exams/gcp/cloud-database-engineer](../exams/gcp/cloud-database-engineer/) |
 | gcp/data-engineer | 2026-05-03 | [exams/gcp/data-engineer](../exams/gcp/data-engineer/) |
 | mongodb/associate-atlas-administrator | 2026-05-03 | [exams/mongodb/associate-atlas-administrator](../exams/mongodb/associate-atlas-administrator/) |
@@ -29,6 +27,8 @@ Each row shows when a page was last verified against its source of truth.
 | azure/dp-420 | 2026-10-22 | [exams/azure/dp-420](../exams/azure/dp-420/) |
 | azure/dp-600 | 2026-10-22 | [exams/azure/dp-600](../exams/azure/dp-600/) |
 | azure/dp-700 | 2026-10-22 | [exams/azure/dp-700](../exams/azure/dp-700/) |
+| databricks/data-engineer-associate | 2026-10-22 | [exams/databricks/data-engineer-associate](../exams/databricks/data-engineer-associate/) |
+| databricks/data-engineer-professional | 2026-10-22 | [exams/databricks/data-engineer-professional](../exams/databricks/data-engineer-professional/) |
 | databricks/lakehouse-platform-administrator | 2026-10-22 | [exams/databricks/lakehouse-platform-administrator](../exams/databricks/lakehouse-platform-administrator/) |
 | snowflake/snowpro-advanced-administrator | 2026-10-22 | [exams/snowflake/snowpro-advanced-administrator](../exams/snowflake/snowpro-advanced-administrator/) |
 | snowflake/snowpro-advanced-data-engineer | 2026-10-22 | [exams/snowflake/snowpro-advanced-data-engineer](../exams/snowflake/snowpro-advanced-data-engineer/) |
@@ -79,3 +79,4 @@ Each row shows when a page was last verified against its source of truth.
 | data-from-scratch | 2026-10-21 | [learn/data-from-scratch.md](../learn/data-from-scratch.md) |
 | glossary | 2026-10-21 | [learn/glossary.md](../learn/glossary.md) |
 | youtube | 2026-10-21 | [learn/youtube.md](../learn/youtube.md) |
+| which-site | 2026-10-22 | [learn/which-site.md](../learn/which-site.md) |

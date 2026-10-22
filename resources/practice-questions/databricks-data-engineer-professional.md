@@ -5,13 +5,13 @@ difficulty: advanced
 
 # Databricks Certified Data Engineer Professional - Practice Questions
 
-30 questions for the Data Engineer Professional exam. Questions 16-30 are tagged with the October 2026 exam outline's ten sections, the largest being developing code with Python and SQL (22%) and cost and performance optimisation (13%).
+30 questions for the Data Engineer Professional exam. Every question is tagged with the October 2026 exam outline's ten sections (as numbered on the exam page), the largest being developing code with Python and SQL (22%) and cost and performance optimisation (13%).
 
 > **Cert page:** [exams/databricks/data-engineer-professional/](../../exams/databricks/data-engineer-professional/)
 
 ---
 
-### Question 1
+### Question 1 - Domain 2: Data Ingestion & Acquisition
 **Scenario:** A streaming job must process only new files arriving in cloud storage, at scale.
 
 A. A cron job that compares file modification timestamps to the last run time and loads any newer files
@@ -29,7 +29,7 @@ D. List the directory each run and diff the result against a table of already-lo
 
 ---
 
-### Question 2
+### Question 2 - Domain 1: Developing Code for Data Processing using Python and SQL
 **Scenario:** A Delta table must apply updates and inserts from a change feed atomically.
 
 A. Append everything and de-duplicate on read by key
@@ -47,7 +47,7 @@ D. Delete the affected keys first, then insert the new versions in a second stat
 
 ---
 
-### Question 3
+### Question 3 - Domain 6: Cost & Performance Optimisation
 **Scenario:** Downstream jobs need to know exactly which rows changed in a Delta table.
 
 A. Use the transaction log manually, parsing the JSON commit files in `_delta_log` to infer which rows changed
@@ -65,7 +65,7 @@ D. Add a last-modified timestamp column and have each downstream job filter on v
 
 ---
 
-### Question 4
+### Question 4 - Domain 1: Developing Code for Data Processing using Python and SQL
 **Scenario:** A structured streaming job must guarantee exactly-once processing across restarts.
 
 A. Manual offset tracking in a separate table that the job updates after each micro-batch completes successfully
@@ -83,7 +83,7 @@ D. Nothing is needed, because Structured Streaming is exactly-once by default wi
 
 ---
 
-### Question 5
+### Question 5 - Domain 1: Developing Code for Data Processing using Python and SQL
 **Scenario:** A slowly changing dimension must keep history of attribute changes.
 
 A. Use a view that selects the latest value of each attribute from the source table at query time
@@ -101,7 +101,7 @@ D. SCD Type 2: close the current row with an end timestamp and insert a new curr
 
 ---
 
-### Question 6
+### Question 6 - Domain 6: Cost & Performance Optimisation
 **Scenario:** Query performance on a large Delta table filtered by two high-cardinality columns is poor.
 
 A. Increase cluster size only, adding workers so that more cores scan the same number of files in parallel
@@ -119,7 +119,7 @@ D. Add more partitions on the two high-cardinality columns so each filter value 
 
 ---
 
-### Question 7
+### Question 7 - Domain 10: Data Modelling
 **Scenario:** A table has accumulated thousands of small files.
 
 A. Repartition to 10,000 partitions so that each task has less data and every file is smaller still
@@ -137,7 +137,7 @@ D. Add more nodes so that the many small files can be opened in parallel by addi
 
 ---
 
-### Question 8
+### Question 8 - Domain 8: Data Governance
 **Scenario:** Access must be governed centrally across workspaces with lineage.
 
 A. Notebook permissions, setting who can view, run, or edit each notebook in the workspace
@@ -155,7 +155,7 @@ D. Unity Catalog: a three-level namespace with centralized grants, lineage, and 
 
 ---
 
-### Question 9
+### Question 9 - Domain 1: Developing Code for Data Processing using Python and SQL
 **Scenario:** A streaming job's state store grows without bound on a windowed aggregation.
 
 A. Set a watermark so state for closed windows can be dropped and late events are bounded
@@ -173,7 +173,7 @@ D. Increase memory on the driver and workers until the whole state store fits in
 
 ---
 
-### Question 10
+### Question 10 - Domain 3: Data Transformation, Cleansing, and Quality
 **Scenario:** A pipeline must enforce data quality and stop bad records reaching downstream tables.
 
 A. Delta Live Tables expectations, choosing per rule to warn, drop the record, or fail the update
@@ -191,7 +191,7 @@ D. Check the quality afterwards with a scheduled query and fix any bad rows that
 
 ---
 
-### Question 11
+### Question 11 - Domain 6: Cost & Performance Optimisation
 **Scenario:** Old versions of a Delta table must be removed to reduce storage cost.
 
 A. `VACUUM` with a retention period, knowing it limits time travel to that window
@@ -209,7 +209,7 @@ D. Delete the old data files directly from cloud storage with a lifecycle rule o
 
 ---
 
-### Question 12
+### Question 12 - Domain 9: Debugging and Deploying
 **Scenario:** A job is failing intermittently with skew: one task takes ten times longer than the rest.
 
 A. Increase the timeout so the slowest task has enough time to finish
@@ -227,7 +227,7 @@ D. Add nodes so that the cluster has spare capacity to run the slow task more qu
 
 ---
 
-### Question 13
+### Question 13 - Domain 1: Developing Code for Data Processing using Python and SQL
 **Scenario:** A production job must be orchestrated with dependencies, retries, and alerting.
 
 A. Databricks Jobs with multiple tasks, dependencies, retries, and notifications, defined as code
@@ -245,7 +245,7 @@ D. Manual runs by an engineer who starts each notebook in order and watches for 
 
 ---
 
-### Question 14
+### Question 14 - Domain 9: Debugging and Deploying
 **Scenario:** Development, staging, and production must use the same code against different data.
 
 A. One shared environment where the three stages are separated only by naming conventions on the tables, with no separate catalogs
@@ -263,7 +263,7 @@ D. Databricks Asset Bundles or CI/CD, with parameterized catalogs and per-enviro
 
 ---
 
-### Question 15
+### Question 15 - Domain 1: Developing Code for Data Processing using Python and SQL
 **Scenario:** A pipeline's cost is higher than expected on an all-purpose cluster.
 
 A. Increase the cluster size so that the pipeline finishes sooner and the cluster is idle less often
