@@ -437,7 +437,7 @@
       "format": null,
       "languages": "English, Japanese, Portuguese (BR), Korean",
       "path": "exams/databricks/data-engineer-associate",
-      "notes_count": 5,
+      "notes_count": 7,
       "files": {
         "README.md": true,
         "fact-sheet.md": true,

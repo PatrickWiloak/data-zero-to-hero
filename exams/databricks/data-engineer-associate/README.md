@@ -1,192 +1,119 @@
 ---
 last-updated: 2026-10-22
+applies-to: Databricks exam page and exam guide of 2026-05-04
 ---
 
 # Databricks Certified Data Engineer Associate
 
 ## Exam Overview
 
-The Databricks Certified Data Engineer Associate certification validates foundational knowledge of the Databricks Lakehouse Platform and the ability to use Spark SQL and Python to build and manage ELT pipelines. This certification demonstrates proficiency in data engineering concepts including Delta Lake, Structured Streaming, Delta Live Tables, and Unity Catalog.
+The Databricks Certified Data Engineer Associate exam tests whether you can do foundational data engineering on the Databricks Data Intelligence Platform: know the platform and its compute, ingest data with Auto Loader, `COPY INTO` and Lakeflow Connect, transform it with PySpark and SQL into silver and gold objects, orchestrate it with Lakeflow Jobs, ship it with Git folders and Declarative Automation Bundles, keep it healthy, and govern it with Unity Catalog.
 
-**Exam Details:**
-- **Exam Code:** Databricks Certified Data Engineer Associate
+The exam changed on **2026-05-04**. The old version had five domains (Lakehouse Platform, ELT with Spark SQL and Python, Incremental Data Processing, Production Pipelines, Data Governance). The current one has seven sections, adds Lakeflow Connect, job triggers and control flow, CI/CD with bundles, troubleshooting with the Spark UI, Liquid Clustering, predictive optimization and ABAC, and gives the platform overview much less weight. This guide was rebuilt for the new version on 2026-10-22.
+
+**Exam Details** (from the **[📖 exam page](https://www.databricks.com/learn/certification/data-engineer-associate)** and exam guide, read 2026-10-22):
+- **Exam Code:** Databricks Certified Data Engineer Associate (no separate code)
 - **Duration:** 90 minutes
 - **Number of Questions:** 45 scored multiple-choice questions, plus possible unscored items
 - **Passing Score:** Not published by Databricks
 - **Cost:** $200 USD, plus applicable taxes
-- **Delivery:** Online proctored or test center
-- **Validity:** 2 years
-- **Prerequisites:** None (6+ months hands-on Databricks experience recommended)
+- **Delivery:** Online proctored or test center; no test aids
+- **Languages:** English, Japanese, Portuguese (BR), Korean
+- **Validity:** 2 years; recertify by passing the current exam
+- **Prerequisites:** None; training and six months of hands-on Databricks experience highly recommended
 
-## Exam Domains
+## Exam Sections
 
-> **The outline changed in May 2026.** The current [exam page](https://www.databricks.com/learn/certification/data-engineer-associate) and [exam guide (May 2026)](https://www.databricks.com/sites/default/files/2026-05/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf) list seven sections:
->
-> | Section | Weight |
-> |---|---|
-> | Databricks Intelligence Platform | 6% |
-> | Data Ingestion and Loading | 21% |
-> | Data Transformation and Modeling | 22% |
-> | Working with Lakeflow Jobs | 16% |
-> | Implementing CI/CD | 10% |
-> | Troubleshooting, Monitoring, and Optimization | 10% |
-> | Governance and Security | 15% |
->
-> The domains below and the notes still follow the older five-domain outline (Delta Live Tables is now Lakeflow Spark Declarative Pipelines, Repos are Git folders, Asset Bundles are Declarative Automation Bundles). Most of their content is still tested; Lakeflow Connect, job triggers and control flow, CI/CD with bundles, Liquid Clustering, predictive optimization and ABAC need extra study from the docs. Checked 2026-10-22; a full rework is on the repo TODO.
+The exam page and the **[📖 exam guide PDF (May 2026)](https://www.databricks.com/sites/default/files/2026-05/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf)** agree on seven sections and their weights.
 
-### Domain 1: Databricks Lakehouse Platform (24%)
-- Understand the Lakehouse architecture and its advantages
-- Navigate the Databricks workspace
-- Understand compute resources (clusters, SQL warehouses)
-- Use Databricks Repos and notebooks
-- Understand the relationship between Databricks and Apache Spark
+| # | Section | Weight | About | Notes |
+|---|---|---|---|---|
+| 1 | Databricks Intelligence Platform | 6% | 3 questions | [01](notes/01-intelligence-platform.md) |
+| 2 | Data Ingestion and Loading | 21% | 9-10 | [02](notes/02-data-ingestion-loading.md) |
+| 3 | Data Transformation and Modeling | 22% | 10 | [03](notes/03-data-transformation-modeling.md) |
+| 4 | Working with Lakeflow Jobs | 16% | 7 | [04](notes/04-lakeflow-jobs.md) |
+| 5 | Implementing CI/CD | 10% | 4-5 | [05](notes/05-cicd.md) |
+| 6 | Troubleshooting, Monitoring, and Optimization | 10% | 4-5 | [06](notes/06-troubleshooting-monitoring-optimization.md) |
+| 7 | Governance and Security | 15% | 7 | [07](notes/07-governance-security.md) |
 
-**Key Concepts:**
-- Lakehouse vs Data Warehouse vs Data Lake
-- Databricks workspace organization (notebooks, repos, jobs)
-- All-purpose clusters vs job clusters
-- Cluster configuration (autoscaling, spot instances, pools)
-- SQL warehouses and serverless compute
-- Databricks Runtime versions
+The question counts are the weights applied to 45 scored items, rounded; Databricks doesn't publish per-section counts.
 
-### Domain 2: ELT with Spark SQL and Python (29%)
-- Extract data from various sources
-- Transform data using Spark SQL and Python
-- Load data into Delta Lake tables
-- Write queries to explore and manipulate data
-- Use Spark SQL built-in functions
+### What each section covers
 
-**Key Concepts:**
-- Reading data from files (CSV, JSON, Parquet) and databases
-- DataFrame API vs Spark SQL syntax
-- Common transformations (filtering, joining, aggregating, pivoting)
-- Writing to Delta Lake tables (append, overwrite, merge)
-- Higher-order functions and complex data types
-- User-defined functions (UDFs) and when to avoid them
-- Multi-hop architecture (Bronze, Silver, Gold)
-- CTAS (CREATE TABLE AS SELECT) statements
+1. **Intelligence Platform (6%)** - architecture (control plane and compute plane), Delta Lake and Unity Catalog as core components; compute services (serverless, SQL warehouses, all-purpose and jobs clusters) with their limits and cost models, and choosing one per workload.
+2. **Ingestion and Loading (21%)** - batch, streaming and incremental patterns; local file upload; `COPY INTO`; Auto Loader with schema enforcement and evolution in directory listing or file notification mode; Lakeflow Connect standard and managed connectors; JDBC/ODBC and REST from notebooks, scheduled as jobs; choosing between methods; semi-structured and nested data.
+3. **Transformation and Modeling (22%)** - cleaning bronze into silver; joins (inner, left, broadcast, multiple keys, cross) and unions; adding, dropping, splitting and renaming columns, filtering, exploding arrays; deduplication and aggregation, including approximate count distinct; basic Spark tuning parameters; gold objects (tables, views, materialized views, streaming tables); data quality checks.
+4. **Lakeflow Jobs (16%)** - notebook, SQL, dashboard and pipeline tasks in a DAG; retries; If/else branching and For each looping; scheduled, file arrival and table update triggers; time-based vs data-driven triggers.
+5. **CI/CD (10%)** - branches, commits, pushes and pull requests with Git folders; Declarative Automation Bundles with variables, targets and overrides; deploying jobs and pipelines across dev, test and prod; the Databricks CLI in CI/CD.
+6. **Troubleshooting, Monitoring, Optimization (10%)** - run history trends; job statuses and task graphs; skew, shuffle and spill in the Spark UI; Liquid Clustering and predictive optimization; cluster start failures, library conflicts and out-of-memory errors.
+7. **Governance and Security (15%)** - managed vs external tables and converting between them; `GRANT`, `REVOKE` and `DENY` to users, groups and service principals; row filters and column masks; ABAC policies.
 
-### Domain 3: Incremental Data Processing (17%)
-- Understand Structured Streaming concepts
-- Configure streaming reads and writes
-- Use Auto Loader for file ingestion
-- Understand trigger modes and checkpointing
+## Names to know
 
-**Key Concepts:**
-- Structured Streaming fundamentals (sources, sinks, triggers)
-- Auto Loader (cloudFiles) for incremental file ingestion
-- Schema inference and schema evolution with Auto Loader
-- Trigger modes (availableNow, processingTime, continuous)
-- Checkpointing and exactly-once semantics
-- Watermarking for late-arriving data
-- Output modes (append, complete, update)
+The exam uses current product names. Older courses, practice tests and the exam guide's own sample questions still use some old ones.
 
-### Domain 4: Production Pipelines (13%)
-- Create and manage Delta Live Tables pipelines
-- Schedule and orchestrate jobs
-- Understand pipeline modes (triggered vs continuous)
-- Handle pipeline errors and data quality
-
-**Key Concepts:**
-- Delta Live Tables (DLT) fundamentals
-- DLT expectations for data quality constraints
-- Pipeline modes: triggered vs continuous
-- Databricks Jobs and job orchestration
-- Task dependencies and multi-task workflows
-- Job scheduling and notifications
-- Monitoring pipeline health
-
-### Domain 5: Data Governance (17%)
-- Understand Unity Catalog architecture
-- Manage data access with Unity Catalog
-- Implement data governance best practices
-- Understand data lineage and auditing
-
-**Key Concepts:**
-- Unity Catalog three-level namespace (catalog.schema.table)
-- Metastore, catalogs, schemas, and tables
-- Managed vs external tables and volumes
-- GRANT and REVOKE permissions
-- Data lineage tracking
-- Row-level and column-level security
-- Dynamic views for data masking
-- Information schema for metadata queries
-
-## Key Concepts to Master
-
-### Delta Lake Fundamentals
-- ACID transactions on data lakes
-- Time travel (versioning, RESTORE)
-- Schema enforcement and evolution
-- OPTIMIZE and VACUUM commands
-- Z-ordering for query optimization
-- Delta Lake transaction log
-
-### Spark SQL Essentials
-- SELECT, JOIN, GROUP BY, WINDOW functions
-- Common Table Expressions (CTEs)
-- Temporary views vs global temporary views
-- MERGE INTO for upsert operations
-- COPY INTO for data loading
-
-### Streaming Concepts
-- Micro-batch vs continuous processing
-- Exactly-once processing guarantees
-- Stream-static joins
-- Incremental data ingestion patterns
+| Current name | Former name |
+|---|---|
+| Lakeflow Spark Declarative Pipelines | Delta Live Tables (DLT) |
+| AUTO CDC | APPLY CHANGES |
+| Lakeflow Jobs | Databricks Workflows, Jobs |
+| Lakeflow Connect | (new umbrella for ingestion connectors) |
+| Declarative Automation Bundles | Databricks Asset Bundles (DABs) |
+| Git folders | Repos |
+| Databricks Free Edition | Community Edition |
+| SQL warehouse | SQL endpoint |
+| Standard / dedicated access mode | Shared / single user (and the older "high concurrency") |
+| Data Intelligence Platform | Lakehouse Platform |
 
 ## Study Approach
 
-### Phase 1: Foundation (Week 1-2)
-1. Understand the Lakehouse architecture and how Databricks implements it
-2. Get comfortable with the Databricks workspace and notebook environment
-3. Review Spark SQL basics and DataFrame API operations
-4. Learn Delta Lake fundamentals (ACID, time travel, schema enforcement)
+### Phase 1: Platform and ingestion (Weeks 1-2)
+1. Section 1: how the platform fits together, Delta Lake, Unity Catalog, and which compute to pick.
+2. Section 2: upload, `COPY INTO`, Auto Loader and its schema modes, Lakeflow Connect managed connectors, JDBC and REST ingestion.
 
-### Phase 2: Core Skills (Week 3-4)
-1. Practice ELT operations with Spark SQL and Python
-2. Learn Structured Streaming and Auto Loader
-3. Understand Delta Live Tables pipeline creation
-4. Study Unity Catalog governance model
+### Phase 2: Transform and orchestrate (Weeks 3-4)
+1. Section 3: PySpark and SQL cleaning, joins, unions, aggregation, tuning, gold objects and expectations. Write the code in Free Edition; this is the largest section.
+2. Section 4: build a multi-task job with an If/else, a For each and a file arrival trigger.
 
-### Phase 3: Exam Prep (Week 5-6)
-1. Take practice exams and review incorrect answers
-2. Focus on weak areas identified in practice tests
-3. Review all domain-specific notes and fact sheets
-4. Time yourself on practice questions (2 min per question)
+### Phase 3: Ship, operate and govern (Week 5)
+1. Section 5: a Git folder workflow and a small bundle with dev and prod targets, deployed with the CLI.
+2. Section 6: read the Spark UI on a skewed join; Liquid Clustering and predictive optimization.
+3. Section 7: managed vs external, grants, row filters, column masks, ABAC.
+
+### Phase 4: Exam readiness (Week 6)
+1. Timed practice, then reread the "How the exam tests this section" ending of each note for the sections you miss most.
 
 ## Study Resources
 
-- **[Databricks Academy](https://www.databricks.com/learn)** - Free learning paths and courses
-- **[Databricks Documentation](https://docs.databricks.com/)** - Official documentation
-- **[Databricks Free Edition](https://www.databricks.com/learn/free-edition)** - Free practice environment (replaced Community Edition)
-- **[Exam Guide](https://www.databricks.com/learn/certification/data-engineer-associate)** - Official exam page and registration
-- **[Delta Lake Documentation](https://docs.delta.io/)** - Open-source Delta Lake docs
-- **[Spark SQL Guide](https://spark.apache.org/docs/latest/sql-programming-guide.html)** - Apache Spark SQL reference
+- **[📖 Exam page](https://www.databricks.com/learn/certification/data-engineer-associate)** - format, fee, section weights, registration
+- **[📖 Exam guide PDF (May 2026)](https://www.databricks.com/sites/default/files/2026-05/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf)** - full objective list, recommended training and five sample questions
+- **[📖 Databricks Academy](https://www.databricks.com/learn)** - the instructor-led Data Engineering with Databricks course, and self-paced courses on Lakeflow Connect, Lakeflow Jobs, DevOps essentials, Unity Catalog interoperability, Spark Declarative Pipelines and data governance
+- **[📖 Databricks Free Edition](https://docs.databricks.com/aws/en/getting-started/free-edition)** - free serverless workspace for hands-on practice (replaced Community Edition)
+- **[📖 Databricks documentation](https://docs.databricks.com/aws/en/)** - the authoritative source; prefer it over older blog posts
 
 ## Tips for Success
 
-1. **Hands-on practice is essential** - Use Databricks Free Edition to practice
-2. **Focus on Spark SQL** - Domain 2 is the largest at 29%
-3. **Understand the "why"** - Know why Lakehouse is better than alternatives for specific use cases
-4. **Delta Lake is foundational** - It appears in almost every domain
-5. **Auto Loader vs COPY INTO** - Know when to use each approach
-6. **DLT expectations** - Understand how constraints affect data quality
-7. **Unity Catalog permissions** - Know the GRANT model and namespace hierarchy
-8. **Read questions carefully** - Look for keywords like "minimal effort" or "most cost-effective"
-9. **Eliminate wrong answers** - Many distractors use real services in wrong contexts
-10. **Time management** - 2 minutes per question, flag and return to difficult ones
+1. **Ingestion plus transformation is 43% of the exam.** Know Auto Loader vs `COPY INTO` vs Lakeflow Connect cold, and be able to read PySpark and SQL transformation code.
+2. **Learn the new names.** Questions say Lakeflow Jobs, Lakeflow Spark Declarative Pipelines, Declarative Automation Bundles, Git folders.
+3. **Prefer managed and automatic.** Managed connectors, managed tables, serverless, predictive optimization, Liquid Clustering, ABAC: the exam favours the option that removes manual work.
+4. **Match the trigger to the data.** Irregular arrivals mean file arrival; upstream tables mean table update; a deadline means a schedule.
+5. **Read the Spark UI numbers.** Max far above Median is skew; non-zero spill is spill.
+6. **Grants need gates.** `USE CATALOG` + `USE SCHEMA` + `SELECT`, inherited downward.
+7. **Time management.** 2 minutes per question; flag long scenarios and come back.
 
 ## File Index
 
 | File | Description |
 |------|-------------|
-| [fact-sheet.md](fact-sheet.md) | Comprehensive reference with documentation links |
-| [practice-plan.md](practice-plan.md) | Week-by-week study schedule with checkboxes |
+| [fact-sheet.md](fact-sheet.md) | Exam facts and the key facts per section, with documentation links |
+| [strategy.md](strategy.md) | Study phases, resources and exam tactics |
+| [practice-plan.md](practice-plan.md) | Six-week schedule with checkboxes |
 | [scenarios.md](scenarios.md) | Exam-style scenarios with solutions |
-| [strategy.md](strategy.md) | Study phases, resources, and exam tactics |
-| [notes/01-lakehouse-platform.md](notes/01-lakehouse-platform.md) | Lakehouse architecture and workspace |
-| [notes/02-elt-spark-sql.md](notes/02-elt-spark-sql.md) | ELT with Spark SQL and Python |
-| [notes/03-incremental-processing.md](notes/03-incremental-processing.md) | Structured Streaming and Auto Loader |
-| [notes/04-production-pipelines.md](notes/04-production-pipelines.md) | Delta Live Tables and job orchestration |
-| [notes/05-data-governance.md](notes/05-data-governance.md) | Unity Catalog and data governance |
+| [notes/01-intelligence-platform.md](notes/01-intelligence-platform.md) | Architecture, Delta Lake, Unity Catalog, compute choices |
+| [notes/02-data-ingestion-loading.md](notes/02-data-ingestion-loading.md) | Upload, COPY INTO, Auto Loader, schema evolution, Lakeflow Connect, JDBC and REST, nested data |
+| [notes/03-data-transformation-modeling.md](notes/03-data-transformation-modeling.md) | Medallion, cleaning, joins, unions, aggregation, tuning, gold objects, data quality |
+| [notes/04-lakeflow-jobs.md](notes/04-lakeflow-jobs.md) | Tasks, DAGs, task values, retries, If/else, For each, triggers |
+| [notes/05-cicd.md](notes/05-cicd.md) | Git folders, bundles, variables and targets, the CLI, a CI/CD flow |
+| [notes/06-troubleshooting-monitoring-optimization.md](notes/06-troubleshooting-monitoring-optimization.md) | Jobs monitoring, Spark UI, skew and spill, Liquid Clustering, predictive optimization, failures |
+| [notes/07-governance-security.md](notes/07-governance-security.md) | Managed and external tables, grants, row filters, column masks, ABAC |
+| [Practice questions](../../../resources/practice-questions/databricks-data-engineer-associate.md) | 25 questions tagged by section |

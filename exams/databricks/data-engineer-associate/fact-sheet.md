@@ -1,5 +1,6 @@
 ---
 last-updated: 2026-10-22
+applies-to: Databricks exam page and exam guide of 2026-05-04
 ---
 
 # Databricks Data Engineer Associate - Fact Sheet
@@ -15,269 +16,203 @@ last-updated: 2026-10-22
 **Languages:** English, Japanese, Portuguese (BR), Korean
 **Valid For:** 2 years
 
-**[📖 Official Exam Page](https://www.databricks.com/learn/certification/data-engineer-associate)** - Registration and exam details
-**[📖 Databricks Academy](https://www.databricks.com/learn)** - Free learning paths and courses
-**[📖 Databricks Free Edition](https://www.databricks.com/learn/free-edition)** - Free practice environment (replaced Community Edition)
+Current version effective **2026-05-04**, replacing the five-domain version (Lakehouse Platform 24%, ELT with Spark SQL and Python 29%, Incremental Data Processing 17%, Production Pipelines 13%, Data Governance 17%). Facts read from the exam page and the exam guide PDF on 2026-10-22.
 
-> **The exam outline changed in May 2026.** The current [exam guide (May 2026)](https://www.databricks.com/sites/default/files/2026-05/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf) has seven sections: Databricks Intelligence Platform (6%), Data Ingestion and Loading (21%), Data Transformation and Modeling (22%), Working with Lakeflow Jobs (16%), Implementing CI/CD (10%), Troubleshooting, Monitoring, and Optimization (10%), and Governance and Security (15%). The domain sections below still follow the older five-domain outline; the facts in them are mostly still tested, but Lakeflow Connect, Lakeflow Jobs triggers and control flow, Git folders, Declarative Automation Bundles, Liquid Clustering, predictive optimization and ABAC need more depth than they get here. Checked 2026-10-22; a full rework is on the repo TODO.
+**[📖 Official Exam Page](https://www.databricks.com/learn/certification/data-engineer-associate)** - registration, format, section weights
+**[📖 Exam Guide PDF (May 2026)](https://www.databricks.com/sites/default/files/2026-05/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf)** - every objective, recommended training, sample questions
+**[📖 Databricks Free Edition](https://docs.databricks.com/aws/en/getting-started/free-edition)** - free practice workspace (replaced Community Edition)
+**[📖 Databricks Documentation](https://docs.databricks.com/aws/en/)** - the authoritative reference
+
+## Sections and Weights
+
+| # | Section | Weight |
+|---|---|---|
+| 1 | Databricks Intelligence Platform | 6% |
+| 2 | Data Ingestion and Loading | 21% |
+| 3 | Data Transformation and Modeling | 22% |
+| 4 | Working with Lakeflow Jobs | 16% |
+| 5 | Implementing CI/CD | 10% |
+| 6 | Troubleshooting, Monitoring, and Optimization | 10% |
+| 7 | Governance and Security | 15% |
 
 ## Target Audience
 
-This certification is designed for:
-- Data engineers building ELT pipelines on Databricks
-- SQL analysts transitioning to data engineering
-- Data professionals with 6+ months Databricks experience
-- Engineers familiar with Spark SQL and Python
-- Professionals working with Delta Lake and Lakehouse architecture
+- Data engineers with about six months of hands-on Databricks work
+- SQL and Python developers moving into data engineering on Databricks
+- Engineers who build ingestion and transformation pipelines and need to orchestrate, deploy and govern them
 
-## Domain 1: Databricks Lakehouse Platform (24%)
+## Section 1: Databricks Intelligence Platform (6%)
 
-### Lakehouse Architecture
-
-**[📖 What is a Lakehouse?](https://docs.databricks.com/en/lakehouse/index.html)** - Lakehouse architecture overview
-**[📖 Delta Lake Overview](https://docs.databricks.com/en/delta/index.html)** - Delta Lake fundamentals
-**[📖 Databricks Architecture](https://docs.databricks.com/en/getting-started/overview.html)** - Platform architecture
+**[📖 Architecture overview](https://docs.databricks.com/aws/en/getting-started/overview)** - control plane and compute plane
+**[📖 Delta Lake](https://docs.databricks.com/aws/en/delta/)** - transaction log, time travel
+**[📖 Unity Catalog](https://docs.databricks.com/aws/en/data-governance/unity-catalog/)** - governance for data and AI
+**[📖 Compute](https://docs.databricks.com/aws/en/compute/)** - every compute type
 
 **Key Facts:**
-- Lakehouse combines the best of data warehouses and data lakes
-- Built on open formats (Delta Lake, Parquet) for data openness
-- Single platform for BI, data science, ML, and streaming
-- ACID transactions on data lake storage
-- Schema enforcement prevents bad data from entering tables
-- Supports both structured and unstructured data
+- Control plane (Databricks-run: UI, scheduler, Unity Catalog) vs compute plane (serverless in Databricks' account, classic in yours); data in your object storage
+- Delta Lake = Parquet files + `_delta_log`; ACID, schema enforcement, time travel (`VERSION AS OF`, `RESTORE`), `DESCRIBE HISTORY`
+- `VACUUM` removes unneeded files older than retention (default 7 days); versions needing them can no longer be read
+- Unity Catalog: one metastore per region, `catalog.schema.object` names, inherited grants, audit, automatic lineage
+- SQL warehouse for SQL and BI; serverless jobs compute for most scheduled jobs; jobs cluster when you need custom setup; all-purpose for interactive work
+- Serverless: fast start, no init scripts, Scala, R or GPUs; DBUs include the machines
+- Classic: DBUs plus your cloud VM bill; all-purpose has a higher DBU rate than jobs compute
+- Auto-termination, autoscaling, spot workers, pools and Photon are the classic cost and speed levers
+- Access modes: standard (shared, multi-user) and dedicated (single user or group)
 
-**Lakehouse vs Data Warehouse vs Data Lake:**
-| Feature | Data Lake | Data Warehouse | Lakehouse |
-|---------|-----------|----------------|-----------|
-| Data Types | All types | Structured | All types |
-| ACID | No | Yes | Yes |
-| Schema | Schema-on-read | Schema-on-write | Both |
-| Cost | Low | High | Medium |
-| BI Support | Limited | Strong | Strong |
-| ML Support | Strong | Limited | Strong |
+## Section 2: Data Ingestion and Loading (21%)
 
-### Workspace and Notebooks
-
-**[📖 Databricks Workspace](https://docs.databricks.com/en/workspace/index.html)** - Workspace navigation
-**[📖 Notebooks](https://docs.databricks.com/en/notebooks/index.html)** - Notebook development
-**[📖 Databricks Repos](https://docs.databricks.com/en/repos/index.html)** - Git integration
+**[📖 Ingestion overview](https://docs.databricks.com/aws/en/ingestion/)** - standard and managed connectors
+**[📖 COPY INTO](https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/copy-into/)** - idempotent SQL loads
+**[📖 Auto Loader](https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/)** - incremental file ingestion
+**[📖 Schema inference and evolution](https://docs.databricks.com/aws/en/ingestion/cloud-object-storage/auto-loader/schema)** - modes and rescued data
+**[📖 Lakeflow Connect managed connectors](https://docs.databricks.com/aws/en/ingestion/lakeflow-connect/)** - SaaS and database sources
+**[📖 JDBC](https://docs.databricks.com/aws/en/connect/external-systems/jdbc)** - reading databases from notebooks
 
 **Key Facts:**
-- Notebooks support Python, SQL, Scala, and R
-- Magic commands: `%sql`, `%python`, `%scala`, `%r`, `%md`
-- `%run` executes another notebook in the same context
-- `dbutils` provides utilities for file operations, secrets, and widgets
-- Repos integrate with Git providers (GitHub, GitLab, Bitbucket, Azure DevOps)
-- Notebooks can be scheduled as jobs
+- Incremental = process only what's new; Auto Loader with `trigger(availableNow=True)` is incremental batch
+- Upload UI for one-off small files; volumes (`/Volumes/c/s/v/...`) for raw files
+- `COPY INTO` is idempotent (skips loaded files), SQL-only, best up to thousands of files; `force = true` reloads
+- Auto Loader: `format("cloudFiles")`, `cloudFiles.format`, `cloudFiles.schemaLocation`; exactly-once via checkpoint; millions of files
+- Discovery: directory listing (default), file notification (cloud queues), managed file events on an external location
+- `schemaEvolutionMode`: `addNewColumns` (default; stops once, restart adds column), `rescue`, `failOnNewColumns`, `none`
+- `_rescued_data` keeps unmatched columns, wrong types and case mismatches instead of dropping them
+- Lakeflow Connect managed connectors: Unity Catalog connection, streaming tables, serverless pipeline, SCD Type 1 or 2, CDC for SQL Server, MySQL, PostgreSQL
+- Standard connectors: Auto Loader, `COPY INTO`, Kafka, Pub/Sub, Pulsar, SFTP
+- JDBC: credentials from secrets; `partitionColumn` + bounds + `numPartitions` for parallel reads; misses source deletes
+- Nested data: structs and arrays, `explode`, `from_json`, `:` path extraction, `VARIANT` for changing shapes
 
-### Compute Resources
+## Section 3: Data Transformation and Modeling (22%)
 
-**[📖 Clusters](https://docs.databricks.com/en/compute/index.html)** - Cluster configuration
-**[📖 SQL Warehouses](https://docs.databricks.com/en/sql/admin/sql-endpoints.html)** - SQL warehouse setup
-**[📖 Cluster Pools](https://docs.databricks.com/en/compute/pool-index.html)** - Instance pools
-
-**Key Facts:**
-- All-purpose clusters: interactive development, shared by multiple users
-- Job clusters: created and terminated per job run, cost-effective
-- SQL warehouses: optimized for SQL workloads and BI tools
-- Serverless compute: fully managed, no cluster management
-- Cluster autoscaling: scales workers between min and max
-- Photon: native vectorized query engine for faster SQL
-- Cluster pools: pre-provisioned instances for faster cluster startup
-
-## Domain 2: ELT with Spark SQL and Python (29%)
-
-### Reading Data
-
-**[📖 Data Sources](https://docs.databricks.com/en/connect/storage/index.html)** - Connecting to data sources
-**[📖 File Format Options](https://docs.databricks.com/en/sql/language-manual/sql-ref-syntax-ddl-create-table-using.html)** - Supported file formats
+**[📖 Medallion architecture](https://docs.databricks.com/aws/en/lakehouse/medallion)** - bronze, silver, gold
+**[📖 MERGE INTO](https://docs.databricks.com/aws/en/sql/language-manual/delta-merge-into)** - upserts
+**[📖 Adaptive query execution](https://docs.databricks.com/aws/en/optimizations/aqe)** - automatic tuning
+**[📖 Materialized views](https://docs.databricks.com/aws/en/views/materialized)** - refreshable stored results
+**[📖 Pipeline expectations](https://docs.databricks.com/aws/en/ldp/expectations)** - warn, drop, fail
 
 **Key Facts:**
-- `spark.read.format("csv").option("header", "true").load(path)` - Read CSV
-- `spark.read.json(path)` - Read JSON
-- `spark.read.parquet(path)` - Read Parquet
-- `spark.table("table_name")` - Read from table
-- COPY INTO loads data from files into Delta tables
-- `inferSchema` option auto-detects column types (slower)
-- `multiLine` option for multi-line JSON records
+- Bronze raw and replayable; silver cleaned, typed, deduplicated; gold business-ready
+- `withColumn`, `withColumnRenamed`, `drop`, `split`, `explode` (drops empty arrays) vs `explode_outer`
+- `fillna` / `coalesce` replace nulls; `dropna` / `IS NOT NULL` drop rows; `try_cast` returns null on bad values
+- PySpark `union` = `unionAll`: keeps duplicates, matches by position; `unionByName` matches by name; SQL `UNION` removes duplicates, `UNION ALL` keeps them
+- Broadcast the small side (`F.broadcast`, `/*+ BROADCAST */`); auto below `autoBroadcastJoinThreshold` (10 MB default)
+- Latest row per key: `ROW_NUMBER() OVER (PARTITION BY key ORDER BY ts DESC) = 1` with `QUALIFY`
+- `approx_count_distinct` for cheap approximate distinct counts; `describe()` and `summary()` for profiles
+- `spark.sql.shuffle.partitions` default 200; memory configs are cluster-level; serverless doesn't allow most Spark configs
+- `CREATE OR REPLACE TABLE` keeps history and grants; `MERGE` needs one source row per key
+- View: no storage, always current. Materialized view: stored, refreshed (`SCHEDULE EVERY`), for expensive gold. Streaming table: append-only incremental
+- Expectations: `expect` (keep), `expect_or_drop`, `expect_or_fail`; `CHECK` and `NOT NULL` constraints fail the whole write
 
-### Transformations
+## Section 4: Working with Lakeflow Jobs (16%)
 
-**[📖 Spark SQL Functions](https://docs.databricks.com/en/sql/language-manual/sql-ref-functions-builtin-alpha.html)** - Built-in SQL functions
-**[📖 DataFrame API](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/dataframe.html)** - Python DataFrame reference
-
-**Key Transformations:**
-- `SELECT`, `WHERE`, `GROUP BY`, `ORDER BY`, `HAVING`
-- `JOIN` types: INNER, LEFT, RIGHT, FULL, CROSS, SEMI, ANTI
-- Window functions: `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `LAG()`, `LEAD()`
-- `PIVOT` and `UNPIVOT` for reshaping data
-- `explode()` - Flatten arrays into rows
-- `posexplode()` - Flatten with position index
-- `collect_set()`, `collect_list()` - Aggregate into arrays
-- `from_json()`, `to_json()` - JSON parsing and creation
-- `regexp_extract()`, `regexp_replace()` - Regex operations
-
-### Writing Data
-
-**[📖 Write to Delta](https://docs.databricks.com/en/delta/delta-batch.html)** - Writing to Delta tables
-**[📖 MERGE INTO](https://docs.databricks.com/en/sql/language-manual/delta-merge-into.html)** - Upsert operations
+**[📖 Lakeflow Jobs](https://docs.databricks.com/aws/en/jobs/)** - tasks, triggers, notifications
+**[📖 Triggers](https://docs.databricks.com/aws/en/jobs/triggers)** - scheduled, file arrival, table update, continuous
+**[📖 If/else task](https://docs.databricks.com/aws/en/jobs/if-else)** - branching
+**[📖 For each task](https://docs.databricks.com/aws/en/jobs/for-each)** - looping
+**[📖 Run if dependencies](https://docs.databricks.com/aws/en/jobs/run-if)** - conditional execution
 
 **Key Facts:**
-- `df.write.format("delta").mode("overwrite").saveAsTable("table")` - Create/overwrite table
-- `df.write.mode("append")` - Append data
-- MERGE INTO for upserts (insert, update, delete in one statement)
-- CTAS: `CREATE TABLE t AS SELECT ...` creates Delta table by default
-- `CREATE OR REPLACE TABLE` for idempotent table creation
-- `INSERT OVERWRITE` replaces partition data
-- Save modes: append, overwrite, errorIfExists, ignore
+- Task types: notebook, Python script or wheel, SQL (query, file, alert), dashboard, pipeline, dbt, JAR, Run Job, If/else, For each
+- Tasks without dependencies run in parallel; default Run if is All succeeded; All done runs cleanup regardless
+- Task values: `dbutils.jobs.taskValues.set/get`; reference as `{{tasks.<task>.values.<key>}}`
+- Retries per task (count, interval) for transient failures; timeouts stop hung tasks
+- If/else compares two operands (`==`, `!=`, `>`, `>=`, `<`, `<=`); the other branch is skipped
+- For each runs a nested task per input item with a concurrency limit; `{{input}}` is the current item
+- Triggers: scheduled (interval or cron), file arrival (UC external location or volume), table update (up to 10 tables, any or all), continuous, manual
+- Wait after last change = debounce; minimum time between triggers = cooldown
+- Data-driven triggers for irregular arrivals and upstream dependencies; schedules for fixed deadlines
+- Repair run reruns only failed and skipped tasks
 
-### Multi-Hop Architecture
+## Section 5: Implementing CI/CD (10%)
 
-**[📖 Medallion Architecture](https://docs.databricks.com/en/lakehouse/medallion.html)** - Bronze, Silver, Gold pattern
-
-**Key Facts:**
-- Bronze: Raw data ingestion, minimal transformation
-- Silver: Cleaned, filtered, augmented data
-- Gold: Business-level aggregations and reporting
-- Each layer adds data quality and business value
-- Delta Lake enables ACID transactions at each layer
-
-## Domain 3: Incremental Data Processing (17%)
-
-### Structured Streaming
-
-**[📖 Structured Streaming](https://docs.databricks.com/en/structured-streaming/index.html)** - Streaming overview
-**[📖 Streaming with Delta](https://docs.databricks.com/en/structured-streaming/delta-lake.html)** - Delta as source and sink
+**[📖 Git folders](https://docs.databricks.com/aws/en/repos/)** - Git integration in the workspace
+**[📖 Declarative Automation Bundles](https://docs.databricks.com/aws/en/dev-tools/bundles/)** - resources as code
+**[📖 Bundle variables](https://docs.databricks.com/aws/en/dev-tools/bundles/variables)** - substitutions and precedence
+**[📖 Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/)** - install and commands
 
 **Key Facts:**
-- `spark.readStream` starts a streaming read
-- `df.writeStream` starts a streaming write
-- Trigger modes:
-  - `processingTime="10 seconds"` - micro-batch interval
-  - `availableNow=True` - process all available data then stop
-  - `once=True` - process one micro-batch then stop (deprecated)
-- Checkpointing: stores streaming state for fault tolerance
-- Output modes: append (new rows only), complete (all rows), update (changed rows)
-- Exactly-once semantics with checkpointing and idempotent sinks
+- Git folders: create and switch branches, pull, commit and push, merge, rebase, resolve conflicts in the Git dialog; pull requests are opened and merged in the Git provider
+- Bundles were renamed from Databricks Asset Bundles in March 2026; `databricks.yml` and `databricks bundle` commands are unchanged
+- A bundle holds code plus YAML for jobs, pipelines, dashboards, schemas, volumes and more
+- `variables:` with `default` or `lookup`; reference `${var.name}`; per-target values under `targets.<t>.variables`
+- Variable precedence: `--var`, `BUNDLE_VAR_<name>`, `variable-overrides.json`, target value, default
+- `mode: development` prefixes names and pauses triggers; `mode: production` expects a service principal run-as
+- `bundle validate`, `bundle deploy -t <target>`, `bundle run`, `bundle destroy`, `bundle summary`
+- CI authenticates as a service principal (OAuth M2M or workload identity federation) and promotes the same commit through targets
 
-### Auto Loader
+## Section 6: Troubleshooting, Monitoring, and Optimization (10%)
 
-**[📖 Auto Loader](https://docs.databricks.com/en/ingestion/auto-loader/index.html)** - Incremental file ingestion
-**[📖 Auto Loader Options](https://docs.databricks.com/en/ingestion/auto-loader/options.html)** - Configuration options
-
-**Key Facts:**
-- Uses `cloudFiles` format for incremental file discovery
-- File notification mode (recommended for large directories) vs directory listing mode
-- Schema inference: automatically detects schema from data
-- Schema evolution: `cloudFiles.schemaEvolutionMode` (addNewColumns, rescue, failOnNewColumns, none)
-- Rescue data column: `_rescued_data` captures schema mismatches
-- `cloudFiles.format` specifies underlying file format (csv, json, parquet)
-- More efficient than COPY INTO for streaming workloads
-
-**Auto Loader vs COPY INTO:**
-| Feature | Auto Loader | COPY INTO |
-|---------|-------------|-----------|
-| Approach | Streaming | Batch |
-| File Discovery | Automatic | Manual/Scheduled |
-| Schema Evolution | Built-in | Limited |
-| Scalability | Millions of files | Thousands of files |
-| Use Case | Continuous ingestion | Ad-hoc loading |
-
-## Domain 4: Production Pipelines (13%)
-
-### Delta Live Tables
-
-**[📖 Delta Live Tables](https://docs.databricks.com/en/delta-live-tables/index.html)** - DLT overview
-**[📖 DLT Expectations](https://docs.databricks.com/en/delta-live-tables/expectations.html)** - Data quality constraints
+**[📖 Monitoring Lakeflow Jobs](https://docs.databricks.com/aws/en/jobs/monitor)** - matrix view and run details
+**[📖 Skew and spill in the Spark UI](https://docs.databricks.com/aws/en/optimizations/spark-ui-guide/long-spark-stage-page)** - reading stage metrics
+**[📖 Liquid clustering](https://docs.databricks.com/aws/en/delta/clustering)** - keys and `CLUSTER BY AUTO`
+**[📖 Predictive optimization](https://docs.databricks.com/aws/en/optimizations/predictive-optimization)** - automatic maintenance
 
 **Key Facts:**
-- DLT simplifies ETL pipeline development with declarative syntax
-- `@dlt.table` decorator defines a materialized table
-- `@dlt.view` decorator defines a temporary view (not persisted)
-- Expectations enforce data quality:
-  - `@dlt.expect("valid_id", "id IS NOT NULL")` - Warn and keep invalid records
-  - `@dlt.expect_or_drop("valid_id", "id IS NOT NULL")` - Drop invalid records
-  - `@dlt.expect_or_fail("valid_id", "id IS NOT NULL")` - Fail pipeline on invalid
-- Pipeline modes: triggered (runs once) vs continuous (always running)
-- Event log tracks pipeline metrics and data quality results
+- Runs tab matrix: one column per run, one row per task; Upstream failed and Skipped are not root causes
+- Compare durations with a baseline; find which task slowed, then what changed
+- Spark UI stage summary: Max far above Median = skew; non-zero spill = spill; large shuffle read/write = heavy shuffle
+- Skew fix order: AQE skew join handling, handle hot or null keys, broadcast, salting last; more executors don't fix skew
+- Liquid Clustering: `CLUSTER BY (cols)`, change keys without a rewrite, incremental `OPTIMIZE`; replaces partitioning and Z-order
+- Predictive optimization runs `OPTIMIZE`, `VACUUM`, `ANALYZE` automatically on Unity Catalog managed tables only
+- Cluster won't start: event log (capacity, quota, init script, network)
+- Library conflict: Libraries tab and driver logs; pin versions; `%pip` or job environments
+- Driver OOM = too much data pulled to the driver; executor OOM = skew or oversized partitions
 
-### Databricks Jobs
+## Section 7: Governance and Security (15%)
 
-**[📖 Databricks Jobs](https://docs.databricks.com/en/workflows/jobs/create-run-jobs.html)** - Job creation and scheduling
-**[📖 Multi-task Jobs](https://docs.databricks.com/aws/en/jobs/task-values)** - Task dependencies
-
-**Key Facts:**
-- Jobs can run notebooks, Python scripts, JARs, SQL, DLT pipelines
-- Multi-task workflows with DAG-style dependencies
-- Task types: notebook, Python script, SQL, DLT pipeline, dbt
-- Scheduling: cron-based scheduling with timezone support
-- Notifications: email, webhook, Slack on job events
-- Retry policies: configurable retries on failure
-- Job clusters: ephemeral clusters created per run (cost-effective)
-- Parameters: pass runtime values to tasks
-
-## Domain 5: Data Governance (17%)
-
-### Unity Catalog
-
-**[📖 Unity Catalog](https://docs.databricks.com/en/data-governance/unity-catalog/index.html)** - UC overview
-**[📖 UC Privileges](https://docs.databricks.com/en/data-governance/unity-catalog/manage-privileges/privileges.html)** - Permission model
-**[📖 Data Lineage](https://docs.databricks.com/en/data-governance/unity-catalog/data-lineage.html)** - Lineage tracking
+**[📖 Managed tables](https://docs.databricks.com/aws/en/tables/managed)** - storage and benefits
+**[📖 Convert external to managed](https://docs.databricks.com/aws/en/tables/convert-external-managed)** - `SET MANAGED`
+**[📖 Privileges reference](https://docs.databricks.com/aws/en/data-governance/unity-catalog/access-control/privileges-reference)** - every privilege
+**[📖 Row filters and column masks](https://docs.databricks.com/aws/en/data-governance/unity-catalog/filters-and-masks)** - fine-grained access
+**[📖 ABAC](https://docs.databricks.com/aws/en/data-governance/unity-catalog/abac/)** - tag-based policies
 
 **Key Facts:**
-- Three-level namespace: `catalog.schema.table`
-- Metastore: top-level container for all data assets
-- Catalogs: organize schemas, typically per environment or domain
-- Schemas: organize tables, views, functions
-- Managed tables: data stored in metastore-managed storage
-- External tables: data stored in customer-managed storage
-- Volumes: manage non-tabular data (files, images, logs)
-- Permissions: GRANT, REVOKE on securables
-- Privilege inheritance: catalog -> schema -> table
-- Data lineage: automatic tracking of data flow
-- Dynamic views: row/column-level security
-- Information schema: metadata queries
-
-**Common GRANT Statements:**
-```sql
-GRANT USE CATALOG ON CATALOG catalog_name TO group_name;
-GRANT USE SCHEMA ON SCHEMA catalog.schema TO group_name;
-GRANT SELECT ON TABLE catalog.schema.table TO group_name;
-GRANT CREATE TABLE ON SCHEMA catalog.schema TO group_name;
-GRANT ALL PRIVILEGES ON SCHEMA catalog.schema TO group_name;
-```
+- Managed: Unity Catalog stores files; `DROP` deletes data after the `UNDROP` window (7 days default); predictive optimization applies
+- External: `LOCATION` in an external location; `DROP` removes metadata only
+- `ALTER TABLE ... SET MANAGED` converts external to managed (rollback with `UNSET MANAGED` within 14 days)
+- Read one table: `USE CATALOG` + `USE SCHEMA` + `SELECT`; write adds `MODIFY`
+- Grants inherit downward, including to future objects; `REVOKE` on a child can't cancel a parent grant
+- Grant to groups and service principals; principals with special characters in backticks
+- `DENY` statement is legacy Hive metastore only; Unity Catalog uses ABAC DENY policies (Beta, `MANAGE ACCESS CONTROL` only)
+- Row filter: boolean SQL UDF via `SET ROW FILTER ... ON (col)`; column mask: UDF via `ALTER COLUMN ... SET MASK`
+- `is_account_group_member()` decides who sees what; dynamic views are the older pattern
+- ABAC: governed tags + `CREATE POLICY` at catalog or schema; covers future tables
 
 ## Exam Tips
 
-1. **Spark SQL and ELT (29%)** is the largest domain - master common SQL operations
-2. **Delta Lake** concepts appear across all domains
-3. **Auto Loader vs COPY INTO** - know when to use each
-4. **DLT expectations** - understand the three constraint behaviors
-5. **Unity Catalog namespace** - know the three-level hierarchy
-6. **Cluster types** - all-purpose vs job clusters and their use cases
-7. **Streaming triggers** - know each trigger mode and when to use it
-8. **MERGE INTO** - understand upsert syntax and behavior
-9. **Multi-hop architecture** - know Bronze, Silver, Gold purpose
-10. **Time management** - 2 minutes per question average
+1. **Ingestion (21%) and transformation (22%)** are almost half the exam.
+2. **New names**: Lakeflow Jobs, Lakeflow Spark Declarative Pipelines, Declarative Automation Bundles, Git folders, Free Edition.
+3. **Managed and automatic win**: managed connectors, managed tables, serverless, predictive optimization, ABAC.
+4. **Triggers follow the data**: file arrival, table update, or a schedule for a fixed deadline.
+5. **Stage metrics**: Max vs Median for skew; spill columns for spill.
+6. **Time management**: 2 minutes per question.
 
 ## Quick Reference
 
-### Essential SQL Commands
 ```sql
--- Delta Lake operations
-DESCRIBE HISTORY table_name;
-DESCRIBE DETAIL table_name;
-OPTIMIZE table_name ZORDER BY (col);
-VACUUM table_name RETAIN 168 HOURS;
-RESTORE TABLE table_name TO VERSION AS OF 5;
+-- Ingestion
+COPY INTO main.raw.orders FROM '/Volumes/main/raw/landing/orders/' FILEFORMAT = JSON
+  COPY_OPTIONS ('mergeSchema' = 'true');
+CREATE OR REFRESH STREAMING TABLE main.raw.events AS
+  SELECT * FROM STREAM read_files('/Volumes/main/raw/landing/events/', format => 'json');
 
--- Streaming
-CREATE OR REFRESH STREAMING TABLE t AS SELECT * FROM STREAM(source);
-CREATE OR REFRESH MATERIALIZED VIEW v AS SELECT * FROM source;
+-- Gold
+CREATE OR REPLACE MATERIALIZED VIEW main.gold.daily AS
+  SELECT date(ts) AS day, sum(amount) AS revenue FROM main.silver.orders GROUP BY ALL;
 
--- Unity Catalog
-SHOW CATALOGS;
-SHOW SCHEMAS IN catalog_name;
-SHOW TABLES IN catalog_name.schema_name;
-SHOW GRANTS ON TABLE catalog.schema.table;
+-- Delta and layout
+DESCRIBE HISTORY main.silver.orders;
+RESTORE TABLE main.silver.orders TO VERSION AS OF 12;
+ALTER TABLE main.silver.orders CLUSTER BY (customer_id);
+
+-- Governance
+ALTER TABLE main.sales.orders_ext SET MANAGED;
+GRANT USE CATALOG ON CATALOG main TO `analysts`;
+GRANT USE SCHEMA, SELECT ON SCHEMA main.gold TO `analysts`;
+ALTER TABLE main.hr.people ALTER COLUMN ssn SET MASK main.sec.mask_ssn;
+```
+
+```bash
+databricks bundle validate -t test
+databricks bundle deploy -t prod
+databricks bundle run -t prod orders_job
 ```

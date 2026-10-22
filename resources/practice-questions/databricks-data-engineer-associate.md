@@ -1,12 +1,12 @@
 # Databricks Data Engineer Associate - Practice Questions
 
-25 scenario-based questions for Databricks DE Associate prep.
+25 scenario-based questions for Databricks DE Associate prep. Every question is tagged with the May 2026 exam guide's seven sections, the largest being data transformation and modeling (22%) and data ingestion and loading (21%).
 
 > **Cert page:** [exams/databricks/data-engineer-associate/](../../exams/databricks/data-engineer-associate/)
 
 ---
 
-### Question 1
+### Question 1 - Domain 1: Databricks Intelligence Platform
 **Scenario:** A pipeline reads from S3, transforms with Spark, and writes Delta tables. Which storage layer should the curated tables use?
 
 A. CSV, since it is plain text that any Spark job can write and that every downstream tool can open
@@ -24,7 +24,7 @@ D. Parquet, which is columnar and compressed and so also gives ACID transactions
 
 ---
 
-### Question 2
+### Question 2 - Domain 2: Data Ingestion and Loading
 **Scenario:** A streaming job reads Kafka and writes to Delta. The query crashes after 4 hours and you need to resume from where it left off. What feature?
 
 A. Delta time travel, which lets the query reread the table at the version where it stopped and carry on
@@ -42,7 +42,7 @@ D. Auto Loader, which records the offset of each Kafka partition and restarts th
 
 ---
 
-### Question 3
+### Question 3 - Domain 2: Data Ingestion and Loading
 **Scenario:** Auto Loader (`cloudFiles`) is best for what use case?
 
 A. Streaming Kafka topics, where it manages each partition's offsets
@@ -60,7 +60,7 @@ D. Incrementally ingesting new cloud storage files, with schema inference and ev
 
 ---
 
-### Question 4
+### Question 4 - Domain 3: Data Transformation and Modeling
 **Scenario:** Which Delta operation is appropriate for upserts (insert if not exists, update if exists)?
 
 A. MERGE INTO, matching on the key to update existing rows and insert new ones
@@ -78,7 +78,7 @@ D. INSERT, which adds each source row as a new row
 
 ---
 
-### Question 5
+### Question 5 - Domain 1: Databricks Intelligence Platform
 **Scenario:** A team has a long-running data pipeline that takes 3 hours daily. They want to optimize. Which technique reduces compute cost the most?
 
 A. Add more workers to the cluster so each stage has more parallel tasks
@@ -96,7 +96,7 @@ D. Run on serverless SQL only, since the pipeline code can be rewritten as queri
 
 ---
 
-### Question 6
+### Question 6 - Domain 6: Troubleshooting, Monitoring, and Optimization
 **Scenario:** Delta Lake `OPTIMIZE` does what?
 
 A. Compacts small files into larger files for read performance, optionally co-locating data with Z-ordering
@@ -114,7 +114,7 @@ D. Deletes old data once it is outside the time travel window
 
 ---
 
-### Question 7
+### Question 7 - Domain 7: Governance and Security
 **Scenario:** Unity Catalog three-level namespace is:
 
 A. catalog.schema.table, with the catalog as the top level governed by Unity Catalog
@@ -132,7 +132,7 @@ D. region.workspace.table, which names the cloud region and the workspace that h
 
 ---
 
-### Question 8
+### Question 8 - Domain 7: Governance and Security
 **Scenario:** A team needs to share a Delta table with another organization that uses Snowflake. What feature?
 
 A. CSV export of the table to a shared bucket, refreshed on a schedule so the other side has recent data, then loaded by hand
@@ -152,7 +152,7 @@ D. SSO federation between the two organizations' identity providers, which expos
 
 ---
 
-### Question 9
+### Question 9 - Domain 6: Troubleshooting, Monitoring, and Optimization
 **Scenario:** What does `VACUUM` do on a Delta table?
 
 A. Removes data files that the log no longer references and that are older than the retention threshold (default 7 days)
@@ -170,7 +170,7 @@ D. Compacts small files into larger ones, the same as OPTIMIZE does
 
 ---
 
-### Question 10
+### Question 10 - Domain 3: Data Transformation and Modeling
 **Scenario:** Delta Live Tables (DLT) primary value proposition?
 
 A. Lower cost, because the service runs on cheaper hardware than a Spark cluster of the same size would use
@@ -188,7 +188,7 @@ D. Declarative pipelines: declare tables; DLT handles dependencies, retries, lin
 
 ---
 
-### Question 11
+### Question 11 - Domain 3: Data Transformation and Modeling
 **Scenario:** Streaming Tables (DLT) vs Materialized Views (DLT) - when to use each?
 
 A. They're identical, since each keeps a table up to date
@@ -206,7 +206,7 @@ D. Streaming is for real-time only, while a materialized view can only run once 
 
 ---
 
-### Question 12
+### Question 12 - Domain 3: Data Transformation and Modeling
 **Scenario:** A pipeline must enforce data quality. Which DLT feature?
 
 A. Expectations (`@dlt.expect_or_drop`, `@dlt.expect_or_fail`, `@dlt.expect`)
@@ -224,7 +224,7 @@ D. Spark `assert` statements in the notebook, which stop the pipeline run when a
 
 ---
 
-### Question 13
+### Question 13 - Domain 1: Databricks Intelligence Platform
 **Scenario:** An analyst needs ad-hoc SQL on Delta tables with serverless compute. Which Databricks product?
 
 A. ML compute, a runtime with the machine learning libraries preinstalled, meant for training rather than SQL
@@ -242,7 +242,7 @@ D. A job cluster, which starts on demand for each query and shuts down again whe
 
 ---
 
-### Question 14
+### Question 14 - Domain 1: Databricks Intelligence Platform
 **Scenario:** Time-travel a Delta table to last week's state for a comparison query?
 
 A. Use snapshots taken by the metastore each night, which are queried with a `SNAPSHOT` clause in the SELECT
@@ -260,7 +260,7 @@ D. `SELECT * FROM tbl VERSION AS OF 12345` or `TIMESTAMP AS OF '2026-04-20'`
 
 ---
 
-### Question 15
+### Question 15 - Domain 7: Governance and Security
 **Scenario:** Which is the correct ACL pattern in Unity Catalog?
 
 A. `chmod` on the underlying S3 path
@@ -278,7 +278,7 @@ D. `GRANT SELECT ON TABLE tbl TO USER alice`, repeated for each analyst, using t
 
 ---
 
-### Question 16
+### Question 16 - Domain 6: Troubleshooting, Monitoring, and Optimization
 **Scenario:** A Delta table has accumulated 10,000 small files from frequent micro-batch writes. Read latency is poor. Which command compacts files without changing schema?
 
 A. `OPTIMIZE table_name`, optionally with `ZORDER BY` on common filter columns; it bin-packs small files and leaves the schema unchanged
@@ -296,7 +296,7 @@ D. `VACUUM`, which merges the small files and removes the older versions in the 
 
 ---
 
-### Question 17
+### Question 17 - Domain 3: Data Transformation and Modeling
 **Scenario:** Difference between MERGE INTO and a separate DELETE + INSERT pattern?
 
 A. MERGE is slower, since it must scan the whole target table for every source row, so the manual pattern is faster in practice for large tables
@@ -314,7 +314,7 @@ D. MERGE INTO is atomic in one transaction and supports MATCHED / NOT MATCHED co
 
 ---
 
-### Question 18
+### Question 18 - Domain 2: Data Ingestion and Loading
 **Scenario:** Delta Live Tables (DLT) - what does Auto Loader solve?
 
 A. Cluster autoscaling for the pipeline, which adds and removes workers as the number of new files arriving in the storage account changes through the day
@@ -332,7 +332,7 @@ D. Hyperparameter tuning for the models trained on the bronze tables
 
 ---
 
-### Question 19
+### Question 19 - Domain 7: Governance and Security
 **Scenario:** Unity Catalog: which scope does `GRANT SELECT ON SCHEMA` apply to?
 
 A. The whole metastore, so the user can select from every catalog and schema attached to it
@@ -350,7 +350,7 @@ D. The cluster only, so the user can run the SELECT from the one cluster where t
 
 ---
 
-### Question 20
+### Question 20 - Domain 3: Data Transformation and Modeling
 **Scenario:** Bronze ingests raw JSON. Silver applies cleansing. Gold serves aggregates. Typical refresh cadence?
 
 A. Bronze is daily only, because raw JSON can only be ingested in a batch once the day's files have all arrived in the storage location
@@ -368,7 +368,7 @@ D. Gold refreshes first, since aggregates are what users query, and the others c
 
 ---
 
-### Question 21
+### Question 21 - Domain 1: Databricks Intelligence Platform
 **Scenario:** Time Travel in Delta - which is true?
 
 A. Time Travel is a paid add-on that must be enabled per workspace before the history is kept for a table in that workspace
@@ -386,7 +386,7 @@ D. Query old versions with `VERSION AS OF` or `TIMESTAMP AS OF` until VACUUM rem
 
 ---
 
-### Question 22
+### Question 22 - Domain 4: Working with Lakeflow Jobs
 **Scenario:** A nightly notebook job fails 1 in 5 times due to transient cluster startup issues. Best fix?
 
 A. Disable logging, since writing log files to storage at startup is what makes it fail
@@ -404,7 +404,7 @@ D. Configure job-level retries and use job clusters (a fresh cluster per run), p
 
 ---
 
-### Question 23
+### Question 23 - Domain 1: Databricks Intelligence Platform
 **Scenario:** Photon - what is it and when does it help most?
 
 A. A serverless tier of compute that starts in seconds and is billed per query rather than by the cluster hour, with no clusters to size
@@ -422,7 +422,7 @@ D. A model registry for tracking versions of trained models, which helps most wh
 
 ---
 
-### Question 24
+### Question 24 - Domain 2: Data Ingestion and Loading
 **Scenario:** A streaming pipeline reads Kafka and writes Delta. What configuration achieves exactly-once?
 
 A. Structured Streaming with a unique checkpoint per query and a Delta sink; avoid `failOnDataLoss=false` unless intended
@@ -440,7 +440,7 @@ D. Use foreachBatch always, writing each micro-batch with a plain append
 
 ---
 
-### Question 25
+### Question 25 - Domain 1: Databricks Intelligence Platform
 **Scenario:** Cost optimization: workload runs 16 hours/day, idle 8 hours. Best cluster choice?
 
 A. An all-purpose cluster running 24/7, so that it is always warm when the first job of the day starts

@@ -1,0 +1,26 @@
+Question,Answer,Tags
+How long is the Databricks Certified Data Engineer Associate exam?,90 minutes,exam-logistics
+How many questions are on the Databricks Certified Data Engineer Associate exam?,"45 scored multiple-choice questions, plus possible unscored items",exam-logistics
+What is the passing score for Databricks Certified Data Engineer Associate?,Not published by Databricks,exam-logistics
+What does the Databricks Certified Data Engineer Associate exam cost?,"$200 USD, plus applicable taxes",exam-logistics
+How long is Databricks Certified Data Engineer Associate valid for?,2 years,exam-logistics
+How is the Databricks Certified Data Engineer Associate exam delivered?,Online proctored or test center,exam-logistics
+Batch (data ingestion loading),"reads a whole dataset at once, on a schedule or on demand. Simple, but if it rereads everything each time, cost grows with total data, not with new data.","notes,data-ingestion-loading"
+Streaming (data ingestion loading),"processes data continuously as it arrives, keeping state between runs. Lowest latency, but compute runs all the time.","notes,data-ingestion-loading"
+Incremental (data ingestion loading),"processes only what is new since the last run. It can run as a batch on a schedule (""process new files, then stop"") or as a continuous stream. This is what most ingestion should be.","notes,data-ingestion-loading"
+Bronze (data transformation modeling),"keeps data as close to the source as possible, plus ingestion metadata (file name, load time). Its job is to be replayable: if a silver rule was wrong, you rebuild silver from bronze without going back to the source.","notes,data-transformation-modeling"
+Silver (data transformation modeling),"the cleaned, conformed version: correct types, no duplicates, nulls handled, codes standardised, related sources joined. It is the layer data engineers and data scientists usually query.","notes,data-transformation-modeling"
+Gold (data transformation modeling),"shaped for a use: aggregates, dimensional models, KPI tables. BI tools read gold.","notes,data-transformation-modeling"
+Deployment modes (cicd),"mode: development gives each developer an isolated copy (names prefixed, schedules and triggers paused); mode: production enforces production-safe settings such as running as a service principal.","notes,cicd"
+Stages (troubleshooting monitoring optimization),every stage of a job with its duration; open the slowest one first.,"notes,troubleshooting-monitoring-optimization"
+Stage detail > Summary Metrics (troubleshooting monitoring optimization),"Min, 25th percentile, Median, 75th percentile and Max for task duration, shuffle read size, shuffle write size, and spill. This table is where skew and spill show up.","notes,troubleshooting-monitoring-optimization"
+Executors (troubleshooting monitoring optimization),"memory, garbage collection (GC) time, failed tasks and lost executors per executor.","notes,troubleshooting-monitoring-optimization"
+OPTIMIZE (troubleshooting monitoring optimization),compacts small files and performs Liquid Clustering;,"notes,troubleshooting-monitoring-optimization"
+VACUUM (troubleshooting monitoring optimization),removes data files no longer needed by the table's retention window;,"notes,troubleshooting-monitoring-optimization"
+ANALYZE TABLE ... COMPUTE STATISTICS (troubleshooting monitoring optimization),keeps statistics fresh for the query optimiser;,"notes,troubleshooting-monitoring-optimization"
+Users (governance security),"people, identified by email.","notes,governance-security"
+Groups (governance security),"sets of users and service principals, ideally account-level groups synced from the identity provider. Grant to groups, not individuals, so access follows team membership.","notes,governance-security"
+Service principals (governance security),"identities for automation (jobs, pipelines, CI/CD). Production jobs should run as one.","notes,governance-security"
+Lineage (governance security),"captured automatically, down to columns, for queries run on Unity Catalog-enabled compute, and shown on the table's Lineage tab in Catalog Explorer. Use it for impact analysis (""what breaks if I change this column?"").","notes,governance-security"
+Audit logs (governance security),record every access and permission change; query them in the system.access.audit system table.,"notes,governance-security"
+Information schema (governance security),"every catalog has information_schema views (tables, columns, table_privileges...) for SQL queries over metadata.","notes,governance-security"
