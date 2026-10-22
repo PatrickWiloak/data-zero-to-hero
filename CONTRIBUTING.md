@@ -70,7 +70,7 @@ Keep early files (`README.md`, `fact-sheet.md`) compact and accurate. Depth live
 The repo has a few specialized content shapes beyond the core cert dirs and concept pages. Each follows a stable template - if you author a new one, match the existing pattern.
 
 - **`resources/decision-matrix-*.md`** - score-driven product picks (none on this site yet; the shape is shared with the sibling sites). Lead paragraph (when you'd reach for this matrix), criteria-by-product table, per-product strengths / limitations, default pick, alternatives by use case.
-- **`resources/postmortem-*.md`** - real-incident study guides (none on this site yet). Lead paragraph (incident summary in one sentence), timeline, root cause, what would have caught it, mapped cert exam domains, lessons cross-linked to repo concepts.
+- **`resources/postmortem-*.md`** - real-incident study guides (examples: `postmortem-gitlab-database-2017.md`, `postmortem-atlassian-site-deletion-2022.md`). Lead paragraph (incident summary in one sentence), timeline, root cause, what would have caught it, mapped cert exam domains, lessons cross-linked to repo concepts.
 - **`resources/playlist-*.md`** - persona reading sequences. Frontmatter with `persona` + `time-budget`, ordered list of repo links with one-sentence justifications, "what you'll be able to do at the end" summary. Example: `playlist-data-engineer-1hour.md`.
 - **`topics/<topic>.md`** - cross-pillar topic index. Mermaid "topic at a glance" diagram, then sections linking Learn / Compare / Reference / Build / Certify pages relevant to that topic. Existing topics: databases, data-engineering.
 

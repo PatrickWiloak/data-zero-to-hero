@@ -112,6 +112,7 @@
 - [Practice questions](resources/practice-questions/) - scenario banks with explained answers
 - [Data engineer interview prep](resources/interview-prep/data-engineer-interview.md) - pipeline design, modeling and SQL questions
 - [SQL interview guide](resources/interview-prep/sql-interview-guide.md) - joins, top-N, dedup and gaps-and-islands, worked
+- [DBA interview guide](resources/interview-prep/dba-interview.md) - backups, HA, query plans and locking, worked
 - [Slow SQL query diagnosis](resources/troubleshooting/slow-sql-query-diagnosis.md) - read the plan, find the cause
 - [Freshness ledger](docs/freshness.md) - what was last verified, and when
 - [Which Zero to Hero site?](learn/which-site.md) - cloud, data, security or AI: pick by goal

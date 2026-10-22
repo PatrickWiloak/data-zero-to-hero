@@ -79,6 +79,7 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 - [Troubleshooting: failing and late pipelines](../resources/troubleshooting/failing-and-late-pipelines.md)
 - [Troubleshooting: Spark job performance](../resources/troubleshooting/spark-job-performance.md)
 - [Interview: data modeling and pipeline design](../resources/interview-prep/data-modeling-system-design-interview.md)
+- [Interview: analytics engineer](../resources/interview-prep/analytics-engineer-interview.md) - dbt layering, incremental models, tests, SCDs and metric definitions, with worked answers
 - [Compliance guides](https://security.noblerworks.com/resources/compliance-guides/) - GDPR and the rest, where lineage stops being optional
 
 ---

@@ -6,6 +6,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-10-22] (4) - Two data postmortems and analytics engineer and DBA interview guides
+
+### Added
+
+- **Postmortems** (new section): [GitLab.com database deletion and backup failure, 2017](./resources/postmortem-gitlab-database-2017.md) (wrong-host `rm`, five backup mechanisms that failed, replication is not backup, restore testing, RPO and RTO) and [Atlassian cloud site deletion, 2022](./resources/postmortem-atlassian-site-deletion-2022.md) (883 sites deleted by a script given site IDs, RPO met and RTO missed, Restoration 1 versus 2, soft deletes and stable identifiers). Both sourced from the companies' official write-ups.
+- **Interview prep** (4 to 5): [analytics engineer interview guide](./resources/interview-prep/analytics-engineer-interview.md) (dbt layering, incremental models and late data, testing and reconciliation, SCD joins, metric definitions, take-home review) and [DBA interview guide](./resources/interview-prep/dba-interview.md) (backup and PITR, HA and split brain, performance triage, isolation and deadlocks, MVCC and vacuum, online schema changes, security, a design question).
+
+---
+
 ## [2026-10-22] (3) - Four architecture patterns, SQL and design interview guides, troubleshooting, warehouse migration
 
 ### Added

@@ -21,7 +21,8 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 - [ ] Next concept candidates: backup and point-in-time restore. (Query plans, Spark shuffles and skew, and semantic layers now have long-form pages under `resources/troubleshooting/` and `resources/architecture-patterns/`; a 5-minute concept page each would still help.)
 - [x] 2026-10-22 Resources expansion: 4 patterns, 2 interview guides, 3 troubleshooting guides, warehouse migration guide (CHANGELOG 2026-10-22 (3)).
 - [ ] Judge 2026-12-22: re-verify version-sensitive facts in the 2026-10-22 pages - Debezium stable line (3.6), Lakeflow Connect sources, Fabric mirroring preview sources, Google "Lakehouse" (ex-BigLake) naming, Census-in-Fivetran branding.
-- [ ] Gaps still open vs the cloud sibling: postmortems (data incident write-ups), more interview pages (analytics engineer, DBA).
+- [x] 2026-10-22 Postmortems (GitLab 2017, Atlassian 2022) and analytics engineer + DBA interview guides added (CHANGELOG 2026-10-22 (4)).
+- [ ] 2026-11-21 After both sites deploy: confirm `dba-interview.md`'s absolute link to security.noblerworks.com/resources/case-study-snowflake-customer-breaches-2024/ resolves.
 
 ## Patrick
 

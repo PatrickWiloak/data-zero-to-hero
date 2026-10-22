@@ -121,6 +121,7 @@ The **[topic indexes](./topics/)** tie all four pillars together by subject: dat
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
+- **2026-10-22** - Two data postmortems ([GitLab 2017](./resources/postmortem-gitlab-database-2017.md), [Atlassian 2022](./resources/postmortem-atlassian-site-deletion-2022.md)) and two role interview guides with worked answers: [analytics engineer](./resources/interview-prep/analytics-engineer-interview.md) and [DBA](./resources/interview-prep/dba-interview.md).
 - **2026-10-22** - Four new architecture patterns ([CDC into a lakehouse](./resources/architecture-patterns/cdc-to-lakehouse.md), [medallion](./resources/architecture-patterns/medallion-architecture.md), [reverse ETL](./resources/architecture-patterns/reverse-etl-operational-analytics.md), [semantic layer](./resources/architecture-patterns/semantic-layer.md)), a [SQL interview guide](./resources/interview-prep/sql-interview-guide.md) and a [data modeling and pipeline design interview guide](./resources/interview-prep/data-modeling-system-design-interview.md) with worked answers, three troubleshooting guides ([slow SQL](./resources/troubleshooting/slow-sql-query-diagnosis.md), [failing and late pipelines](./resources/troubleshooting/failing-and-late-pipelines.md), [Spark performance](./resources/troubleshooting/spark-job-performance.md)), and a [legacy warehouse to cloud migration guide](./resources/migration-guides/warehouse-to-cloud-migration.md).
 - **2026-10-21** - Thirteen new concept pages (SQL joins, window functions, indexes, transactions and ACID, OLTP vs OLAP, replication and sharding, change data capture, slowly changing dimensions, stream windows and watermarks, dbt, governance and catalogs, data contracts, vector databases), three hands-on projects ([streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md), [star schema design](./resources/hands-on-projects/design-star-schema.md), [dbt project](./resources/hands-on-projects/build-dbt-project.md)), a [streaming analytics pattern](./resources/architecture-patterns/streaming-analytics.md), and a data-only glossary and YouTube list.
 - **2026-10-21** - Data Zero to Hero is now its own site at [data.noblerworks.com](https://data.noblerworks.com/), split by subject from the original combined cloud, data, AI and security repo. New: [Data from Scratch](./learn/data-from-scratch.md), an eight-phase path to data engineer, analytics engineer or DBA. Cloud, security and AI material moved to the sibling sites: [Cloud](https://cloud.noblerworks.com/), [Security](https://security.noblerworks.com/) and [AI](https://ai.noblerworks.com/).
@@ -140,7 +141,7 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 - ✅ **8 architecture patterns** - data pipeline and ETL, lakehouse, medallion, CDC into a lakehouse, data mesh, streaming analytics (Lambda vs Kappa), reverse ETL, semantic layer
 - ✅ **4 hands-on projects** - a batch data pipeline, a Kafka streaming pipeline, a star schema design, and a tested dbt project
 - ✅ **2 certification roadmaps** - data engineer, database specialist
-- ✅ **3 interview prep guides** - data engineer, SQL with worked problems, data modeling and pipeline design
+- ✅ **5 interview prep guides** - data engineer, SQL with worked problems, data modeling and pipeline design
 - ✅ **3 troubleshooting guides** - slow SQL queries, failing and late pipelines, Spark job performance
 - ✅ **2 migration guides** - operational database, legacy warehouse to cloud
 - ✅ **[Practice question banks](./resources/practice-questions/)** - one per certification, with explained answers
@@ -188,7 +189,8 @@ Other career paths live on the sibling sites: [cloud, DevOps and platform roadma
 - **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md) · [Streaming analytics](./resources/architecture-patterns/streaming-analytics.md) · [CDC into a lakehouse](./resources/architecture-patterns/cdc-to-lakehouse.md) · [Medallion](./resources/architecture-patterns/medallion-architecture.md) · [Reverse ETL](./resources/architecture-patterns/reverse-etl-operational-analytics.md) · [Semantic layer](./resources/architecture-patterns/semantic-layer.md)
 - **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Build a streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md) · [Design a star schema](./resources/hands-on-projects/design-star-schema.md) · [Build a dbt project](./resources/hands-on-projects/build-dbt-project.md) · [Labs by certification](./resources/hands-on-projects/labs-by-cert.md)
 - **Migration:** [Database migration](./resources/migration-guides/database-migration.md) · [Warehouse to cloud](./resources/migration-guides/warehouse-to-cloud-migration.md)
-- **Interview prep:** [Data engineer](./resources/interview-prep/data-engineer-interview.md) · [SQL](./resources/interview-prep/sql-interview-guide.md) · [Data modeling and pipeline design](./resources/interview-prep/data-modeling-system-design-interview.md)
+- **Interview prep:** [Data engineer](./resources/interview-prep/data-engineer-interview.md) · [SQL](./resources/interview-prep/sql-interview-guide.md) · [Data modeling and pipeline design](./resources/interview-prep/data-modeling-system-design-interview.md) · [Analytics engineer](./resources/interview-prep/analytics-engineer-interview.md) · [DBA](./resources/interview-prep/dba-interview.md)
+- **Postmortems:** [GitLab database deletion, 2017](./resources/postmortem-gitlab-database-2017.md) · [Atlassian site deletion, 2022](./resources/postmortem-atlassian-site-deletion-2022.md)
 - **Troubleshooting:** [Slow SQL queries](./resources/troubleshooting/slow-sql-query-diagnosis.md) · [Failing and late pipelines](./resources/troubleshooting/failing-and-late-pipelines.md) · [Spark job performance](./resources/troubleshooting/spark-job-performance.md)
 - **Persona playlist:** [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md)
 
@@ -213,7 +215,7 @@ Other career paths live on the sibling sites: [cloud, DevOps and platform roadma
 - **Hands-on projects:** 4
 - **Topic indexes:** 2
 - **Career roadmaps:** 2
-- **Interview prep guides:** 3
+- **Interview prep guides:** 5
 - **Migration guides:** 2
 - **Troubleshooting guides:** 3
 

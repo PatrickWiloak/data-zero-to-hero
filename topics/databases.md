@@ -60,6 +60,9 @@ For how data gets into these stores - pipelines, ETL/ELT, batch vs streaming, pa
 - [Migration: legacy warehouse to cloud](../resources/migration-guides/warehouse-to-cloud-migration.md)
 - [Troubleshooting: slow SQL queries](../resources/troubleshooting/slow-sql-query-diagnosis.md) - reading plans, indexes, statistics and skew
 - [Interview: SQL worked problems](../resources/interview-prep/sql-interview-guide.md)
+- [Interview: DBA](../resources/interview-prep/dba-interview.md) - backup and recovery, HA, performance, locking, vacuum and online schema changes, with worked answers
+- [Postmortem: GitLab.com database deletion, 2017](../resources/postmortem-gitlab-database-2017.md) - replication is not backup, and untested backups fail
+- [Postmortem: Atlassian site deletion, 2022](../resources/postmortem-atlassian-site-deletion-2022.md) - RPO met, RTO missed: restores that did not scale
 
 ---
 

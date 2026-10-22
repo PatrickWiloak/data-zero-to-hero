@@ -238,6 +238,7 @@ Take each prompt above, set a 45-minute timer, and talk out loud while drawing o
 
 - [SQL interview guide](./sql-interview-guide.md) - the SQL round, with worked problems
 - [Data engineer interview prep](./data-engineer-interview.md) - concepts, tools and a real-time pipeline design
+- [Analytics engineer interview guide](./analytics-engineer-interview.md) - dbt layering, tests and metric definitions
 - [Design a star schema](../hands-on-projects/design-star-schema.md) - hands-on modelling practice
 - [Slowly changing dimensions](../../learn/concepts/slowly-changing-dimensions.md)
 - [Medallion architecture](../architecture-patterns/medallion-architecture.md)

@@ -425,5 +425,6 @@ Pick ten problems from this page and write each from a blank editor, against a r
 
 - [Data engineer interview prep](./data-engineer-interview.md) - the broader interview, including tool and concept questions
 - [Data modeling and pipeline design interviews](./data-modeling-system-design-interview.md) - the design round
+- [Analytics engineer interview guide](./analytics-engineer-interview.md) and [DBA interview guide](./dba-interview.md) - the role-specific loops
 - [SQL joins explained](../../learn/concepts/sql-joins-explained.md)
 - [Window functions explained](../../learn/concepts/window-functions-explained.md)

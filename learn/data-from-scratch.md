@@ -151,6 +151,7 @@ You keep databases fast, available, backed up and secure. Fewer pipelines, more 
 - **Go deeper on:** indexing and query plans ([Indexes explained](./concepts/indexes-explained.md)), isolation and locking ([Transactions and ACID](./concepts/transactions-and-acid.md)), backup and restore, replication and failover ([Replication and sharding](./concepts/replication-and-sharding.md)), migrations between engines.
 - **Certs:** [Azure Database Administrator (DP-300)](../exams/azure/dp-300/), [Google Cloud Professional Cloud Database Engineer](../exams/gcp/cloud-database-engineer/), [MongoDB Associate DBA](../exams/mongodb/associate-dba/), [Cosmos DB (DP-420)](../exams/azure/dp-420/) for globally distributed NoSQL.
 - **Read:** the [Database migration guide](../resources/migration-guides/database-migration.md), [Slow SQL query diagnosis](../resources/troubleshooting/slow-sql-query-diagnosis.md) and the [Database specialist roadmap](../resources/certification-roadmap-database-specialist.md).
+- **Learn from real incidents:** the [GitLab 2017](../resources/postmortem-gitlab-database-2017.md) and [Atlassian 2022](../resources/postmortem-atlassian-site-deletion-2022.md) postmortems, on backups that failed and restores that did not scale.
 
 ---
 
@@ -158,6 +159,7 @@ You keep databases fast, available, backed up and secure. Fewer pipelines, more 
 
 - **Read:** [Data engineer interview prep](../resources/interview-prep/data-engineer-interview.md) - pipeline design, data modeling and SQL questions.
 - **Practise:** the [SQL interview guide](../resources/interview-prep/sql-interview-guide.md) (worked problems) and [data modeling and pipeline design interviews](../resources/interview-prep/data-modeling-system-design-interview.md) (worked designs).
+- **Role-specific:** the [analytics engineer interview guide](../resources/interview-prep/analytics-engineer-interview.md) and the [DBA interview guide](../resources/interview-prep/dba-interview.md), each with worked answers and common traps.
 - **Quick refresher:** [Data engineer in 1 hour](../resources/playlist-data-engineer-1hour.md), a curated reading order through this site.
 - **Show your work:** put the pipeline from phases 3 to 6 on GitHub with a README that explains the design, the checks from phase 5, and what you would change at ten times the data.
 - **Practice:** every cert above has a [practice question bank](../resources/practice-questions/) with explained answers.
