@@ -1,3 +1,7 @@
+---
+last-updated: 2026-10-22
+---
+
 # Databricks Certified Data Engineer Associate
 
 ## Exam Overview
@@ -7,14 +11,28 @@ The Databricks Certified Data Engineer Associate certification validates foundat
 **Exam Details:**
 - **Exam Code:** Databricks Certified Data Engineer Associate
 - **Duration:** 90 minutes
-- **Number of Questions:** 45 multiple-choice questions
-- **Passing Score:** 70% (approximately 32 correct answers)
-- **Cost:** $200 USD
-- **Delivery:** Online proctored
+- **Number of Questions:** 45 scored multiple-choice questions, plus possible unscored items
+- **Passing Score:** Not published by Databricks
+- **Cost:** $200 USD, plus applicable taxes
+- **Delivery:** Online proctored or test center
 - **Validity:** 2 years
 - **Prerequisites:** None (6+ months hands-on Databricks experience recommended)
 
 ## Exam Domains
+
+> **The outline changed in May 2026.** The current [exam page](https://www.databricks.com/learn/certification/data-engineer-associate) and [exam guide (May 2026)](https://www.databricks.com/sites/default/files/2026-05/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf) list seven sections:
+>
+> | Section | Weight |
+> |---|---|
+> | Databricks Intelligence Platform | 6% |
+> | Data Ingestion and Loading | 21% |
+> | Data Transformation and Modeling | 22% |
+> | Working with Lakeflow Jobs | 16% |
+> | Implementing CI/CD | 10% |
+> | Troubleshooting, Monitoring, and Optimization | 10% |
+> | Governance and Security | 15% |
+>
+> The domains below and the notes still follow the older five-domain outline (Delta Live Tables is now Lakeflow Spark Declarative Pipelines, Repos are Git folders, Asset Bundles are Declarative Automation Bundles). Most of their content is still tested; Lakeflow Connect, job triggers and control flow, CI/CD with bundles, Liquid Clustering, predictive optimization and ABAC need extra study from the docs. Checked 2026-10-22; a full rework is on the repo TODO.
 
 ### Domain 1: Databricks Lakehouse Platform (24%)
 - Understand the Lakehouse architecture and its advantages
@@ -141,14 +159,14 @@ The Databricks Certified Data Engineer Associate certification validates foundat
 
 - **[Databricks Academy](https://www.databricks.com/learn)** - Free learning paths and courses
 - **[Databricks Documentation](https://docs.databricks.com/)** - Official documentation
-- **[Databricks Community Edition](https://community.cloud.databricks.com/)** - Free practice environment
+- **[Databricks Free Edition](https://www.databricks.com/learn/free-edition)** - Free practice environment (replaced Community Edition)
 - **[Exam Guide](https://www.databricks.com/learn/certification/data-engineer-associate)** - Official exam page and registration
 - **[Delta Lake Documentation](https://docs.delta.io/)** - Open-source Delta Lake docs
 - **[Spark SQL Guide](https://spark.apache.org/docs/latest/sql-programming-guide.html)** - Apache Spark SQL reference
 
 ## Tips for Success
 
-1. **Hands-on practice is essential** - Use Databricks Community Edition to practice
+1. **Hands-on practice is essential** - Use Databricks Free Edition to practice
 2. **Focus on Spark SQL** - Domain 2 is the largest at 29%
 3. **Understand the "why"** - Know why Lakehouse is better than alternatives for specific use cases
 4. **Delta Lake is foundational** - It appears in almost every domain

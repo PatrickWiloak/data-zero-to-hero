@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
 ---
 
 # Databricks Data Engineer Associate - Fact Sheet
@@ -8,15 +8,18 @@ last-updated: 2026-05-03
 
 **Exam Name:** Databricks Certified Data Engineer Associate
 **Duration:** 90 minutes
-**Questions:** 45 multiple-choice questions
-**Passing Score:** 70% (approximately 32 correct)
-**Cost:** $200 USD
-**Delivery:** Online proctored
+**Questions:** 45 scored multiple-choice questions, plus possible unscored items
+**Passing Score:** Not published by Databricks
+**Cost:** $200 USD, plus applicable taxes
+**Delivery:** Online proctored or test center
+**Languages:** English, Japanese, Portuguese (BR), Korean
 **Valid For:** 2 years
 
 **[📖 Official Exam Page](https://www.databricks.com/learn/certification/data-engineer-associate)** - Registration and exam details
 **[📖 Databricks Academy](https://www.databricks.com/learn)** - Free learning paths and courses
-**[📖 Databricks Community Edition](https://community.cloud.databricks.com/)** - Free practice environment
+**[📖 Databricks Free Edition](https://www.databricks.com/learn/free-edition)** - Free practice environment (replaced Community Edition)
+
+> **The exam outline changed in May 2026.** The current [exam guide (May 2026)](https://www.databricks.com/sites/default/files/2026-05/databricks-certified-data-engineer-associate-exam-guide-may-2026-000.pdf) has seven sections: Databricks Intelligence Platform (6%), Data Ingestion and Loading (21%), Data Transformation and Modeling (22%), Working with Lakeflow Jobs (16%), Implementing CI/CD (10%), Troubleshooting, Monitoring, and Optimization (10%), and Governance and Security (15%). The domain sections below still follow the older five-domain outline; the facts in them are mostly still tested, but Lakeflow Connect, Lakeflow Jobs triggers and control flow, Git folders, Declarative Automation Bundles, Liquid Clustering, predictive optimization and ABAC need more depth than they get here. Checked 2026-10-22; a full rework is on the repo TODO.
 
 ## Target Audience
 

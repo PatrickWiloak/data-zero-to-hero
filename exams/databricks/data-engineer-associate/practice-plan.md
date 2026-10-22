@@ -1,3 +1,7 @@
+---
+last-updated: 2026-10-22
+---
+
 # Databricks Data Engineer Associate - Study Plan
 
 ## 5-Week Study Schedule
@@ -161,11 +165,11 @@
 
 ### Recommended Daily Schedule
 - **30 min** reading documentation or notes
-- **30 min** hands-on practice on Databricks Community Edition
+- **30 min** hands-on practice on Databricks Free Edition
 - **15 min** reviewing flashcards or key concepts
 - **Total: ~1.25 hours/day**
 
 ### Key Resources
-- **[Databricks Community Edition](https://community.cloud.databricks.com/)** - Free practice environment
+- **[Databricks Free Edition](https://www.databricks.com/learn/free-edition)** - Free practice environment (replaced Community Edition)
 - **[Databricks Academy](https://www.databricks.com/learn)** - Free learning paths
 - **[Exam Guide](https://www.databricks.com/learn/certification/data-engineer-associate)** - Official exam page

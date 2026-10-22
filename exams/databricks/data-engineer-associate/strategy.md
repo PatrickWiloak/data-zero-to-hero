@@ -1,3 +1,7 @@
+---
+last-updated: 2026-10-22
+---
+
 # Databricks Data Engineer Associate - Study Strategy
 
 ## Study Approach
@@ -20,7 +24,7 @@
    - Practice higher-order functions on arrays and complex types
 
 3. **Resources for Phase 1**
-   - **[Databricks Community Edition](https://community.cloud.databricks.com/)** - Free practice environment
+   - **[Databricks Free Edition](https://www.databricks.com/learn/free-edition)** - Free practice environment (replaced Community Edition)
    - **[Lakehouse Architecture](https://docs.databricks.com/en/lakehouse/index.html)** - Lakehouse concepts
    - **[SQL Reference](https://docs.databricks.com/en/sql/language-manual/index.html)** - Complete SQL manual
    - **[Delta Lake Overview](https://docs.databricks.com/en/delta/index.html)** - Delta Lake fundamentals
@@ -80,7 +84,7 @@
 ### Official Databricks Resources
 - **[Databricks Academy](https://www.databricks.com/learn)** - Free learning paths and courses
 - **[Databricks Documentation](https://docs.databricks.com/)** - Complete platform documentation
-- **[Databricks Community Edition](https://community.cloud.databricks.com/)** - Free practice environment
+- **[Databricks Free Edition](https://www.databricks.com/learn/free-edition)** - Free practice environment (replaced Community Edition)
 - **[Exam Registration](https://www.databricks.com/learn/certification/data-engineer-associate)** - Official exam page
 
 ### Documentation Deep Dives

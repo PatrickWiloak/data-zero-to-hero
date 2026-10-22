@@ -1,3 +1,7 @@
+---
+last-updated: 2026-10-22
+---
+
 # Databricks Platform Administrator Accreditation - Practice Plan
 
 ## Week 1: Workspace and Identity Fundamentals
@@ -90,11 +94,11 @@
 
 ## Practice Environment
 
-### Databricks Community Edition
-- Free tier for basic practice
-- Limited to single-node clusters
-- No Unity Catalog, SQL warehouses, or admin features
-- Good for notebook and Spark basics
+### Databricks Free Edition
+- Free, serverless-only workspace that replaced Community Edition in 2025
+- Includes Unity Catalog, SQL warehouses and jobs, with usage quotas
+- No account console, custom compute or most account-level admin features, so admin practice needs a trial
+- **[📖 Databricks Free Edition](https://www.databricks.com/learn/free-edition)** - sign-up and limits
 
 ### Databricks Trial
 - 14-day full-featured trial
