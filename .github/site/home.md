@@ -112,6 +112,7 @@
 - [Practice questions](resources/practice-questions/) - scenario banks with explained answers
 - [Data engineer interview prep](resources/interview-prep/data-engineer-interview.md) - pipeline design, modeling and SQL questions
 - [Freshness ledger](docs/freshness.md) - what was last verified, and when
+- [Which Zero to Hero site?](learn/which-site.md) - cloud, data, security or AI: pick by goal
 
 </div>
 
@@ -163,7 +164,7 @@
 
 </div>
 
-All four are free, by Nobler Works.
+All four are free, by Nobler Works. Not sure which to start with? [Pick a site by your goal](learn/which-site.md).
 
 ## Who made this
 
