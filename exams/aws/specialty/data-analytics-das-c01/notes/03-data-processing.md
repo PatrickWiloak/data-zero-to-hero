@@ -203,6 +203,8 @@ Data processing covers 24% of the DAS-C01 exam - the largest domain. This domain
 
 ## Kinesis Data Analytics (Processing Context)
 
+> **Exam-era service.** The SQL flavour below, including `RANDOM_CUT_FOREST` and stagger windows, was discontinued (applications deleted from 2026-01-27). Today the equivalent is Amazon Managed Service for Apache Flink. See [the AWS discontinuation notice](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/discontinuation.html).
+
 **[📖 Kinesis Analytics SQL Reference](https://docs.aws.amazon.com/kinesisanalytics/latest/sqlref/analytics-sql-reference.html)** - SQL functions
 
 ### Windowed Queries
@@ -232,8 +234,8 @@ Data processing covers 24% of the DAS-C01 exam - the largest domain. This domain
 | Serverless ETL with schema flexibility | Glue ETL |
 | Large-scale batch processing (PB-scale) | EMR Spark |
 | Interactive SQL on diverse data sources | EMR Presto/Trino |
-| Real-time stream processing (SQL) | Kinesis Data Analytics |
-| Real-time stream processing (complex) | Kinesis Data Analytics (Flink) |
+| Real-time stream processing (SQL) | Kinesis Data Analytics for SQL on the exam; Managed Service for Apache Flink (Studio) today |
+| Real-time stream processing (complex) | Kinesis Data Analytics for Flink, now Managed Service for Apache Flink |
 | Multi-step pipeline orchestration | Step Functions |
 | Glue-only pipeline orchestration | Glue Workflows |
 

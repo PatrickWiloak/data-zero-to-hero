@@ -5,7 +5,7 @@
 ### Phase 1: Database Fundamentals (Weeks 1-2)
 1. **Relational Databases** - RDS engines, Aurora architecture, storage, replication
 2. **NoSQL Databases** - DynamoDB data modeling, GSI/LSI, capacity modes
-3. **Purpose-Built** - DocumentDB, Neptune, Keyspaces, QLDB, Timestream
+3. **Purpose-Built** - DocumentDB, Neptune, Keyspaces, QLDB (end of support 2025-07-31), Timestream
 4. **Caching** - ElastiCache Redis vs Memcached, DAX
 - **[📖 RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html)**
 - **[📖 Aurora User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html)**
@@ -58,7 +58,7 @@
 - "Cross-region DR with < 1 sec RPO" - Aurora Global Database
 - "MongoDB compatible" - DocumentDB
 - "Cassandra compatible" - Keyspaces
-- "Immutable ledger" or "audit trail" - QLDB
+- "Immutable ledger" or "audit trail" - QLDB (exam-era answer; QLDB ended support 2025-07-31)
 - "Time-series" or "IoT metrics" - Timestream
 - "Connection pooling for Lambda" - RDS Proxy
 - "Encrypt existing database" - Snapshot, copy encrypted, restore

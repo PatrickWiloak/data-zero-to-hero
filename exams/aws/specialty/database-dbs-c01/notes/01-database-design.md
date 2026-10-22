@@ -199,7 +199,9 @@ Workload-specific database design covers 26% of the DBS-C01 exam - the largest d
 - Wide-column time-series data
 - High-volume write workloads with simple read patterns
 
-## Amazon QLDB
+## Amazon QLDB (end of support 2025-07-31)
+
+> Amazon QLDB reached end of support on 2025-07-31 and can no longer be used; AWS pointed customers to Amazon Aurora PostgreSQL. It is described here because the retired DBS-C01 exam tested it. See [what replaced QLDB](../../../shared/services/database/qldb.md#what-replaced-qldb).
 
 **[📖 QLDB Developer Guide](https://web.archive.org/web/20250103202510/https://docs.aws.amazon.com/qldb/latest/developerguide/what-is.html)** - Quantum Ledger Database
 
@@ -244,7 +246,7 @@ Workload-specific database design covers 26% of the DBS-C01 exam - the largest d
 | Document (MongoDB compatible) | DocumentDB |
 | Graph queries (relationships) | Neptune |
 | Wide-column (Cassandra compatible) | Keyspaces |
-| Immutable ledger with cryptographic verification | QLDB |
+| Immutable ledger with cryptographic verification | QLDB on the exam (end of support 2025-07-31; today Aurora PostgreSQL audit patterns) |
 | Time-series data | Timestream |
 | In-memory with persistence and data structures | ElastiCache (Redis) |
 | Simple in-memory caching, multi-threaded | ElastiCache (Memcached) |
@@ -254,7 +256,7 @@ Workload-specific database design covers 26% of the DBS-C01 exam - the largest d
 1. **"Microsecond reads on DynamoDB"** - DAX (not ElastiCache)
 2. **"Multi-region active-active relational"** - Not natively supported; use Aurora Global Database (active-passive with write forwarding)
 3. **"Multi-region active-active NoSQL"** - DynamoDB Global Tables
-4. **"Audit trail with cryptographic verification"** - QLDB
+4. **"Audit trail with cryptographic verification"** - QLDB (exam-era answer; QLDB ended support 2025-07-31)
 5. **"Graph relationships"** - Neptune
 6. **"MongoDB migration"** - DocumentDB
 7. **"Cassandra migration"** - Keyspaces

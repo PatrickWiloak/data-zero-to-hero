@@ -1,4 +1,10 @@
+---
+last-updated: 2026-10-22
+---
+
 # Amazon QLDB (Quantum Ledger Database)
+
+> ⚠️ **Amazon QLDB reached end of support on 2025-07-31.** AWS's own notice read: "Existing customers will be able to use Amazon QLDB until end of support on 07/31/2025" ([archived QLDB developer guide](https://web.archive.org/web/20250103202510/https://docs.aws.amazon.com/qldb/latest/developerguide/what-is.html)). It cannot be created or used today, and AWS now redirects QLDB pages to Amazon Aurora. AWS's recommended path was **Amazon Aurora PostgreSQL**. This page is kept because QLDB appears in the retired Database Specialty (DBS-C01) material and in older architectures; read it as history, and see [What replaced QLDB](#what-replaced-qldb) for what to use now.
 
 ## Service Overview and Purpose
 
@@ -122,7 +128,27 @@ def verify_ledger_integrity():
 - **Supply Chain Tracking**: Product authenticity verification
 - **Legal and Compliance**: Document integrity verification
 
-## Exam Tips
+## What replaced QLDB
+
+QLDB solved one problem well: a journal you could not quietly rewrite, with a cryptographic digest you could hand to an auditor. With the service gone, that property has to be built from parts, and the right parts depend on which half of QLDB you relied on.
+
+**If you needed history and auditability**, AWS's migration guidance moved ledgers into **Amazon Aurora PostgreSQL**. The [migration walkthrough]({MIG}) normalizes ledger documents into relational tables, keeps each revision's metadata (document ID, version, transaction time) in a JSONB column, does a full load from a QLDB export and then replays ongoing changes from a QLDB stream until cutover. The [audit use case guide]({AUD}) shows how Aurora PostgreSQL features stand in for QLDB's built-ins: audit tables filled by triggers on every insert, update and delete, the `pgAudit` extension for session and object audit logging, Database Activity Streams as a trustworthy record of administrator activity (including uncommitted reads), and AWS DMS to copy changes into a separate audit database.
+
+**If you needed cryptographic verification**, no AWS service now offers QLDB's digest-and-proof API as a managed feature, and AWS's audit guide accepts that Aurora keeps no permanent immutable record by itself. A pattern this guide suggests (not an AWS-documented feature): hash-chain the audit table (each row stores a hash of its content plus the previous row's hash) and write periodic digests to S3 Object Lock in compliance mode, so even an administrator cannot alter the stored proofs. AWS Japan's QLDB migration overview also points to partner ledger products such as Scalar's ScalarDL.
+
+**On other clouds**, the closest managed equivalent is **ledger tables in Azure SQL Database and SQL Server 2022**, which hash every change into a chain and write database digests to immutable storage - see the [DP-300 encryption and compliance note](../../../../azure/dp-300/notes/security-encryption-compliance.md#ledger).
+
+| QLDB capability | Replacement today |
+|---|---|
+| Immutable journal of every revision | History table maintained by triggers in Aurora PostgreSQL |
+| PartiQL queries over documents | SQL over relational tables, JSONB for document-shaped data |
+| Digest and proof verification | Your own hash chain plus digests in S3 Object Lock; a partner ledger; or Azure SQL ledger |
+| Streams to Kinesis | DMS change data capture or logical replication; Database Activity Streams for the admin audit trail |
+
+## Exam Tips (DBS-C01 era)
+
+The retired Database Specialty exam expected QLDB as the answer for "immutable, cryptographically verifiable ledger". That answer is historical; no current AWS exam should present QLDB as a service to deploy.
+
 - **Know immutable ledger concepts** and cryptographic verification
 - **Understand when to use QLDB** vs traditional databases
 - **Remember PartiQL** as the query language

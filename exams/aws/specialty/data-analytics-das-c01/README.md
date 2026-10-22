@@ -6,6 +6,21 @@
 
 This certification is no longer available for new candidates. If you hold this certification, your credential will remain valid for three years from the date you earned it.
 
+## Services retired or renamed since this exam
+
+DAS-C01 was written around services that have since changed. When you apply this material today:
+
+| Exam-era name | Status in 2026 | Use today |
+|---|---|---|
+| Kinesis Data Analytics for SQL applications | **Discontinued.** No new applications from 2025-10-15; existing applications deleted from 2026-01-27 ([AWS notice](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/discontinuation.html)) | **Amazon Managed Service for Apache Flink** (or Flink Studio for SQL) |
+| Kinesis Data Analytics for Apache Flink | Renamed | [Amazon Managed Service for Apache Flink](https://docs.aws.amazon.com/managed-flink/latest/java/what-is.html) |
+| Kinesis Data Firehose | Renamed | [Amazon Data Firehose](https://docs.aws.amazon.com/firehose/latest/dev/what-is-this-service.html) |
+| Amazon QuickSight | Rebranded | [Amazon Quick](https://docs.aws.amazon.com/quick/latest/userguide/doc-history.html) (QuickSight APIs retained) |
+| Amazon Elasticsearch Service | Renamed (2021) | Amazon OpenSearch Service |
+| Amazon QLDB (adjacent, tested on DBS-C01) | End of support 2025-07-31 | See [what replaced QLDB](../../shared/services/database/qldb.md#what-replaced-qldb) |
+
+The `RANDOM_CUT_FOREST` anomaly function and in-application streams were features of Kinesis Data Analytics for SQL and went with it. In Managed Service for Apache Flink, anomaly detection is your own Flink code or a SageMaker model call.
+
 ## Replacement Certification
 
 AWS has launched the **AWS Certified Data Engineer - Associate** certification as a replacement, which became available on March 12, 2024.

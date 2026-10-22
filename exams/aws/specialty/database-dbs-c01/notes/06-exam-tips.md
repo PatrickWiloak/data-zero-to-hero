@@ -24,7 +24,7 @@ What is the primary workload?
 │   ├── Need multi-threaded simple caching? -> ElastiCache Memcached
 │   └── Need session store with persistence? -> ElastiCache Redis
 ├── Graph -> Neptune
-├── Ledger / Immutable audit -> QLDB
+├── Ledger / Immutable audit -> QLDB (exam-era; end of support 2025-07-31)
 ├── Time-series -> Timestream
 └── Full-text search -> OpenSearch
 ```
@@ -124,7 +124,7 @@ HA requirement?
 | Microsecond reads | DAX |
 | MongoDB migration | DocumentDB |
 | Cassandra migration | Keyspaces |
-| Immutable audit trail | QLDB |
+| Immutable audit trail | QLDB (exam-era; end of support 2025-07-31) |
 | IoT time-series | Timestream |
 | Social network graphs | Neptune |
 | Cross-region active-active NoSQL | DynamoDB Global Tables |

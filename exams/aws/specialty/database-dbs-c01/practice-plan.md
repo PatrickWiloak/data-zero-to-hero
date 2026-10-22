@@ -55,7 +55,7 @@ This practice plan is preserved for those who earned the DBS-C01 certification a
 ### Week 5: Specialized Databases
 - **Amazon Neptune** - Graph database for social networks, knowledge graphs
   - **[📖 Neptune User Guide](https://docs.aws.amazon.com/neptune/latest/userguide/)** - Graph database guide
-- **Amazon QLDB** - Ledger database for immutable audit trails
+- **Amazon QLDB** - Ledger database for immutable audit trails (end of support 2025-07-31; [what replaced it](../../shared/services/database/qldb.md#what-replaced-qldb))
   - **[📖 QLDB Developer Guide](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Ledger database guide
 - **Amazon Timestream** - Time series data for IoT and monitoring
   - **[📖 Timestream Developer Guide](https://docs.aws.amazon.com/timestream/latest/developerguide/)** - Time series database
@@ -150,7 +150,7 @@ This practice plan is preserved for those who earned the DBS-C01 certification a
 - **Document (DocumentDB)**: Semi-structured data, JSON documents
 - **Graph (Neptune)**: Highly connected data, relationship queries
 - **Time Series (Timestream)**: IoT data, monitoring metrics, logs
-- **Ledger (QLDB)**: Immutable history, cryptographic verification
+- **Ledger (QLDB, end of support 2025-07-31)**: Immutable history, cryptographic verification
 - **In-Memory (ElastiCache/MemoryDB)**: Microsecond latency, caching
 
 **Design Patterns**
@@ -330,7 +330,7 @@ This practice plan is preserved for those who earned the DBS-C01 certification a
 | **DynamoDB** | NoSQL Key-Value | High throughput, serverless apps | Single-digit ms latency, global tables |
 | **DocumentDB** | NoSQL Document | MongoDB workloads | MongoDB compatible, fully managed |
 | **Neptune** | Graph | Social networks, fraud detection | Gremlin/SPARQL support, high availability |
-| **QLDB** | Ledger | Audit trails, immutable records | Cryptographically verifiable |
+| **QLDB** (end of support 2025-07-31) | Ledger | Audit trails, immutable records | Cryptographically verifiable; replaced by Aurora PostgreSQL audit patterns |
 | **Timestream** | Time Series | IoT, monitoring, analytics | Built-in time series analytics |
 | **Redshift** | Data Warehouse | Analytics, BI, reporting | Columnar storage, Spectrum for S3 |
 | **ElastiCache** | In-Memory | Caching, session store | Redis/Memcached, microsecond latency |

@@ -7,7 +7,7 @@ difficulty: advanced
 
 15 questions for DAS-C01 prep, weighted toward processing (24%) and storage and data management (22%), then collection, analysis and visualization, and security (18% each).
 
-DAS-C01 has been retired and replaced by the Data Engineer Associate (DEA-C01). The analytics content is still directly useful; confirm exam availability before planning to sit it.
+DAS-C01 was retired on 2024-04-08 and replaced by the Data Engineer Associate (DEA-C01); it can no longer be taken. The analytics content is still useful, but several services have since been renamed or retired (Kinesis Data Analytics for SQL is discontinued, Firehose is now Amazon Data Firehose); see the table on the [cert page](../../exams/aws/specialty/data-analytics-das-c01/#services-retired-or-renamed-since-this-exam).
 
 > **Cert page:** [exams/aws/specialty/data-analytics-das-c01/](../../exams/aws/specialty/data-analytics-das-c01/)
 

@@ -6,7 +6,7 @@
 
 **Solution Pattern**:
 - **Ingestion**: Kinesis Data Streams with enough shards for 50K events/sec
-- **Real-time anomaly detection**: Kinesis Data Analytics (SQL) with RANDOM_CUT_FOREST
+- **Real-time anomaly detection**: Kinesis Data Analytics (SQL) with RANDOM_CUT_FOREST (exam-era answer; KDA for SQL is discontinued, so today use Managed Service for Apache Flink)
 - **Data lake storage**: Kinesis Data Firehose to S3 in Parquet format (format conversion via Glue Data Catalog)
 - **Hourly reports**: Athena scheduled queries or Glue ETL on S3 data
 - **Dashboards**: QuickSight connected to Athena with SPICE for caching

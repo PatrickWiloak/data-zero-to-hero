@@ -2,7 +2,7 @@
 
 ## Important Notice
 
-**The AWS Certified Database - Specialty (DBS-C01) certification was retired on April 29, 2024.**
+**The AWS Certified Database - Specialty (DBS-C01) certification was retired on April 29, 2024.** Some services it tested have since been retired too: **Amazon QLDB reached end of support on 2025-07-31** ([what replaced it](../../shared/services/database/qldb.md#what-replaced-qldb)).
 
 This certification is no longer available for new candidates. If you hold this certification, your credential will remain valid for three years from the date you earned it.
 
@@ -60,7 +60,7 @@ If you currently hold the DBS-C01 certification:
 - **Amazon DocumentDB**: MongoDB-compatible database
 - **Amazon Neptune**: Graph database
 - **Amazon Keyspaces**: Cassandra-compatible database
-- **Amazon QLDB**: Ledger database
+- **Amazon QLDB**: Ledger database (exam-era service; end of support 2025-07-31, see [what replaced it](../../shared/services/database/qldb.md#what-replaced-qldb))
 - **Amazon Timestream**: Time series database
 - **AWS Database Migration Service**: Database migration
 - **AWS Schema Conversion Tool**: Schema migration
@@ -120,7 +120,7 @@ If you currently hold the DBS-C01 certification:
 ### Specialized Databases
 - **Amazon Neptune**: Graph database for connected data
   - **[📖 Neptune Documentation](https://docs.aws.amazon.com/neptune/)** - Graph database guide
-- **Amazon QLDB**: Ledger database for immutable history
+- **Amazon QLDB**: Ledger database for immutable history (**end of support 2025-07-31**; AWS pointed customers to Aurora PostgreSQL - see [what replaced it](../../shared/services/database/qldb.md#what-replaced-qldb))
   - **[📖 QLDB Documentation](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Quantum ledger database
 - **Amazon Timestream**: Time series database
   - **[📖 Timestream Documentation](https://docs.aws.amazon.com/timestream/)** - Time series data management

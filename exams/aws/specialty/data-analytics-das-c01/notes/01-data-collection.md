@@ -48,7 +48,7 @@ Real-time data streaming service with shard-based architecture.
 
 **[📖 Resharding](https://docs.aws.amazon.com/streams/latest/dev/kinesis-using-sdk-java-resharding.html)** - Shard management
 
-### Kinesis Data Firehose
+### Kinesis Data Firehose (now Amazon Data Firehose)
 
 Fully managed service for loading streaming data into destinations.
 
@@ -83,6 +83,8 @@ Fully managed service for loading streaming data into destinations.
 - Format conversion destinations: Snappy (default for Parquet), GZIP, ZIP
 
 ### Kinesis Data Analytics
+
+> **Exam-era service.** Kinesis Data Analytics for SQL applications was discontinued (no new applications from 2025-10-15, existing ones deleted from 2026-01-27); the Apache Flink flavour continues as **Amazon Managed Service for Apache Flink**. See [the AWS discontinuation notice](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/discontinuation.html).
 
 Real-time analytics using SQL or Apache Flink on streaming data.
 

@@ -12,8 +12,8 @@ This guide covers common patterns, decision trees, and quick-reference tips for 
 Need to stream data into AWS?
 ├── Need custom consumers or ordering? -> Kinesis Data Streams
 ├── Just load to S3/Redshift/OpenSearch? -> Kinesis Data Firehose
-├── Real-time SQL on streams? -> Kinesis Data Analytics (SQL)
-├── Complex stream processing (stateful)? -> Kinesis Data Analytics (Flink)
+├── Real-time SQL on streams? -> Kinesis Data Analytics (SQL) [discontinued 2026; Managed Service for Apache Flink today]
+├── Complex stream processing (stateful)? -> Kinesis Data Analytics (Flink) [now Managed Service for Apache Flink]
 └── IoT device data? -> IoT Core -> Rules Engine -> Kinesis/S3/DynamoDB
 ```
 

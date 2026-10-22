@@ -122,15 +122,16 @@ exam-retires: 2024-04-29
 - **[📖 Timestream Queries](https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.query.html)** - Query examples
 - **[📖 Timestream Scheduled Queries](https://docs.aws.amazon.com/timestream/latest/developerguide/scheduled-queries.html)** - Automated queries
 
-**Amazon QLDB**
-- Quantum Ledger Database
+**Amazon QLDB** (end of support 2025-07-31)
+- Quantum Ledger Database; the links below are archived snapshots because AWS removed the live docs
+- Replacement: AWS pointed customers to Aurora PostgreSQL ([what replaced QLDB](../../shared/services/database/qldb.md#what-replaced-qldb))
 - Immutable, cryptographically verifiable transaction log
 - Use cases: Compliance, audit trails, supply chain
 - **[📖 QLDB Documentation](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Main documentation hub
 - **[📖 QLDB Developer Guide](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Complete developer guide
-- **[📖 QLDB Journal](https://web.archive.org/web/20250810210701/https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Immutable transaction log
+- **[📖 QLDB Journal](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Immutable transaction log
 - **[📖 QLDB PartiQL](https://web.archive.org/web/20250625165707/https://docs.aws.amazon.com/qldb/latest/developerguide/ql-reference.html)** - SQL-compatible query language
-- **[📖 QLDB Verification](https://web.archive.org/web/20250810210701/https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Cryptographic verification
+- **[📖 QLDB Verification](https://web.archive.org/web/20250810210701/https://docs.aws.amazon.com/qldb/latest/developerguide/)** - Cryptographic verification
 
 **Amazon MemoryDB for Redis**
 - Redis-compatible in-memory database
@@ -223,8 +224,8 @@ exam-retires: 2024-04-29
 - ✅ Time-stamped data, high ingestion rate
 - Use cases: IoT, DevOps metrics, financial trading
 
-**Ledger (QLDB):**
-- ✅ Immutable, cryptographically verifiable
+**Ledger (QLDB, end of support 2025-07-31):**
+- ✅ Immutable, cryptographically verifiable (exam-era answer; today use Aurora PostgreSQL audit patterns)
 - Use cases: Financial transactions, supply chain, audit logs
 
 ## Performance Optimization
