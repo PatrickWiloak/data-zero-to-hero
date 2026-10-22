@@ -28,43 +28,46 @@ This 10-week plan is designed to systematically cover all exam domains with hand
 - [ ] Review relevant notes files
 - [ ] Create study schedule and track progress
 
-### Week 2: Core Domain #1
-- [ ] Study first major exam domain
-- [ ] Complete hands-on labs for core services
-- [ ] Practice with Azure Portal, CLI, and PowerShell
-- [ ] Review configuration scenarios
+### Week 2: Maintain a data analytics solution (25-30%)
+- [ ] Workspace and item access, RLS/CLS/OLS and file-level access
+- [ ] Sensitivity labels and endorsement
+- [ ] Git integration, .pbip projects and deployment pipelines
+- [ ] Impact analysis, XMLA endpoint deployment, .pbit and .pbids files
 - [ ] Complete domain practice questions
 
 ---
 
-## Week 3-4: Domain Deep Dives
+## Week 3-4: Prepare data (45-50%)
 
-### Week 3: Domain #2
-- [ ] Study second major domain area
-- [ ] Implement practical solutions
-- [ ] Practice troubleshooting scenarios
-- [ ] Review best practices and design patterns
+### Week 3: Get and transform data
+- [ ] Data connections; OneLake catalog and Real-Time hub discovery
+- [ ] Choosing between lakehouse, warehouse and eventhouse; OneLake integration for Eventhouse and semantic models
+- [ ] Views, functions and stored procedures; star schema in a lakehouse or warehouse
+- [ ] Cleansing: duplicates, missing data, nulls, type conversion
 - [ ] Complete practice questions
 
-### Week 4: Domain #3
-- [ ] Study third major domain
-- [ ] Hands-on implementation labs
-- [ ] Integration scenarios
-- [ ] Security and compliance considerations
+### Week 4: Query and analyze data
+- [ ] Visual query editor
+- [ ] SQL against the warehouse and SQL analytics endpoint
+- [ ] KQL against an eventhouse
+- [ ] DAX queries in DAX query view
 - [ ] Practice questions and review
 
 ---
 
-## Week 5-6: Advanced Topics
+## Week 5-6: Implement and manage semantic models (25-30%)
 
-### Week 5: Domain #4
-- [ ] Study remaining exam domains
-- [ ] Advanced configuration scenarios
-- [ ] Performance optimization
-- [ ] Cost management strategies
-- [ ] Practice questions
+### Week 5: Design and build semantic models
+- [ ] Storage modes: Import, DirectQuery, Dual, Direct Lake on OneLake and on SQL
+- [ ] Relationships: bridge tables, many-to-many
+- [ ] DAX variables, iterators, windowing and information functions
+- [ ] Calculation groups, dynamic format strings, field parameters
+- [ ] Large semantic model storage format; composite models
 
-### Week 6: Integration and Scenarios
+### Week 6: Optimize enterprise-scale semantic models
+- [ ] Performance Analyzer, DAX query view and DAX optimization
+- [ ] Direct Lake fallback (Direct Lake behavior property) and refresh (framing)
+- [ ] Incremental refresh
 - [ ] End-to-end solution design
 - [ ] Multi-service integration
 - [ ] Real-world case studies

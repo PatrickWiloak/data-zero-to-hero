@@ -1,9 +1,8 @@
 Question,Answer,Tags
-How long is the Microsoft Fabric Analytics Engineer Associate (DP-600) exam?,120 minutes,exam-logistics
-How many questions are on the Microsoft Fabric Analytics Engineer Associate (DP-600) exam?,40-60 questions,exam-logistics
+How long is the Microsoft Fabric Analytics Engineer Associate (DP-600) exam?,100 minutes,exam-logistics
 What is the passing score for Microsoft Fabric Analytics Engineer Associate (DP-600)?,700/1000,exam-logistics
-What does the Microsoft Fabric Analytics Engineer Associate (DP-600) exam cost?,$165 USD,exam-logistics
-How long is Microsoft Fabric Analytics Engineer Associate (DP-600) valid for?,3 years,exam-logistics
+What does the Microsoft Fabric Analytics Engineer Associate (DP-600) exam cost?,$165 USD (US price; varies by country),exam-logistics
+How long is Microsoft Fabric Analytics Engineer Associate (DP-600) valid for?,1 year (free annual renewal via Microsoft Learn),exam-logistics
 Hierarchical namespace (microsoft fabric overview),Parquet and Delta Lake format,"notes,microsoft-fabric-overview"
 Spark job definitions (microsoft fabric overview),Lakehouse: Data storage and compute,"notes,microsoft-fabric-overview"
 Auto-tune and optimize (microsoft fabric overview),Separates storage and compute,"notes,microsoft-fabric-overview"

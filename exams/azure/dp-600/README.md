@@ -1,68 +1,46 @@
 # Microsoft Fabric Analytics Engineer Associate (DP-600)
 
+> **Outline checked 2026-10-22 against skills measured as of 2026-10-19.** Microsoft's change log for the 2026-10-19 update lists one minor change, a wording fix in "Query and analyze data" ("Visual query editor"); no skills were added, removed or reweighted. This guide was also behind the earlier outline (it still showed the retired four-domain layout), so the domains below are now the current three. Source: [DP-600 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-600#change-log).
+
 ## Exam Overview
 
-The Microsoft Fabric Analytics Engineer Associate certification validates your ability to implement and manage data analytics solutions using Microsoft Fabric, including data ingestion, transformation, and analytics workloads.
+The Microsoft Fabric Analytics Engineer Associate certification validates that you can design, create and manage analytical assets in Microsoft Fabric - semantic models, warehouses and lakehouses - by preparing and enriching data, securing and maintaining analytics assets, and implementing semantic models. You query with SQL, KQL and DAX.
 
 **Exam Details:**
 - **Exam Code:** DP-600
-- **Duration:** 120 minutes
-- **Number of Questions:** 40-60 questions
+- **Exam Name:** Implementing Analytics Solutions Using Microsoft Fabric
+- **Duration:** 100 minutes
 - **Passing Score:** 700 out of 1000
-- **Question Types:** Multiple choice, multiple select, drag and drop, case studies
-- **Cost:** $165 USD
-- **Prerequisites:** Experience with Microsoft Fabric and data analytics concepts
+- **Question Types:** Multiple choice, multiple select, drag and drop, case studies; may include interactive components
+- **Cost:** $165 USD in the US (price varies by country)
+- **Validity:** 1 year, renewable free with an online assessment on Microsoft Learn
+- **Prerequisites:** Experience with Microsoft Fabric and Power BI
 
-## Exam Domains
+## Exam Domains (skills measured as of 2026-10-19)
 
-### 1. Plan, Implement, and Manage a Solution for Data Analytics (25-30%)
-- **Fabric Workspace Management**
-  - Configure Fabric workspaces and environments
-  - Manage workspace roles and permissions
-  - Implement version control with Git integration
-  
-- **Data Pipeline Planning**
-  - Design end-to-end analytics solutions
-  - Plan for data ingestion and transformation
-  - Design for scalability and performance
+| # | Domain | Weight |
+|---|--------|--------|
+| 1 | Maintain a data analytics solution | 25-30% |
+| 2 | Prepare data | 45-50% |
+| 3 | Implement and manage semantic models | 25-30% |
 
-### 2. Prepare and Serve Data (40-45%)
-- **Data Ingestion**
-  - Implement data ingestion using Data Factory
-  - Configure dataflows Gen2
-  - Implement real-time data ingestion
-  
-- **Data Transformation**
-  - Design and implement data transformation pipelines
-  - Use Apache Spark and notebooks
-  - Implement data quality checks
-  
-- **Data Modeling**
-  - Design star schema and dimensional models
-  - Create relationships and hierarchies
-  - Optimize for query performance
+### 1. Maintain a data analytics solution (25-30%)
 
-### 3. Implement and Manage Semantic Models (20-25%)
-- **Semantic Model Design**
-  - Create and configure semantic models
-  - Implement DirectQuery and Import modes
-  - Design for large datasets
-  
-- **DAX and Calculations**
-  - Create measures and calculated columns
-  - Implement time intelligence
-  - Optimize DAX performance
+- **Implement security and governance** - workspace-level and item-level access controls; row-level, column-level, object-level and file-level access control; sensitivity labels; endorsement
+- **Maintain the analytics development lifecycle** - version control for a workspace; Power BI Desktop projects (.pbip); deployment pipelines; impact analysis of downstream dependencies from lakehouses, warehouses, dataflows and semantic models; deploying and managing semantic models through the XMLA endpoint; reusable assets (.pbit templates, .pbids data source files, shared semantic models)
 
-### 4. Explore and Analyze Data (15-20%)
-- **Data Visualization**
-  - Create Power BI reports and dashboards
-  - Implement advanced visualizations
-  - Configure report interactions
-  
-- **Data Analysis**
-  - Perform ad-hoc analysis with SQL
-  - Use notebooks for exploratory analysis
-  - Implement AI and ML capabilities
+### 2. Prepare data (45-50%)
+
+- **Get data** - create a data connection; discover data with the OneLake catalog and Real-Time hub; ingest or access data; choose between data stores; OneLake integration for Eventhouse and semantic models
+- **Transform data** - views, functions and stored procedures; enrich with new columns or tables; star schema for a lakehouse or warehouse; denormalize; aggregate; merge or join; resolve duplicates, missing data and nulls; convert data types; filter
+- **Query and analyze data** - select, filter and aggregate with the Visual query editor, SQL, KQL and DAX
+
+### 3. Implement and manage semantic models (25-30%)
+
+- **Design and build semantic models** - storage modes; star schema for a semantic model; bridge tables and many-to-many relationships; DAX variables, iterators, table filtering, windowing and information functions; calculation groups, dynamic format strings and field parameters; large semantic model storage format; composite models
+- **Optimize enterprise-scale semantic models** - query and visual performance; DAX performance; Direct Lake configuration including default fallback and refresh behavior; Direct Lake on OneLake vs Direct Lake on SQL analytics endpoint; incremental refresh
+
+The skills newest to this guide (OneLake catalog, Real-Time hub, .pbip/.pbit/.pbids, XMLA deployment, calculation groups, field parameters, large model format, the two Direct Lake flavours) are taught in [Semantic models, lifecycle and discovery](notes/semantic-models-lifecycle-discovery.md).
 
 ## Key Microsoft Fabric Components
 
@@ -135,6 +113,6 @@ The Microsoft Fabric Analytics Engineer Associate certification validates your a
 ### Career Path
 - **Role Focus:** Fabric Analytics Engineer, Data Engineer, BI Developer
 - **Skills Development:** Modern data stack, lakehouse architectures, real-time analytics
-- **Next Steps:** Consider DP-700 (Fabric Data Engineer) when available
+- **Next Steps:** DP-700 (Fabric Data Engineer) for the engineering side of the same platform
 
 Remember: DP-600 focuses on the modern analytics platform of Microsoft Fabric. Hands-on experience with Fabric is essential!

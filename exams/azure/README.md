@@ -13,7 +13,7 @@ Study guides for Azure in this repo. For the full picture across every provider,
 | [Microsoft Azure Database Administrator Associate (DP-300)](dp-300/) | DP-300 | Associate | Ready | 3 |
 | [Microsoft Certified: Azure Cosmos DB AI Developer Associate (DP-420)](dp-420/) | DP-420 | Associate | Ready | 5 |
 | [Microsoft Certified: Fabric Data Engineer Associate (DP-700)](dp-700/) | DP-700 | Associate | Ready | 5 |
-| [Microsoft Fabric Analytics Engineer Associate (DP-600)](dp-600/) | DP-600 | Associate | Ready | 3 |
+| [Microsoft Fabric Analytics Engineer Associate (DP-600)](dp-600/) | DP-600 | Associate | Ready | 4 |
 | [Microsoft Power BI Data Analyst (PL-300)](pl-300/) | PL-300 | Associate | Ready | 4 |
 
 **Retired** - the exam is no longer offered. The guide is kept for anyone holding the credential, and points to its replacement.

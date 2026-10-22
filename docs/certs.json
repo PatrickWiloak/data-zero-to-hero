@@ -248,16 +248,16 @@
       "exam_code": "DP-600",
       "level": "associate",
       "status": "active",
-      "duration": "120 minutes",
-      "questions": "40-60 questions",
+      "duration": "100 minutes",
+      "questions": null,
       "passing_score": "700/1000",
-      "cost": "$165 USD",
-      "validity": "3 years",
+      "cost": "$165 USD (US price; varies by country)",
+      "validity": "1 year (free annual renewal via Microsoft Learn)",
       "delivery": null,
       "format": null,
       "languages": null,
       "path": "exams/azure/dp-600",
-      "notes_count": 3,
+      "notes_count": 4,
       "files": {
         "README.md": true,
         "fact-sheet.md": true,
@@ -265,8 +265,8 @@
         "scenarios.md": false,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03",
-      "exam_version": null,
+      "last_updated": "2026-10-22",
+      "exam_version": "skills measured as of 2026-10-19",
       "exam_retires": null
     },
     {

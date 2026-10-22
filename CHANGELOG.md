@@ -11,6 +11,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 ### Changed
 
 - **DP-420** rebuilt for the 2026-10-06 outline: the certification is now the Azure Cosmos DB AI Developer Associate (was Specialty), exam "Building AI Applications with Azure Cosmos DB", 100 minutes, three domains (40-45 / 30-35 / 20-25%). Two new notes: [AI retrieval and agent memory](./exams/azure/dp-420/notes/cosmos-db-ai-retrieval-agent-memory.md) and [Fabric, fleets and resilience](./exams/azure/dp-420/notes/cosmos-db-fabric-fleets-resilience.md); README, fact sheet and practice plan rewritten to the new skills; 8 new [practice questions](./resources/practice-questions/azure-cosmos-db-dp-420.md). Source: Microsoft's DP-420 study guide change log.
+- **DP-600** checked against skills measured as of 2026-10-19 (change log: one wording fix, no skill or weight changes). The guide still showed the retired four-domain outline; README, fact sheet and study plan now follow the current three domains (25-30 / 45-50 / 25-30%), duration corrected to 100 minutes and validity to 1 year. New note: [Semantic models, lifecycle and discovery](./exams/azure/dp-600/notes/semantic-models-lifecycle-discovery.md) (.pbip, deployment pipelines, XMLA, OneLake catalog, Real-Time hub, Direct Lake on OneLake vs SQL, calculation groups, field parameters, large models, incremental refresh).
 
 ## [2026-10-21] (2) - Thirteen concept pages, three builds, a streaming pattern, data-only glossary
 

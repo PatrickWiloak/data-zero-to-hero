@@ -1,5 +1,6 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
+exam-version: skills measured as of 2026-10-19
 ---
 
 # Microsoft Fabric Analytics Engineer (DP-600) - Fact Sheet
@@ -7,21 +8,25 @@ last-updated: 2026-05-03
 ## Quick Reference
 
 **Exam Code:** DP-600
-**Duration:** 120 minutes
-**Questions:** 40-60 questions
+**Exam Name:** Implementing Analytics Solutions Using Microsoft Fabric
+**Duration:** 100 minutes
 **Passing Score:** 700/1000
-**Cost:** $165 USD
-**Validity:** 3 years
+**Cost:** $165 USD (US price; varies by country)
+**Validity:** 1 year (free annual renewal via Microsoft Learn)
 **Difficulty:** ⭐⭐⭐⭐
 
-## Exam Domains
+**[📖 DP-600 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-600)** - Skills measured as of 2026-10-19 and change log
+**[📖 Certification page](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/)** - Registration and renewal
+
+## Exam Domains (skills measured as of 2026-10-19)
 
 | Domain | Weight | Key Focus |
 |--------|--------|-----------|
-| Plan, implement, and manage a solution for data analytics | 10-15% | Fabric workspace, capacity, governance |
-| Prepare and serve data | 40-45% | Lakehouses, data pipelines, semantic models |
-| Implement and manage semantic models | 20-25% | Data modeling, DAX, optimization |
-| Explore and analyze data | 20-25% | Power BI reports, KQL queries, notebooks |
+| Maintain a data analytics solution | 25-30% | Access controls, sensitivity labels, endorsement, Git, .pbip, deployment pipelines, XMLA, impact analysis |
+| Prepare data | 45-50% | Get data (OneLake catalog, Real-Time hub), transform (star schema, joins, cleansing), query with Visual query editor, SQL, KQL and DAX |
+| Implement and manage semantic models | 25-30% | Storage modes, relationships, DAX, calculation groups, field parameters, large model format, composite models, Direct Lake, incremental refresh |
+
+The 2026-10-19 update changed one wording ("Visual query editor"); no skill or weight changed. Deep dive on the newest skills: [Semantic models, lifecycle and discovery](notes/semantic-models-lifecycle-discovery.md).
 
 ## Microsoft Fabric Overview
 
