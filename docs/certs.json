@@ -277,7 +277,7 @@
       "name": "Microsoft Certified: Fabric Data Engineer Associate (DP-700)",
       "exam_code": "DP-700",
       "level": "associate",
-      "status": "active",
+      "status": "retired",
       "duration": "100 minutes",
       "questions": null,
       "passing_score": "700/1000",
@@ -287,7 +287,7 @@
       "format": "Multiple choice + multiple response + case studies + Labs (some sittings)",
       "languages": null,
       "path": "exams/azure/dp-700",
-      "notes_count": 5,
+      "notes_count": 6,
       "files": {
         "README.md": true,
         "fact-sheet.md": true,
@@ -295,8 +295,8 @@
         "scenarios.md": true,
         "strategy.md": false
       },
-      "last_updated": "2026-05-03",
-      "exam_version": null,
+      "last_updated": "2026-10-22",
+      "exam_version": "skills measured as of 2026-10-19",
       "exam_retires": null
     },
     {

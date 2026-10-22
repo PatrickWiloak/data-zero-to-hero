@@ -51,3 +51,6 @@ Activity timeout (monitoring optimization),set per activity to fail fast,"notes,
 Retry policies (monitoring optimization),sane retry counts (3) and backoff,"notes,monitoring-optimization"
 Right-size capacity (monitoring optimization),don't over-provision,"notes,monitoring-optimization"
 Schedule heavy work off-peak (monitoring optimization),smoothing window absorbs bursts,"notes,monitoring-optimization"
+Control plane (airflow database projects rti shortcuts),"workspace roles (Admin, Member, Contributor, Viewer) and item permissions govern what you can *do to* an item: create, configure, share, delete.","notes,airflow-database-projects-rti-shortcuts"
+Data plane (airflow database projects rti shortcuts),"OneLake security roles, defined on an item (such as a lakehouse), govern what *data* you can read, scoped down to folders, tables, schemas, rows and columns.","notes,airflow-database-projects-rti-shortcuts"
+Native tables (airflow database projects rti shortcuts),"data is ingested into the eventhouse. It is indexed, compressed and cached (hot cache on SSD per the caching policy), so KQL queries are fast. Update policies and materialized views work on native tables, which is how you build streaming transformations inside the eventhouse.","notes,airflow-database-projects-rti-shortcuts"

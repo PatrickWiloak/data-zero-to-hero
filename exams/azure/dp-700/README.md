@@ -4,7 +4,9 @@
 
 The Fabric Data Engineer Associate certification validates the ability to ingest, transform, secure, and serve analytical data using Microsoft Fabric. Fabric is Microsoft's unified analytics platform combining Power BI, Synapse, Data Factory, and Lakehouse (OneLake) into a SaaS experience.
 
-DP-700 launched in late 2024 as Microsoft's modern data-engineering credential, positioned alongside / above the older DP-203 (Azure Data Engineer Associate, which remains active but more Synapse / Azure Data Lake-focused).
+DP-700 launched in late 2024 as Microsoft's modern data-engineering credential. It replaced the older DP-203 (Azure Data Engineer Associate), which was retired on 2025-03-31.
+
+> **Outline checked 2026-10-22 against skills measured as of 2026-10-19.** Microsoft's change log marks two minor changes (in "Configure Microsoft Fabric workspace settings" and "Optimize performance"); compared with the previous published outline the visible edits are wording ("Eventstream" and "Eventhouse" in the singular). No skills were added or removed and the weights are unchanged. Source: [DP-700 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-700#change-log).
 
 ---
 
@@ -23,7 +25,7 @@ DP-700 launched in late 2024 as Microsoft's modern data-engineering credential, 
 | **Languages** | English (more added over time) |
 
 **[📖 Official DP-700 page](https://learn.microsoft.com/credentials/certifications/fabric-data-engineer-associate/)**
-**[📖 Microsoft Learn DP-700 Study Guide](https://learn.microsoft.com/credentials/certifications/exams/dp-700/)**
+**[📖 Microsoft Learn DP-700 Study Guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-700)**
 
 ---
 
@@ -39,32 +41,26 @@ Per the official Skills Measured outline:
 
 ---
 
-## Key Topics
+## Key Topics (skills measured as of 2026-10-19)
 
-### Domain 1 - Implement and manage an analytics solution
+### Domain 1 - Implement and manage an analytics solution (30-35%)
 
-- Microsoft Fabric workspace administration, capacity management, lifecycle (Dev/Test/Prod via deployment pipelines)
-- Version control with Git integration
-- Security: workspace roles, item permissions, sensitivity labels, OneLake security
-- CI/CD via Fabric Deployment Pipelines
+- **Workspace settings:** Spark (starter vs custom pools, environments), domain, OneLake and Apache Airflow workspace settings
+- **Lifecycle management:** version control (Git), database projects, deployment pipelines
+- **Security and governance:** workspace-level and item-level access; row-, column-, object- and folder/file-level access; dynamic data masking; sensitivity labels; endorsement; Fabric audit logs; OneLake security
+- **Orchestration:** choose between Dataflow Gen2, a pipeline and a notebook; schedules and event-based triggers; parameters and dynamic expressions in notebook and pipeline patterns
 
-### Domain 2 - Ingest and transform data
+### Domain 2 - Ingest and transform data (30-35%)
 
-- **Lakehouse** (Files + Tables, Delta format) and **Warehouse** (T-SQL endpoints)
-- **Dataflows Gen2** (Power Query) - low-code transforms
-- **Data Pipelines** (Data Factory in Fabric) - orchestration
-- **Notebooks** with Spark - PySpark / Spark SQL transforms
-- **Eventstream** for streaming ingestion
-- **Shortcuts** to other Fabric workspaces or external data (S3, ADLS, Dataverse)
-- **Mirroring** - automatic CDC from operational DBs (Cosmos DB, Snowflake, Azure SQL DB)
+- **Loading patterns:** full and incremental loads, preparing data for a dimensional model, streaming loads
+- **Batch:** choose a data store; choose between Dataflows Gen2, notebooks, KQL and T-SQL; OneLake shortcuts; mirroring; pipelines; PySpark, SQL and KQL transforms; denormalize, group and aggregate; duplicate, missing and late-arriving data
+- **Streaming:** choose a streaming engine; native tables vs OneLake shortcuts in Real-Time Intelligence; query acceleration vs standard shortcuts; Eventstream, Spark structured streaming and KQL processing; windowing functions
 
-### Domain 3 - Monitor and optimize an analytics solution
+### Domain 3 - Monitor and optimize an analytics solution (30-35%)
 
-- Monitoring hub, capacity metrics
-- Optimizing Lakehouse / Warehouse query performance
-- Pipeline run monitoring
-- Spark job tuning
-- Cost optimization within capacity units (CU)
+- **Monitor:** ingestion, transformation, semantic model refresh, alerts
+- **Resolve errors:** pipeline, Dataflow Gen2, notebook, Eventhouse, Eventstream, T-SQL and OneLake shortcut errors
+- **Optimize:** Lakehouse tables, pipelines, the data warehouse, Eventstream and Eventhouse, Spark, queries
 
 ---
 
@@ -80,6 +76,7 @@ Per the official Skills Measured outline:
 | [notes/03-lakehouse-warehouse-notebooks.md](notes/03-lakehouse-warehouse-notebooks.md) | Lakehouse, Warehouse, Spark notebooks |
 | [notes/04-security-governance-deployment.md](notes/04-security-governance-deployment.md) | RBAC, sensitivity labels, deployment pipelines, Git |
 | [notes/05-monitoring-optimization.md](notes/05-monitoring-optimization.md) | Monitoring hub, capacity tuning, query optimization |
+| [notes/06-airflow-database-projects-rti-shortcuts.md](notes/06-airflow-database-projects-rti-shortcuts.md) | Spark, domain, OneLake and Airflow workspace settings; database projects; OneLake security; native tables vs shortcuts and query acceleration in Real-Time Intelligence |
 
 ---
 

@@ -1,5 +1,6 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
+exam-version: skills measured as of 2026-10-19
 ---
 
 # DP-700 Fabric Data Engineer Associate - Fact Sheet
@@ -14,7 +15,8 @@ last-updated: 2026-05-03
 **Validity:** 1 year (free annual renewal via Microsoft Learn)
 
 **[📖 Official DP-700 page](https://learn.microsoft.com/credentials/certifications/fabric-data-engineer-associate/)**
-**[📖 Skills Measured](https://learn.microsoft.com/credentials/certifications/exams/dp-700/)**
+**[📖 Skills Measured (study guide)](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-700)** - outline as of 2026-10-19; the change log lists only minor wording changes
+**[📖 Airflow, database projects and RTI shortcuts](notes/06-airflow-database-projects-rti-shortcuts.md)** - this guide's note on the current-outline skills the older notes did not cover
 **[📖 Microsoft Fabric Documentation](https://learn.microsoft.com/fabric/)**
 
 ---
