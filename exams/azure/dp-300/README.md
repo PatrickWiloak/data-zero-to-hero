@@ -2,101 +2,56 @@
 
 ## Exam Overview
 
-The Azure Database Administrator Associate certification validates your skills in managing SQL Server and Azure SQL databases, including implementation, maintenance, monitoring, and security.
+> **Outline checked 2026-10-22 against skills measured as of 2026-10-27 (the update takes effect that day).** Microsoft's change log lists one minor change: in "Implement security for data at rest and data in transit", "Implement Always Encrypted with VBS enclaves" became **"Implement Always Encrypted with secure enclaves"** (VBS and Intel SGX). No skills were added or removed and the weights are unchanged. This guide's weights and duration were older than the current outline and are corrected below. Source: [DP-300 study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-300#change-log).
+
+The Azure Database Administrator Associate certification validates your skills in managing SQL Server and Azure SQL databases - Azure SQL Database, Azure SQL Managed Instance, SQL Server on Azure VMs and SQL Server on-premises - including deployment, security, performance, automation and HA/DR.
 
 **Exam Details:**
 - **Exam Code:** DP-300
-- **Duration:** 180 minutes
-- **Number of Questions:** 40-60 questions
+- **Exam Name:** Administering Microsoft Azure SQL Solutions
+- **Duration:** 100 minutes
 - **Passing Score:** 700 out of 1000
-- **Question Types:** Multiple choice, multiple select, drag and drop, case studies
-- **Cost:** $165 USD
+- **Question Types:** Multiple choice, multiple select, drag and drop, case studies; may include interactive components
+- **Cost:** $165 USD in the US (price varies by country)
+- **Validity:** 1 year, renewable free with an online assessment on Microsoft Learn
 - **Prerequisites:** Experience administering SQL databases
 
-## Exam Domains
+## Exam Domains (skills measured as of 2026-10-27)
 
-### 1. Plan and Implement Data Platform Resources (20-25%)
-- **Deployment Planning**
-  - Choose between SQL Database, Managed Instance, SQL VM
-  - Plan for compute and storage resources
-  - Design for high availability
-  - Plan hybrid and migration scenarios
+| # | Domain | Weight |
+|---|--------|--------|
+| 1 | Plan and implement data platform resources | 15-20% |
+| 2 | Implement a secure environment | 20-25% |
+| 3 | Monitor, configure, and optimize database resources | 20-25% |
+| 4 | Configure and manage automation of tasks | 15-20% |
+| 5 | Plan and configure a high availability and disaster recovery (HA/DR) environment | 20-25% |
 
-- **Database Deployment**
-  - Deploy Azure SQL Database
-  - Configure Azure SQL Managed Instance
-  - Deploy SQL Server on Azure VMs
-  - Implement automation with ARM/Bicep
+### 1. Plan and implement data platform resources (15-20%)
+- **Plan and deploy Azure SQL solutions** - choose an offering; automated deployment; Azure Arc-enabled SQL; Azure SQL Database in Microsoft Fabric; table partitioning; sharding; hybrid deployments; patching IaaS and hybrid
+- **Configure resources for scale and performance** - SQL Database, Managed Instance and SQL on Azure VMs; table partitioning; data compression
+- **Plan and implement a migration strategy** - requirements; online vs offline; migrations to Azure and between Azure SQL services; Managed Instance database copy and move; troubleshooting
 
-### 2. Implement a Secure Environment (15-20%)
-- **Authentication and Authorization**
-  - Configure Azure AD authentication
-  - Implement SQL authentication
-  - Manage database roles and permissions
-  - Configure firewall rules
+### 2. Implement a secure environment (20-25%)
+- **Authentication and authorization** - Microsoft Entra ID authentication; security principals; users from Entra identities; object-level permissions; least privilege; troubleshooting; T-SQL management
+- **Data at rest and in transit** - TDE; object-level encryption; server and database firewall rules; Always Encrypted; **Always Encrypted with secure enclaves** (changed 2026-10-27); private links and service endpoints
+- **Compliance controls** - data classification; server and database audits; change tracking; dynamic data masking; ledger; row-level security
 
-- **Data Protection**
-  - Implement Transparent Data Encryption (TDE)
-  - Configure Always Encrypted
-  - Implement Dynamic Data Masking
-  - Use Azure Key Vault for key management
+Taught in depth in [Encryption and compliance controls](notes/security-encryption-compliance.md).
 
-- **Security Monitoring**
-  - Configure Azure Defender for SQL
-  - Implement threat detection
-  - Enable database auditing
-  - Review security assessments
+### 3. Monitor, configure, and optimize database resources (20-25%)
+- **Monitor resource activity and performance** - baselines; metric sources; database watcher; Extended Events
+- **Monitor and optimize query performance** - Query Store; blocking; DMVs; index changes; query construct changes; execution plans; Intelligent Insights
+- **Configure for optimal performance** - index and statistics maintenance; integrity checks; automatic tuning; server settings; Resource Governor; database-scoped configuration; scaling; intelligent query processing
 
-### 3. Monitor, Configure, and Optimize Database Resources (20-25%)
-- **Performance Monitoring**
-  - Monitor with Azure Monitor
-  - Use Query Performance Insight
-  - Analyze query execution plans
-  - Configure Extended Events
+### 4. Configure and manage automation of tasks (15-20%)
+- **SQL Server Agent jobs** - schedules, alerts and notifications, troubleshooting
+- **Automate deployment** - ARM and Bicep, Azure PowerShell, Azure CLI, monitoring deployments
+- **Database tasks in Azure** - elastic jobs, automation, alerts, troubleshooting
 
-- **Performance Optimization**
-  - Optimize indexes
-  - Implement query tuning
-  - Configure automatic tuning
-  - Manage statistics
-
-- **Resource Configuration**
-  - Configure service tiers and compute sizes
-  - Implement read scale-out
-  - Configure resource governance
-  - Optimize storage
-
-### 4. Configure and Manage Automation of Tasks (15-20%)
-- **Automated Deployment**
-  - Implement database deployment pipelines
-  - Use Azure DevOps for deployments
-  - Configure PowerShell/CLI automation
-  - Implement Infrastructure as Code
-
-- **Maintenance Automation**
-  - Configure automated backups
-  - Implement index maintenance
-  - Automate database updates
-  - Schedule maintenance windows
-
-### 5. Plan and Configure a High Availability and Disaster Recovery Environment (20-25%)
-- **High Availability**
-  - Configure active geo-replication
-  - Implement auto-failover groups
-  - Design for zone redundancy
-  - Configure read replicas
-
-- **Backup and Restore**
-  - Configure automated backups
-  - Implement long-term retention
-  - Perform point-in-time restore
-  - Test restore procedures
-
-- **Disaster Recovery**
-  - Design DR strategies
-  - Implement geo-restore
-  - Configure business continuity
-  - Test failover scenarios
+### 5. Plan and configure HA/DR (20-25%)
+- **Plan an HA/DR strategy** - RPO/RTO-driven choices; hybrid; Azure-specific options; testing
+- **Backup and restore** - strategy; native backup and restore; point-in-time restore; long-term retention; T-SQL; backup to and restore from cloud storage
+- **Configure HA/DR** - active geo-replication; Always On availability groups on Managed Instance and VMs; failover groups; Failover Cluster Instances on VMs; log shipping; monitoring and troubleshooting
 
 ## Key Azure SQL Services
 

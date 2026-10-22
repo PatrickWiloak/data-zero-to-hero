@@ -1,4 +1,8 @@
 Question,Answer,Tags
+How long is the Microsoft Azure Database Administrator Associate (DP-300) exam?,100 minutes,exam-logistics
+What is the passing score for Microsoft Azure Database Administrator Associate (DP-300)?,700/1000,exam-logistics
+What does the Microsoft Azure Database Administrator Associate (DP-300) exam cost?,$165 USD (US price; varies by country),exam-logistics
+How long is Microsoft Azure Database Administrator Associate (DP-300) valid for?,"1 year, free online renewal",exam-logistics
 Fully managed PaaS (database administration overview),Best for: Cloud-native applications,"notes,database-administration-overview"
 Near 100% SQL Server compatibility (database administration overview),Best for: Lift-and-shift migrations,"notes,database-administration-overview"
 Table Scan (performance monitoring optimization),Reads entire table (costly),"notes,performance-monitoring-optimization"
@@ -19,6 +23,8 @@ sys.dm_db_missing_index_details (performance monitoring optimization),Missing in
 sys.dm_os_wait_stats (performance monitoring optimization),Wait statistics,"notes,performance-monitoring-optimization"
 sys.dm_exec_requests (performance monitoring optimization),Current requests,"notes,performance-monitoring-optimization"
 sys.dm_db_resource_stats (performance monitoring optimization),Resource usage (Azure SQL),"notes,performance-monitoring-optimization"
+Column master key (CMK) (security encryption compliance),"lives outside the database (Azure Key Vault, Windows certificate store, HSM). The database holds only metadata pointing to it.","notes,security-encryption-compliance"
+Column encryption key (CEK) (security encryption compliance),"encrypts the column data; stored in the database, but itself encrypted by the CMK.","notes,security-encryption-compliance"
 Premium SSD (sql deployment management),Production workloads,"notes,sql-deployment-management"
 Ultra Disk (sql deployment management),"Mission-critical, low-latency","notes,sql-deployment-management"
 Deterministic (sql deployment management),Same plaintext → same ciphertext (equality operations),"notes,sql-deployment-management"

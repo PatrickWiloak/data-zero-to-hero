@@ -1,5 +1,6 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-10-22
+exam-version: skills measured as of 2026-10-27
 ---
 
 # Azure DP-300 Certification Fact Sheet
@@ -22,23 +23,23 @@ last-updated: 2026-05-03
 
 ## Exam Overview
 
-### Exam Structure
-- **Exam Code:** DP-300: Administering Microsoft Azure SQL Solutions
-- **Duration:** 180 minutes (3 hours)
-- **Questions:** 40-60 questions
-- **Passing Score:** 700/1000
-- **Cost:** $165 USD
-- **Question Types:** Multiple choice, multiple select, drag-drop, case studies, hot areas
+**Exam Code:** DP-300
+**Exam Name:** Administering Microsoft Azure SQL Solutions
+**Duration:** 100 minutes
+**Passing Score:** 700/1000
+**Cost:** $165 USD (US price; varies by country)
+**Valid For:** 1 year, free online renewal
+**Question Types:** Multiple choice, multiple select, drag-drop, case studies, hot areas
 
 ### Official Resources
 - **[📖 DP-300 Official Exam Page](https://learn.microsoft.com/en-us/certifications/exams/dp-300/)** - Official exam registration and overview
 - **[📖 DP-300 Learning Path](https://learn.microsoft.com/en-us/certifications/azure-database-administrator-associate/)** - Microsoft Learn official certification path
-- **[📖 Exam Skills Outline](https://learn.microsoft.com/en-us/certifications/resources/study-guides/dp-300)** - Detailed skills measured document
+- **[📖 Exam Skills Outline](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/dp-300)** - Skills measured as of 2026-10-27; the change log shows "Always Encrypted with VBS enclaves" became "with secure enclaves"
 - **[📖 Azure SQL Documentation Hub](https://learn.microsoft.com/en-us/azure/azure-sql/)** - Complete Azure SQL documentation portal
 
 ### Exam Domain Breakdown
-1. **Plan and Implement Data Platform Resources** (20-25%)
-2. **Implement a Secure Environment** (15-20%)
+1. **Plan and Implement Data Platform Resources** (15-20%)
+2. **Implement a Secure Environment** (20-25%)
 3. **Monitor, Configure, and Optimize Database Resources** (20-25%)
 4. **Configure and Manage Automation of Tasks** (15-20%)
 5. **Plan and Configure High Availability and Disaster Recovery** (20-25%)
@@ -124,7 +125,8 @@ last-updated: 2026-05-03
 
 #### Always Encrypted
 - **[📖 Always Encrypted Overview](https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine)** - Client-side encryption for sensitive data
-- **[📖 Always Encrypted with Secure Enclaves](https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-enclaves)** - Enhanced functionality with secure enclaves
+- **[📖 Always Encrypted with Secure Enclaves](https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-enclaves)** - In-place encryption and rich queries on randomized columns; VBS and Intel SGX enclaves
+- **[📖 Plan for Secure Enclaves in Azure SQL Database](https://learn.microsoft.com/en-us/azure/azure-sql/database/always-encrypted-enclaves-plan)** - VBS (no attestation, any hardware except DC-series) vs SGX (DC-series, Microsoft Azure Attestation, end of support 2027-10-31). Deep dive: [Encryption and compliance controls](notes/security-encryption-compliance.md)
 - **[📖 Configure Always Encrypted](https://learn.microsoft.com/en-us/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)** - Setup with Azure Key Vault
 - **[📖 Key Management for Always Encrypted](https://learn.microsoft.com/en-us/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted)** - Column encryption and master keys
 

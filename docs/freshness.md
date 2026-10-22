@@ -12,7 +12,6 @@ Each row shows when a page was last verified against its source of truth.
 | aws/associate/data-engineer-dea-c01 | 2026-05-03 | [exams/aws/associate/data-engineer-dea-c01](../exams/aws/associate/data-engineer-dea-c01/) |
 | aws/specialty/data-analytics-das-c01 | 2026-05-03 | [exams/aws/specialty/data-analytics-das-c01](../exams/aws/specialty/data-analytics-das-c01/) |
 | aws/specialty/database-dbs-c01 | 2026-05-03 | [exams/aws/specialty/database-dbs-c01](../exams/aws/specialty/database-dbs-c01/) |
-| azure/dp-300 | 2026-05-03 | [exams/azure/dp-300](../exams/azure/dp-300/) |
 | azure/dp-900 | 2026-05-03 | [exams/azure/dp-900](../exams/azure/dp-900/) |
 | confluent/certified-administrator | 2026-05-03 | [exams/confluent/certified-administrator](../exams/confluent/certified-administrator/) |
 | confluent/certified-developer | 2026-05-03 | [exams/confluent/certified-developer](../exams/confluent/certified-developer/) |
@@ -30,6 +29,7 @@ Each row shows when a page was last verified against its source of truth.
 | snowflake/snowpro-core | 2026-05-03 | [exams/snowflake/snowpro-core](../exams/snowflake/snowpro-core/) |
 | azure/pl-300 | 2026-08-09 | [exams/azure/pl-300](../exams/azure/pl-300/) |
 | azure/dp-203 | 2026-10-16 | [exams/azure/dp-203](../exams/azure/dp-203/) |
+| azure/dp-300 | 2026-10-22 | [exams/azure/dp-300](../exams/azure/dp-300/) |
 | azure/dp-420 | 2026-10-22 | [exams/azure/dp-420](../exams/azure/dp-420/) |
 | azure/dp-600 | 2026-10-22 | [exams/azure/dp-600](../exams/azure/dp-600/) |
 | azure/dp-700 | 2026-10-22 | [exams/azure/dp-700](../exams/azure/dp-700/) |
