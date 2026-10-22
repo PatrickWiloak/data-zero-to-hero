@@ -405,6 +405,9 @@ def write_home_page() -> None:
         "service_comparisons": counts["service_comparisons"],
         "architecture_patterns": counts["architecture_patterns"],
         "roadmaps": counts["roadmaps"],
+        "interview_prep": counts["interview_prep"],
+        "migration_guides": counts["migration_guides"],
+        "troubleshooting_guides": counts["troubleshooting_guides"],
         "words": f"{counts['words'] / 1_000_000:.1f}M",
         # A floor, like the README's, so removing a handful of links never makes
         # the page overstate itself.

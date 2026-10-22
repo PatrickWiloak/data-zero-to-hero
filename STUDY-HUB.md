@@ -147,11 +147,12 @@ The Certs column counts real exams, retired ones included.
 ## 📚 Resource Library
 
 - **Service comparisons:** [Databases](./resources/service-comparison-databases.md) · [Messaging and queues](./resources/service-comparison-messaging-queues.md)
-- **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md) · [Streaming analytics](./resources/architecture-patterns/streaming-analytics.md)
+- **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md) · [Streaming analytics](./resources/architecture-patterns/streaming-analytics.md) · [CDC into a lakehouse](./resources/architecture-patterns/cdc-to-lakehouse.md) · [Medallion](./resources/architecture-patterns/medallion-architecture.md) · [Reverse ETL](./resources/architecture-patterns/reverse-etl-operational-analytics.md) · [Semantic layer](./resources/architecture-patterns/semantic-layer.md)
 - **Career roadmaps:** [Data Engineer](./resources/certification-roadmap-data-engineer.md) · [Database Specialist](./resources/certification-roadmap-database-specialist.md)
 - **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Build a streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md) · [Design a star schema](./resources/hands-on-projects/design-star-schema.md) · [Build a dbt project](./resources/hands-on-projects/build-dbt-project.md)
-- **Migration:** [Database migration](./resources/migration-guides/database-migration.md)
-- **Interview prep:** [Data engineer](./resources/interview-prep/data-engineer-interview.md)
+- **Migration:** [Database migration](./resources/migration-guides/database-migration.md) · [Warehouse to cloud](./resources/migration-guides/warehouse-to-cloud-migration.md)
+- **Interview prep:** [Data engineer](./resources/interview-prep/data-engineer-interview.md) · [SQL](./resources/interview-prep/sql-interview-guide.md) · [Data modeling and pipeline design](./resources/interview-prep/data-modeling-system-design-interview.md)
+- **Troubleshooting:** [Slow SQL queries](./resources/troubleshooting/slow-sql-query-diagnosis.md) · [Failing and late pipelines](./resources/troubleshooting/failing-and-late-pipelines.md) · [Spark job performance](./resources/troubleshooting/spark-job-performance.md)
 - **Persona playlist:** [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md)
 
 ### Practice & Strategy

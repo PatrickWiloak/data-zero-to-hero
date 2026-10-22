@@ -105,11 +105,12 @@ When scaffolding a new cert, the validator's tier classification is the default;
 
 ```
 resources/
-├── architecture-patterns/      # Data pipeline / ETL, lakehouse, data mesh
+├── architecture-patterns/      # Pipeline / ETL, lakehouse, medallion, CDC, mesh, streaming, reverse ETL, semantic layer
 ├── hands-on-projects/          # Guided builds + generated labs-by-cert.md index
-├── interview-prep/             # Data engineer interview prep
-├── migration-guides/           # Database migration
-└── practice-questions/         # One question bank per cert + template
+├── interview-prep/             # Data engineer, SQL, data modeling and pipeline design
+├── migration-guides/           # Database migration, legacy warehouse to cloud
+├── practice-questions/         # One question bank per cert + template
+└── troubleshooting/            # Slow SQL, failing and late pipelines, Spark performance
 ```
 
 ### Top-level resource files

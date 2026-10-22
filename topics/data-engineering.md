@@ -67,10 +67,18 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 - [Architecture pattern: lakehouse](../resources/architecture-patterns/lakehouse-architecture.md)
 - [Architecture pattern: data mesh](../resources/architecture-patterns/data-mesh.md) - decentralized ownership, domain data products
 - [Architecture pattern: streaming analytics](../resources/architecture-patterns/streaming-analytics.md) - Lambda vs Kappa, and the lakehouse hybrid
+- [Architecture pattern: CDC into a lakehouse](../resources/architecture-patterns/cdc-to-lakehouse.md) - Debezium, DMS or Datastream into Delta or Iceberg
+- [Architecture pattern: medallion](../resources/architecture-patterns/medallion-architecture.md) - bronze, silver and gold, and what belongs in each
+- [Architecture pattern: reverse ETL](../resources/architecture-patterns/reverse-etl-operational-analytics.md) - pushing modelled data back into operational tools
+- [Architecture pattern: semantic layer](../resources/architecture-patterns/semantic-layer.md) - metrics defined once for BI, notebooks and AI
 - [Architecture pattern: CQRS and event sourcing](https://cloud.noblerworks.com/resources/architecture-patterns/cqrs-event-sourcing/)
 - [Architecture pattern: event-driven architecture](https://cloud.noblerworks.com/resources/architecture-patterns/event-driven-architecture/)
 - [Architecture pattern: AI/ML pipeline](https://ai.noblerworks.com/build/patterns/ai-ml-pipeline/)
 - [Migration: database](../resources/migration-guides/database-migration.md)
+- [Migration: legacy warehouse to cloud](../resources/migration-guides/warehouse-to-cloud-migration.md)
+- [Troubleshooting: failing and late pipelines](../resources/troubleshooting/failing-and-late-pipelines.md)
+- [Troubleshooting: Spark job performance](../resources/troubleshooting/spark-job-performance.md)
+- [Interview: data modeling and pipeline design](../resources/interview-prep/data-modeling-system-design-interview.md)
 - [Compliance guides](https://security.noblerworks.com/resources/compliance-guides/) - GDPR and the rest, where lineage stops being optional
 
 ---

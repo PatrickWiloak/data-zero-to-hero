@@ -55,7 +55,11 @@ For how data gets into these stores - pipelines, ETL/ELT, batch vs streaming, pa
 - [Architecture pattern: Lakehouse](../resources/architecture-patterns/lakehouse-architecture.md)
 - [Architecture pattern: Data Mesh](../resources/architecture-patterns/data-mesh.md)
 - [Architecture pattern: CQRS / Event Sourcing](https://cloud.noblerworks.com/resources/architecture-patterns/cqrs-event-sourcing/)
+- [Architecture pattern: CDC into a lakehouse](../resources/architecture-patterns/cdc-to-lakehouse.md)
 - [Migration: database](../resources/migration-guides/database-migration.md)
+- [Migration: legacy warehouse to cloud](../resources/migration-guides/warehouse-to-cloud-migration.md)
+- [Troubleshooting: slow SQL queries](../resources/troubleshooting/slow-sql-query-diagnosis.md) - reading plans, indexes, statistics and skew
+- [Interview: SQL worked problems](../resources/interview-prep/sql-interview-guide.md)
 
 ---
 

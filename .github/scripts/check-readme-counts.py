@@ -115,6 +115,7 @@ def gather() -> dict[str, int]:
         "interview_prep": count_pages("resources/interview-prep"),
         "compliance_guides": count_pages("resources/compliance-guides"),
         "migration_guides": count_pages("resources/migration-guides"),
+        "troubleshooting_guides": count_pages("resources/troubleshooting"),
         "words": total_words(),
         "doc_links": doc_links(),
     }
@@ -138,6 +139,8 @@ CLAIMS: list[tuple[str, str, str]] = [
     ("hands-on projects", r"\*\*(\d+) hands-on projects?\*\*", "hands_on_projects"),
     ("certification roadmaps", r"\*\*(\d+) certification roadmaps?\*\*", "roadmaps"),
     ("interview prep guides", r"\*\*(\d+) interview prep guides?\*\*", "interview_prep"),
+    ("troubleshooting guides", r"\*\*(\d+) troubleshooting guides?\*\*", "troubleshooting_guides"),
+    ("migration guides", r"\*\*(\d+) migration guides?\*\*", "migration_guides"),
     # The "Repository Statistics" block. Unchecked until 2026-08-14, by which
     # point it claimed 37 concept pages against 46 and 8 topic indexes against
     # 13 - the same drift the rest of this script exists to stop, in the one
@@ -152,6 +155,7 @@ CLAIMS: list[tuple[str, str, str]] = [
     ("stats career roadmaps", r"\*\*Career roadmaps:\*\* (\d+)", "roadmaps"),
     ("stats interview prep", r"\*\*Interview prep guides:\*\* (\d+)", "interview_prep"),
     ("stats migration guides", r"\*\*Migration guides:\*\* (\d+)", "migration_guides"),
+    ("stats troubleshooting guides", r"\*\*Troubleshooting guides:\*\* (\d+)", "troubleshooting_guides"),
     # The repository-structure code block restates three of them again.
     ("tree concept pages", r"# (\d+) bite-size concept pages", "concept_pages"),
     ("tree certifications", r"# (\d+) certs across \d+ providers", "certifications"),

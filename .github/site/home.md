@@ -73,7 +73,7 @@
 
     ---
 
-    A guided end-to-end pipeline build and {{architecture_patterns}} architecture patterns: data pipeline and ETL, lakehouse, data mesh.
+    A guided end-to-end pipeline build and {{architecture_patterns}} architecture patterns: data pipeline and ETL, lakehouse, medallion, CDC, data mesh, streaming, reverse ETL and the semantic layer.
 
     [:octicons-arrow-right-24: Build something](resources/hands-on-projects/)
 
@@ -89,7 +89,7 @@
 
     ---
 
-    {{service_comparisons}} cross-cloud service comparisons, {{roadmaps}} career roadmaps, plus database migration and data engineer interview prep.
+    {{service_comparisons}} cross-cloud service comparisons, {{roadmaps}} career roadmaps, {{troubleshooting_guides}} troubleshooting guides, {{migration_guides}} migration guides and {{interview_prep}} interview prep guides.
 
     [:octicons-arrow-right-24: Browse reference](resources/)
 
@@ -111,6 +111,8 @@
 - [Labs by certification](resources/hands-on-projects/labs-by-cert.md) - which build backs which exam
 - [Practice questions](resources/practice-questions/) - scenario banks with explained answers
 - [Data engineer interview prep](resources/interview-prep/data-engineer-interview.md) - pipeline design, modeling and SQL questions
+- [SQL interview guide](resources/interview-prep/sql-interview-guide.md) - joins, top-N, dedup and gaps-and-islands, worked
+- [Slow SQL query diagnosis](resources/troubleshooting/slow-sql-query-diagnosis.md) - read the plan, find the cause
 - [Freshness ledger](docs/freshness.md) - what was last verified, and when
 - [Which Zero to Hero site?](learn/which-site.md) - cloud, data, security or AI: pick by goal
 

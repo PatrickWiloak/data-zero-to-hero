@@ -6,6 +6,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-10-22] (3) - Four architecture patterns, SQL and design interview guides, troubleshooting, warehouse migration
+
+### Added
+
+- **Architecture patterns** (4 to 8): [CDC into a lakehouse](./resources/architecture-patterns/cdc-to-lakehouse.md) (Debezium, DMS, Datastream, Fabric mirroring, Lakeflow Connect and `AUTO CDC`, Openflow; event shape, the position-guarded merge, snapshots, replication-slot and log-retention failures), [medallion architecture](./resources/architecture-patterns/medallion-architecture.md) (rules per layer, a worked example, per-platform layouts, failure modes), [reverse ETL and operational analytics](./resources/architecture-patterns/reverse-etl-operational-analytics.md) (sync mechanics, Hightouch, Census now part of Fivetran, write-back loops, mass-overwrite guards) and [semantic layer](./resources/architecture-patterns/semantic-layer.md) (MetricFlow, Cube, Snowflake semantic views, Databricks metric views, BI-native models).
+- **Interview prep** (1 to 3): [SQL interview guide](./resources/interview-prep/sql-interview-guide.md) with worked problems (anti-joins and the `NOT IN` null trap, top-N per group and ties, dedup, running totals and frames, `LAG`, gaps and islands two ways, recursive CTEs, retention cohorts) and [data modeling and pipeline design interviews](./resources/interview-prep/data-modeling-system-design-interview.md) with four worked designs (ride-sharing, clickstream sessionization, MRR and churn, inventory).
+- **Troubleshooting** (new section, 3 guides): [slow SQL query diagnosis](./resources/troubleshooting/slow-sql-query-diagnosis.md), [failing and late pipelines](./resources/troubleshooting/failing-and-late-pipelines.md) and [Spark job performance](./resources/troubleshooting/spark-job-performance.md). New README claims for troubleshooting and migration guide counts, checked by `check-readme-counts.py`; the home page now fills interview, migration and troubleshooting counts from tokens.
+- **Migration**: [legacy warehouse to cloud warehouse or lakehouse](./resources/migration-guides/warehouse-to-cloud-migration.md) (assessment from query logs, lift-and-shift versus re-architect, waves, validation levels, parallel run, cutover, vendor conversion tools).
+
 ## [2026-10-22] (2) - "Which site should I start with?" page
 
 ### Added
