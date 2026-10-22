@@ -287,9 +287,9 @@ D. Use the Capacity Metrics app to find the heavy items, then reschedule, optimi
 **Scenario:** You promote notebooks from a Dev workspace to Test and Prod with a deployment pipeline. In each stage the notebook must read that stage's own lakehouse, not the Dev one.
 
 A. Edit each notebook by hand after every deployment to point it at the right lakehouse
-B. Keep one shared lakehouse for all three stages so the notebooks never need to change
+B. Keep one shared lakehouse for all three stages so the notebooks never need to change at all
 C. Set deployment rules on the Test and Prod stages that swap the notebook's default lakehouse
-D. Copy the Dev lakehouse into Test and Prod before each deployment so the names match
+D. Copy the Dev lakehouse into Test and Prod before each deployment so the names and IDs match
 
 <details>
 <summary>Answer</summary>
@@ -304,7 +304,7 @@ D. Copy the Dev lakehouse into Test and Prod before each deployment so the names
 ### Question 17 - Domain 1: Implement and manage an analytics solution
 **Scenario:** Support agents query a warehouse `Customers` table. They must see that an email address exists but not the full value. Finance analysts must still see the real emails.
 
-A. Apply dynamic data masking to the email column and grant UNMASK only to the finance role
+A. Apply dynamic data masking to the email column and grant UNMASK to finance
 B. Remove the email column from the table and store it in a separate warehouse for finance
 C. Encrypt the email column in the notebook that loads it and share the key with finance
 D. Add row-level security so support agents cannot see any rows that contain an email
@@ -342,7 +342,7 @@ D. Ask the capacity admin to raise the node size so the installs finish faster
 
 A. Schedule the pipeline every minute and exit early when there is no new file
 B. Have the partner email the team so someone can start the pipeline by hand
-C. Add a Wait activity loop at the start of a long-running pipeline that checks the folder
+C. Add a Wait activity loop at the start of a long-running pipeline that keeps checking the folder
 D. Add an event-based trigger on the file-created event for that folder that runs the pipeline
 
 <details>
@@ -486,7 +486,7 @@ D. Delete the transaction log so the engine stops tracking old file versions
 
 A. Check the Monitor hub every morning and post failures in the team channel by hand
 B. Add a Teams post at the end of the pipeline that runs only on the Success path
-C. Ask the capacity admin to email a weekly usage report from the Capacity Metrics app
+C. Ask the capacity admin to email a weekly usage and failure report from the Capacity Metrics app
 D. Create an Activator rule on the pipeline's job events that sends a Teams message when a run fails
 
 <details>
