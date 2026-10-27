@@ -172,7 +172,7 @@ The engine's checkpoints make internal state exactly-once. The **output** is onl
 ## Official docs
 
 - **[📖 Apache Flink: Timely stream processing](https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/time/)** - event time, watermarks, lateness and idleness
-- **[📖 Apache Flink: Windowing table-valued functions](https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/table/sql/queries/window-tvf/)** - `TUMBLE`, `HOP`, `CUMULATE` and `SESSION` in SQL
+- **[📖 Apache Flink: Windowing table-valued functions](https://nightlies.apache.org/flink/flink-docs-stable/docs/sql/reference/queries/window-tvf/)** - `TUMBLE`, `HOP`, `CUMULATE` and `SESSION` in SQL
 - **[📖 Apache Beam: Windowing and triggers](https://beam.apache.org/documentation/programming-guide/#windowing)** - the model Dataflow implements, with triggers and accumulation modes
 
 ## What to look at next
