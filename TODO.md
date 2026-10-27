@@ -9,7 +9,7 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 - [x] 2026-10-21 Split from cloud-data-ai-security-zero-to-hero: data scope, cyan accent, new IndexNow key, Data from Scratch path, family cross-links (CHANGELOG 2026-10-21).
 - [x] 2026-10-27 live at data.noblerworks.com. Was: Not deployed: push to `main` deploys via docs-site.yml once the GitHub repo and Pages exist. Pages custom domain `data.noblerworks.com` + DNS CNAME are outside this repo.
 - [x] 2026-10-27 topics + description set. After first deploy: `python3 .github/scripts/check-repo-metadata.py --fix` (description + topics; needs admin), then `--check` passes in CI.
-- [ ] 2026-10-27 Patrick: upload `assets/brand/social-preview-1280x640.png` at GitHub Settings > General > Social preview (no API). Card is the shared Zero to Hero template (`assets/brand/social-preview.html`, 2026-10-21).
+- [x] 2026-10-27 social preview uploaded (`assets/brand/social-preview-1280x640.png`; GitHub reports a custom image).
 - [ ] After first deploy: `https://data.noblerworks.com/<key>.txt` serves the key in `.github/site/indexnow-key.txt`; the deploy's "Notify IndexNow" step says `accepted` (a first-run 403 is normal; rerun `notify-indexnow.py --all`).
 - [ ] Patrick, after first deploy: Search Console `sc-domain:noblerworks.com` -> submit `https://data.noblerworks.com/sitemap.xml`.
 - [x] 2026-10-21 Glossary and YouTube page rewritten data-only (CHANGELOG 2026-10-21 (2)).
