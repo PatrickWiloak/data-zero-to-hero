@@ -197,6 +197,6 @@ See the [budget study plan](./resources/budget-study-plan.md) for cost-minimizat
 
 **Ready to start? [Data from Scratch](./learn/data-from-scratch.md) · [Browse AWS](./exams/aws/) · [Browse Azure](./exams/azure/) · [Browse GCP](./exams/gcp/) · [Browse Databricks](./exams/databricks/) · [Browse Snowflake](./exams/snowflake/)**
 
-*Maintained by [Patrick Wiloak](https://patricklukewilson.com) - one of the four free [Zero to Hero](https://noblerworks.com/) sites by Nobler Works.*
+*Maintained by [Patrick Wiloak](https://patrickwiloak.com) - one of the four free [Zero to Hero](https://noblerworks.com/) sites by Nobler Works.*
 
 </div>
