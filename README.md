@@ -50,7 +50,7 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 >
 > SQL, modeling, pipelines, streaming, lakehouses, warehouses and DBA work, on AWS, Azure, GCP, Databricks, Snowflake, Kafka and MongoDB. Free, no signup.
 >
-> Patrick: Ex-AWS Solutions Architect | 10 Years in Tech | 64 Certifications & Accreditations | 19x Multi Cloud Certified
+> Patrick: Ex-AWS Solutions Architect | 10 Years in Tech | 63 Certifications & Accreditations | 18x Multi Cloud Certified
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
@@ -282,7 +282,7 @@ without carrying an attribution obligation for ten lines of SQL.
 
 Created and maintained by **[Patrick Wiloak](https://patrickwiloak.com)**
 
-**19x Multi Cloud Certified** | **64 Certifications & Accreditations** | **Prev @ AWS** | **14x AWS Certified** | **3x GCP** | **2x Azure**
+**18x Multi Cloud Certified** | **63 Certifications & Accreditations** | **Prev @ AWS** | **13x AWS Certified** | **3x GCP** | **2x Azure**
 
 🎥 **[YouTube: @patrickwiloak](https://youtube.com/@patrickwiloak)** · 💼 **[LinkedIn](https://www.linkedin.com/in/patricklukewilson/)** · 🌐 **[patrickwiloak.com](https://patrickwiloak.com)**
 

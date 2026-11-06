@@ -27,7 +27,7 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 ## Patrick
 
 - [ ] **Decide** whether the bio should carry a cert count again. If yes, add a `{{personal_certs}}` token in `build-site.py` fed from one checked-in value.
-- [ ] 2026-11-05: Database Specialty lapses - `README.md` (top quote and About the Author) and `learn/README.md` bio go from 19x / 14x AWS / 64 to **18x / 13x / 63** (source `go-to-market/claims.md`).
+- [x] ✅ 2026-11-06: 2026-11-05: Database Specialty lapses - `README.md` (top quote and About the Author) and `learn/README.md` bio go from 19x / 14x AWS / 64 to **18x / 13x / 63** (source `go-to-market/claims.md`).
 - [ ] Distribution: one useful page each to r/dataengineering and r/SQL, and awesome-data-engineering, linking back.
 
 ## Exam currency (from the 2026-10-16 vendor sweep, data exams only)
