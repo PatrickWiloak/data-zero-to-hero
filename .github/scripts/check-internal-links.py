@@ -72,7 +72,8 @@ ATX = re.compile(r"^ {0,3}(?P<hashes>#{1,6})(?:[ \t]+(?P<text>.*?))?(?:[ \t]+#+)
 SETEXT = re.compile(r"^ {0,3}(=+|-{2,})[ \t]*$")
 ATTR_TAIL = re.compile(r"\s*\{:?\s*([^{}]*)\}\s*$")
 ATTR_ID = re.compile(r"#([^\s}]+)")
-RAW_ID = re.compile(r"""\b(?:id|name)\s*=\s*["']([^"']+)["']""")
+# Only inside an html tag: prose such as `name = "Phishing email detected"` is not an id.
+RAW_ID = re.compile(r"""<[A-Za-z][^<>]*?\b(?:id|name)\s*=\s*["']([^"']+)["']""")
 RAW_ID_ONLY = re.compile(r"""\bid\s*=\s*["']([^"']+)["']""")
 ATTR_LIST_ANY = re.compile(r"\{:?\s*[^{}]*?#([^\s{}]+)[^{}]*\}")
 
@@ -306,6 +307,7 @@ def self_test():
         ("## Q&A: What's new?\n", {"qa-whats-new"}),
         ("## 3. Avoid `SELECT *`\n", {"3-avoid-select-"}),
         ("## SELECT *\n", {"select-"}),                         # a lone star is not emphasis
+        ('name = "Not an id"\n\n## H2\n', {"h2"}),               # prose is not an html attribute
         ("---\ntitle: x\n---\n\n## After\n", {"after"}),    # frontmatter is not a setext heading
     ]
     bad = 0
