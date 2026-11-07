@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 12 min
 ---
@@ -166,3 +166,43 @@ Two-phase commit (2PC) exists, but it couples every participant's availability t
 - **[Change data capture](./change-data-capture.md)** - turning the transaction log into a data feed
 - **[Indexes explained](./indexes-explained.md)** - the other structures every write has to keep in step
 - **[Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/)** - surviving retries across system boundaries
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Which ACID property does the page say causes real bugs, and why?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Isolation, because the default level in most databases is weaker than people assume. See: [The one-line answer](#the-one-line-answer).
+
+</details>
+
+**2. How does a database achieve atomicity?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+With a write-ahead log: changes are recorded in a log before they touch the data files, so after a crash it can replay committed work and discard uncommitted work. See: [Atomicity - all or nothing](#atomicity---all-or-nothing).
+
+</details>
+
+**3. In the on-call doctors example, why do the two transactions not conflict, and name one fix.**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Neither transaction wrote a row the other wrote, so there is no conflict even though together they break the rule. Fixes are running at serializable and retrying, locking what you read with `SELECT ... FOR UPDATE`, or turning the rule into a constraint. See: [The bug read committed lets through](#the-bug-read-committed-lets-through).
+
+</details>
+
+**4. How do open table formats like Delta Lake and Iceberg bring ACID to object storage?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A write produces new data files plus a new metadata or log entry, and the commit is a single atomic swap of the table's pointer. Readers see the old snapshot or the new one, never a mix. See: [Transactions in analytics and lakehouses](#transactions-in-analytics-and-lakehouses).
+
+</details>

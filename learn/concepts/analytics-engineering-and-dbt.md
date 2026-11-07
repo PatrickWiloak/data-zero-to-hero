@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 12 min
 ---
@@ -196,3 +196,43 @@ Alternatives with the same idea include **SQLMesh**, **Dataform** (built into Bi
 - **[Data modeling for analytics](./data-modeling-for-analytics.md)** - what the marts layer should look like
 - **[Data quality and lineage](./data-quality-and-lineage.md)** - tests in the wider context of trusting data
 - **[Data pipelines and orchestration](./data-pipelines-and-orchestration.md)** - running `dbt build` on a schedule after the loads finish
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. What does `{{ ref(...) }}` do in a dbt model?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It points at another model. dbt reads every `ref` to build a dependency graph, runs the models in the right order, and substitutes the correct schema for the environment. See: [How dbt works](#how-dbt-works).
+
+</details>
+
+**2. Why should staging models stay boring, with no joins or business logic?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Staging is a 1:1 cleaned mirror of each source table, so if a source renames a column you fix it in exactly one place. See: [The standard layers](#the-standard-layers).
+
+</details>
+
+**3. What is the trap with an incremental model that filters on `updated_at`, and what are the common fixes?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Rows that arrive late with an older `updated_at` are skipped forever. Common fixes are a lookback window combined with the `unique_key` merge, and a periodic `--full-refresh`. See: [Materializations](#materializations).
+
+</details>
+
+**4. What would happen to downstream models if a model's tests fail during `dbt build`?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+dbt stops the downstream models from building on top of the failed one, so a wrong number turns into a stopped pipeline that pages someone. See: [Tests](#tests).
+
+</details>

@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-09-17
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 9 min
 ---
@@ -105,3 +105,43 @@ It is worth reaching for at the point where two dashboards disagree about revenu
 - **[File formats and partitioning](./file-formats-and-partitioning.md)** - how the fact table is physically laid out
 - **[SQL vs NoSQL](./sql-vs-nosql.md)** - the normalized world these tables are copied from
 - **[Data engineering topic](../../topics/data-engineering.md)** - everything in the repo on this subject
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. What is the page's test for deciding whether a column belongs in a fact or a dimension?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+If you would sum it, it belongs in a fact. If you would group by it or filter on it, it belongs in a dimension. See: [Facts and dimensions](#facts-and-dimensions).
+
+</details>
+
+**2. Why do Type 2 dimensions use a surrogate key instead of the natural key?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The natural key identifies the customer, while the surrogate key identifies a version of the customer, and the fact table references the version that was current when the fact occurred. See: [Slowly changing dimensions](#slowly-changing-dimensions).
+
+</details>
+
+**3. What goes wrong if an order-level discount is stored on an order-line fact table?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It gets summed once per line, which inflates it. The fix is to allocate it across lines or keep a separate order-grain fact. See: [Grain](#grain).
+
+</details>
+
+**4. What causes fan-out, and which test would catch it?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Joining a fact to a dimension that is not unique on the join key multiplies the matching fact rows. A uniqueness test on every dimension key would catch it. See: [Fan-out, the silent duplication bug](#fan-out-the-silent-duplication-bug).
+
+</details>

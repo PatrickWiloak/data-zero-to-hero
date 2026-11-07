@@ -90,3 +90,43 @@ The Microsoft page is candid: perfect compliance is not always practical, many s
 - **[Transactions and ACID](./transactions-and-acid.md)** - keeping multi-table writes consistent
 - **[Indexes explained](./indexes-explained.md)** - what joins across normalized tables need
 - **[SQL joins explained](./sql-joins-explained.md)** - putting the pieces back together
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. What goes wrong in the wide student-advisor-class table?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The advisor's room is copied on every row, so if you change it in two rows out of three the table disagrees with itself. See: [The problem: one wide table](#the-problem-one-wide-table).
+
+</details>
+
+**2. In third normal form, why does the advisor's room move to a `faculty` table?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Because the room depends on the advisor, not on the student, and 3NF removes columns that depend on something other than the key. See: [The first three normal forms](#the-first-three-normal-forms).
+
+</details>
+
+**3. How far should you normalize for OLTP, and what do analytics databases do instead?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+For OLTP, normalize to about 3NF so writes touch one place and constraints do the checking. For analytics, denormalize on purpose into stars and wide tables because reads dominate. See: [When to stop (or undo it)](#when-to-stop-or-undo-it).
+
+</details>
+
+**4. What did the last line of the SQLite demo show, and what setting did it need?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It showed the database refusing a student whose advisor does not exist. SQLite needs `PRAGMA foreign_keys=ON` on each connection for that to happen. See: [Run it](#run-it).
+
+</details>

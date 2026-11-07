@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-09-17
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 8 min
 ---
@@ -87,3 +87,43 @@ CDC tools such as Debezium, AWS DMS or Fivetran read the transaction log rather 
 - **[Data quality and lineage](./data-quality-and-lineage.md)** - catching the wrong number before a dashboard shows it
 - **[Build a data pipeline](../../resources/hands-on-projects/build-data-pipeline.md)** - the hands-on version
 - **[Architecture pattern: data pipeline / ETL](../../resources/architecture-patterns/data-pipeline-etl.md)** - the reference implementation
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. What is the difference between ETL and ELT, and what change drove the reorder?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+ETL transforms data on the way in; ELT loads it raw and transforms it inside the warehouse using the warehouse's own compute. The reorder was driven by warehouse compute becoming cheap and elastic. See: [The one-line answer](#the-one-line-answer).
+
+</details>
+
+**2. Name two situations where ETL is still the right choice.**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+For example, personal data that must be masked before it touches the analytical store, or a huge volume where most of the data is discarded. The page also lists fragile sources and transformations that SQL cannot express. See: [When ETL is still right](#when-etl-is-still-right).
+
+</details>
+
+**3. Why is a wrong transformation easier to recover from under ELT?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The raw data stays in the warehouse, so you re-run the fixed transform against data you still have. Under ETL the raw input was discarded, so you must re-extract from the source, which may not keep the history. See: [Why ELT won for most new work](#why-elt-won-for-most-new-work).
+
+</details>
+
+**4. Why does a high-water-mark load (`WHERE updated_at > last_run`) miss hard deletes, and why does CDC not?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A deleted row has no new timestamp to find, so the query never sees it. CDC reads the database's transaction log, so it catches deletes and every other change. See: [Incremental loading, briefly](#incremental-loading-briefly).
+
+</details>

@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 10 min
 ---
@@ -161,3 +161,43 @@ Contracts have a cost: the producing team now maintains a public interface. They
 - **[Data governance and catalogs](./data-governance-and-catalogs.md)** - where contracts are published and found
 - **[Change data capture](./change-data-capture.md)** - the outbox pattern, a contract-friendly CDC source
 - **[Data mesh pattern](../../resources/architecture-patterns/data-mesh.md)** - data products owned by domains
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Which three properties matter more than the exact contract format?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It lives in version control, a machine can read it, and something enforces it. See: [What goes in a contract](#what-goes-in-a-contract).
+
+</details>
+
+**2. Which enforcement point is the highest-value check, and why?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The producer's CI, because comparing the proposed schema against the published contract stops a breaking change before it exists. See: [Where contracts are enforced](#where-contracts-are-enforced).
+
+</details>
+
+**3. Is renaming a field backward compatible, and why or why not?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+No. A rename is a remove plus an add, so consumers reading the old name get nulls or errors. See: [Compatibility: what counts as breaking](#compatibility-what-counts-as-breaking).
+
+</details>
+
+**4. Why do contracts imposed by a data team on producers tend to fail?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Producers who never agreed to the obligation make the contract just documentation of what the data team hopes for. The page suggests starting with one willing producer and one painful dataset. See: [Contracts and team structure](#contracts-and-team-structure).
+
+</details>

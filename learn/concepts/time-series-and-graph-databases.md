@@ -79,3 +79,43 @@ Why not just joins? A relational database can store the same links in a join tab
 - **[SQL vs NoSQL](./sql-vs-nosql.md)** - where specialized stores fit
 - **[Indexes explained](./indexes-explained.md)** - the general-purpose alternative
 - **[Vector databases for data engineers](./vector-databases-for-data-engineers.md)** - another specialized store
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. How does a TimescaleDB hypertable make time-range queries cheap?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It automatically partitions time-series data by time into chunks, so a query for a time range reads only the matching chunks. See: [Time-series](#time-series).
+
+</details>
+
+**2. Why does a "friends of friends of friends" question get awkward with a relational join table?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It needs a join per hop, which gets awkward and slow as depth grows. Graph stores are designed to walk relationships directly. See: [Graph](#graph).
+
+</details>
+
+**3. Which tool does the page point to for "Totals by category and month"?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A warehouse, not a time-series or graph store. See: [Choosing](#choosing).
+
+</details>
+
+**4. When does the page say to reach for a time-series store instead of a plain partitioned table?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+When volume is high, you query by time window, and you need retention and rollups. Below that, a plain partitioned table is often enough. See: [Time-series](#time-series).
+
+</details>

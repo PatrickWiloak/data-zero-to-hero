@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 10 min
 ---
@@ -183,3 +183,43 @@ In distributed engines, `PARTITION BY` also decides how data is shuffled. A wind
 - **[Slowly changing dimensions](./slowly-changing-dimensions.md)** - where `LEAD` builds `valid_to` dates
 - **[Analytics engineering and dbt](./analytics-engineering-and-dbt.md)** - where these queries end up living as tested models
 - **[OLTP vs OLAP](./oltp-vs-olap.md)** - why windows over millions of rows belong in a warehouse
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. How does a window function differ from `GROUP BY`?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+`GROUP BY` collapses rows, while a window function keeps every row and attaches the computed value to each one. See: [GROUP BY versus a window](#group-by-versus-a-window).
+
+</details>
+
+**2. Why add a unique tie-breaker column to the `ORDER BY` when picking the latest row per key?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+If two rows share the same `updated_at`, `ROW_NUMBER` picks one arbitrarily and the pick can change between runs. A unique extra sort column makes the result deterministic. See: [Pattern 1: latest row per key (deduplication)](#pattern-1-latest-row-per-key-deduplication).
+
+</details>
+
+**3. For scores 90, 85, 85, 70, what do `RANK` and `DENSE_RANK` give the score 70?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+`RANK` gives 4 because ties share a place and the next place is skipped. `DENSE_RANK` gives 3. See: [Pattern 2: ROW_NUMBER vs RANK vs DENSE_RANK](#pattern-2-row_number-vs-rank-vs-dense_rank).
+
+</details>
+
+**4. If you filter to October in `WHERE` and then compute `LAG`, what happens to the first October row, and why?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It has no previous month, even though September exists in the table, because `WHERE` filters rows before the window function sees them. See: [Where window functions run in the query](#where-window-functions-run-in-the-query).
+
+</details>

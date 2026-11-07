@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-09-17
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 9 min
 ---
@@ -99,3 +99,43 @@ Lineage tooling comes after those. A perfect graph of a pipeline nobody is check
 - **[Observability basics](https://cloud.noblerworks.com/learn/concepts/observability-basics/)** - the same argument for services
 - **[Compliance guides](https://security.noblerworks.com/resources/compliance-guides/)** - where lineage stops being good practice and becomes a requirement
 - **[Data engineering topic](../../topics/data-engineering.md)** - everything in the repo on this subject
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Which of the six data quality dimensions is the hard one, and why?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Accuracy, because it requires a source of truth outside the pipeline. It also catches the errors that matter most, so a reconciliation against the operational system is worth the work. See: [The six dimensions](#the-six-dimensions).
+
+</details>
+
+**2. When a check fails before publishing, what should the default be, and why?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Hold the last good version and alert instead of overwriting, because publishing bad data is usually worse than publishing yesterday's data. See: [Where the tests go](#where-the-tests-go).
+
+</details>
+
+**3. Why does the page say the downstream lineage question is the one that pays for itself?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+When an upstream system has an incident, lineage turns "probably some dashboards are affected" into a list of tables, dashboards and owners you can notify in ten minutes. See: [Lineage](#lineage).
+
+</details>
+
+**4. Why does lineage tooling come after the first quality checks in the suggested order?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A perfect graph of a pipeline nobody is checking is decoration. Start with freshness and row-count checks, key uniqueness and not-null, one reconciliation, and recorded ownership. See: [Where to start](#where-to-start).
+
+</details>

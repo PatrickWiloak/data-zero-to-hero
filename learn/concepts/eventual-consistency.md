@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 7 min
 ---
@@ -142,3 +142,43 @@ Default to eventual; opt into strong where needed; design for retries and duplic
 - **[Queues vs streams](./queues-vs-streams.md)** - delivery semantics under retry
 - **[Topic: databases](../../topics/databases.md)** - where consistency models live
 - **[Service comparison: Databases](../../resources/service-comparison-databases.md)** - per-store consistency models
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. What does eventual consistency promise, and what does it allow?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+After a write, every reader will eventually see the new value, but for a short window afterwards some readers may still see the old value. See: [The one-line answer](#the-one-line-answer).
+
+</details>
+
+**2. What is the read-your-writes problem, and how can it be fixed?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A user updates their profile photo and the next page load hits a stale replica that shows the old one. Route the immediate read to the primary or to the replica that handled the write, or use a session token that expires after replication catches up. See: [Read-your-writes](#read-your-writes).
+
+</details>
+
+**3. Name two operations the page says cannot tolerate staleness, and give the reason for one.**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Inventory and seat allocation, authentication state, financial transactions, and locking and leadership. For example, selling the last item to two people is a billing disaster. See: [Strong consistency: when it's required](#strong-consistency-when-its-required).
+
+</details>
+
+**4. Why does eventual consistency mix badly with non-idempotent operations?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A retry might land on a replica that already has the write, so the operation runs again. Making consumers idempotent makes duplicate processing safe. See: [Idempotency: EC's best friend](#idempotency-ecs-best-friend).
+
+</details>

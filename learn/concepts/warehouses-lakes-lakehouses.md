@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-09-17
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 10 min
 ---
@@ -107,3 +107,43 @@ The honest caveat: at small scale the distinction barely matters. A few hundred 
 - **[Architecture pattern: lakehouse](../../resources/architecture-patterns/lakehouse-architecture.md)** - the implementation view
 - **[Service comparison: databases](../../resources/service-comparison-databases.md)** - the warehouse options side by side
 - **[Data engineering topic](../../topics/data-engineering.md)** - everything in the repo on this subject
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. In one sentence each, what do a warehouse, a lake and a lakehouse store?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A warehouse stores cleaned, structured data ready to query. A lake stores raw files of any shape cheaply. A lakehouse puts warehouse-style tables on top of lake-style file storage so there is one copy. See: [The one-line answer](#the-one-line-answer).
+
+</details>
+
+**2. According to the page, what separates a data lake from a data swamp?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Entirely governance, not technology. A lake with no catalog, no ownership and no quality checks becomes a swamp. See: [The data lake](#the-data-lake).
+
+</details>
+
+**3. Name two things a table format like Iceberg adds over a directory of Parquet files.**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Any two of ACID transactions, schema evolution, time travel, and efficient updates and deletes. See: [The lakehouse](#the-lakehouse).
+
+</details>
+
+**4. A wrong currency conversion and a missing day of data: which medallion layer is each problem in?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The conversion is a silver problem and the missing day is a bronze problem. Each layer has one job, so a failure has an obvious blast radius. See: [Medallion layers](#medallion-layers).
+
+</details>

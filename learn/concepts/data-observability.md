@@ -77,3 +77,43 @@ I did not run any of these tools for this page; the descriptions come from the d
 - **[Data quality and lineage](./data-quality-and-lineage.md)** - the checks and the map
 - **[Data contracts](./data-contracts.md)** - stopping breakage at the source
 - **[Data pipelines and orchestration](./data-pipelines-and-orchestration.md)** - where job monitoring lives
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Why can a green pipeline run still deliver bad data?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A green run only tells you the code finished. It does not tell you the output table has today's rows, so the data itself needs watching too. See: [Pipeline monitoring versus data monitoring](#pipeline-monitoring-versus-data-monitoring).
+
+</details>
+
+**2. Name three signals worth watching on a table.**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Any three of freshness, volume, schema, values and distribution. See: [Signals worth watching](#signals-worth-watching).
+
+</details>
+
+**3. In dbt, what does a passing data test return, and which two generic tests does the page say to put on every model's primary key?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A passing test returns zero failing rows. The docs recommend `unique` and `not_null` on the primary key. See: [Two ways to build it](#two-ways-to-build-it).
+
+</details>
+
+**4. Why do most teams use both hand-written tests and learned monitors?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Hand-written tests catch what you thought of, while learned monitors catch what you did not, at the price of some false alarms. See: [Two ways to build it](#two-ways-to-build-it).
+
+</details>

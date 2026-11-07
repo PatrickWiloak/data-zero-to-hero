@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 11 min
 ---
@@ -173,3 +173,43 @@ The goal is the same, read less data, but the mechanism is "skip big chunks" rat
 - **[SQL joins explained](./sql-joins-explained.md)** - nested-loop joins live or die by indexes
 - **[Transactions and ACID](./transactions-and-acid.md)** - what the database is protecting while it updates those indexes
 - **[File formats and partitioning](./file-formats-and-partitioning.md)** - pruning, the columnar equivalent
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Why does a table with ten indexes do eleven writes for every new row?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Each index must be updated on every insert, update and delete, so the table plus its ten indexes are all written. See: [The book analogy, and where it stops](#the-book-analogy-and-where-it-stops).
+
+</details>
+
+**2. Why does `WHERE created_at::date = '2026-10-21'` scan the table, while a range on `created_at` uses the index?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Wrapping a column in a function, or comparing it to a value of a different type, hides it from the index. The range form compares the plain column, so the index can be used. See: [What an index can and cannot help](#what-an-index-can-and-cannot-help).
+
+</details>
+
+**3. Why does an index on `(customer_id, created_at)` not serve a filter on `created_at` alone?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The index is sorted by the first column and then by the second within it, so dates are only sorted within each customer. Like a phone book, it cannot find everyone named "Maria" quickly. See: [Composite indexes and the leftmost-prefix rule](#composite-indexes-and-the-leftmost-prefix-rule).
+
+</details>
+
+**4. If 95% of rows have `status = 'complete'`, why does the planner skip an index on `status` for that filter?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Fetching 95% of the rows one pointer at a time is slower than just scanning the table, and the planner knows this from table statistics. See: [Selectivity: when the planner ignores your index](#selectivity-when-the-planner-ignores-your-index).
+
+</details>

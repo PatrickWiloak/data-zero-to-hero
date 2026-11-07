@@ -70,3 +70,43 @@ I did not run any of these controls for this page; they are described from the d
 - **[Warehouses, lakes, and lakehouses](./warehouses-lakes-lakehouses.md)** - what you are paying for
 - **[File formats and partitioning](./file-formats-and-partitioning.md)** - the biggest scan-cost lever
 - **[Cloud cost basics](https://cloud.noblerworks.com/learn/concepts/cloud-cost-basics/)** - the cloud-wide view
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. What two things does warehouse cost come from?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+How much data your queries read and how long compute runs. See: [The one-line answer](#the-one-line-answer).
+
+</details>
+
+**2. On a non-clustered BigQuery table, does adding `LIMIT` reduce the data read?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+No. On a clustered table it can. See: [Cut waste first](#cut-waste-first).
+
+</details>
+
+**3. What does BigQuery's maximum bytes billed setting do?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It makes a query fail before running, and unbilled, if its estimate exceeds the cap. See: [Then add guardrails](#then-add-guardrails).
+
+</details>
+
+**4. Why does the page say "alerts without limits" is a mistake?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A notification at 80% helps only if someone acts on it before the weekend. A hard limit stops the spend without anyone needing to notice. See: [Common mistakes](#common-mistakes).
+
+</details>

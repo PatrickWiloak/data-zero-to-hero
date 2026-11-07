@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 11 min
 ---
@@ -149,3 +149,43 @@ Governance programs fail when they start with a framework document and a committ
 - **[Data contracts](./data-contracts.md)** - governance agreed between producer and consumer, enforced in code
 - **[Data mesh pattern](../../resources/architecture-patterns/data-mesh.md)** - federated governance across domain teams
 - **[IAM explained](https://security.noblerworks.com/learn/concepts/iam-explained/)** - the identity layer access control sits on
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. How does data governance differ from a data catalog?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Governance is the set of decisions and controls about ownership, access, meaning, quality and retention. A catalog is the tool that makes those decisions findable and enforceable. See: [The one-line answer](#the-one-line-answer).
+
+</details>
+
+**2. What does the page call the single most effective governance step, and why?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Putting a named owner on every important table, because an unowned table is one nobody will fix. See: [Roles: owners and stewards](#roles-owners-and-stewards).
+
+</details>
+
+**3. Which kind of catalog metadata has to come from people, and what does that mean for catalogs that rely on manual entry?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Business metadata (meaning, ownership, certification). Catalogs that rely on manual entry decay, so the best ones harvest everything they can and ask people only for what a machine cannot know. See: [What a catalog contains](#what-a-catalog-contains).
+
+</details>
+
+**4. Why does tag-based access control scale better than granting access table by table?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+You write the policy once, for example masking columns tagged `pii`, and it applies to every current and future column with that tag. See: [Access control that scales](#access-control-that-scales).
+
+</details>

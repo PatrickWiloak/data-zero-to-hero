@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-09-17
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 10 min
 ---
@@ -93,3 +93,43 @@ Once your job writes to something outside that boundary, a payment API or a thir
 - **[Eventual consistency](./eventual-consistency.md)** - the same "when is it settled" problem in storage
 - **[Service comparison: messaging and queues](../../resources/service-comparison-messaging-queues.md)** - the services side by side
 - **[Data engineering topic](../../topics/data-engineering.md)** - everything in the repo on this subject
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. According to the page, what is the real difference between batch and streaming?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It is not speed. A batch job knows when its input is complete, and a streaming job never does. See: [The one-line answer](#the-one-line-answer).
+
+</details>
+
+**2. What does a watermark do in a streaming job?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It is a moving assertion that everything up to a given time has been seen. When it passes a window's end, the window closes and emits its result. See: [Why that matters more than latency](#why-that-matters-more-than-latency).
+
+</details>
+
+**3. Which window type would you use to group a user's activity into visits, and why?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A session window, because it is bounded by a gap in activity rather than by a clock. See: [Windows](#windows).
+
+</details>
+
+**4. A team cannot name any decision that changes if data is 5 minutes old instead of 6 hours old. What does the page say that pipeline should be?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A batch pipeline. Streaming runs continuously so you pay continuously, and micro-batching every 15 minutes gets most of the perceived benefit for far less operational load. See: [The honest warning](#the-honest-warning).
+
+</details>

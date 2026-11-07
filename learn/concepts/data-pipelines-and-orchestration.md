@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-09-17
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 9 min
 ---
@@ -85,3 +85,43 @@ Both matter more than they look, because neither produces an error message. Arou
 - **[Observability basics](https://cloud.noblerworks.com/learn/concepts/observability-basics/)** - the same discipline for services
 - **[Build a data pipeline](../../resources/hands-on-projects/build-data-pipeline.md)** - build one end to end
 - **[Data engineering topic](../../topics/data-engineering.md)** - everything in the repo on this subject
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Give one reason a cron job stops being enough once step B needs step A's output.**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Cron can only run B a fixed time after A and hope. When A takes longer than that gap, B silently processes yesterday's data. See: [Why a cron job stops being enough](#why-a-cron-job-stops-being-enough).
+
+</details>
+
+**2. Why can a pipeline that calls `today()` internally not be backfilled?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Pipelines are usually parameterized by an execution date so that a backfill is the same code with a different parameter. A pipeline that reads "now" cannot be re-run for a past range. See: [The properties that matter](#the-properties-that-matter).
+
+</details>
+
+**3. Is dbt an orchestrator?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+No. It builds a DAG of SQL models, tests them and documents them, but something else still has to decide when it runs. See: [The tools](#the-tools).
+
+</details>
+
+**4. What is the "silent zero", and what does the page suggest to catch it?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A task completes successfully having produced nothing, for example because an upstream API returned an empty page, so every check is green. Assert a minimum row count on anything that should never be empty. See: [Two failure modes worth designing against](#two-failure-modes-worth-designing-against).
+
+</details>

@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 12 min
 ---
@@ -149,3 +149,43 @@ Kafka partitions are closer to sharding: each topic is split by key across broke
 - **[Change data capture](./change-data-capture.md)** - the same replication log, used to feed pipelines
 - **[SQL vs NoSQL](./sql-vs-nosql.md)** - many NoSQL stores were designed around sharding from day one
 - **[Database services across clouds](../../resources/service-comparison-databases.md)** - managed replication and distributed SQL options
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. What problem does replication solve, and what problem does sharding solve?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Replication keeps copies of the same data on several machines, for availability and to spread reads. Sharding gives each machine a different slice of the data, to spread writes and storage. See: [The one-line answer](#the-one-line-answer).
+
+</details>
+
+**2. With asynchronous replication, what can be lost if the primary dies?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Whatever had not yet reached a replica. With synchronous replication, acknowledged writes are not lost, at the cost of higher write latency. See: [Synchronous versus asynchronous](#synchronous-versus-asynchronous).
+
+</details>
+
+**3. Why does adding replicas not help when the write rate or data size exceeds one machine?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Every replica still applies every write and stores every row, so replication helps with neither. See: [When you need it](#when-you-need-it).
+
+</details>
+
+**4. Why is sharding a multi-tenant app by `created_at` a classic bad choice?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Every write in the system goes to the newest shard. Sharding by `tenant_id` keeps each tenant's data together so most queries stay on one shard. See: [Choosing a shard key](#choosing-a-shard-key).
+
+</details>

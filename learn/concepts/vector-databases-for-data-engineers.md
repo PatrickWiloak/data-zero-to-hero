@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 8 min
 ---
@@ -126,3 +126,43 @@ The questions to answer, all familiar from the rest of this site:
 - **[Build a RAG pipeline](https://ai.noblerworks.com/build/projects/build-rag-pipeline/)** - a hands-on build that uses a vector store
 - **[Indexes explained](./indexes-explained.md)** - how ordinary database indexes compare
 - **[Change data capture](./change-data-capture.md)** - keeping an index in sync with its source
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Why do vector stores use approximate nearest neighbor indexes instead of exact search?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Exact search compares the query to every stored vector, around ten billion multiplications per query at ten million vectors of 1,024 dimensions. ANN trades a little recall for orders of magnitude of speed. See: [Why it needs a special index](#why-it-needs-a-special-index).
+
+</details>
+
+**2. What is the page's decision rule for where to keep vectors?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Start with pgvector or your existing platform's vector support, and move to a dedicated store when measured scale or latency needs it. See: [Where vectors can live](#where-vectors-can-live).
+
+</details>
+
+**3. What happens if you change the embedding model but keep the old vectors in the same index?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Vectors from two embedding models are not comparable. You must re-embed the whole corpus into a new index and switch over, and store the model name on every row. See: [The pipeline is the hard part](#the-pipeline-is-the-hard-part).
+
+</details>
+
+**4. Why must deletes in the source reach the vector index?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Stale vectors are how a chatbot quotes a withdrawn policy. Stable chunk ids derived from the source id let deletes and updates find their rows. See: [The pipeline is the hard part](#the-pipeline-is-the-hard-part).
+
+</details>

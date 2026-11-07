@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: advanced
 reading-time: 13 min
 ---
@@ -181,3 +181,43 @@ The engine's checkpoints make internal state exactly-once. The **output** is onl
 - **[Queues vs streams](./queues-vs-streams.md)** - partitions, offsets and replay underneath
 - **[Build a streaming pipeline](../../resources/hands-on-projects/build-streaming-pipeline.md)** - windows and late data in a hands-on build
 - **[Streaming analytics pattern](../../resources/architecture-patterns/streaming-analytics.md)** - Lambda versus Kappa, and a reference design
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Why does the page recommend windowing by event time rather than processing time?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Event time gives the same answer however and whenever the data arrives, which lets you reprocess history and trust the result. Processing time gives wrong answers whenever there is delay or a backfill. See: [Event time is the only clock that means anything](#event-time-is-the-only-clock-that-means-anything).
+
+</details>
+
+**2. A 10-minute sliding window moves every minute. How many windows does each event belong to?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Ten, because a new window starts every slide interval and windows overlap. State and output grow with size divided by slide. See: [Sliding (hopping) windows](#sliding-hopping-windows).
+
+</details>
+
+**3. What happens to a job's windows if one Kafka partition receives no events, and what is the fix?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The job's watermark is the minimum across partitions, so the quiet partition's watermark never advances and every window stops firing. Set an idleness timeout to exclude quiet partitions. See: [The idle partition trap](#the-idle-partition-trap).
+
+</details>
+
+**4. What are the three options for late data that arrives after the watermark passed its window?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Drop it (and at least count what you drop), keep the window's state for an allowed lateness and emit an updated result, or route late events to a side output and reconcile them in a batch job. See: [Late data](#late-data).
+
+</details>

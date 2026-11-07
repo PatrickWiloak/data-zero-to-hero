@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-09-17
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 9 min
 ---
@@ -96,3 +96,43 @@ This is why "the warehouse is expensive" is usually a layout problem rather than
 - **[Batch vs streaming](./batch-vs-streaming.md)** - why streaming writes create small files
 - **[Cloud cost basics](https://cloud.noblerworks.com/learn/concepts/cloud-cost-basics/)** - bytes scanned as a billing model
 - **[Data engineering topic](../../topics/data-engineering.md)** - everything in the repo on this subject
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Why does a query touching 3 of 50 columns read only about 6% of a Parquet file?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Parquet stores data by column, so the query only reads the columns it needs. A row format such as CSV makes you read every byte. See: [Row formats and column formats](#row-formats-and-column-formats).
+
+</details>
+
+**2. What is predicate pushdown?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Parquet keeps the min and max of each column per row group, so a query filtering on a date can skip a whole chunk whose range cannot match, without decompressing it. See: [Row formats and column formats](#row-formats-and-column-formats).
+
+</details>
+
+**3. Daily volume is only 10 MB. How should you partition, and why?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+By month, not by day. A partition should hold at least a few hundred megabytes, and over-partitioning gives you maximum metadata overhead plus the small files problem. See: [Over-partitioning](#over-partitioning).
+
+</details>
+
+**4. Why does a streaming job writing a file every minute make queries slow, and what is the fix?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It produces 1,440 files a day per partition, and the open and metadata overhead of many tiny objects dwarfs the reading. Aim for files of 128 MB to 1 GB and schedule compaction such as `OPTIMIZE` in Delta or `rewrite_data_files` in Iceberg. See: [The small files problem](#the-small-files-problem).
+
+</details>

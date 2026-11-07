@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 11 min
 ---
@@ -149,3 +149,43 @@ The **outbox pattern** separates the two: the application writes a deliberate, v
 - **[Queues vs streams](./queues-vs-streams.md)** - the transport CDC events travel on
 - **[Build a streaming pipeline](../../resources/hands-on-projects/build-streaming-pipeline.md)** - a hands-on stream into a lake
 - **[Database migration guide](../../resources/migration-guides/database-migration.md)** - CDC as the low-downtime migration technique
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Name two of the three blind spots of an incremental `updated_at` query.**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Deletes are invisible, it trusts every writer to set `updated_at`, and intermediate states are lost (you only see the latest state between runs). See: [The problem with re-reading tables](#the-problem-with-re-reading-tables).
+
+</details>
+
+**2. Why does a new CDC pipeline start with an initial snapshot before streaming?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The log only holds recent changes but the target needs every existing row. The connector reads the tables while noting the log position, then switches to streaming from that position. See: [Snapshot, then stream](#snapshot-then-stream).
+
+</details>
+
+**3. When applying change events downstream, why order by log position instead of timestamp?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Two changes can happen in the same millisecond, but each has a distinct log position. See: [Applying changes downstream: MERGE](#applying-changes-downstream-merge).
+
+</details>
+
+**4. What happens if a CDC connector is down longer than the database keeps its log?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The log position it needs is gone, so you must re-snapshot. See: [Things that go wrong](#things-that-go-wrong).
+
+</details>

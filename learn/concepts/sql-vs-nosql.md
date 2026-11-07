@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-08-09
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 9 min
 ---
@@ -125,3 +125,43 @@ That is normal and usually correct. The cost is operational: each system needs b
 - **[Caching explained](https://cloud.noblerworks.com/learn/concepts/caching-explained/)** - the layer usually sitting in front of the database
 - **[Service comparison: databases](../../resources/service-comparison-databases.md)** - AWS, Azure, and GCP equivalents
 - **[Databases topic](../../topics/databases.md)** - everything in the repo on this subject
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Name the four NoSQL families the page describes.**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Key-value, document, wide-column and graph. See: [The four NoSQL families](#the-four-nosql-families).
+
+</details>
+
+**2. Why is "which products sold best in Germany last quarter" awkward in a document database that stores orders with nested line items?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The question cuts across documents in a way the storage shape did not anticipate. A relational database answers it with a join, at the price of more work per read. See: [The real trade-off](#the-real-trade-off).
+
+</details>
+
+**3. What practical question does the page say should decide how much eventual consistency matters?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+What your application does when a read returns data from two seconds ago. For a social feed, nothing; for an account balance during a withdrawal, quite a lot. See: [Consistency](#consistency).
+
+</details>
+
+**4. What is the cost of polyglot persistence, and when should you add another system?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Each system needs backups, monitoring, upgrades and expertise. Add one only when the benefit is concrete. See: [Polyglot persistence](#polyglot-persistence).
+
+</details>

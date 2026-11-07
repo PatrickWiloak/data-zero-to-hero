@@ -100,3 +100,43 @@ The `-wal` file really exists in WAL mode; SQLite's own WAL page says changes ar
 - **[Transactions and ACID](./transactions-and-acid.md)** - why the log exists in the first place
 - **[Change data capture](./change-data-capture.md)** - reading that same log for downstream systems
 - **[Replication and sharding](./replication-and-sharding.md)** - why a replica is not a backup
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. What are the two ingredients of point-in-time restore?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A base backup (a full copy at some time T0) and the change log kept unbroken since then. Restore copies the base back and replays the log forward to the chosen time. See: [The two ingredients](#the-two-ingredients).
+
+</details>
+
+**2. Why can `pg_dump` not be used to make the base backup for PITR in PostgreSQL?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A logical dump lacks what WAL replay needs, so you take a base backup with `pg_basebackup` instead. See: [How PostgreSQL does it](#how-postgresql-does-it).
+
+</details>
+
+**3. What would happen if one archived log segment were lost?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Replay would stop at the gap, because recovery needs an unbroken sequence of archived log from the start of the base backup onward. See: [Common mistakes](#common-mistakes).
+
+</details>
+
+**4. When you restore an Amazon RDS instance to a point in time, what happens to the source, and what must you do next?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The restore creates a new DB instance and does not touch the source. You must repoint the application or copy the repaired rows back. See: [How a managed service does it](#how-a-managed-service-does-it).
+
+</details>

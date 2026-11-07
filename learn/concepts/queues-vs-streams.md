@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 difficulty: intermediate
 reading-time: 7 min
 ---
@@ -140,3 +140,43 @@ A poison message (malformed payload) keeps failing. Without a dead-letter queue,
 - **[Topic: databases](../../topics/databases.md)** - cross-pillar
 - **[Architecture pattern: Event-driven](https://cloud.noblerworks.com/resources/architecture-patterns/event-driven-architecture/)**
 - **[Service comparison: Messaging and queues](../../resources/service-comparison-messaging-queues.md)**
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. What is the core difference between a queue and a stream?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A queue delivers each message to one consumer and deletes it when consumed. A stream keeps every message in an ordered log that many consumers can read independently, often re-reading from the past. See: [The one-line answer](#the-one-line-answer).
+
+</details>
+
+**2. Six months in, someone wants to add an analytics consumer. Why is that easy with a stream and hard with a queue?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+With a queue the messages are already gone. With a stream you reset a read position and read from any historical point. See: [Picking a queue when a stream is right](#picking-a-queue-when-a-stream-is-right).
+
+</details>
+
+**3. Why can partitioning a stream on `userId` cause trouble?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Hot users can overwhelm one partition while others idle. Choose partition keys that spread load. See: [Not thinking about the partition key for streams](#not-thinking-about-the-partition-key-for-streams).
+
+</details>
+
+**4. What delivery guarantee should you default to in your design, and what should you do about it?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Default to at-least-once and make consumers idempotent, because exactly-once across system boundaries is hard and rarely worth it. See: [Delivery guarantees](#delivery-guarantees).
+
+</details>

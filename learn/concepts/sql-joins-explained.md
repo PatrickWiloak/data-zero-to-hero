@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 10 min
 ---
@@ -237,3 +237,43 @@ This exact shape is how facts join to a Type 2 [slowly changing dimension](./slo
 - **[Data modeling for analytics](./data-modeling-for-analytics.md)** - star schemas, built so joins are simple and safe
 - **[Data quality and lineage](./data-quality-and-lineage.md)** - the uniqueness test that catches fan-out
 - **[Databases topic](../../topics/databases.md)** - everything on the site about where data rests
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. In the page's example tables, which rows disappear in an inner join, and why?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Dana disappears because she has no orders, and order 104 disappears because its customer does not exist. An inner join keeps a row only when both sides match. See: [INNER JOIN - only the matches](#inner-join---only-the-matches).
+
+</details>
+
+**2. What is a FULL OUTER JOIN especially useful for?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Reconciliation: comparing a source table against a target table and listing rows that exist on only one side, for example to check that a pipeline copied everything. See: [FULL OUTER JOIN - keep everything on both sides](#full-outer-join---keep-everything-on-both-sides).
+
+</details>
+
+**3. Why does adding `WHERE o.amount > 25` to a left join drop customers who have no orders, and where should the filter go instead?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+For such a customer `o.amount` is `NULL`, and `NULL > 25` is not true, so `WHERE` removes the row and the left join quietly becomes an inner join. Put conditions on the right-hand table in the `ON` clause. See: [Mistake 2: a WHERE clause that undoes the LEFT JOIN](#mistake-2-a-where-clause-that-undoes-the-left-join).
+
+</details>
+
+**4. What happens to revenue if Ana has two rows in `customer_addresses` and you join on customer without checking uniqueness?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Each of her orders is multiplied by the two address rows. Nothing errors, revenue is just higher. Check that the right-hand key is unique, or filter or aggregate before joining. See: [Mistake 1: fan-out, the silent duplication](#mistake-1-fan-out-the-silent-duplication).
+
+</details>

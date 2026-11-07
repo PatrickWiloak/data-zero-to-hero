@@ -66,3 +66,43 @@ I did not run Feast or SageMaker for this page; everything above is from their d
 - **[AI Zero to Hero](https://ai.noblerworks.com/)** - the machine-learning side
 - **[Slowly changing dimensions](./slowly-changing-dimensions.md)** - history and "as of" thinking
 - **[Batch vs streaming](./batch-vs-streaming.md)** - how features get fresh
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. What is training-serving skew, and how does it arise without a feature store?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+It is the gap between training and serving performance. A data scientist writes a feature in a notebook for training and an engineer rewrites it in application code for serving, and the two drift apart. See: [The problem it solves](#the-problem-it-solves).
+
+</details>
+
+**2. What is the difference between the offline and online stores?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+The offline store holds all historical feature values for exploration, training and batch prediction. The online store holds only the latest values for low-latency lookups in real-time prediction. See: [Two stores, one definition](#two-stores-one-definition).
+
+</details>
+
+**3. Why must a training set use feature values as they were at each example's time?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Using later values leaks the future into training. That is why you need history with timestamps, joined "as of" each example, not just the current row. See: [The part that is pure data engineering: point-in-time joins](#the-part-that-is-pure-data-engineering-point-in-time-joins).
+
+</details>
+
+**4. When does the page say a dedicated feature store is worth considering?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+When several models share features, you need real-time serving, or training-serving skew has actually bitten you. Otherwise a well-built warehouse table plus a nightly job is often enough. See: [Do you need one?](#do-you-need-one).
+
+</details>

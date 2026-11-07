@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: beginner
 reading-time: 9 min
 ---
@@ -128,3 +128,43 @@ Older material uses "OLAP" to mean **cubes**: pre-aggregated structures (SQL Ser
 - **[Change data capture](./change-data-capture.md)** - the modern bridge between the two
 - **[Data modeling for analytics](./data-modeling-for-analytics.md)** - how the OLAP side is shaped
 - **[Database services across clouds](../../resources/service-comparison-databases.md)** - every managed OLTP and OLAP service side by side
+
+## Check yourself
+
+Test your understanding. Click an answer to reveal it.
+
+**1. Why does summing `amount` over a billion orders suit a column store better than a row store?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+A column store keeps each column together, so the sum reads only the amount column. A row store has to read every column of every row just to use one. See: [Row stores versus column stores](#row-stores-versus-column-stores).
+
+</details>
+
+**2. Name two reasons the page gives for not running analytics on the production database.**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Contention with checkout traffic, the wrong shape (a normalized schema needs many joins and row storage reads too many bytes), and no history because OLTP overwrites old values. See: [Why you do not run analytics on the production database](#why-you-do-not-run-analytics-on-the-production-database).
+
+</details>
+
+**3. Which of those problems does a read replica fix?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+Only the first, contention. It is a fine first step for a small company and the start of the path to a warehouse. See: [Why you do not run analytics on the production database](#why-you-do-not-run-analytics-on-the-production-database).
+
+</details>
+
+**4. How do HTAP systems work, and what do they not remove the need for?**
+
+<details markdown="1">
+<summary>Answer</summary>
+
+They keep two copies in two layouts inside one product and sync them for you. They do not remove the need for modelling, history, or joining data from many source systems. See: [HTAP: can one system do both?](#htap-can-one-system-do-both).
+
+</details>
