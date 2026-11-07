@@ -1536,7 +1536,6 @@ With this budget, you can access premium resources while still being strategic a
 **ACE Certification Coaching:**
 - Offers discounted CompTIA exam vouchers
 - Usually 10-15% off
-- https://blog.certification-specialist.com
 - Legitimate voucher reseller
 
 **GetCertified4Less:**

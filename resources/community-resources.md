@@ -211,7 +211,7 @@ Slack communities provide professional networking and focused discussions.
   - Channels per service
   - AWS Heroes participation
   - Certification discussions
-- **How to join:** [aws-community-slack.invite.creds.io](https://aws-community-slack.invite.creds.io/)
+- **How to join:** the old public invite link no longer works (checked 2026-11-06); ask at a local AWS User Group
 
 **Microsoft Tech Community**
 - **Members:** 50,000+

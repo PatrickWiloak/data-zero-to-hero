@@ -16,13 +16,13 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 
 ## Content (2026-10-21 expansion)
 
-- [ ] Judge 2026-11-21: rerun `build-dbt-project.md` on the current dbt release; if dbt v2 is the pip default by then, retest and update the pinned `dbt-core<2`.
-- [ ] Judge 2026-11-21: first lychee run covers the new pages' vendor links; fix any 404s. (All 22 `learn/youtube.md` handles fetched and confirmed 2026-10-22.)
+- [ ] Judge 2026-11-21: rerun `build-dbt-project.md` on the current dbt release; if dbt v2 is the pip default by then, retest and update the pinned `dbt-core<2`. ✏️ 2026-11-06 early read: dbt-core is 1.12.6, so the `<2` pin holds; guide not rerun yet.
+- [x] 2026-11-06 lychee (#7, 11-02): 0 real 404s; 2 dead hosts removed. The rest are cloud.google.com refusing the runner.
 - [ ] Next concept candidates: backup and point-in-time restore. (Query plans, Spark shuffles and skew, and semantic layers now have long-form pages under `resources/troubleshooting/` and `resources/architecture-patterns/`; a 5-minute concept page each would still help.)
 - [x] 2026-10-22 Resources expansion: 4 patterns, 2 interview guides, 3 troubleshooting guides, warehouse migration guide (CHANGELOG 2026-10-22 (3)).
 - [ ] Judge 2026-12-22: re-verify version-sensitive facts in the 2026-10-22 pages - Debezium stable line (3.6), Lakeflow Connect sources, Fabric mirroring preview sources, Google "Lakehouse" (ex-BigLake) naming, Census-in-Fivetran branding.
 - [x] 2026-10-22 Postmortems (GitLab 2017, Atlassian 2022) and analytics engineer + DBA interview guides added (CHANGELOG 2026-10-22 (4)).
-- [ ] 2026-11-21 After both sites deploy: confirm `dba-interview.md`'s absolute link to security.noblerworks.com/resources/case-study-snowflake-customer-breaches-2024/ resolves.
+- [x] ✅ 2026-11-06 dba-interview's link to the security site's Snowflake case study returns 200.
 
 ## Patrick
 
