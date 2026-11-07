@@ -17,7 +17,7 @@ The MongoDB Associate Data Modeler exam checks that you can design, build and ev
 - **Cost:** $150 USD
 - **Delivery:** Online proctored; no reference materials
 - **Languages:** English
-- **Validity:** Not stated on the pages read
+- **Validity:** Not stated on the exam page; the Certification Program Guide (gated) was not read, so validity and retake rules are unverified
 - **Prerequisites:** None
 
 ## Exam Domains

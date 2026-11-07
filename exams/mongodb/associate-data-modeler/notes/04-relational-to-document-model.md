@@ -88,7 +88,7 @@ Flexibility does not mean no rules. Schema validation lets you "create validatio
 
 | Setting | Values | Meaning |
 |---|---|---|
-| `validationLevel` | `strict` (default), `moderate`, `constraint` | Which documents are checked. `moderate`: inserts, and updates to documents that already pass; updates to already-invalid documents skip validation. `constraint` (newer) also guarantees every document in the collection satisfies the rules. |
+| `validationLevel` | `strict` (default), `moderate`, `constraint` | Which documents are checked. `moderate`: inserts, and updates to documents that already pass; updates to already-invalid documents skip validation. `constraint` (new in MongoDB 9.0 per the docs, so not available on the 8.3.13 server used for the runs here) also guarantees every document in the collection satisfies the rules. |
 | `validationAction` | `error` (default), `warn`, `errorAndLog` (new in 8.1) | `error` rejects violating writes. `warn` allows the write and logs the violation. |
 
 A write can also pass `bypassDocumentValidation` for a single operation, for example when restoring old data from backup. That is rejected when the level is `constraint`.

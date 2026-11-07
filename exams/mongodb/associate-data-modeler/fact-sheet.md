@@ -13,7 +13,7 @@ applies-to: MongoDB Associate Data Modeler exam page and Exam Guide v2.0, read 2
 **Questions:** 75 multiple-choice questions, one correct response each. The guide says there may be more than 75, because a handful of unscored questions can be added.
 **Passing Score:** Not published; MongoDB sets it statistically per exam and does not publish the required percentage. Only the overall percentage must be met, not a pass in each domain.
 **Cost:** $150 USD (exam page and guide, read 2026-11-07)
-**Valid For:** Not stated on the exam page, the exam guide or the certification program page read 2026-11-07
+**Valid For:** Not stated on the exam page (re-read 2026-11-07); the Certification Program Guide is a gated download and was not read, so validity and retake rules are unverified
 **Delivery:** Online, proctored; reference materials are not allowed
 **Languages:** English
 **Prerequisites:** None
@@ -86,7 +86,7 @@ Domains 8, 7, 1 and 6 together carry 73% of the exam.
 
 **Key Facts:**
 - Documents must be under 16 mebibytes
-- `validationLevel`: strict (default), moderate, constraint; `validationAction`: error (default), warn, errorAndLog (8.1)
+- `validationLevel`: strict (default), moderate, constraint (constraint is new in 9.0); `validationAction`: error (default), warn, errorAndLog (8.1)
 - Workload table: action, type, information, frequency, priority
 
 ## Domain 5: Performance Tools and Techniques (6%)

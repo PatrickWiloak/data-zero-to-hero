@@ -69,7 +69,7 @@ Output (reduced):
 { planSummary: 'COLLSCAN', docsExamined: 20000, nreturned: 40, keysExamined: 0 }
 ```
 
-The first line confirms the defaults: profiler off, 100 ms threshold. The profile entry shows a `COLLSCAN` reading 20,000 documents for 40 results, a clear index candidate. The profiler adds overhead, so the usual practice is level 1 with a sensible threshold rather than level 2 in production (the docs describe the levels; the production advice is general practice).
+The first line confirms the defaults: profiler off, 100 ms threshold. The profile entry shows a `COLLSCAN` reading 20,000 documents for 40 results, a clear index candidate. The profiler adds overhead: the docs open with "The database profiler can degrade MongoDB performance", say the effect is largest at level 2 or with a low threshold at level 1, and advise considering performance and storage implications before enabling it in production. They suggest Atlas Query Profiler, Performance Advisor or the `$queryStats` stage as alternatives. So level 1 with a sensible threshold is the safer choice. The profile collection is capped (1 MB by default).
 
 **[📖 Database Profiler](https://www.mongodb.com/docs/manual/tutorial/manage-the-database-profiler/)** - levels, `slowms`, `system.profile`
 **[📖 Database Profiler Output](https://www.mongodb.com/docs/manual/reference/database-profiler/)** - fields such as `planSummary` and `docsExamined`
