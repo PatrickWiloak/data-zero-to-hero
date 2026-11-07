@@ -100,7 +100,7 @@ Registration: through the exam delivery platform at webassessor.com/databricks (
 **[📖 Liquid clustering](https://docs.databricks.com/aws/en/delta/clustering)** - CLUSTER BY, AUTO
 
 **Key Facts:**
-- Photon: native vectorized C++ engine; always on for SQL warehouses and serverless; no UDF or stateful streaming support
+- Photon: native vectorized C++ engine; default engine for all SQL warehouses; no UDF or stateful streaming support
 - Result cache entries last 24 hours; UI cache up to 7 days; invalidated when tables change
 - Predictive optimization runs OPTIMIZE, VACUUM, ANALYZE on managed tables only
 - CLUSTER BY AUTO needs predictive optimization and managed tables; up to four keys otherwise

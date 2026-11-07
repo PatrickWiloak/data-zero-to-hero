@@ -24,7 +24,7 @@ Weighted **15%**, about seven questions. Six objectives: Photon; finding poorly 
 
 ## Photon
 
-**Photon** is Databricks' native vectorized query engine, written in C++ and processing data in columnar batches. Spark's optimizer still plans the query, and existing SQL and DataFrame code runs unchanged. It speeds up SQL, DataFrame, ETL and stateless streaming work, helps most on long-running queries over large data, and does little for queries that finish in under two seconds. SQL warehouses and serverless compute always use Photon. Limits: UDFs, RDD and Dataset APIs and stateful streaming are not supported, and an unsupported operation simply falls back to regular Spark for that portion, with correct results.
+**Photon** is Databricks' native vectorized query engine, written in C++ and processing data in columnar batches. Spark's optimizer still plans the query, and existing SQL and DataFrame code runs unchanged. It speeds up SQL, DataFrame, ETL and stateless streaming work, helps most on long-running queries over large data, and does little for queries that finish in under two seconds. Photon is the default engine for all SQL warehouses. Limits: UDFs, RDD and Dataset APIs and stateful streaming are not supported, and an unsupported operation simply falls back to regular Spark for that portion, with correct results.
 
 **[📖 Photon](https://docs.databricks.com/aws/en/compute/photon)** - what it is, supported workloads and limitations
 

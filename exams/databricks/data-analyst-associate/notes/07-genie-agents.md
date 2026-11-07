@@ -36,7 +36,7 @@ From the sidebar choose **Genie Agents**, **New**, pick data sources, and **Crea
 - **Common questions:** the sample questions shown on the landing page; authors define them and Genie fills remaining slots.
 - **Settings:** title, default warehouse, tags, description.
 
-**Trusted assets.** The exam guide says to vet queries as *trusted assets*. In practice this means curating the example SQL and Unity Catalog SQL functions that give Genie proven answers for important questions. The docs page I read for benchmarks does not use the phrase "trusted assets" and treats example queries and SQL functions as the equivalent, so confirm the exact label in the product.
+**Trusted assets.** The exam guide says to vet queries as *trusted assets*. The Genie set-up page lists trusted assets alongside Unity Catalog data, example SQL queries and instructions, but no fetched page defines the term. Reading it as the curated example SQL and Unity Catalog SQL functions that give Genie proven answers is an interpretation (unverified), so confirm the label in the product.
 
 **[📖 Set up a Genie Agent](https://docs.databricks.com/aws/en/genie/set-up)** - data, warehouse, instructions, sample questions and permissions
 
