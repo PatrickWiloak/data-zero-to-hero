@@ -49,7 +49,7 @@ The diagram shows one main line (SQL, vocabulary, a BI tool exam) and three ways
 
 ## What this roadmap does not cover
 
-Some analyst-focused certifications from other vendors have no guide in this repo (Databricks Data Analyst is on the [TODO](../TODO.md) list as a candidate). This page does not recommend a cert it cannot point to.
+Some analyst-focused certifications from other vendors have no guide in this repo (Databricks Data Analyst is on the [TODO](https://github.com/PatrickWiloak/data-zero-to-hero/blob/main/TODO.md) list as a candidate). This page does not recommend a cert it cannot point to.
 
 ## Build proof as you go
 
