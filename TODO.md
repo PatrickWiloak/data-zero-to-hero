@@ -49,8 +49,9 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 
 - [ ] 🟡 `.github/scripts/site_hooks.py` has drifted from ai-zero-to-hero's port - one canonical module the sites vendor (with a sync check), or record the fork. S-M, low.
 - [ ] 🟡 `glossary-add-anchors.py`, `glossary-autolink.py`, `glossary-upgrade-existing-links.py` are a documented manual pipeline (`.github/AUTOMATION.md`, CONTRIBUTING); delete only if that pipeline is retired.
-- [ ] Fold heading-anchor validation into `check-internal-links.py`, so a broken anchor is reported without a full site build.
-- [ ] No CI check for unbalanced code fences; the site build only catches them as missing anchors. A direct validator would name file and line.
+- [x] 2026-11-07 Heading-anchor validation folded into `check-internal-links.py` (640 anchors, 0 broken; ids match the strict build's on all 463 comparable pages).
+- [x] 2026-11-07 `check-code-fences.py` added (0 unclosed fences); both run in `structure-validate.yml`, blocking.
+- [ ] 2026-11-07 Port `check-code-fences.py` and the anchor mode of `check-internal-links.py` to cloud-zero-to-hero and security-zero-to-hero (check each repo's slugify setting and emoji pinning first); not edited from this session.
 - [x] 2026-11-06 MD060 is already off in `.markdownlint.json`.
 - [ ] Judge after the first Monday link-check run on this repo: it opens or updates one `link-check` issue (not a new one each week) and lists no real 404s.
 
