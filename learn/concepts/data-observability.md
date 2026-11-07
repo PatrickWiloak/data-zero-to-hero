@@ -47,7 +47,7 @@ A data observability loop. Metrics are computed on a schedule, compared with an 
 
 **Tests you write.** In dbt, a data test is a SQL `select` that returns failing rows; zero rows means pass. dbt ships four generic tests (`unique`, `not_null`, `accepted_values`, `relationships`), and its docs recommend `unique` and `not_null` on every model's primary key. See [Analytics engineering and dbt](./analytics-engineering-and-dbt.md).
 
-**Monitors the platform runs.** Snowflake's data quality monitoring pairs a data metric function (such as a null count, or how often a table is updated) with an expectation, runs on a schedule (default hourly, adjustable), and reports violations. Its anomaly detection covers freshness and volume by comparing against a range predicted from history. It runs on serverless compute that uses credits, so monitoring itself has a cost. Other platforms and vendors offer similar features; check their docs.
+**Monitors the platform runs.** Snowflake's data quality monitoring pairs a data metric function (such as a null count, or how often a table is updated) with an expectation, runs on a schedule (default hourly, adjustable), and reports violations. Its anomaly detection covers freshness and volume by comparing against a range predicted from history. It runs on serverless compute that uses credits, so monitoring itself has a cost. The Snowflake page says data quality monitoring requires Enterprise Edition. Other platforms and vendors offer similar features; check their docs.
 
 Hand-written tests catch what you thought of. Learned monitors catch what you did not, at the price of some false alarms. Most teams use both.
 

@@ -45,7 +45,7 @@ The table holds only facts from the vendor pages linked below.
 
 - A visual analytics tool with Tableau Desktop and web authoring. The help covers Tableau Cloud, Tableau Desktop and Tableau Server.
 - Its help covers connecting to data, building views, creating calculations and making dashboards.
-- I could only read the help index, so product packaging, ownership and licensing are **unverified**. Check Tableau's own pages.
+- The help pages also name Tableau Prep Builder, Tableau Bridge and Tableau Mobile. Tableau's marketing pages block automated fetching and the help text never states who owns Tableau, so ownership, packaging and licensing are **unverified**. Check Tableau's own pages.
 
 **[📖 Tableau Desktop and Web Authoring Help](https://help.tableau.com/current/pro/desktop/en-us/default.htm)** - help index for Cloud, Desktop and Server
 
@@ -59,7 +59,7 @@ The table holds only facts from the vendor pages linked below.
 ## Apache Superset
 
 - An open-source platform for exploring and visualizing data.
-- A no-code chart builder, a SQL editor, support for many SQL-based databases and dozens of built-in chart types.
+- A no-code chart builder, a SQL editor, support for many SQL-based databases and 40+ pre-installed visualization types.
 - You host it yourself (or use a third-party host). That brings freedom and an operations bill in time.
 
 **[📖 Apache Superset](https://superset.apache.org/)** - project home

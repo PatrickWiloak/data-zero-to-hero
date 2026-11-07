@@ -28,7 +28,7 @@ The table only holds facts from the vendor pages linked below. "Not covered here
 - A fully managed, petabyte-scale data warehouse service on AWS.
 - Two modes: **Redshift Serverless**, where resources are provisioned and scaled automatically and nothing is charged while idle, and **provisioned clusters** that you manage yourself.
 - You can load data and query it from the query editor v2 or from a BI tool.
-- Heads-up from the AWS docs: Redshift stops supporting Python UDFs after June 30, 2026, with enforcement in phases. Check the AWS blog post linked from the docs before relying on them.
+- Heads-up from the AWS docs: Redshift no longer supports Python UDFs after June 30, 2026 (that date has passed), with enforcement in phases. Check the AWS blog post linked from the docs before relying on them.
 
 **[📖 What is Amazon Redshift?](https://docs.aws.amazon.com/redshift/latest/mgmt/welcome.html)** - serverless and provisioned modes, query editor, UDF notice
 
@@ -57,7 +57,7 @@ The table only holds facts from the vendor pages linked below. "Not covered here
 
 - Three layers: **database storage** (Snowflake tables, Iceberg tables and hybrid tables), **compute** (virtual warehouses) and **cloud services** (security, metadata, query optimization).
 - Each virtual warehouse is an independent cluster of compute, so one team's heavy query does not slow another team's warehouse.
-- Multi-cluster warehouses add clusters when queries queue and remove them as load drops. They need Enterprise Edition or higher.
+- Multi-cluster warehouses need Enterprise Edition or higher. In **Auto-scale** mode they add clusters when queries queue and remove them as load drops; in **Maximized** mode they run all configured clusters whenever the warehouse runs.
 - Runs on AWS, Azure and Google Cloud.
 
 **[📖 Key concepts and architecture](https://docs.snowflake.com/en/user-guide/intro-key-concepts)** - three layers, virtual warehouses, clouds

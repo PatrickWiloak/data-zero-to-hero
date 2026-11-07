@@ -38,7 +38,7 @@ The PostgreSQL manual describes continuous archiving this way (settings named ex
 - Set `wal_level` to `replica` or higher, turn on `archive_mode`, and give an `archive_command` that copies each full WAL segment to safe storage. The command must succeed only when the copy did.
 - Take a base backup with `pg_basebackup` (or the low-level `pg_backup_start()` / `pg_backup_stop()`). `pg_dump` cannot be used for this, because a logical dump lacks what WAL replay needs.
 - Recovery needs an unbroken sequence of archived WAL from the start of the base backup onward. Test archiving before you rely on it.
-- To restore: put the base backup in an empty data directory, set `restore_command` and a recovery target (such as a target time), create an empty `recovery.signal` file and start the server. Replay stops at the target.
+- To restore: remove the old files from the cluster data directory, put the base backup there, set `restore_command` and a recovery target (such as a target time), create an empty `recovery.signal` file and start the server. Replay stops at the target.
 - Each completed recovery starts a new **timeline**, so new WAL cannot overwrite the old history.
 
 ## How a managed service does it
@@ -70,7 +70,7 @@ restore to t=3: []
 restore to t=0: [(1, 'paid'), (2, 'paid'), (3, 'paid')]
 ```
 
-The `-wal` file really exists in WAL mode; SQLite's own WAL page says changes are appended there and copied back into the database file at checkpoints. SQLite itself has no built-in log archiving, so the replay part here is the toy.
+The `-wal` file really exists in WAL mode; SQLite's own WAL page says changes are appended there and copied back into the database file at checkpoints. The SQLite WAL page describes recycling the WAL file, not archiving it, so the replay part here is the toy.
 
 ## Decisions you actually make
 

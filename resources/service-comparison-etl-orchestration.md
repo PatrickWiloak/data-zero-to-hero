@@ -17,11 +17,11 @@ This page compares AWS Glue, Azure Data Factory, Google Dataflow, managed Airflo
 |---|---|---|---|
 | **AWS Glue** | Data integration: catalog, crawlers, ETL jobs | Serverless, Spark-based jobs, visual or code | Job code and triggers |
 | **Azure Data Factory** | Pipelines that copy and orchestrate, plus mapping data flows | Managed, visual authoring | Pipelines, integration runtimes |
-| **Dataflow** | Batch and streaming processing with Apache Beam | Serverless, code or prebuilt templates | Beam pipeline code |
+| **Dataflow** | Batch and streaming processing with Apache Beam | Fully managed, code or prebuilt templates | Beam pipeline code |
 | **Amazon MWAA** | Run Apache Airflow DAGs | Managed Airflow, DAGs in S3 | DAGs, environment settings |
 | **Google managed Airflow (Composer)** | Run Apache Airflow DAGs | Managed Airflow, DAGs in Cloud Storage | DAGs, environment settings |
-| **dbt** | SQL transformations inside a warehouse | Open-source tool plus a hosted product | Models, tests |
-| **Dagster** | Orchestrate data assets | Open-source orchestrator | Asset code |
+| **dbt** | SQL transformations inside a warehouse | Open-source engine (dbt OSS) plus the hosted dbt platform | Models, tests |
+| **Dagster** | Orchestrate data assets | Orchestrator (the docs link a public GitHub repo; the docs page does not use the words open source) | Asset code |
 
 ## AWS Glue
 
@@ -45,7 +45,7 @@ This page compares AWS Glue, Azure Data Factory, Google Dataflow, managed Airflo
 ## Google Dataflow
 
 - Runs **Apache Beam** pipelines (Java, Python or Go SDKs). One programming model covers batch and streaming.
-- Serverless: Dataflow allocates worker VMs per job, scales them and removes them when the job ends.
+- Fully managed: Dataflow allocates worker VMs per job and removes them when the job ends.
 - Prebuilt **templates** let you run common pipelines without writing Beam.
 - Streaming pipelines process data exactly-once by default; at-least-once mode can cut cost and latency if duplicates are acceptable.
 - Because Beam is portable, the same pipeline can run on another runner such as Flink or Spark.
@@ -57,7 +57,7 @@ This page compares AWS Glue, Azure Data Factory, Google Dataflow, managed Airflo
 Apache Airflow is an open-source tool to create, schedule and monitor workflows written in Python. Both clouds run it for you.
 
 - **Amazon MWAA** sets up Airflow when you pick a version, scales workers between limits you set, integrates with IAM for access and sends logs and metrics to CloudWatch. DAGs and supporting files live in an S3 bucket.
-- **Google's managed Airflow** (the Composer 3 docs now say "Managed Airflow (Gen 3)") is a fully managed Airflow service. Google runs a GKE cluster per environment for the scheduler, triggerers and workers, hosts the web server and manages the metadata database. DAGs live in the environment's Cloud Storage bucket. Gen 3 supports Airflow 2 and 3.
+- **Google's managed Airflow** (the Composer 3 docs now say "Managed Airflow (Gen 3)") is a fully managed Airflow service. Google runs a GKE cluster per environment for the scheduler, triggerers and workers, runs the Airflow web server UI and manages the metadata database. DAGs live in the environment's Cloud Storage bucket. Gen 3 supports Airflow 2 and 3.
 - This guide did not read a managed Airflow page for Azure. Data Factory pipelines cover much of the same ground; check Microsoft's docs for any Airflow offering.
 
 **[📖 What is Amazon MWAA?](https://docs.aws.amazon.com/mwaa/latest/userguide/what-is-mwaa.html)** - features, architecture, versions

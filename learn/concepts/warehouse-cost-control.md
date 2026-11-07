@@ -19,11 +19,11 @@ Warehouse cost comes from two things: **how much data your queries read** and **
 | **Per data scanned** (BigQuery on-demand) | Bytes processed by each query | Read less data |
 | **Per compute time or capacity** (Snowflake warehouses, BigQuery slot reservations) | Compute that is running or reserved | Right-size it, suspend it, cap it |
 
-The BigQuery cost page puts it this way: on-demand compute is billed by bytes processed, and its only direct cost control is quotas; capacity compute is billed for slots, where you can cap maximum slots, buy commitments or use autoscaling.
+The BigQuery cost page puts it this way: on-demand compute is billed by bytes processed, and its controls are project or user daily quotas plus a maximum bytes billed setting; capacity compute is billed for slots, where you can cap maximum slots, buy commitments or use autoscaling.
 
 ## Cut waste first
 
-- **Read fewer bytes.** Partition and cluster tables on the columns queries filter by, and select only the columns you need. See [File formats and partitioning](./file-formats-and-partitioning.md). On a non-clustered BigQuery table, `LIMIT` does not reduce the data read; on a clustered one it can.
+- **Read fewer bytes.** Partition tables on the columns queries filter by and select only the columns you need (both are advice on BigQuery's query-optimization page; clustering shows up on the cost page only in the `LIMIT` note below). See [File formats and partitioning](./file-formats-and-partitioning.md). On a non-clustered BigQuery table, `LIMIT` does not reduce the data read; on a clustered one it can.
 - **Look before you run.** BigQuery's dry run (or the console validator) returns the estimated bytes without running the query. The estimate is an upper bound.
 - **Preview instead of querying.** Table preview and `bq head` do not incur query charges.
 - **Do not recompute what you can store.** Incremental models beat full rebuilds. See [Analytics engineering and dbt](./analytics-engineering-and-dbt.md).
@@ -62,6 +62,7 @@ I did not run any of these controls for this page; they are described from the d
 ## Official docs
 
 - **[📖 BigQuery: Estimate and control costs](https://docs.cloud.google.com/bigquery/docs/best-practices-costs)** - dry runs, maximum bytes billed, quotas, pricing models
+- **[📖 BigQuery: Optimize query computation](https://docs.cloud.google.com/bigquery/docs/best-practices-performance-compute)** - query only the columns you need, filter on partitions
 - **[📖 Snowflake: Resource monitors](https://docs.snowflake.com/en/user-guide/resource-monitors)** - credit quotas, notify and suspend triggers
 
 ## What to look at next

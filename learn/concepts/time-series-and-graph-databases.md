@@ -36,11 +36,11 @@ Reach for a time-series store when volume is high, you query by time window, and
 A graph database stores **nodes** (things), **relationships** (typed, directed links) and **properties** (key-value pairs on either). Neo4j's Cypher query language writes patterns with round brackets for nodes and square brackets with an arrow for relationships:
 
 ```cypher
-MATCH (p:Person)-[:LIKES]->(t:Technology)
-RETURN p, t
+MATCH (p:Person)-[r:LIKES]->(t:Technology)
+RETURN p,r,t
 ```
 
-That example is from Neo4j's getting-started page, which says graph pattern matching sits at the core of Cypher. The database finds the parts of the graph that fit the pattern.
+That example is from Neo4j's getting-started page (which also binds the relationship to a variable `r`), and the page says graph pattern matching sits at the core of Cypher. The database finds the parts of the graph that fit the pattern.
 
 ```mermaid
 flowchart LR
