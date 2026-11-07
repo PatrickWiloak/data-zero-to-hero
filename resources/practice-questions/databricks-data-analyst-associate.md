@@ -7,7 +7,7 @@ last-updated: 2026-11-07
 25 scenario-based questions for Databricks Data Analyst Associate prep, tagged with the nine sections of the August 2026 exam guide. Weights: Executing queries 20%, Dashboards and visualizations 16%, Analyzing queries 15%, Genie 12%, Platform 11%, Managing data 8%, Securing data 8%, Importing data 5%, Data modeling 5%.
 
 > **Cert page:** [exams/databricks/data-analyst-associate/](../../exams/databricks/data-analyst-associate/)
-
+>
 > Original scenario questions for study. They contain no vendor exam content.
 
 ---

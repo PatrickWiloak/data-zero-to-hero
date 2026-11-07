@@ -7,7 +7,7 @@ last-updated: 2026-11-07
 25 scenario-based questions for MongoDB Associate Data Modeler prep, tagged with the eight domains of Exam Guide v2.0. Domain weights: Monitoring and Evolving Data Models 27%, Schema Design Optimization 16%, Advanced Schema Design Patterns and Anti-patterns 15%, Indexing Design Fundamentals 15%, Relational to Document Model 12%, Fundamentals of Data Transformation 6%, Performance Tools and Techniques 6%, CRUD Operations 3%. The bank follows those weights: 7, 4, 4, 4, 3, 1, 1, 1 questions.
 
 > **Cert page:** [exams/mongodb/associate-data-modeler/](../../exams/mongodb/associate-data-modeler/)
-
+>
 > Original scenario questions for study. They contain no vendor exam content.
 
 ---

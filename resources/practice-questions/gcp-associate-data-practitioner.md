@@ -7,7 +7,7 @@ last-updated: 2026-11-07
 28 scenario-based questions for Associate Data Practitioner prep. Questions follow the official guide's four sections and weights: Data Preparation and Ingestion (~30%), Data Analysis and Presentation (~27%), Data Pipeline Orchestration (~18%) and Data Management (~25%).
 
 > **Cert page:** [exams/gcp/associate-data-practitioner/](../../exams/gcp/associate-data-practitioner/)
-
+>
 > Original scenario questions for study. They contain no vendor exam content.
 
 ---

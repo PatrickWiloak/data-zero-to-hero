@@ -87,9 +87,9 @@ CONTEXT:  while updating tuple (0,1) in relation "accounts"
 ```text
 ERROR:  deadlock detected
 DETAIL:  Process 91 waits for ShareLock on transaction 741; blocked by process 90.
-	Process 90 waits for ShareLock on transaction 742; blocked by process 91.
-	Process 91: update accounts set balance=balance+10 where id=1;
-	Process 90: update accounts set balance=balance+10 where id=2;
+    Process 90 waits for ShareLock on transaction 742; blocked by process 91.
+    Process 91: update accounts set balance=balance+10 where id=1;
+    Process 90: update accounts set balance=balance+10 where id=2;
 ```
 
 Read it as a cycle: 91 waits for 90, and 90 waits for 91. The final balances were `90` and `110`: only the survivor's transfer happened, and the victim's whole transaction rolled back. **The application has to catch the error and retry the transaction**, because the database already undid it.

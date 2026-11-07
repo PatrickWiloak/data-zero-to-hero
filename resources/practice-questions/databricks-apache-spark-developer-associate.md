@@ -7,7 +7,7 @@ last-updated: 2026-11-07
 24 scenario-based questions for the Apache Spark Developer Associate exam, tagged with the seven sections of the guide published 2026-10-08. Weights: DataFrame API 30%, Architecture 20%, Spark SQL 20%, Troubleshooting and tuning 10%, Structured Streaming 10%, Spark Connect 5%, Pandas API 5%. All code is Python.
 
 > **Cert page:** [exams/databricks/apache-spark-developer-associate/](../../exams/databricks/apache-spark-developer-associate/)
-
+>
 > Original scenario questions for study. They contain no vendor exam content.
 
 ---
