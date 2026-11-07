@@ -55,6 +55,9 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 ## Compare
 
 - [Databases (cloud-native)](../resources/service-comparison-databases.md) - BigQuery vs Redshift vs Synapse, and the operational stores
+- [Data warehouses](../resources/service-comparison-warehouses.md) - Redshift, Fabric, BigQuery, Snowflake, Databricks SQL
+- [ETL and orchestration](../resources/service-comparison-etl-orchestration.md) - Glue, Data Factory, Dataflow, managed Airflow, dbt, Dagster
+- [BI tools](../resources/service-comparison-bi-tools.md) - Power BI, Looker, Tableau, Quick Sight, Superset
 - [Messaging and queues](../resources/service-comparison-messaging-queues.md) - Kafka, Kinesis, Pub/Sub, Event Hubs, SQS
 - [Vector databases](https://ai.noblerworks.com/tools/decisions/vector-database/) - the analytical store for embeddings
 - [AI and ML services](https://ai.noblerworks.com/tools/comparisons/cloud-ai-ml-services/) - where the feature pipelines end up
@@ -129,6 +132,6 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 
 ## Roadmap
 
-The ordered path through these is the **[Data Engineer roadmap](../resources/certification-roadmap-data-engineer.md)**. For the storage-administration side, see the **[Database Specialist roadmap](../resources/certification-roadmap-database-specialist.md)**; for cost control over the warehouse bill, **[FinOps](https://cloud.noblerworks.com/topics/finops/)**.
+The ordered path through these is the **[Data Engineer roadmap](../resources/certification-roadmap-data-engineer.md)**. The analyst side has the **[Data Analyst roadmap](../resources/certification-roadmap-data-analyst.md)** and **[Analytics Engineer roadmap](../resources/certification-roadmap-analytics-engineer.md)**. For the storage-administration side, see the **[Database Specialist roadmap](../resources/certification-roadmap-database-specialist.md)**; for cost control over the warehouse bill, **[FinOps](https://cloud.noblerworks.com/topics/finops/)**.
 
 Related topics: **[Databases](./databases.md)** for choosing a store per workload, **[AI/ML systems](https://ai.noblerworks.com/build/)** for what consumes the feature tables, and **[Observability](https://cloud.noblerworks.com/topics/observability/)** for the monitoring discipline the quality checks borrow from.

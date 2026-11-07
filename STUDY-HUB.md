@@ -104,6 +104,8 @@ Full roadmap: [Data engineer certification roadmap](./resources/certification-ro
 3. Azure DP-600 (Fabric Analytics Engineer) *or* SnowPro Core
 4. Add: SnowPro Advanced Architect for warehouse design depth
 
+Full roadmaps: [Data analyst](./resources/certification-roadmap-data-analyst.md) · [Analytics engineer](./resources/certification-roadmap-analytics-engineer.md)
+
 ### Database Administration Track
 1. Azure DP-900 for the vocabulary
 2. Azure DP-300 *or* GCP Professional Cloud Database Engineer
@@ -148,9 +150,9 @@ The Certs column counts real exams, retired ones included.
 
 ## 📚 Resource Library
 
-- **Service comparisons:** [Databases](./resources/service-comparison-databases.md) · [Messaging and queues](./resources/service-comparison-messaging-queues.md)
+- **Service comparisons:** [Databases](./resources/service-comparison-databases.md) · [Warehouses](./resources/service-comparison-warehouses.md) · [ETL and orchestration](./resources/service-comparison-etl-orchestration.md) · [BI tools](./resources/service-comparison-bi-tools.md) · [Messaging and queues](./resources/service-comparison-messaging-queues.md)
 - **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md) · [Streaming analytics](./resources/architecture-patterns/streaming-analytics.md) · [CDC into a lakehouse](./resources/architecture-patterns/cdc-to-lakehouse.md) · [Medallion](./resources/architecture-patterns/medallion-architecture.md) · [Reverse ETL](./resources/architecture-patterns/reverse-etl-operational-analytics.md) · [Semantic layer](./resources/architecture-patterns/semantic-layer.md)
-- **Career roadmaps:** [Data Engineer](./resources/certification-roadmap-data-engineer.md) · [Database Specialist](./resources/certification-roadmap-database-specialist.md)
+- **Career roadmaps:** [Data Engineer](./resources/certification-roadmap-data-engineer.md) · [Data Analyst](./resources/certification-roadmap-data-analyst.md) · [Analytics Engineer](./resources/certification-roadmap-analytics-engineer.md) · [Database Specialist](./resources/certification-roadmap-database-specialist.md)
 - **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Build a streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md) · [Design a star schema](./resources/hands-on-projects/design-star-schema.md) · [Build a dbt project](./resources/hands-on-projects/build-dbt-project.md)
 - **Migration:** [Database migration](./resources/migration-guides/database-migration.md) · [Warehouse to cloud](./resources/migration-guides/warehouse-to-cloud-migration.md)
 - **Interview prep:** [Data engineer](./resources/interview-prep/data-engineer-interview.md) · [SQL](./resources/interview-prep/sql-interview-guide.md) · [Data modeling and pipeline design](./resources/interview-prep/data-modeling-system-design-interview.md) · [Analytics engineer](./resources/interview-prep/analytics-engineer-interview.md) · [DBA](./resources/interview-prep/dba-interview.md)

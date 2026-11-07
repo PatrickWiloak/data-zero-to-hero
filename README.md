@@ -137,10 +137,10 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 - ✅ **[23 concept pages](./learn/concepts/)** - SQL joins, window functions, indexes, transactions, OLTP vs OLAP, replication and sharding, SQL vs NoSQL, ETL vs ELT, CDC, batch vs streaming, windows and watermarks, warehouses vs lakes vs lakehouses, modeling and slowly changing dimensions, dbt, partitioning, orchestration, quality, governance, data contracts, vector databases
 - ✅ **24 certification study guides** across 7 providers, with 2,000+ embedded vendor doc links
 - ✅ **[2 cross-pillar topic indexes](./topics/)** - databases and data engineering
-- ✅ **2 cross-cloud service comparisons** - databases, messaging and queues
+- ✅ **5 cross-cloud service comparisons** - databases, messaging and queues
 - ✅ **8 architecture patterns** - data pipeline and ETL, lakehouse, medallion, CDC into a lakehouse, data mesh, streaming analytics (Lambda vs Kappa), reverse ETL, semantic layer
 - ✅ **4 hands-on projects** - a batch data pipeline, a Kafka streaming pipeline, a star schema design, and a tested dbt project
-- ✅ **2 certification roadmaps** - data engineer, database specialist
+- ✅ **4 certification roadmaps** - data engineer, database specialist
 - ✅ **5 interview prep guides** - data engineer, SQL with worked problems, data modeling and pipeline design
 - ✅ **3 troubleshooting guides** - slow SQL queries, failing and late pipelines, Spark job performance
 - ✅ **2 migration guides** - operational database, legacy warehouse to cloud
@@ -177,6 +177,8 @@ Highlights are a sample, not the full list - the Certs column is the total. Open
 ## 🗺️ Certification Roadmaps
 
 - **[📊 Data Engineer](./resources/certification-roadmap-data-engineer.md)** - cloud data engineering, then Databricks or Snowflake depth
+- **[📈 Data Analyst](./resources/certification-roadmap-data-analyst.md)** - SQL, Power BI and a first warehouse
+- **[🧱 Analytics Engineer](./resources/certification-roadmap-analytics-engineer.md)** - the modelled layer: Fabric or Snowflake lane, plus dbt practice
 - **[🗄️ Database Specialist](./resources/certification-roadmap-database-specialist.md)** - relational and NoSQL administration across AWS, Azure and GCP
 
 Other career paths live on the sibling sites: [cloud, DevOps and platform roadmaps](https://cloud.noblerworks.com/), [security roadmaps](https://security.noblerworks.com/), and the [AI engineer roadmap](https://ai.noblerworks.com/careers/roles/ai-engineer-roadmap/).
@@ -185,7 +187,7 @@ Other career paths live on the sibling sites: [cloud, DevOps and platform roadma
 
 ## 📚 Study Resources
 
-- **Service comparisons:** [Databases](./resources/service-comparison-databases.md) · [Messaging and queues](./resources/service-comparison-messaging-queues.md)
+- **Service comparisons:** [Databases](./resources/service-comparison-databases.md) · [Warehouses](./resources/service-comparison-warehouses.md) · [ETL and orchestration](./resources/service-comparison-etl-orchestration.md) · [BI tools](./resources/service-comparison-bi-tools.md) · [Messaging and queues](./resources/service-comparison-messaging-queues.md)
 - **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md) · [Streaming analytics](./resources/architecture-patterns/streaming-analytics.md) · [CDC into a lakehouse](./resources/architecture-patterns/cdc-to-lakehouse.md) · [Medallion](./resources/architecture-patterns/medallion-architecture.md) · [Reverse ETL](./resources/architecture-patterns/reverse-etl-operational-analytics.md) · [Semantic layer](./resources/architecture-patterns/semantic-layer.md)
 - **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Build a streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md) · [Design a star schema](./resources/hands-on-projects/design-star-schema.md) · [Build a dbt project](./resources/hands-on-projects/build-dbt-project.md) · [Labs by certification](./resources/hands-on-projects/labs-by-cert.md)
 - **Migration:** [Database migration](./resources/migration-guides/database-migration.md) · [Warehouse to cloud](./resources/migration-guides/warehouse-to-cloud-migration.md)
@@ -210,11 +212,11 @@ Other career paths live on the sibling sites: [cloud, DevOps and platform roadma
 - **Certifications:** 24
 - **Providers:** 7
 - **Concept pages:** 23
-- **Service comparisons:** 2
+- **Service comparisons:** 5
 - **Architecture patterns:** 8
 - **Hands-on projects:** 4
 - **Topic indexes:** 2
-- **Career roadmaps:** 2
+- **Career roadmaps:** 4
 - **Interview prep guides:** 5
 - **Migration guides:** 2
 - **Troubleshooting guides:** 3

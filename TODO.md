@@ -57,7 +57,8 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert items are already listed above.
 
 - [x] 2026-11-07 Wave 1: `learn/day-one/` on-ramp (7 pages, samples run; the DuckDB CLI, JupyterLab/VS Code UIs and `pd.read_parquet` were not run - stated on the pages).
-- [ ] Wave 2: service comparisons for warehouses, ETL/orchestration and BI tools; data analyst + analytics engineer roadmaps.
+- [x] 2026-11-07 Wave 2: service comparisons (warehouses, ETL/orchestration, BI tools) + data analyst and analytics engineer roadmaps. Unverified items are marked on the pages (Tableau, Redshift/Databricks/Snowflake pricing models).
+- [ ] Judge 2026-12-22: re-read the vendor pages behind the Wave 2 comparisons (Quick Sight rename, Fabric vs Synapse, Fabric Data Factory, Composer "Managed Airflow Gen 3" naming, Redshift Python UDF end of support).
 - [ ] Wave 3: concept pages - data observability, warehouse cost control, OLTP normalisation, time-series + graph DBs, feature stores.
 - [ ] Wave 4: projects (Debezium CDC, Airflow/Dagster, Iceberg lakehouse, backup-restore drill); troubleshooting (replication lag, deadlocks, consumer lag); topic indexes (streaming, BI, governance).
 - [ ] Flashcard decks: 4 Snowflake guides, dp-203, associate-atlas-administrator.
