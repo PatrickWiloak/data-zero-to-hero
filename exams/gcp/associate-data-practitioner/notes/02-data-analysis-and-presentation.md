@@ -43,9 +43,9 @@ In BigQuery the same shape works, with `DATE_TRUNC(order_date, MONTH)` (argument
 
 ### Notebooks
 
-For exploration that SQL alone does not cover, such as charts, statistics or a quick model, you use a **Jupyter notebook**. In Google Cloud the managed notebook experience named in the guide is **Colab Enterprise** (notebooks inside BigQuery Studio and Vertex-family tooling). A typical notebook cell pulls a BigQuery result into a pandas DataFrame, plots it, and annotates the finding. Notebooks answer "what is going on in this data"; a dashboard answers "show the same view to the team every day".
+For exploration that SQL alone does not cover, such as charts, statistics or a quick model, you use a **Jupyter notebook**. In Google Cloud the managed notebook experience named in the guide is **Colab Enterprise** notebooks in BigQuery Studio, which combine SQL, Python, text and visualizations in the Google Cloud console. A typical notebook cell pulls a BigQuery result into a pandas DataFrame, plots it, and annotates the finding. Notebooks answer "what is going on in this data"; a dashboard answers "show the same view to the team every day".
 
-(I did not fetch the Colab Enterprise documentation for this guide, so treat the product description as general knowledge to confirm on the docs page.)
+**[📖 Colab Enterprise notebooks in BigQuery Studio](https://docs.cloud.google.com/bigquery/docs/notebooks-introduction)** - notebooks with SQL and visualization cells; BigQuery DataFrames (an open source Python library) implements pandas and scikit-learn APIs by converting operations to SQL that runs in BigQuery.
 
 ### Answering business questions
 
@@ -62,7 +62,7 @@ Google has two products with similar names, and the guide asks you to compare th
 
 The decision rule: quick, flexible, ad hoc reporting favours Looker Studio; consistent governed metrics across many users favours Looker.
 
-**[📖 Looker documentation](https://docs.cloud.google.com/looker/docs/intro)** - the intro describes LookML as Looker's language for describing your SQL data and the options you want to offer users, and dashboards as a main content type alongside Looks. (The same page does not mention Looker Studio; the Studio-versus-Looker comparison above is general knowledge I could not confirm from a docs page.)
+**[📖 Looker documentation](https://docs.cloud.google.com/looker/docs/intro)** - the intro describes LookML as Looker's language for describing your SQL data and the options you want to offer users, and dashboards as a main content type alongside Looks. (That page does not mention Looker Studio. The comparison above rests on Google's product pages, which describe Looker Studio as a no-cost tool that builds dashboards from raw data without a centralized data model, and Looker's LookML as a reusable, version-controlled semantic layer; Looker Studio can also read Looker-modeled data. See the **[📖 Looker next evolution post](https://cloud.google.com/blog/products/data-analytics/looker-next-evolution-business-intelligence-data-studio)**. I could not fetch Google's side-by-side docs page.)
 
 LookML parameters the guide mentions are small edits to the model: change a dimension's SQL, rename a label, add a filter. You do not need to write a full model, but you should recognise that a LookML change alters the data model for every dashboard that uses it, while a dashboard change affects only that dashboard.
 

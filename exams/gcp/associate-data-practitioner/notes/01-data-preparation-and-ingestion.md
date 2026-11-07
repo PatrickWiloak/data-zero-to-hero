@@ -107,7 +107,9 @@ This is a pattern-matching skill. Match the workload shape to the product:
 - **Bigtable**: wide-column NoSQL for huge volumes with very low-latency key lookups (time series, IoT, telemetry).
 - **Spanner**: relational with SQL and strong consistency that scales horizontally, including across regions.
 
-(This product-to-workload mapping is general Google Cloud knowledge that I did not re-verify on a docs page for this guide; the Cloud Storage details below are verified.)
+(Bigtable is verified: its docs list time-series and IoT data and low-latency single-key access, and describe a sparse sorted key-value table. The Firestore, Spanner and Cloud SQL one-liners are general Google Cloud knowledge; the product pages fetched were truncated, so they are unverified. The Cloud Storage details below are verified.)
+
+**[📖 Bigtable overview](https://docs.cloud.google.com/bigtable/docs/overview)** - use cases and low-latency key access
 
 ### Choose the location type
 

@@ -405,7 +405,7 @@ D. The Cloud Storage lifecycle configuration
 
 **Correct: B**
 
-**Why:** The Dataflow job UI shows the pipeline graph, stage progress and execution details, and supports CPU and memory profiling. IAM, lifecycle rules and report galleries do not describe job progress.
+**Why:** The Dataflow job UI shows the pipeline graph, stage progress and execution details, with job metrics charts. IAM, lifecycle rules and report galleries do not describe job progress.
 
 **Key Concept:** exams/gcp/associate-data-practitioner/notes/03-data-pipeline-orchestration.md
 </details>

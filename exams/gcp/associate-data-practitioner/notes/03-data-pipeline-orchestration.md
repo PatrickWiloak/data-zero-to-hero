@@ -75,15 +75,15 @@ Not everything runs on a clock. **Pub/Sub** carries messages from producers to s
 
 **[📖 Pub/Sub BigQuery subscriptions](https://docs.cloud.google.com/pubsub/docs/bigquery)** - direct writes to BigQuery, dead-letter handling, when Dataflow is the better choice
 
-**Eventarc** routes events (a file landing in Cloud Storage, an audit log entry) to targets. Its destinations include Cloud Run services and jobs, Workflows, and Cloud Run functions (the current name for Cloud Functions). In Eventarc Standard a trigger filters events by source and type and routes matches to one destination.
+**Eventarc** routes events (a file landing in Cloud Storage, an audit log entry) to targets. Eventarc Standard destinations are Cloud Run services, Cloud Run functions (the current name for Cloud Functions), Workflows, GKE services and internal HTTP endpoints; Eventarc Advanced adds Cloud Run jobs, Pub/Sub topics and buses. In Eventarc Standard a trigger filters events by source and type and routes matches to one destination.
 
-**[📖 Eventarc overview](https://docs.cloud.google.com/eventarc/docs/overview)** - providers, triggers and destinations
+**[📖 Eventarc overview](https://docs.cloud.google.com/eventarc/docs/overview)** - providers, triggers and the Standard and Advanced destination lists
 
 A common chain: a file arrives in a bucket, Eventarc fires, it starts a Cloud Run function or a Workflow, which kicks off a Dataform run or a Dataflow template.
 
 ### Monitoring
 
-- **Dataflow job UI** shows a graphical pipeline view, stage progress and execution details; you can profile CPU and memory to find bottlenecks. First stop when a pipeline is slow or stuck.
+- **Dataflow job UI** shows a graphical pipeline view, stage progress and execution details; job metrics charts show data freshness, resource utilization and I/O requests. First stop when a pipeline is slow or stuck.
 - **Cloud Logging** collects logs; filter by resource and severity to find errors.
 - **Cloud Monitoring** charts metrics and drives alerting policies (for example, alert when a job fails or lag grows).
 

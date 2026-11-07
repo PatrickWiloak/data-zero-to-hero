@@ -73,11 +73,13 @@ An **Object Lifecycle Management** configuration is a set of rules; each rule ha
 
 **[📖 Object Lifecycle Management](https://docs.cloud.google.com/storage/docs/lifecycle)** - actions, conditions and timing
 
-In BigQuery, the equivalent cost control is expiration: you can set a default table or partition expiration so old data is deleted automatically (I did not fetch the BigQuery expiration page for this guide; confirm the setting names in the docs).
+In BigQuery, the equivalent cost control is expiration: you can set a default table expiration on a dataset (applies only to tables created after it is set) and a partition expiration (`time_partitioning_expiration` in the bq tool, `expirationMs` in the API), so old data is deleted automatically.
+
+**[📖 BigQuery storage best practices](https://docs.cloud.google.com/bigquery/docs/best-practices-storage)** - default table expiration and partition expiration
 
 ### Archiving
 
-For archive needs, think of which service fits the access pattern: Cloud Storage Archive class for files kept for years and rarely read; BigQuery long-term storage pricing applies automatically to tables not modified for 90 days (general knowledge, not fetched); backups of databases belong in the database's own backup feature. Choose by retention period and how fast you must get the data back.
+For archive needs, think of which service fits the access pattern: Cloud Storage Archive class for files kept for years and rarely read; BigQuery long-term storage pricing (about half the active rate) applies automatically to a table or partition not modified for 90 consecutive days, per partition; reads do not reset the clock (per Google's cost documentation as returned by search; the fetched storage-overview page did not state the 90 days, so treat the exact figure as lightly verified, see the **[📖 Estimate and control costs](https://docs.cloud.google.com/bigquery/docs/best-practices-costs)** page); backups of databases belong in the database's own backup feature. Choose by retention period and how fast you must get the data back.
 
 ---
 

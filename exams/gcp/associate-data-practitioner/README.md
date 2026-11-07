@@ -17,7 +17,7 @@ The Associate Data Practitioner exam tests whether you can do the everyday jobs 
 - **Cost:** $125 USD plus tax where applicable
 - **Delivery:** Online proctored or onsite at a testing center
 - **Languages:** English, Japanese
-- **Validity:** Not stated on the exam page; see the **[📖 renewal FAQs](https://support.google.com/cloud-certification/answer/9907853)**
+- **Validity:** Total period not stated on the exam page or the FAQ. The **[📖 renewal FAQs](https://support.google.com/cloud-certification/answer/9907853)** say renewal for "all other foundational and associate certifications" is the standard exam only, opens 180 days before the inactive date, adds 3 years, and is allowed up to 30 days after it (read 2026-11-07)
 - **Prerequisites:** None; 6+ months of data work on Google Cloud recommended
 
 ## Exam Sections

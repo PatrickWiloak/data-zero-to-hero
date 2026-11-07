@@ -15,11 +15,12 @@ applies-to: Google Cloud exam page and exam guide v1.0, read 2026-11-07
 **Cost:** $125 USD plus tax where applicable (exam page, read 2026-11-07)
 **Delivery:** Online proctored from home, or onsite at a Pearson VUE test center
 **Languages:** English, Japanese
-**Valid For:** The exam page does not state a validity period; see the Renewal FAQ
+**Valid For:** Total validity is not stated on the exam page or the Renewal FAQ; the FAQ says a renewal adds 3 years to the inactive date (read 2026-11-07)
+**Retakes:** The FAQ says the waiting period between attempts varies by exam; none is published for this exam
 **Prerequisites:** None; 6+ months of hands-on experience with data on Google Cloud recommended
 **Level:** Associate
 
-Registration is through Google Cloud's certification portal (the exam page links to cp.certmetrics.com). The renewal FAQ lists renewal terms for "other foundational and associate certifications": the renewal window opens 180 days before the inactive date, renewal adds 3 years, and the standard exam is the only option. Read that FAQ on the date you plan to renew, because the table was hard to parse when this guide was written.
+Registration is through Google Cloud's certification portal (the exam page links to cp.certmetrics.com). The renewal FAQ lists renewal terms for "other foundational and associate certifications": the renewal window opens 180 days before the inactive date, renewal adds 3 years, and the standard exam is the only option. Per the FAQ, you can also renew up to 30 days after the inactive date; after that you must retake the standard exam at full price. The Associate Cloud Engineer row was ambiguous in the fetched text, so read the FAQ on the date you plan to renew.
 
 **[📖 Official exam page](https://cloud.google.com/learn/certification/data-practitioner)** - format, fee, delivery, links to the guide and sample questions
 **[📖 Exam guide v1.0 (PDF)](https://services.google.com/fh/files/misc/v1.0_associate_data_practitioner_exam_guide_english.pdf)** - the full section and objective list
