@@ -50,7 +50,7 @@ The diagram shows two lanes, Microsoft and Snowflake. Pick one lane first; you d
 | 2 | [SnowPro Advanced Data Engineer](../exams/snowflake/snowpro-advanced-data-engineer/README.md) | Pipelines on Snowflake: Snowpipe, streams, tasks, dynamic tables |
 | 2 (alternative) | [SnowPro Advanced Architect](../exams/snowflake/snowpro-advanced-architect/README.md) | Designing accounts, security and performance at scale |
 
-The Advanced guides in this repo list an active SnowPro Core as a prerequisite. Snowflake's certification pages I could fetch do not state it, so confirm it before you book.
+The Advanced guides in this repo list an active SnowPro Core as a prerequisite. Snowflake's blog says "being SnowPro Core Certified is a prerequisite for all advanced exams" ([May 2023 post](https://www.snowflake.com/en/blog/updated-snowpro-advanced-data-scientist-certification/)), but the current Advanced pages and the FAQ answer do not state it, so confirm it on the exam registration page before you book.
 
 ### Other warehouses
 

@@ -50,6 +50,7 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 
 ## Tooling (shared with the sibling sites)
 
+- [ ] 2026-11-09 Freshness workflow built, not pushed: after the train pushes, run Actions > Freshness once (workflow_dispatch) and skim the step summary; advisory, fails only past 365 days. Script: `.github/scripts/check-freshness.py`.
 - [ ] 🟡 `.github/scripts/site_hooks.py` has drifted from ai-zero-to-hero's port - one canonical module the sites vendor (with a sync check), or record the fork. S-M, low.
 - [ ] 🟡 `glossary-add-anchors.py`, `glossary-autolink.py`, `glossary-upgrade-existing-links.py` are a documented manual pipeline (`.github/AUTOMATION.md`, CONTRIBUTING); delete only if that pipeline is retired.
 - [x] 2026-11-07 Heading-anchor validation folded into `check-internal-links.py` (640 anchors, 0 broken; ids match the strict build's on all 463 comparable pages).
@@ -67,7 +68,7 @@ Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert i
 - [ ] Judge 2026-12-22: re-read the vendor pages behind the Wave 2 comparisons (Quick Sight rename, Fabric vs Synapse, Fabric Data Factory, Composer "Managed Airflow Gen 3" naming, Redshift Python UDF end of support).
 - [x] 2026-11-07 Wave 3: concept pages - backup/PITR, data observability, warehouse cost control, OLTP normalization, time-series + graph DBs, feature stores. Left: query plans, Spark shuffles/skew, semantic layers 5-minute pages.
 - [x] 2026-11-07 Wave 4: 4 projects (Debezium CDC to Iceberg, Dagster, local Iceberg, backup-restore drill), 3 troubleshooting guides (replication lag, deadlocks, Kafka consumer lag), 3 topic indexes (streaming, analytics and BI, governance). All run in Docker or uv venvs; what was NOT run is stated on each page (Airflow mapping, Dagster UI clicks, MySQL/SQL Server/managed-service equivalents, Spark/Trino Iceberg readers, lock-order fix).
-- [ ] 2026-11-07 Verification pass done ([ledger](docs/verification-2026-11-07.md)); left: confirm Tableau ownership/licensing and whether SnowPro Core is required for Advanced exams (Patrick, on the vendor sites).
+- [ ] 2026-11-07 Verification pass done ([ledger](docs/verification-2026-11-07.md)); Tableau ownership and tiers settled. Left: Tableau prices; Snowflake Core prerequisite only in a 2023 blog (check at registration).
 - [ ] Wave 4 left: a streaming or warehouse postmortem from primary sources (the 2 existing postmortems are databases).
 - [ ] Judge 2026-12-22: rerun the Wave 4 projects on current releases (Debezium 3.6.x, PyIceberg 0.12, Dagster 1.13, `apache/kafka:latest` is unpinned in the CDC and consumer-lag pages) and re-check the PyIceberg `expire_snapshots` file-cleanup note.
 - [x] 2026-11-07: flashcard decks added for 4 Snowflake guides + associate-atlas-administrator. Left: none; dp-203 is retired (reference-only), so no deck by design.

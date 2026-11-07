@@ -16,9 +16,9 @@ A **time-series database** is built for data that arrives stamped with a time an
 
 Typical shape: very many rows, mostly inserts, almost never updated, queried like "the last hour" or "daily average for March".
 
-The usual trick is to **partition by time**. TimescaleDB's hypertable is a PostgreSQL table that automatically partitions time-series data by time into **chunks** (a day or a week, adjustable). A query for a time range reads only the matching chunks, and old chunks stay small and independent. You use it like a normal PostgreSQL table, per the vendor docs.
+The usual trick is to **partition by time**. TimescaleDB's hypertable is a PostgreSQL table that automatically partitions time-series data by time into **chunks** (7 days by default, adjustable with `chunk_time_interval`; [create_hypertable reference](https://www.tigerdata.com/docs/reference/timescaledb/hypertables/create_hypertable_old)). A query for a time range reads only the matching chunks, and old chunks stay small and independent. You use it like a normal PostgreSQL table, per the vendor docs.
 
-Other things these stores add (general features; verify per product): downsampling old data into hourly or daily rollups, retention rules that drop old chunks, and time-bucket functions.
+TimescaleDB names these `add_retention_policy` (drops older raw data on a schedule), `drop_chunks` (manual) ([data retention](https://www.tigerdata.com/docs/use-timescale/latest/data-retention)) and continuous aggregates, summary tables refreshed in the background, built with `time_bucket` ([continuous aggregates](https://www.tigerdata.com/docs/use-timescale/latest/continuous-aggregates)). Other things these stores add (general features; verify per product): downsampling old data into hourly or daily rollups, retention rules that drop old chunks, and time-bucket functions.
 
 The core query, shown as plain SQL in SQLite's dialect to show the idea:
 

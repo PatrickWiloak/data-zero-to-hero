@@ -45,7 +45,9 @@ The table holds only facts from the vendor pages linked below.
 
 - A visual analytics tool with Tableau Desktop and web authoring. The help covers Tableau Cloud, Tableau Desktop and Tableau Server.
 - Its help covers connecting to data, building views, creating calculations and making dashboards.
-- The help pages also name Tableau Prep Builder, Tableau Bridge and Tableau Mobile. Tableau's marketing pages block automated fetching and the help text never states who owns Tableau, so ownership, packaging and licensing are **unverified**. Check Tableau's own pages.
+- The help pages also name Tableau Prep Builder, Tableau Bridge and Tableau Mobile.
+- Ownership: Salesforce's product page calls Tableau and CRM Analytics "complementary products from Salesforce" ([Salesforce Tableau page](https://www.salesforce.com/products/tableau/)).
+- Licensing on Tableau Cloud has three tiers. Viewer licenses "let users view and interact with workbooks"; Explorer adds browser-based authoring; Creator adds Tableau Desktop and Tableau Prep Builder and publishing from new data sources ([Understanding license models](https://help.tableau.com/current/online/en-us/license_product_keys.htm)). Prices are **unverified**: tableau.com blocks automated fetching, so read them on Tableau's pricing page.
 
 **[📖 Tableau Desktop and Web Authoring Help](https://help.tableau.com/current/pro/desktop/en-us/default.htm)** - help index for Cloud, Desktop and Server
 

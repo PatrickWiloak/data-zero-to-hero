@@ -61,7 +61,7 @@ Read it column by column:
 Two other views of the same group:
 
 ```bash
-# Group state (the test run showed Stable; the Kafka docs page does not list every state name)
+# Group state (the test run showed Stable; the operations page shows only Stable. Apache's GroupState Javadoc lists the constants UNKNOWN, PREPARING_REBALANCE, COMPLETING_REBALANCE, STABLE, DEAD, EMPTY, plus newer ASSIGNING, RECONCILING, NOT_READY, with no per-state descriptions: https://kafka.apache.org/42/javadoc/org/apache/kafka/common/GroupState.html)
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group g2 --state
 # Which client owns which partitions
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group g2 --members

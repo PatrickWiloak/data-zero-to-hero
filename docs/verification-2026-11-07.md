@@ -69,12 +69,12 @@ Hands-on and day-one pages were run for real on 2026-11-07; only their vendor cl
 
 ## Still unverifiable
 
-- Tableau ownership, editions and licensing (tableau.com returns 403 to fetchers).
-- Whether Snowflake requires SnowPro Core before Advanced exams (not on any Snowflake page fetched).
+- Tableau prices (tableau.com returns 403, including to a browser; ownership and license tiers settled below).
+- SnowPro Core before Advanced: only a May 2023 Snowflake blog says so; current Advanced pages and the FAQ answer are silent.
 - Warehouse time travel and snapshot features across platforms (stated as unchecked on the backup page).
 - Auto-suspend setting names per platform (stated as unchecked on the cost page).
-- TimescaleDB rollup, retention and time-bucket features, and the default chunk interval (the hypertables page names neither).
-- Kafka consumer group state names beyond Stable, and `xml_deadlock_report` as the deadlock event name.
+- Kafka consumer group state descriptions (names settled; the Javadoc gives no per-state text).
+- Warehouse time travel and auto-suspend setting names per platform: not attempted in the second pass.
 - Not run and not checked: Airflow mapping, Spark/Trino Iceberg readers, MySQL/SQL Server/managed-service commands beyond the doc-level checks above.
 
 ## Cert guides pass
@@ -119,7 +119,22 @@ No keyed answer was wrong and no distractor was accidentally correct in any of t
 
 ### Still unverifiable
 
-- GCP: total certification validity (the FAQ gives only the 3-year renewal extension; the Associate Cloud Engineer row is ambiguous); Firestore, Spanner and Cloud SQL one-line descriptions; the BigQuery 90-day long-term storage figure on a fetched docs page; Looker docs-side comparison page; Dataflow "exactly-once by default" and Data Fusion built on CDAP were not re-fetched.
-- Databricks analyst: exact meaning of "trusted assets"; embedded links, external app integrations and channel apps for Genie (no docs page read); passing score (not published).
-- Spark: PySpark stateful operator names and the default state store provider; whether serverless compute always uses Photon; Databricks serverless using Spark Connect connectivity; behavior of local runs (cache storage level, ANSI union errors) is as run, not documented.
+- GCP: total certification validity (the FAQ gives only the 3-year renewal extension; the Associate Cloud Engineer row is ambiguous); Firestore and Spanner one-line descriptions (product pages truncated); the BigQuery 90-day long-term storage figure (the pricing and storage pages fetched do not state it); Looker docs-side comparison page; Dataflow "exactly-once by default" and Data Fusion built on CDAP were not re-fetched.
+- Databricks analyst: exact meaning of "trusted assets" (set-up page uses the term, does not define it); embedded links, external app integrations and channel apps for Genie (set-up page lists sharing, copy link, OpenSharing and API only); passing score (not published).
+- Spark: PySpark stateful operator names (the guide excerpt read did not include them); Databricks serverless using Spark Connect connectivity; behavior of local runs (cache storage level, ANSI union errors) is as run, not documented.
 - MongoDB: certification validity and retake rules (gated Certification Program Guide; forum reports of a 15-day wait are unofficial); domain weights and objective text come from the Exam Guide v2.0 read earlier today and sit behind a login viewer, so they were not re-fetched; gradual migration practice; the cardinality-selectivity link; Subset in sharded clusters (guide wording plus inference).
+
+## Settled 2026-11-07 (second pass)
+
+Public pages only, no logins. Left open: MongoDB Associate Data Modeler validity and retakes (gated Certification Program Guide), Google Associate Data Practitioner total validity (FAQ unchanged), Tableau prices, Wave 2 vendor rereads (dated 2026-12-22, not cheap).
+
+| Page | Old | New | Source |
+|---|---|---|---|
+| resources/service-comparison-bi-tools | Tableau ownership, packaging, licensing unverified | Salesforce calls Tableau a Salesforce product; Cloud tiers Viewer, Explorer, Creator (Creator adds Desktop and Prep Builder); prices still unverified | https://www.salesforce.com/products/tableau/ ; https://help.tableau.com/current/online/en-us/license_product_keys.htm |
+| resources/troubleshooting/deadlocks-and-lock-waits | `xml_deadlock_report` name not on fetched page | system_health captures `xml_deadlock_report` events, which contain the graph | https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-deadlocks-guide |
+| resources/troubleshooting/kafka-consumer-lag | Only Stable known | Javadoc constants: UNKNOWN, PREPARING_REBALANCE, COMPLETING_REBALANCE, STABLE, DEAD, EMPTY (plus ASSIGNING, RECONCILING, NOT_READY); no descriptions | https://kafka.apache.org/42/javadoc/org/apache/kafka/common/GroupState.html |
+| learn/concepts/time-series-and-graph-databases | Chunks "a day or a week"; retention and time-bucket generic | Default `chunk_time_interval` is 7 days; `add_retention_policy`, `drop_chunks`, continuous aggregates, `time_bucket` named | https://www.tigerdata.com/docs/reference/timescaledb/hypertables/create_hypertable_old ; https://www.tigerdata.com/docs/use-timescale/latest/data-retention ; https://www.tigerdata.com/docs/use-timescale/latest/continuous-aggregates |
+| resources/certification-roadmap-analytics-engineer | Snowflake pages do not state Core prerequisite | Only a May 2023 Snowflake blog states it; current pages and FAQ silent; page now says confirm at registration | https://www.snowflake.com/en/blog/updated-snowpro-advanced-data-scientist-certification/ |
+| spark notes/03 | HDFS default state store and RocksDB option unverified | Settled: HDFS backend provider is the default; RocksDB since 3.2 via `spark.sql.streaming.stateStore.providerClass` | https://spark.apache.org/docs/latest/streaming/apis-on-dataframes-and-datasets.html |
+| databricks analyst notes/05 | Photon on serverless unverified | "Photon is enabled on serverless compute, SQL warehouses, and serverless Lakeflow pipelines" | https://docs.databricks.com/aws/en/compute/photon |
+| gcp notes/01 | Cloud SQL line unverified | "A fully managed relational database service for MySQL, PostgreSQL, and SQL Server" | https://docs.cloud.google.com/sql/docs/introduction |
