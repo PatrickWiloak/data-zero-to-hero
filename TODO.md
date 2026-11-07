@@ -35,15 +35,15 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 
 Confidence in brackets: H = vendor page read, M = vendor page plus search, L = third-party.
 
-- [ ] 2026-11-15: Snowflake COF-C03 / ADA-C02 / DEA-C02 objective-level outlines - get the form-gated study guide PDFs and remap topic sections.
-- [ ] 2026-11-15: DP-300 notes still lack database watcher, SQL DB in Fabric, elastic jobs, Resource Governor, IQP, compression, log shipping.
+- [ ] 2026-11-22: Snowflake COF-C03 / ADA-C02 / DEA-C02 objective-level outlines - get the form-gated study guide PDFs and remap topic sections.
+- [ ] 2026-11-29: DP-300 notes still lack database watcher, SQL DB in Fabric, elastic jobs, Resource Governor, IQP, compression, log shipping.
 - [x] 2026-10-22 Databricks DE Professional rebuilt for the 2026-10-09 outline: 10 section notes, README, fact sheet, strategy, plan; bank fully retagged. Page says 10 sections / 59 items, guide PDF 9 / 60.
 - [x] 2026-10-22 Databricks DE Associate rebuilt for the May 2026 7-section guide: 7 section notes, README, fact sheet, strategy, plan; bank retagged (no Section 5 question yet).
 - [ ] Judge 2027-01-15: recheck the DE Associate exam page and guide for a revision; recheck ABAC DENY policies (Beta) and `SET MANAGED` facts in notes/07.
 - [ ] DP-203 is retired: decide whether its guide, practice bank and `labs-by-cert` entry stay as reference or go.
 - [ ] "Vertex AI" still appears in `exams/gcp/data-engineer` (renamed Gemini Enterprise Agent Platform 2026-04-22). Sweep with Google's rename table once names settle.
 - [x] 2026-11-07 MongoDB Associate Data Modeler guide built from the exam page and Exam Guide v2.0 (validity not stated on any page read).
-- [ ] 2026-11-14: Confluent Cloud Certified Operator (CCAC; 90 min, USD 150, 2-year validity per training.confluent.io, read 2026-11-07) not built: the exam guide (course 1159) is a SCORM behind a free training-portal login, so question count and domain weights are unread. Enroll, read it, then build `exams/confluent/cloud-operator`. [M]
+- [ ] 2026-11-22: Confluent Cloud Certified Operator (CCAC; 90 min, USD 150, 2-year validity per training.confluent.io, read 2026-11-07) not built: the exam guide (course 1159) is a SCORM behind a free training-portal login, so question count and domain weights are unread. Enroll, read it, then build `exams/confluent/cloud-operator`. [M]
 - [ ] Snowflake SPS-C01 retires 2026-11-01 and SEA-C01 / DAA-C01 2026-12-01 [M]; no guides here.
 
 ## Tooling (shared with the sibling sites)
