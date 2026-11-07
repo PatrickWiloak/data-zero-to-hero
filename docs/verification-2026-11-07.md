@@ -76,3 +76,50 @@ Hands-on and day-one pages were run for real on 2026-11-07; only their vendor cl
 - TimescaleDB rollup, retention and time-bucket features, and the default chunk interval (the hypertables page names neither).
 - Kafka consumer group state names beyond Stable, and `xml_deadlock_report` as the deadlock event name.
 - Not run and not checked: Airflow mapping, Spark/Trino Iceberg readers, MySQL/SQL Server/managed-service commands beyond the doc-level checks above.
+
+## Cert guides pass
+
+A second pass over the four cert guides added on 2026-11-07 (GCP Associate Data Practitioner, Databricks Data Analyst Associate, Databricks Associate Developer for Apache Spark, MongoDB Associate Data Modeler): exam logistics re-fetched from the vendor pages and guides, every practice question's key and distractors judged against vendor docs, and note claims with a number, default, syntax or named behavior checked. Same classes as above. Counts are approximate groupings of checkable claims.
+
+| Guide | Logistics verified | Logistics fixed | Bank (items) | Wrong keys | Note claims verified | Note claims fixed | Unverifiable (marked) |
+|---|---|---|---|---|---|---|---|
+| gcp/associate-data-practitioner | 7 of 8 (duration, count, price, languages, delivery, prerequisites, weights) | 1 (validity and retakes) | 28 | 0 (1 explanation fixed) | 46 | 6 | 4 |
+| databricks/data-analyst-associate | 10 of 10 | 0 | 25 | 0 | 55 | 2 | 3 |
+| databricks/apache-spark-developer-associate | 10 of 10 | 0 | 24 | 0 | 62 | 3 | 3 |
+| mongodb/associate-data-modeler | 7 of 9 (validity and retakes not stated) | 1 (validity wording) | 25 | 0 | 48 | 3 | 5 |
+
+No keyed answer was wrong and no distractor was accidentally correct in any of the 102 questions. One explanation stated an unsupported capability (GCP Q20).
+
+### Fixes
+
+| Page | Old | New | Source |
+|---|---|---|---|
+| gcp fact-sheet, README | Validity "see the Renewal FAQ" | Total validity not stated; FAQ: "all other foundational and associate" certifications renew by standard exam only, window opens 180 days before the inactive date, adds 3 years, renewable up to 30 days after; retake wait "varies by exam" | https://support.google.com/cloud-certification/answer/9907853 |
+| gcp notes/03, bank Q20 | Dataflow job UI supports CPU and memory profiling | Job graph, execution details, stage progress and job metrics charts (data freshness, resource utilization, I/O); no profiling on the page | https://docs.cloud.google.com/dataflow/docs/guides/monitoring-overview |
+| gcp notes/03 | Eventarc destinations include Cloud Run services and jobs, Workflows, Cloud Run functions | Standard: Cloud Run services, Cloud Run functions, Workflows, GKE, internal HTTP; Advanced adds Cloud Run jobs, Pub/Sub, buses | https://docs.cloud.google.com/eventarc/docs/overview |
+| gcp notes/02 | Colab Enterprise "inside BigQuery Studio and Vertex-family tooling", not fetched | Colab Enterprise notebooks in BigQuery Studio; BigQuery DataFrames implements pandas and scikit-learn APIs over SQL | https://docs.cloud.google.com/bigquery/docs/notebooks-introduction |
+| gcp notes/02 | Looker vs Looker Studio "general knowledge" | Sourced to Google's product post (Studio: no-cost, no centralized model; LookML: version-controlled semantic layer); docs intro page does not compare them | https://cloud.google.com/blog/products/data-analytics/looker-next-evolution-business-intelligence-data-studio |
+| gcp notes/01 | Storage product mapping unchecked | Bigtable verified (time series, IoT, low latency, sparse sorted table); Firestore, Spanner, Cloud SQL lines marked unverified (pages truncated) | https://docs.cloud.google.com/bigtable/docs/overview |
+| gcp notes/04 | Table expiration "confirm the setting names"; 90-day long-term storage "not fetched" | Default table expiration applies only to new tables; `time_partitioning_expiration` / `expirationMs` for partitions; 90 consecutive days per partition, reads do not reset it (search-returned docs text; the storage-overview page does not state the figure) | https://docs.cloud.google.com/bigquery/docs/best-practices-storage |
+| databricks analyst notes/05, fact-sheet | Photon "always on for SQL warehouses and serverless" | "The default engine for all SQL warehouses" | https://docs.databricks.com/aws/en/compute/photon |
+| databricks analyst notes/07 | "Trusted assets" described as equivalent to example SQL and functions, attributed to benchmarks page | Set-up page lists trusted assets without defining them; the reading is marked unverified | https://docs.databricks.com/aws/en/genie/set-up |
+| spark notes/03 | `applyInPandasWithState` and `transformWithState` "family" from memory; HDFS state store default stated as fact | `transformWithState` encouraged since Spark 4.0, `mapGroupsWithState` / `flatMapGroupsWithState` legacy; PySpark names and state store default marked unverified | https://spark.apache.org/docs/latest/streaming/apis-on-dataframes-and-datasets.html#arbitrary-stateful-operations |
+| spark notes/07 | `PandasUDFType` "is deprecated" | "Will be deprecated in a future release" | https://spark.apache.org/docs/latest/api/python/tutorial/sql/arrow_pandas.html |
+| spark notes/07 | pandas API differences were "pointers to check" | Default index type is `distributed-sequence`; `sequence` uses a single partition; `compute.ops_on_diff_frames` exists but the options table (True) contradicts its prose (disallowed by default) | https://spark.apache.org/docs/latest/api/python/tutorial/pandas_on_spark/options.html |
+| mongodb notes/04, fact-sheet | `validationLevel: constraint` listed with 8.x levels, "(newer)" | New in MongoDB 9.0; the 8.3.13 server used for the runs does not have it | https://www.mongodb.com/docs/manual/core/schema-validation/specify-validation-level/ |
+| mongodb notes/05 | Profiler production advice "general practice" | Docs: profiler can degrade performance, worst at level 2 or low level-1 threshold; consider implications before production | https://www.mongodb.com/docs/manual/tutorial/manage-the-database-profiler/ |
+| mongodb fact-sheet, README | Validity "not stated on the pages read" | Exam page re-read; Certification Program Guide is a gated download and unread, so validity and retake rules stay unverified | https://learn.mongodb.com/pages/mongodb-associate-data-modeler-exam |
+
+### Verified without change (selection)
+
+- GCP: 2 hours, 50-60 questions, USD 125, English and Japanese, no prerequisites, 6+ months recommended; section weights 30/27/18/25 and all four objective lists match the guide PDF; storage-class minimums, lifecycle actions and 24-hour delay, soft delete 7 days, Cloud SQL HA (about 60 seconds, synchronous, same IP, double cost, standby cannot read), backup retention 1 day to 10 years, scheduled queries (5-minute minimum, on-the-hour duplicates, `@run_time`), BigQuery subscription at-least-once, CSEK not a Cloud KMS feature, Analytics Hub now BigQuery sharing, BQML model types and Model Registry deployment.
+- Databricks analyst: 45 scored plus up to 10 unscored, 90 minutes, USD 200, English, 2 years, 14-day retake at full fee, nine weights summing to 100; managed-table 7-day recovery, OpenSharing naming, 5 GB UI upload limit, `SET TAG` on DBR 16.1+, `APPLY TAG`, tag inheritance stops at columns, `BROWSE` for lineage, result cache 24 hours and UI cache 7 days, predictive optimization on managed tables only, `CLUSTER BY AUTO` requirements and four-key limit, Genie 50-object and 500-benchmark limits, feedback alone does not change behavior, alert states, Quartz cron, admin-created destinations. The `/explain` command is in the exam guide's own answer key.
+- Spark: same logistics as the analyst exam (guide published 2026-10-08), seven weights summing to 100, Python only; defaults (200 shuffle partitions, 128 MB, 10 MB broadcast, AQE since 3.2.0, 64 MB advisory, skew factor 5 and 256 MB), JDK 17 and G1GC default since 4.0.0, Spark Connect (3.4, gRPC, Arrow, port 15002, no built-in authentication, `pyspark-client`), deploy modes, save modes, 10,000-row Arrow batches.
+- MongoDB: 75 questions, 110 minutes, USD 150, English, online proctored, no prerequisites (exam page, read through a browser because the page is script-rendered); `errorAndLog` new in 8.1, 32-field compound limit, ESR and ERS wording, shard key factors including `reshardCollection` from 5.0, Archive, Bucket, Outlier, Inheritance and Schema Versioning page wording, Performance Advisor on M10 or higher.
+
+### Still unverifiable
+
+- GCP: total certification validity (the FAQ gives only the 3-year renewal extension; the Associate Cloud Engineer row is ambiguous); Firestore, Spanner and Cloud SQL one-line descriptions; the BigQuery 90-day long-term storage figure on a fetched docs page; Looker docs-side comparison page; Dataflow "exactly-once by default" and Data Fusion built on CDAP were not re-fetched.
+- Databricks analyst: exact meaning of "trusted assets"; embedded links, external app integrations and channel apps for Genie (no docs page read); passing score (not published).
+- Spark: PySpark stateful operator names and the default state store provider; whether serverless compute always uses Photon; Databricks serverless using Spark Connect connectivity; behavior of local runs (cache storage level, ANSI union errors) is as run, not documented.
+- MongoDB: certification validity and retake rules (gated Certification Program Guide; forum reports of a 15-day wait are unofficial); domain weights and objective text come from the Exam Guide v2.0 read earlier today and sit behind a login viewer, so they were not re-fetched; gradual migration practice; the cardinality-selectivity link; Subset in sharded clusters (guide wording plus inference).
