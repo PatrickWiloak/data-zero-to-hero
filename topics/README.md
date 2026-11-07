@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-21
+last-updated: 2026-11-07
 difficulty: any
 reading-time: 2 min
 ---
@@ -14,6 +14,9 @@ If you want everything this site has on a given subject - the plain-English expl
 
 - **[Databases](./databases.md)** - SQL, NoSQL, vector DBs, data warehouses, lakehouses, choosing per workload
 - **[Data engineering](./data-engineering.md)** - pipelines, ETL/ELT, batch vs streaming, modeling, partitioning, quality and lineage
+- **[Streaming](./streaming.md)** - logs, Kafka and Kinesis, windows and watermarks, CDC, consumer lag
+- **[Analytics and BI](./analytics-and-bi.md)** - star schemas, dbt, semantic layers, BI tools, query speed and cost
+- **[Data governance](./data-governance.md)** - ownership, catalogs, contracts, quality, access control and recovery
 
 New to the subject? **[Data from Scratch](../learn/data-from-scratch.md)** walks through both topics in order.
 
@@ -40,4 +43,4 @@ Use these pages as a starting jumppoint. They're aggregators, not source-of-trut
 
 ## Don't see a topic you want?
 
-The topics here cover the densest cross-pillar threads. Other data subjects (streaming or BI on their own, for instance) have material in [resources/](../resources/) and the [concept pages](../learn/concepts/) but don't yet have a topic index. Contributions welcome - see [CONTRIBUTING.md](../CONTRIBUTING.md).
+The topics here cover the densest cross-pillar threads. Other data subjects have material in [resources/](../resources/) and the [concept pages](../learn/concepts/) but don't yet have a topic index. Contributions welcome - see [CONTRIBUTING.md](../CONTRIBUTING.md).

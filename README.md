@@ -98,7 +98,7 @@ All four are free, by Nobler Works.
 | 🎯 | **Certify** | 24 cert study guides across 7 providers. Fact sheets, practice plans, scenarios, practice questions. | [STUDY-HUB.md](./STUDY-HUB.md) |
 | 📚 | **Reference** | Cross-cloud database and messaging comparisons, career roadmaps, migration and interview guides. | [resources/](./resources/) |
 
-The **[topic indexes](./topics/)** tie all four pillars together by subject: databases and data engineering.
+The **[topic indexes](./topics/)** tie all four pillars together by subject: databases, data engineering, streaming, analytics and BI, and data governance.
 
 ---
 
@@ -121,6 +121,7 @@ The **[topic indexes](./topics/)** tie all four pillars together by subject: dat
 
 See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
+- **2026-11-07** - Wave 4 of the content plan: four run-it-for-real hands-on projects ([Debezium CDC into Iceberg](./resources/hands-on-projects/debezium-cdc-to-lakehouse.md), [local Iceberg lakehouse](./resources/hands-on-projects/iceberg-lakehouse-local.md), [backup and restore drill](./resources/hands-on-projects/backup-and-restore-drill.md), [Dagster pipeline](./resources/hands-on-projects/airflow-or-dagster-pipeline.md)), three troubleshooting guides ([replication lag](./resources/troubleshooting/replication-lag.md), [deadlocks and lock waits](./resources/troubleshooting/deadlocks-and-lock-waits.md), [Kafka consumer lag](./resources/troubleshooting/kafka-consumer-lag.md)) and topic indexes for [streaming](./topics/streaming.md), [analytics and BI](./topics/analytics-and-bi.md) and [data governance](./topics/data-governance.md).
 - **2026-10-22** - Two data postmortems ([GitLab 2017](./resources/postmortem-gitlab-database-2017.md), [Atlassian 2022](./resources/postmortem-atlassian-site-deletion-2022.md)) and two role interview guides with worked answers: [analytics engineer](./resources/interview-prep/analytics-engineer-interview.md) and [DBA](./resources/interview-prep/dba-interview.md).
 - **2026-10-22** - Four new architecture patterns ([CDC into a lakehouse](./resources/architecture-patterns/cdc-to-lakehouse.md), [medallion](./resources/architecture-patterns/medallion-architecture.md), [reverse ETL](./resources/architecture-patterns/reverse-etl-operational-analytics.md), [semantic layer](./resources/architecture-patterns/semantic-layer.md)), a [SQL interview guide](./resources/interview-prep/sql-interview-guide.md) and a [data modeling and pipeline design interview guide](./resources/interview-prep/data-modeling-system-design-interview.md) with worked answers, three troubleshooting guides ([slow SQL](./resources/troubleshooting/slow-sql-query-diagnosis.md), [failing and late pipelines](./resources/troubleshooting/failing-and-late-pipelines.md), [Spark performance](./resources/troubleshooting/spark-job-performance.md)), and a [legacy warehouse to cloud migration guide](./resources/migration-guides/warehouse-to-cloud-migration.md).
 - **2026-10-21** - Thirteen new concept pages (SQL joins, window functions, indexes, transactions and ACID, OLTP vs OLAP, replication and sharding, change data capture, slowly changing dimensions, stream windows and watermarks, dbt, governance and catalogs, data contracts, vector databases), three hands-on projects ([streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md), [star schema design](./resources/hands-on-projects/design-star-schema.md), [dbt project](./resources/hands-on-projects/build-dbt-project.md)), a [streaming analytics pattern](./resources/architecture-patterns/streaming-analytics.md), and a data-only glossary and YouTube list.
@@ -136,13 +137,13 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 - ✅ **[Data from Scratch](./learn/data-from-scratch.md)** - eight phases from zero to a data role
 - ✅ **[29 concept pages](./learn/concepts/)** - SQL joins, window functions, indexes, transactions, OLTP vs OLAP, replication and sharding, SQL vs NoSQL, ETL vs ELT, CDC, batch vs streaming, windows and watermarks, warehouses vs lakes vs lakehouses, modeling and slowly changing dimensions, dbt, partitioning, orchestration, quality, governance, data contracts, vector databases
 - ✅ **24 certification study guides** across 7 providers, with 2,000+ embedded vendor doc links
-- ✅ **[2 cross-pillar topic indexes](./topics/)** - databases and data engineering
+- ✅ **[5 cross-pillar topic indexes](./topics/)** - databases, data engineering, streaming, analytics and BI, data governance
 - ✅ **5 cross-cloud service comparisons** - databases, messaging and queues
 - ✅ **8 architecture patterns** - data pipeline and ETL, lakehouse, medallion, CDC into a lakehouse, data mesh, streaming analytics (Lambda vs Kappa), reverse ETL, semantic layer
-- ✅ **4 hands-on projects** - a batch data pipeline, a Kafka streaming pipeline, a star schema design, and a tested dbt project
+- ✅ **8 hands-on projects** - a batch data pipeline, a Kafka streaming pipeline, a star schema design, a tested dbt project, Debezium CDC into Iceberg, a local Iceberg lakehouse, a PostgreSQL backup and restore drill, and a Dagster pipeline
 - ✅ **4 certification roadmaps** - data engineer, database specialist
 - ✅ **5 interview prep guides** - data engineer, SQL with worked problems, data modeling and pipeline design
-- ✅ **3 troubleshooting guides** - slow SQL queries, failing and late pipelines, Spark job performance
+- ✅ **6 troubleshooting guides** - slow SQL queries, failing and late pipelines, Spark job performance, replication lag, deadlocks and lock waits, Kafka consumer lag
 - ✅ **2 migration guides** - operational database, legacy warehouse to cloud
 - ✅ **[Practice question banks](./resources/practice-questions/)** - one per certification, with explained answers
 - ✅ **[Freshness ledger](./docs/freshness.md)** - per-cert last-verified dates
@@ -189,11 +190,11 @@ Other career paths live on the sibling sites: [cloud, DevOps and platform roadma
 
 - **Service comparisons:** [Databases](./resources/service-comparison-databases.md) · [Warehouses](./resources/service-comparison-warehouses.md) · [ETL and orchestration](./resources/service-comparison-etl-orchestration.md) · [BI tools](./resources/service-comparison-bi-tools.md) · [Messaging and queues](./resources/service-comparison-messaging-queues.md)
 - **Architecture patterns:** [Data pipeline / ETL](./resources/architecture-patterns/data-pipeline-etl.md) · [Lakehouse](./resources/architecture-patterns/lakehouse-architecture.md) · [Data mesh](./resources/architecture-patterns/data-mesh.md) · [Streaming analytics](./resources/architecture-patterns/streaming-analytics.md) · [CDC into a lakehouse](./resources/architecture-patterns/cdc-to-lakehouse.md) · [Medallion](./resources/architecture-patterns/medallion-architecture.md) · [Reverse ETL](./resources/architecture-patterns/reverse-etl-operational-analytics.md) · [Semantic layer](./resources/architecture-patterns/semantic-layer.md)
-- **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Build a streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md) · [Design a star schema](./resources/hands-on-projects/design-star-schema.md) · [Build a dbt project](./resources/hands-on-projects/build-dbt-project.md) · [Labs by certification](./resources/hands-on-projects/labs-by-cert.md)
+- **Hands-on:** [Build a data pipeline](./resources/hands-on-projects/build-data-pipeline.md) · [Build a streaming pipeline](./resources/hands-on-projects/build-streaming-pipeline.md) · [Design a star schema](./resources/hands-on-projects/design-star-schema.md) · [Build a dbt project](./resources/hands-on-projects/build-dbt-project.md) · [Debezium CDC into a lakehouse](./resources/hands-on-projects/debezium-cdc-to-lakehouse.md) · [Iceberg lakehouse locally](./resources/hands-on-projects/iceberg-lakehouse-local.md) · [Backup and restore drill](./resources/hands-on-projects/backup-and-restore-drill.md) · [Orchestrate with Dagster](./resources/hands-on-projects/airflow-or-dagster-pipeline.md) · [Labs by certification](./resources/hands-on-projects/labs-by-cert.md)
 - **Migration:** [Database migration](./resources/migration-guides/database-migration.md) · [Warehouse to cloud](./resources/migration-guides/warehouse-to-cloud-migration.md)
 - **Interview prep:** [Data engineer](./resources/interview-prep/data-engineer-interview.md) · [SQL](./resources/interview-prep/sql-interview-guide.md) · [Data modeling and pipeline design](./resources/interview-prep/data-modeling-system-design-interview.md) · [Analytics engineer](./resources/interview-prep/analytics-engineer-interview.md) · [DBA](./resources/interview-prep/dba-interview.md)
 - **Postmortems:** [GitLab database deletion, 2017](./resources/postmortem-gitlab-database-2017.md) · [Atlassian site deletion, 2022](./resources/postmortem-atlassian-site-deletion-2022.md)
-- **Troubleshooting:** [Slow SQL queries](./resources/troubleshooting/slow-sql-query-diagnosis.md) · [Failing and late pipelines](./resources/troubleshooting/failing-and-late-pipelines.md) · [Spark job performance](./resources/troubleshooting/spark-job-performance.md)
+- **Troubleshooting:** [Slow SQL queries](./resources/troubleshooting/slow-sql-query-diagnosis.md) · [Failing and late pipelines](./resources/troubleshooting/failing-and-late-pipelines.md) · [Spark job performance](./resources/troubleshooting/spark-job-performance.md) · [Replication lag](./resources/troubleshooting/replication-lag.md) · [Deadlocks and lock waits](./resources/troubleshooting/deadlocks-and-lock-waits.md) · [Kafka consumer lag](./resources/troubleshooting/kafka-consumer-lag.md)
 - **Persona playlist:** [Data engineer in 1 hour](./resources/playlist-data-engineer-1hour.md)
 
 ### Practice & Strategy
@@ -214,12 +215,12 @@ Other career paths live on the sibling sites: [cloud, DevOps and platform roadma
 - **Concept pages:** 29
 - **Service comparisons:** 5
 - **Architecture patterns:** 8
-- **Hands-on projects:** 4
-- **Topic indexes:** 2
+- **Hands-on projects:** 8
+- **Topic indexes:** 5
 - **Career roadmaps:** 4
 - **Interview prep guides:** 5
 - **Migration guides:** 2
-- **Troubleshooting guides:** 3
+- **Troubleshooting guides:** 6
 
 ---
 
