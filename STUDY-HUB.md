@@ -31,6 +31,7 @@
 
 | I Want To... | Go To... |
 |--------------|----------|
+| 🌅 Write your first SQL query | [Day One for data](./learn/day-one/) |
 | 🛤️ Go from zero to a data job | [Data from Scratch](./learn/data-from-scratch.md) |
 | 💡 Understand one data concept | [Concepts](./learn/concepts/) |
 | 🗂️ Browse by topic across pillars | [Topic indexes](./topics/) |
@@ -49,6 +50,7 @@
 
 The **[Learn](./learn/)** pillar is for anyone who wants to understand data work without an exam date:
 
+- **[Day One](./learn/day-one/)** - six hands-on pages: first SQL query, spreadsheets to SQL, a local DuckDB or PostgreSQL, pandas, notebooks and file formats.
 - **[Data from Scratch](./learn/data-from-scratch.md)** - eight phases from "what is a table?" to data engineer, analytics engineer or DBA.
 - **[Concepts](./learn/concepts/)** - bite-size pages (5-10 min each) on joins, window functions, indexes, transactions, CDC, modeling, streaming, dbt, governance and more.
 - **[Topic indexes](./topics/)** - databases and data engineering, each tying concepts, comparisons, builds and certs together.

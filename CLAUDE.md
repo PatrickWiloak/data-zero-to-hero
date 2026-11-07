@@ -11,6 +11,7 @@ data-zero-to-hero/
 ├── exams/              # Cert-specific study guides (the certify pillar)
 ├── learn/              # Plain-English learning content (the learn pillar)
 │   ├── concepts/       # Bite-size topic pages (5-10 min): data primitives
+│   ├── day-one/        # Hands-on beginner on-ramp (6 pages, every sample run); linked from data-from-scratch, learn/README, STUDY-HUB
 │   ├── data-from-scratch.md  # The zero-to-data-role path; linked from README, STUDY-HUB, home
 │   ├── glossary.md
 │   └── youtube.md

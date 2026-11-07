@@ -6,6 +6,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ---
 
+## [2026-11-07] - Day One for data
+
+### Added
+
+- **`learn/day-one/`** (new, 7 pages): README plus first SQL query, spreadsheets to SQL, a local database (DuckDB and PostgreSQL in Docker), Python and pandas (with Polars), notebooks, and CSV vs JSON vs Parquet. Every code sample was run (DuckDB 2.0.0, pandas 3.1.1, Polars 2.1.0, PostgreSQL 17.11) and the output pasted. Linked from Data from Scratch, the Learn hub and the Study Hub. Wave 1 of [the content gaps plan](./docs/content-gaps-2026-11-07.md).
+
 ## [2026-11-04] - Dark mode by default
 
 ### Changed

@@ -26,6 +26,9 @@ If you **do** want certifications, head to the **[Study Hub](../STUDY-HUB.md)** 
 ### 🛤️ The path
 - **[Data from Scratch](./data-from-scratch.md)** - eight phases from "what is a table?" to data engineer, analytics engineer or DBA. Each phase lists what to read, what to build, and what you can do once it is done.
 
+### 🌅 Day One for data
+- **[Day One](./day-one/README.md)** - six hands-on pages for strict beginners: your first SQL query, spreadsheets to SQL, a local DuckDB or PostgreSQL to practice on, Python and pandas (with Polars), notebooks, and CSV vs JSON vs Parquet. Every sample was run.
+
 ### 💡 Bite-size concept pages
 - **[Concepts](./concepts/)** - 23 topic pages, 5-15 min each. SQL joins, window functions, indexes, transactions and ACID, OLTP vs OLAP, replication and sharding, SQL vs NoSQL, ETL vs ELT, change data capture, batch vs streaming, windows and watermarks, queues vs streams, warehouses vs lakes vs lakehouses, modeling and slowly changing dimensions, dbt, file formats and partitioning, pipelines and orchestration, quality, governance, data contracts, vector databases, eventual consistency.
 
@@ -41,6 +44,7 @@ There's no single right order. Pick what fits:
 
 | If you want to... | Start here |
 |------------------|------------|
+| Write your first SQL query today | [Day One](./day-one/README.md) |
 | Go from zero to a data job | [Data from Scratch](./data-from-scratch.md) |
 | Not sure which Zero to Hero site fits you | [Which site should I start with?](./which-site.md) |
 | Understand one concept (ETL, lakehouse, streaming, ...) | [Concepts](./concepts/) |
@@ -53,6 +57,7 @@ There's no single right order. Pick what fits:
 
 ## Before and after this hub
 
+- **New to SQL or pandas?** [Day One for data](./day-one/README.md) is the hands-on on-ramp.
 - **Never used a terminal?** Start with [Day One](https://cloud.noblerworks.com/learn/day-one/) on Cloud Zero to Hero - terminal, git, HTTP and servers, assuming nothing.
 - **Need cloud basics for phase 6?** [Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/) covers compute, storage, networking and identity.
 - **Ready for machine learning?** [AI Zero to Hero](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) picks up where data engineering hands off.

@@ -56,7 +56,7 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 
 Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert items are already listed above.
 
-- [ ] Wave 1: `learn/day-one/` on-ramp (first SQL query, spreadsheets to SQL, Python + pandas/Polars, notebooks, file formats, local DuckDB/Postgres).
+- [x] 2026-11-07 Wave 1: `learn/day-one/` on-ramp (7 pages, samples run; the DuckDB CLI, JupyterLab/VS Code UIs and `pd.read_parquet` were not run - stated on the pages).
 - [ ] Wave 2: service comparisons for warehouses, ETL/orchestration and BI tools; data analyst + analytics engineer roadmaps.
 - [ ] Wave 3: concept pages - data observability, warehouse cost control, OLTP normalisation, time-series + graph DBs, feature stores.
 - [ ] Wave 4: projects (Debezium CDC, Airflow/Dagster, Iceberg lakehouse, backup-restore drill); troubleshooting (replication lag, deadlocks, consumer lag); topic indexes (streaming, BI, governance).

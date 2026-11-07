@@ -60,6 +60,7 @@ SQL is the one skill every data role uses every day. Learn it before any tool.
 
 - **Learn:** [SQL vs NoSQL](./concepts/sql-vs-nosql.md) for the big picture, then [SQL joins explained](./concepts/sql-joins-explained.md) and [Window functions explained](./concepts/window-functions-explained.md) for the two skills every SQL interview tests.
 - **Then, how the database does it:** [Indexes explained](./concepts/indexes-explained.md), [Transactions and ACID](./concepts/transactions-and-acid.md), and [OLTP vs OLAP](./concepts/oltp-vs-olap.md) for why analytics gets its own database. The [Databases topic index](../topics/databases.md) shows where each engine fits.
+- **Start here if SQL is new:** the six [Day One data pages](./day-one/README.md) - your first query, spreadsheets to SQL, a local DuckDB or PostgreSQL, pandas, notebooks and file formats - take about two hours and use one tiny file throughout.
 - **Do:** load a public CSV into SQLite or PostgreSQL. Write queries with `SELECT`, `WHERE`, `GROUP BY`, `JOIN`, and one window function (`ROW_NUMBER()` or `SUM() OVER`).
 - **After this phase:** you can answer a business question ("which product sold best last month, by region?") straight from raw tables.
 - **Certify (optional):** [Azure Data Fundamentals (DP-900)](../exams/azure/dp-900/) covers relational, non-relational and analytics basics at an entry level.
