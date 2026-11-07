@@ -10,6 +10,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ### Added
 
+- **New cert guide: MongoDB Associate Data Modeler** (`exams/mongodb/associate-data-modeler/`): 8 domain notes in the official Exam Guide v2.0 order, fact sheet, strategy, plan, scenarios, 25-question bank, flashcards. Exam facts read from the exam page and the study guide PDF on 2026-11-07; every mongosh sample was run on MongoDB 8.3.13 (`mongo:8`). Validity is not stated on the pages read.
+
 - **New cert guide: Databricks Certified Associate Developer for Apache Spark** (`exams/databricks/apache-spark-developer-associate/`): 7 section notes in the guide's order (published 2026-10-08), fact sheet, strategy, plan, scenarios, 24-question bank, flashcards. Exam facts read from the exam page and guide on 2026-11-07; the PySpark examples were run on PySpark 4.3.0 in local mode.
 
 - **New cert guide: Databricks Certified Data Analyst Associate** (`exams/databricks/data-analyst-associate/`): 9 section notes in the August 2026 guide's order, fact sheet, strategy, plan, scenarios, 25-question bank, flashcards. Exam facts read from the exam page and guide on 2026-11-07; SQL that does not need Databricks was run on Spark 4.3.0 locally.

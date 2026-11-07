@@ -68,7 +68,7 @@ PROVIDER_HIGHLIGHTS = {
     "cisco": "CCNA (200-301), CCNP Enterprise ENCOR (350-401)",
     "salesforce": "Administrator, Platform Developer I, Platform Developer II",
     "confluent": "Certified Developer, Certified Administrator",
-    "mongodb": "Associate Developer, DBA, Atlas Administrator",
+    "mongodb": "Associate Developer, DBA, Atlas Administrator, Data Modeler",
     "finops": "Practitioner, Engineer, Analyst, Professional",
     "comptia": "Cloud+ (CV0-004), Security+ (SY0-701), Network+ (N10-009), CySA+ (CS0-003)",
     "isc2": "CISSP, CCSP, CC",

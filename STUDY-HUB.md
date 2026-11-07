@@ -128,8 +128,8 @@ Full roadmap: [Database specialist certification roadmap](./resources/certificat
 | **Databricks** | 5 | Data Engineer (Associate + Professional), Data Analyst Associate, Apache Spark Developer Associate, Platform Administrator accreditation | [exams/databricks/](./exams/databricks/) |
 | **Snowflake** | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) | [exams/snowflake/](./exams/snowflake/) |
 | **Confluent/Kafka** | 2 | Certified Developer, Certified Administrator | [exams/confluent/](./exams/confluent/) |
-| **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |
-| **CERTIFICATIONS TOTAL** | **27** | across 7 providers | |
+| **MongoDB** | 4 | Associate Developer, DBA, Atlas Administrator, Data Modeler | [exams/mongodb/](./exams/mongodb/) |
+| **CERTIFICATIONS TOTAL** | **28** | across 7 providers | |
 
 The Certs column counts real exams, retired ones included.
 

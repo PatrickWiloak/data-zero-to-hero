@@ -41,7 +41,9 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 - [ ] Judge 2027-01-15: recheck the DE Associate exam page and guide for a revision; recheck ABAC DENY policies (Beta) and `SET MANAGED` facts in notes/07.
 - [ ] DP-203 is retired: decide whether its guide, practice bank and `labs-by-cert` entry stay as reference or go.
 - [ ] "Vertex AI" still appears in `exams/gcp/data-engineer` (renamed Gemini Enterprise Agent Platform 2026-04-22). Sweep with Google's rename table once names settle.
-- [ ] New-guide candidates (verify codes first): Confluent CCAC, MongoDB Associate Data Modeler [L]. Snowflake SPS-C01 retires 2026-11-01 and SEA-C01 / DAA-C01 2026-12-01 [M]; no guides here.
+- [x] 2026-11-07 MongoDB Associate Data Modeler guide built from the exam page and Exam Guide v2.0 (validity not stated on any page read).
+- [ ] 2026-11-14: Confluent Cloud Certified Operator (CCAC; 90 min, USD 150, 2-year validity per training.confluent.io, read 2026-11-07) not built: the exam guide (course 1159) is a SCORM behind a free training-portal login, so question count and domain weights are unread. Enroll, read it, then build `exams/confluent/cloud-operator`. [M]
+- [ ] Snowflake SPS-C01 retires 2026-11-01 and SEA-C01 / DAA-C01 2026-12-01 [M]; no guides here.
 
 ## Tooling (shared with the sibling sites)
 

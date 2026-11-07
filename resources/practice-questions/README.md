@@ -58,6 +58,7 @@ Scenario-based practice question banks, one per certification. Every bank follow
 ### MongoDB
 
 - [MongoDB Associate Atlas Administrator](./mongodb-associate-atlas-administrator.md)
+- [MongoDB Associate Data Modeler](./mongodb-associate-data-modeler.md)
 - [MongoDB Associate DBA](./mongodb-associate-dba.md)
 - [MongoDB Associate Developer](./mongodb-associate-developer.md)
 
