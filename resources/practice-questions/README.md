@@ -36,6 +36,7 @@ Scenario-based practice question banks, one per certification. Every bank follow
 
 ### Google Cloud
 
+- [Google Cloud Associate Data Practitioner](./gcp-associate-data-practitioner.md)
 - [Google Cloud Professional Cloud Database Engineer (Specialty) Certification](./gcp-cloud-database-engineer.md)
 - [Google Cloud Professional Data Engineer Certification](./gcp-data-engineer.md)
 

@@ -57,7 +57,7 @@ STATUS_LABEL = {
 PROVIDER_HIGHLIGHTS = {
     "aws": "**Data Engineer Associate (DEA-C01)**; retired Data Analytics (DAS-C01) and Database (DBS-C01) specialties retained for reference",
     "azure": "DP-900, DP-300, DP-420 (Cosmos DB), DP-600 and DP-700 (Fabric), PL-300 (Power BI); retired DP-203 retained",
-    "gcp": "Professional Data Engineer, Professional Cloud Database Engineer",
+    "gcp": "Associate Data Practitioner, Professional Data Engineer, Professional Cloud Database Engineer",
     "kubernetes": "KCNA, KCSA, CKA, CKAD, CKS, plus Argo (CAPA), Cilium (CCA), GitOps (CGOA), Istio (ICA), OpenTelemetry (OTCA), Prometheus (PCA), Platform Engineering (CNPA)",
     "nvidia": "AI Infra & Ops, GenAI/LLM, Multimodal, Agentic AI, Networking, OpenUSD",
     "hashicorp": "Terraform Assoc + Pro, Vault, Consul, Packer, Boundary, Nomad",

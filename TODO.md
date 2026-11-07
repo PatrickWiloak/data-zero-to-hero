@@ -41,7 +41,7 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 - [ ] Judge 2027-01-15: recheck the DE Associate exam page and guide for a revision; recheck ABAC DENY policies (Beta) and `SET MANAGED` facts in notes/07.
 - [ ] DP-203 is retired: decide whether its guide, practice bank and `labs-by-cert` entry stay as reference or go.
 - [ ] "Vertex AI" still appears in `exams/gcp/data-engineer` (renamed Gemini Enterprise Agent Platform 2026-04-22). Sweep with Google's rename table once names settle.
-- [ ] New-guide candidates (verify codes first): Databricks Data Analyst and Apache Spark Developer, Google Associate Data Practitioner, Confluent CCAC, MongoDB Associate Data Modeler [L]. Snowflake SPS-C01 retires 2026-11-01 and SEA-C01 / DAA-C01 2026-12-01 [M]; no guides here.
+- [ ] New-guide candidates (verify codes first): Confluent CCAC, MongoDB Associate Data Modeler [L]. Snowflake SPS-C01 retires 2026-11-01 and SEA-C01 / DAA-C01 2026-12-01 [M]; no guides here.
 
 ## Tooling (shared with the sibling sites)
 
@@ -65,3 +65,5 @@ Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert i
 - [ ] Wave 4 left: a streaming or warehouse postmortem from primary sources (the 2 existing postmortems are databases).
 - [ ] Judge 2026-12-22: rerun the Wave 4 projects on current releases (Debezium 3.6.x, PyIceberg 0.12, Dagster 1.13, `apache/kafka:latest` is unpinned in the CDC and consumer-lag pages) and re-check the PyIceberg `expire_snapshots` file-cleanup note.
 - [x] 2026-11-07: flashcard decks added for 4 Snowflake guides + associate-atlas-administrator. Left: none; dp-203 is retired (reference-only), so no deck by design.
+- [x] 2026-11-07 Wave 5: Google Associate Data Practitioner guide added (exam page and guide v1.0 read 2026-11-07; validity not stated on the page; BigQuery ML SQL and the Looker vs Looker Studio comparison not run or checked on a docs page).
+- [ ] Judge 2027-01-15: recheck the Associate Data Practitioner exam page for a fee, length or guide revision, and the Renewal FAQ for its validity period.

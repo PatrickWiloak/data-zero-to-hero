@@ -124,12 +124,12 @@ Full roadmap: [Database specialist certification roadmap](./resources/certificat
 |----------|------:|------------|--------|
 | **AWS** | 3 | **Data Engineer Associate (DEA-C01)**; retired Data Analytics (DAS-C01) and Database (DBS-C01) specialties retained for reference | [exams/aws/](./exams/aws/) |
 | **Azure** | 7 | DP-900, DP-300, DP-420 (Cosmos DB), DP-600 and DP-700 (Fabric), PL-300 (Power BI); retired DP-203 retained | [exams/azure/](./exams/azure/) |
-| **GCP** | 2 | Professional Data Engineer, Professional Cloud Database Engineer | [exams/gcp/](./exams/gcp/) |
+| **GCP** | 3 | Associate Data Practitioner, Professional Data Engineer, Professional Cloud Database Engineer | [exams/gcp/](./exams/gcp/) |
 | **Databricks** | 3 | Data Engineer (Associate + Professional), Platform Administrator accreditation | [exams/databricks/](./exams/databricks/) |
 | **Snowflake** | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) | [exams/snowflake/](./exams/snowflake/) |
 | **Confluent/Kafka** | 2 | Certified Developer, Certified Administrator | [exams/confluent/](./exams/confluent/) |
 | **MongoDB** | 3 | Associate Developer, DBA, Atlas Administrator | [exams/mongodb/](./exams/mongodb/) |
-| **CERTIFICATIONS TOTAL** | **24** | across 7 providers | |
+| **CERTIFICATIONS TOTAL** | **25** | across 7 providers | |
 
 The Certs column counts real exams, retired ones included.
 
