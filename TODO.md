@@ -51,3 +51,13 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 - [ ] No CI check for unbalanced code fences; the site build only catches them as missing anchors. A direct validator would name file and line.
 - [x] 2026-11-06 MD060 is already off in `.markdownlint.json`.
 - [ ] Judge after the first Monday link-check run on this repo: it opens or updates one `link-check` issue (not a new one each week) and lists no real 404s.
+
+## Content gaps (2026-11-07 review)
+
+Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert items are already listed above.
+
+- [ ] Wave 1: `learn/day-one/` on-ramp (first SQL query, spreadsheets to SQL, Python + pandas/Polars, notebooks, file formats, local DuckDB/Postgres).
+- [ ] Wave 2: service comparisons for warehouses, ETL/orchestration and BI tools; data analyst + analytics engineer roadmaps.
+- [ ] Wave 3: concept pages - data observability, warehouse cost control, OLTP normalisation, time-series + graph DBs, feature stores.
+- [ ] Wave 4: projects (Debezium CDC, Airflow/Dagster, Iceberg lakehouse, backup-restore drill); troubleshooting (replication lag, deadlocks, consumer lag); topic indexes (streaming, BI, governance).
+- [ ] Flashcard decks: 4 Snowflake guides, dp-203, associate-atlas-administrator.
