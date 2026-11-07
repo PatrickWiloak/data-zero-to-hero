@@ -198,3 +198,13 @@ GRANT SELECT ON VIEW weather_db.public.shared_forecasts TO SHARE weather_share;
 - **Replication:** Storage cost in target account + data transfer fees
 - **Failover Groups:** Same as replication + failover management overhead
 - **Marketplace:** Platform fees for paid listings, replication for cross-region
+
+## Key terms
+
+- **Replication group** - a defined collection of objects in a source account that is replicated as a unit to one or more target accounts, where the copies are read-only.
+- **Failover group** - a replication group that can also fail over, whose secondary becomes read-write only when promoted to primary; it needs Business Critical edition or higher.
+- **Database replication** - copies a single database to another account as a read-only secondary that is refreshed as a point-in-time snapshot, not a continuous sync.
+- **Client redirect** - account redirect using organization-level connection URLs so clients follow the active primary without code changes.
+- **Share** - a provider-side object holding databases, schemas, tables and views that consumers mount as a read-only database, with no data copied.
+- **Secure view** - a view whose definition is hidden from consumers, used to share a filtered subset of data safely.
+- **Reader account** - a provider-managed account for consumers without their own Snowflake account, where the provider pays the compute.

@@ -240,3 +240,12 @@ SELECT * FROM TABLE(INFORMATION_SCHEMA.DATABASE_REPLICATION_USAGE_HISTORY());
 ```
 
 **[📖 Replication](https://docs.snowflake.com/en/user-guide/account-replication-intro)** - Replication overview
+
+## Key terms
+
+- **ORGADMIN** - the organization-level role that creates and drops accounts, enables replication and views organization billing, without access to data inside the accounts.
+- **ORGANIZATION_USAGE** - the schema in the shared SNOWFLAKE database with views such as WAREHOUSE_METERING_HISTORY and STORAGE_USAGE that report usage across every account in the organization.
+- **Account parameter** - a setting at the broadest scope, which user, session and object-level settings can override where the parameter allows it.
+- **STATEMENT_TIMEOUT_IN_SECONDS** - the parameter that sets the maximum time a statement may run before it is cancelled.
+- **Serverless credits** - credits consumed by features such as Snowpipe, serverless tasks and automatic clustering, billed per operation instead of per warehouse.
+- **Cloud services credits** - credits for compilation, metadata and login work, free up to 10% of daily warehouse credits.

@@ -251,3 +251,13 @@ ALTER TABLE users DROP SEARCH OPTIMIZATION;
 3. **Materialized views** - Pre-compute common aggregations
 4. **Dynamic tables** - Declarative pipeline with controlled freshness
 5. **Table design** - Choose appropriate data types, avoid overly wide tables
+
+## Key terms
+
+- **Micro-partition** - an immutable, columnar storage unit holding 50 MB to 500 MB of uncompressed data, with column metadata kept in the cloud services layer.
+- **Natural clustering** - the ordering that comes from loading data in sequence, which degrades over time with updates, deletes and random inserts.
+- **Clustering key** - columns you choose to keep data co-located, suited to very large tables whose queries filter on those columns.
+- **Clustering depth** - the average number of overlapping micro-partitions for the clustering columns, where lower is better.
+- **SYSTEM$CLUSTERING_INFORMATION** - the function that reports clustering depth and overlap statistics for a table.
+- **Automatic clustering** - a serverless background service that reclusters a table as clustering degrades, and can be suspended and resumed.
+- **Search optimization service** - a serverless service that builds a search access path to speed point lookups on equality and IN predicates.

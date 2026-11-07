@@ -186,3 +186,19 @@ Organization
 - Some features may vary by cloud provider
 
 **[📖 Supported Regions](https://docs.snowflake.com/en/user-guide/intro-regions)** - Available regions by cloud
+
+## Key terms
+
+- **Micro-partition** - the contiguous, immutable, columnar unit of storage Snowflake creates automatically, with min/max, distinct count and null count tracked per column.
+- **Pruning** - skipping micro-partitions that cannot match a query, using the per-column metadata.
+- **Virtual warehouse** - an MPP compute cluster that runs queries and stores no data persistently.
+- **Scaling up** - changing a warehouse to a larger size so complex queries run faster.
+- **Scaling out** - adding clusters with a multi-cluster warehouse (Enterprise and above) so more concurrent queries run without queuing.
+- **Standard scaling policy** - the multi-cluster policy that starts a new cluster as soon as queries queue.
+- **Economy scaling policy** - the multi-cluster policy that starts a new cluster only when there is enough load to keep it busy for about 6 minutes, trading speed for cost.
+- **Cloud services layer** - the layer that handles authentication, access control, metadata, query optimization and transaction management.
+- **Result cache** - holds exact results of identical queries for 24 hours in the cloud services layer, and needs no running warehouse.
+- **Warehouse cache** - SSD cache of raw micro-partition data on a warehouse's nodes, cleared when the warehouse is suspended and not shared across warehouses.
+- **Metadata cache** - column statistics kept by cloud services that answer simple COUNT, MIN and MAX queries without scanning data.
+- **Business Critical edition** - the edition that adds Tri-Secret Secure, private connectivity, and failover and failback between accounts.
+- **Virtual Private Snowflake** - the highest edition, a completely isolated environment with its own infrastructure and metadata store.

@@ -63,4 +63,4 @@ Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert i
 - [x] 2026-11-07 Wave 4: 4 projects (Debezium CDC to Iceberg, Dagster, local Iceberg, backup-restore drill), 3 troubleshooting guides (replication lag, deadlocks, Kafka consumer lag), 3 topic indexes (streaming, analytics and BI, governance). All run in Docker or uv venvs; what was NOT run is stated on each page (Airflow mapping, Dagster UI clicks, MySQL/SQL Server/managed-service equivalents, Spark/Trino Iceberg readers, lock-order fix).
 - [ ] Wave 4 left: a streaming or warehouse postmortem from primary sources (the 2 existing postmortems are databases).
 - [ ] Judge 2026-12-22: rerun the Wave 4 projects on current releases (Debezium 3.6.x, PyIceberg 0.12, Dagster 1.13, `apache/kafka:latest` is unpinned in the CDC and consumer-lag pages) and re-check the PyIceberg `expire_snapshots` file-cleanup note.
-- [ ] Flashcard decks: 4 Snowflake guides, dp-203, associate-atlas-administrator.
+- [x] 2026-11-07: flashcard decks added for 4 Snowflake guides + associate-atlas-administrator. Left: none; dp-203 is retired (reference-only), so no deck by design.

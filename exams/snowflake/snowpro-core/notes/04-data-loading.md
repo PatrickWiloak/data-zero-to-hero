@@ -286,3 +286,16 @@ SINGLE = TRUE;
 - Partitioned unloading for organized output
 
 **[📖 Unloading Best Practices](https://docs.snowflake.com/en/user-guide/data-unload-considerations)** - Optimization tips
+
+## Key terms
+
+- **User stage** - the internal stage every user gets automatically, referenced as @~, which cannot be altered, dropped or shared.
+- **Table stage** - the internal stage every table gets automatically, referenced as @%table_name, which can only load into that table.
+- **Named internal stage** - a stage made with CREATE STAGE that can hold default file format and COPY options and be granted to roles.
+- **Storage integration** - an account-level object that lets a stage reach cloud storage through an IAM role or service principal instead of embedded credentials.
+- **PUT** - uploads local files to an internal stage only, and gzip-compresses them by default.
+- **ON_ERROR** - the COPY INTO option that sets error handling, with ABORT_STATEMENT as the default and CONTINUE, SKIP_FILE and its variants as alternatives.
+- **VALIDATION_MODE** - a COPY INTO option that checks the files and returns rows or errors without loading any data.
+- **FORCE** - the COPY INTO option that reloads files already recorded in the 64-day load history.
+- **Snowpipe** - serverless, event-driven continuous loading that uses its own compute instead of your warehouses and tracks file history for 14 days.
+- **AUTO_INGEST** - the pipe setting that lets cloud storage event notifications trigger Snowpipe loads.

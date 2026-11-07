@@ -273,3 +273,11 @@ ORDER BY credits_used DESC;
 3. **Avoid non-deterministic functions** - they force full refresh
 4. **Limit pipeline depth** - deep chains add cumulative lag
 5. **Cluster output tables** - if downstream queries benefit from clustering
+
+## Key terms
+
+- **Dynamic table** - a table defined by a SELECT query whose results Snowflake keeps up to date automatically.
+- **TARGET_LAG** - the freshness goal for a dynamic table, which Snowflake aims to meet by scheduling refreshes.
+- **DOWNSTREAM lag** - a target lag setting where a dynamic table refreshes only when a table that depends on it needs fresh data.
+- **Incremental refresh** - a refresh mode that processes only the rows that changed since the last refresh.
+- **Full refresh** - a refresh mode that recomputes the entire result set, needed when the query cannot be refreshed incrementally.

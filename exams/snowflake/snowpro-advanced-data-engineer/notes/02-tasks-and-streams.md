@@ -327,3 +327,14 @@ FROM INFORMATION_SCHEMA.STREAMS;
 -- Check if stream has data (lightweight check)
 SELECT SYSTEM$STREAM_HAS_DATA('my_stream');
 ```
+
+## Key terms
+
+- **Root task** - the only task in a DAG that can have a SCHEDULE, which triggers the child tasks that follow it with AFTER.
+- **Serverless task** - a task that runs on Snowflake-managed compute instead of a warehouse and is billed at the serverless credit rate.
+- **SYSTEM$STREAM_HAS_DATA** - a function used in a task WHEN clause so the task runs only when a stream holds unconsumed changes.
+- **Standard stream** - a stream that tracks all DML changes (inserts, updates and deletes) on its source object.
+- **Append-only stream** - a stream that tracks only row inserts.
+- **Insert-only stream** - a stream for external tables and similar sources that records new rows but not removals.
+- **METADATA$ISUPDATE** - the stream column that is TRUE when a change row is half of an update, which appears as a DELETE and INSERT pair.
+- **Stale stream** - a stream whose offset has fallen outside the source object's data retention period, so it cannot be read and must be recreated.

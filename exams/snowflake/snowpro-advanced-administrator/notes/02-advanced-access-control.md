@@ -302,3 +302,12 @@ WHERE deleted_on IS NULL
 | Stage | USAGE, READ, WRITE |
 | Task | OPERATE, MONITOR |
 | Stream | SELECT |
+
+## Key terms
+
+- **Database role** - a role scoped to one database that cannot be activated in a session and is granted to account roles instead.
+- **Future grant** - a grant that gives a role privileges on objects of a given type created later in a schema or database, and does not cover existing objects.
+- **GRANT ... ON ALL** - the grant form that covers existing objects, normally paired with a future grant to cover new ones.
+- **Functional role** - a user-facing role, such as data analyst, that is granted access roles holding the object privileges.
+- **RSA_PUBLIC_KEY_2** - the second public key slot on a user that allows key pair rotation without downtime.
+- **MINS_TO_BYPASS_MFA** - the user property that lets a user skip MFA for a set number of minutes.

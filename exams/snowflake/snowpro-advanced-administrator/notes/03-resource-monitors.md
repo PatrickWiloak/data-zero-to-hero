@@ -295,3 +295,14 @@ WHERE wmh.start_time >= DATE_TRUNC('month', CURRENT_TIMESTAMP())
 GROUP BY tag_value
 ORDER BY total_credits DESC;
 ```
+
+## Key terms
+
+- **Resource monitor** - an object with a credit quota and triggers that tracks warehouse credit use and can notify or suspend warehouses; only ACCOUNTADMIN can create one.
+- **Account-level resource monitor** - the single monitor per account that covers credits for all warehouses together.
+- **NOTIFY** - a resource monitor action that sends an alert and leaves warehouses running.
+- **SUSPEND** - a resource monitor action that suspends assigned warehouses after running statements finish.
+- **SUSPEND_IMMEDIATE** - a resource monitor action that suspends assigned warehouses at once and cancels running statements.
+- **Fail-safe** - 7 days of Snowflake-recoverable storage after Time Travel for permanent tables, not available for transient or temporary tables.
+- **Transient table** - a table with no Fail-safe and at most 1 day of Time Travel, used for staging data to cut storage cost.
+- **Object tag** - a tag such as cost_center set on a warehouse so credit use can be attributed through TAG_REFERENCES.

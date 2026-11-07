@@ -1,0 +1,26 @@
+Question,Answer,Tags
+How long is the SnowPro Advanced: Administrator Certification (ADA-C02) exam?,115 minutes,exam-logistics
+How many questions are on the SnowPro Advanced: Administrator Certification (ADA-C02) exam?,65 questions,exam-logistics
+What is the passing score for SnowPro Advanced: Administrator Certification (ADA-C02)?,750/1000,exam-logistics
+What does the SnowPro Advanced: Administrator Certification (ADA-C02) exam cost?,$375 USD,exam-logistics
+How long is SnowPro Advanced: Administrator Certification (ADA-C02) valid for?,2 years,exam-logistics
+ORGADMIN (organization level management),"the organization-level role that creates and drops accounts, enables replication and views organization billing, without access to data inside the accounts.","notes,organization-level-management"
+ORGANIZATION_USAGE (organization level management),the schema in the shared SNOWFLAKE database with views such as WAREHOUSE_METERING_HISTORY and STORAGE_USAGE that report usage across every account in the organization.,"notes,organization-level-management"
+Account parameter (organization level management),"a setting at the broadest scope, which user, session and object-level settings can override where the parameter allows it.","notes,organization-level-management"
+STATEMENT_TIMEOUT_IN_SECONDS (organization level management),the parameter that sets the maximum time a statement may run before it is cancelled.,"notes,organization-level-management"
+Serverless credits (organization level management),"credits consumed by features such as Snowpipe, serverless tasks and automatic clustering, billed per operation instead of per warehouse.","notes,organization-level-management"
+Cloud services credits (organization level management),"credits for compilation, metadata and login work, free up to 10% of daily warehouse credits.","notes,organization-level-management"
+Database role (advanced access control),a role scoped to one database that cannot be activated in a session and is granted to account roles instead.,"notes,advanced-access-control"
+Future grant (advanced access control),"a grant that gives a role privileges on objects of a given type created later in a schema or database, and does not cover existing objects.","notes,advanced-access-control"
+GRANT ... ON ALL (advanced access control),"the grant form that covers existing objects, normally paired with a future grant to cover new ones.","notes,advanced-access-control"
+Functional role (advanced access control),"a user-facing role, such as data analyst, that is granted access roles holding the object privileges.","notes,advanced-access-control"
+RSA_PUBLIC_KEY_2 (advanced access control),the second public key slot on a user that allows key pair rotation without downtime.,"notes,advanced-access-control"
+MINS_TO_BYPASS_MFA (advanced access control),the user property that lets a user skip MFA for a set number of minutes.,"notes,advanced-access-control"
+Resource monitor (resource monitors),an object with a credit quota and triggers that tracks warehouse credit use and can notify or suspend warehouses; only ACCOUNTADMIN can create one.,"notes,resource-monitors"
+Account-level resource monitor (resource monitors),the single monitor per account that covers credits for all warehouses together.,"notes,resource-monitors"
+NOTIFY (resource monitors),a resource monitor action that sends an alert and leaves warehouses running.,"notes,resource-monitors"
+SUSPEND (resource monitors),a resource monitor action that suspends assigned warehouses after running statements finish.,"notes,resource-monitors"
+SUSPEND_IMMEDIATE (resource monitors),a resource monitor action that suspends assigned warehouses at once and cancels running statements.,"notes,resource-monitors"
+Fail-safe (resource monitors),"7 days of Snowflake-recoverable storage after Time Travel for permanent tables, not available for transient or temporary tables.","notes,resource-monitors"
+Transient table (resource monitors),"a table with no Fail-safe and at most 1 day of Time Travel, used for staging data to cut storage cost.","notes,resource-monitors"
+Object tag (resource monitors),a tag such as cost_center set on a warehouse so credit use can be attributed through TAG_REFERENCES.,"notes,resource-monitors"

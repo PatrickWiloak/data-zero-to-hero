@@ -250,3 +250,12 @@ GET @my_internal_stage/output/ file:///tmp/data/;
 | Kafka events | Kafka Connector (Streaming) | Native integration |
 | Scheduled batch | COPY INTO via task | Task-scheduled loading |
 | External data query | External tables | No loading, query in place |
+
+## Key terms
+
+- **Snowpipe** - serverless, file-based continuous loading that runs a pipe's COPY statement when new files land in a stage, with no warehouse needed.
+- **insertFiles** - the Snowpipe REST API endpoint an application calls to submit staged files for loading.
+- **Snowpipe Streaming** - row-level ingestion through an SDK with no file staging, which can reach sub-second latency.
+- **Channel** - the connection a streaming client opens to a table, with offset tracking used to avoid duplicates.
+- **Kafka connector streaming mode** - set with snowflake.ingestion.method=SNOWPIPE_STREAMING, it loads Kafka rows directly with lower latency than the file-staging mode.
+- **PURGE** - the COPY INTO option that deletes staged files after they load successfully.

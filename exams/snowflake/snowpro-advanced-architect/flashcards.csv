@@ -1,0 +1,26 @@
+Question,Answer,Tags
+How long is the SnowPro Advanced - Architect Certification exam?,115 minutes,exam-logistics
+How many questions are on the SnowPro Advanced - Architect Certification exam?,65 questions,exam-logistics
+What is the passing score for SnowPro Advanced - Architect Certification?,750/1000,exam-logistics
+What does the SnowPro Advanced - Architect Certification exam cost?,$375 USD,exam-logistics
+How long is SnowPro Advanced - Architect Certification valid for?,2 years,exam-logistics
+Replication group (multi account strategy),"a defined collection of objects in a source account that is replicated as a unit to one or more target accounts, where the copies are read-only.","notes,multi-account-strategy"
+Failover group (multi account strategy),"a replication group that can also fail over, whose secondary becomes read-write only when promoted to primary; it needs Business Critical edition or higher.","notes,multi-account-strategy"
+Database replication (multi account strategy),"copies a single database to another account as a read-only secondary that is refreshed as a point-in-time snapshot, not a continuous sync.","notes,multi-account-strategy"
+Client redirect (multi account strategy),account redirect using organization-level connection URLs so clients follow the active primary without code changes.,"notes,multi-account-strategy"
+Share (multi account strategy),"a provider-side object holding databases, schemas, tables and views that consumers mount as a read-only database, with no data copied.","notes,multi-account-strategy"
+Secure view (multi account strategy),"a view whose definition is hidden from consumers, used to share a filtered subset of data safely.","notes,multi-account-strategy"
+Reader account (multi account strategy),"a provider-managed account for consumers without their own Snowflake account, where the provider pays the compute.","notes,multi-account-strategy"
+Hierarchical key model (advanced security),"Snowflake's chain of root key, account key, table key and file key, where each micro-partition file has its own key.","notes,advanced-security"
+Key rotation (advanced security),"Snowflake rotates the keys it manages automatically every 30 days, and rekeying of existing data is an Enterprise-and-above feature.","notes,advanced-security"
+Tri-Secret Secure (advanced security),"a Business Critical feature that builds a composite master key from a Snowflake key and a customer key held in cloud KMS, so disabling the customer key cuts off access.","notes,advanced-security"
+External tokenization (advanced security),"masking that calls an external tokenization service through an external function, used where tokens must be reversible.","notes,advanced-security"
+Tag-based masking (advanced security),attaching a masking policy to a tag so every column carrying the tag is masked automatically.,"notes,advanced-security"
+Object tag (advanced security),"a metadata tag, optionally restricted to allowed values, used to classify objects for governance.","notes,advanced-security"
+Micro-partition (micro partitions deep dive),"an immutable, columnar storage unit holding 50 MB to 500 MB of uncompressed data, with column metadata kept in the cloud services layer.","notes,micro-partitions-deep-dive"
+Natural clustering (micro partitions deep dive),"the ordering that comes from loading data in sequence, which degrades over time with updates, deletes and random inserts.","notes,micro-partitions-deep-dive"
+Clustering key (micro partitions deep dive),"columns you choose to keep data co-located, suited to very large tables whose queries filter on those columns.","notes,micro-partitions-deep-dive"
+Clustering depth (micro partitions deep dive),"the average number of overlapping micro-partitions for the clustering columns, where lower is better.","notes,micro-partitions-deep-dive"
+SYSTEM$CLUSTERING_INFORMATION (micro partitions deep dive),the function that reports clustering depth and overlap statistics for a table.,"notes,micro-partitions-deep-dive"
+Automatic clustering (micro partitions deep dive),"a serverless background service that reclusters a table as clustering degrades, and can be suspended and resumed.","notes,micro-partitions-deep-dive"
+Search optimization service (micro partitions deep dive),a serverless service that builds a search access path to speed point lookups on equality and IN predicates.,"notes,micro-partitions-deep-dive"

@@ -277,3 +277,12 @@ ACCOUNTADMIN
 - ISO 27001
 
 **[📖 Compliance](https://docs.snowflake.com/en/user-guide/intro-compliance)** - Compliance documentation
+
+## Key terms
+
+- **Hierarchical key model** - Snowflake's chain of root key, account key, table key and file key, where each micro-partition file has its own key.
+- **Key rotation** - Snowflake rotates the keys it manages automatically every 30 days, and rekeying of existing data is an Enterprise-and-above feature.
+- **Tri-Secret Secure** - a Business Critical feature that builds a composite master key from a Snowflake key and a customer key held in cloud KMS, so disabling the customer key cuts off access.
+- **External tokenization** - masking that calls an external tokenization service through an external function, used where tokens must be reversible.
+- **Tag-based masking** - attaching a masking policy to a tag so every column carrying the tag is masked automatically.
+- **Object tag** - a metadata tag, optionally restricted to allowed values, used to classify objects for governance.

@@ -1,0 +1,43 @@
+Question,Answer,Tags
+How long is the SnowPro Core Certification (COF-C03) exam?,115 minutes,exam-logistics
+How many questions are on the SnowPro Core Certification (COF-C03) exam?,100 (multiple choice and multiple select),exam-logistics
+What is the passing score for SnowPro Core Certification (COF-C03)?,750/1000,exam-logistics
+What does the SnowPro Core Certification (COF-C03) exam cost?,$175 USD,exam-logistics
+How long is SnowPro Core Certification (COF-C03) valid for?,2 years,exam-logistics
+How is the SnowPro Core Certification (COF-C03) exam delivered?,Online proctored or onsite testing center,exam-logistics
+Micro-partition (architecture),"the contiguous, immutable, columnar unit of storage Snowflake creates automatically, with min/max, distinct count and null count tracked per column.","notes,architecture"
+Pruning (architecture),"skipping micro-partitions that cannot match a query, using the per-column metadata.","notes,architecture"
+Virtual warehouse (architecture),an MPP compute cluster that runs queries and stores no data persistently.,"notes,architecture"
+Scaling up (architecture),changing a warehouse to a larger size so complex queries run faster.,"notes,architecture"
+Scaling out (architecture),adding clusters with a multi-cluster warehouse (Enterprise and above) so more concurrent queries run without queuing.,"notes,architecture"
+Standard scaling policy (architecture),the multi-cluster policy that starts a new cluster as soon as queries queue.,"notes,architecture"
+Economy scaling policy (architecture),"the multi-cluster policy that starts a new cluster only when there is enough load to keep it busy for about 6 minutes, trading speed for cost.","notes,architecture"
+Cloud services layer (architecture),"the layer that handles authentication, access control, metadata, query optimization and transaction management.","notes,architecture"
+Result cache (architecture),"holds exact results of identical queries for 24 hours in the cloud services layer, and needs no running warehouse.","notes,architecture"
+Warehouse cache (architecture),"SSD cache of raw micro-partition data on a warehouse's nodes, cleared when the warehouse is suspended and not shared across warehouses.","notes,architecture"
+Metadata cache (architecture),"column statistics kept by cloud services that answer simple COUNT, MIN and MAX queries without scanning data.","notes,architecture"
+Business Critical edition (architecture),"the edition that adds Tri-Secret Secure, private connectivity, and failover and failback between accounts.","notes,architecture"
+Virtual Private Snowflake (architecture),"the highest edition, a completely isolated environment with its own infrastructure and metadata store.","notes,architecture"
+ACCOUNTADMIN (security),the top-level role that combines SYSADMIN and SECURITYADMIN and manages billing and resource monitors; use it sparingly and do not let it own database objects.,"notes,security"
+SECURITYADMIN (security),the role with the MANAGE GRANTS privilege that can grant privileges on any object and owns USERADMIN.,"notes,security"
+SYSADMIN (security),the role that creates databases and warehouses and is the recommended owner of database objects.,"notes,security"
+USERADMIN (security),the role that creates and manages users and roles but cannot grant object privileges.,"notes,security"
+ORGADMIN (security),the organization-level role that creates accounts within an organization and views organization usage and billing.,"notes,security"
+Managed access schema (security),"a schema created WITH MANAGED ACCESS, where only the schema owner or SECURITYADMIN can grant privileges, not individual object owners.","notes,security"
+Key pair authentication (security),"RSA key pair login (2048-bit minimum) for service accounts, where Snowflake stores the public key and two keys can be active for rotation.","notes,security"
+Network policy (security),"an IP allowlist and blocklist set on the account or a user, where the user-level policy overrides the account-level one.","notes,security"
+Tri-Secret Secure (security),"a Business Critical feature that combines a customer-managed key in cloud KMS with a Snowflake-managed key, so the customer can revoke access by disabling their key.","notes,security"
+Dynamic data masking (security),an Enterprise column-level security feature where a masking policy decides at query time whether a role sees the real value.,"notes,security"
+Row access policy (security),an Enterprise policy attached to a table that decides which rows a role can see.,"notes,security"
+SCIM (security),the standard Snowflake supports for automating user and group provisioning from an identity provider.,"notes,security"
+User stage (data loading),"the internal stage every user gets automatically, referenced as @~, which cannot be altered, dropped or shared.","notes,data-loading"
+Table stage (data loading),"the internal stage every table gets automatically, referenced as @%table_name, which can only load into that table.","notes,data-loading"
+Named internal stage (data loading),a stage made with CREATE STAGE that can hold default file format and COPY options and be granted to roles.,"notes,data-loading"
+Storage integration (data loading),an account-level object that lets a stage reach cloud storage through an IAM role or service principal instead of embedded credentials.,"notes,data-loading"
+PUT (data loading),"uploads local files to an internal stage only, and gzip-compresses them by default.","notes,data-loading"
+ON_ERROR (data loading),"the COPY INTO option that sets error handling, with ABORT_STATEMENT as the default and CONTINUE, SKIP_FILE and its variants as alternatives.","notes,data-loading"
+VALIDATION_MODE (data loading),a COPY INTO option that checks the files and returns rows or errors without loading any data.,"notes,data-loading"
+FORCE (data loading),the COPY INTO option that reloads files already recorded in the 64-day load history.,"notes,data-loading"
+Snowpipe (data loading),"serverless, event-driven continuous loading that uses its own compute instead of your warehouses and tracks file history for 14 days.","notes,data-loading"
+AUTO_INGEST (data loading),the pipe setting that lets cloud storage event notifications trigger Snowpipe loads.,"notes,data-loading"
+EXECUTE AS CALLER (transformations),runs with caller's privileges,"notes,transformations"

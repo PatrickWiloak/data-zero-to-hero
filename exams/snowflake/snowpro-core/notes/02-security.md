@@ -234,3 +234,18 @@ ALTER TABLE sales ADD ROW ACCESS POLICY region_policy ON (region);
 - Session policies control idle timeout and other behaviors
 
 **[📖 Session Parameters](https://docs.snowflake.com/en/sql-reference/parameters)** - All session settings
+
+## Key terms
+
+- **ACCOUNTADMIN** - the top-level role that combines SYSADMIN and SECURITYADMIN and manages billing and resource monitors; use it sparingly and do not let it own database objects.
+- **SECURITYADMIN** - the role with the MANAGE GRANTS privilege that can grant privileges on any object and owns USERADMIN.
+- **SYSADMIN** - the role that creates databases and warehouses and is the recommended owner of database objects.
+- **USERADMIN** - the role that creates and manages users and roles but cannot grant object privileges.
+- **ORGADMIN** - the organization-level role that creates accounts within an organization and views organization usage and billing.
+- **Managed access schema** - a schema created WITH MANAGED ACCESS, where only the schema owner or SECURITYADMIN can grant privileges, not individual object owners.
+- **Key pair authentication** - RSA key pair login (2048-bit minimum) for service accounts, where Snowflake stores the public key and two keys can be active for rotation.
+- **Network policy** - an IP allowlist and blocklist set on the account or a user, where the user-level policy overrides the account-level one.
+- **Tri-Secret Secure** - a Business Critical feature that combines a customer-managed key in cloud KMS with a Snowflake-managed key, so the customer can revoke access by disabling their key.
+- **Dynamic data masking** - an Enterprise column-level security feature where a masking policy decides at query time whether a role sees the real value.
+- **Row access policy** - an Enterprise policy attached to a table that decides which rows a role can see.
+- **SCIM** - the standard Snowflake supports for automating user and group provisioning from an identity provider.

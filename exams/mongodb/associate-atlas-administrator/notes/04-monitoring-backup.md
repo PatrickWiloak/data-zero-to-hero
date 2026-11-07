@@ -265,3 +265,11 @@ atlas backups restores start <clusterName> \
 8. **Configure backup compliance** - For production workloads with compliance needs
 9. **Use on-demand snapshots** - Before major changes
 10. **Review and update alerts** - As workload patterns change
+
+## Key terms
+
+- **Cloud backup** - snapshot-based backup for M10+ dedicated clusters, stored in the cluster's cloud provider and region.
+- **Point-in-time restore** - restore to any second inside the oplog window, using continuously captured oplog entries.
+- **On-demand snapshot** - a snapshot triggered by hand, useful before migrations or deployments.
+- **Backup Compliance Policy** - a project-wide policy that stops anyone deleting snapshots or weakening backup settings, and that only MongoDB Support can help remove.
+- **Replication lag** - how many seconds a secondary is behind the primary.

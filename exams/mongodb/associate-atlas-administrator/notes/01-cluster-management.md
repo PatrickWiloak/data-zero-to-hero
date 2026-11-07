@@ -215,3 +215,16 @@ mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/mydb?retryWrites=true
 - `retryWrites=true` enables automatic write retries
 - `w=majority` configures majority write concern
 - Connection string available in Atlas UI under "Connect"
+
+## Key terms
+
+- **Electable node** - a replica set member that takes part in elections and can become primary.
+- **Read-only node** - a member that serves reads, never becomes primary, and does not affect election outcomes.
+- **Analytics node** - a member isolated from the operational workload, targeted with the readPreferenceTags=nodeType:ANALYTICS read preference tag.
+- **Global cluster** - a cluster that uses zone-based sharding to write data to specific regions by zone key, requiring M30 or higher.
+- **Compute auto-scaling** - moves a cluster up or down between a minimum and maximum tier you set, without downtime, on M10 and higher.
+- **Storage auto-scaling** - enabled by default on dedicated clusters, it adds disk space when utilization is high.
+- **Pausing a cluster** - stops compute billing on an M10+ cluster while storage is still billed, and Atlas resumes it after 30 days if you do not.
+- **mongodb+srv connection string** - a connection string format that finds replica set members through DNS SRV records.
+- **Query targeting** - the ratio of documents scanned to documents returned, where a high ratio points to a missing or inefficient index.
+- **Oplog window** - the time range covered by the oplog, which sets how far back a point-in-time restore can go.

@@ -1,0 +1,32 @@
+Question,Answer,Tags
+How long is the MongoDB Associate Atlas Administrator exam?,75 minutes,exam-logistics
+How many questions are on the MongoDB Associate Atlas Administrator exam?,62 multiple-choice questions,exam-logistics
+What is the passing score for MongoDB Associate Atlas Administrator?,65%,exam-logistics
+What does the MongoDB Associate Atlas Administrator exam cost?,$150 USD,exam-logistics
+How long is MongoDB Associate Atlas Administrator valid for?,3 years,exam-logistics
+How is the MongoDB Associate Atlas Administrator exam delivered?,Online proctored,exam-logistics
+Electable nodes (cluster management),Can become primary (participate in elections),"notes,cluster-management"
+Read-only nodes (cluster management),"Serve reads, never become primary","notes,cluster-management"
+Analytics nodes (cluster management),Isolated analytical workloads,"notes,cluster-management"
+Electable node (cluster management),a replica set member that takes part in elections and can become primary.,"notes,cluster-management"
+Read-only node (cluster management),"a member that serves reads, never becomes primary, and does not affect election outcomes.","notes,cluster-management"
+Analytics node (cluster management),"a member isolated from the operational workload, targeted with the readPreferenceTags=nodeType:ANALYTICS read preference tag.","notes,cluster-management"
+Global cluster (cluster management),"a cluster that uses zone-based sharding to write data to specific regions by zone key, requiring M30 or higher.","notes,cluster-management"
+Compute auto-scaling (cluster management),"moves a cluster up or down between a minimum and maximum tier you set, without downtime, on M10 and higher.","notes,cluster-management"
+Storage auto-scaling (cluster management),"enabled by default on dedicated clusters, it adds disk space when utilization is high.","notes,cluster-management"
+Pausing a cluster (cluster management),"stops compute billing on an M10+ cluster while storage is still billed, and Atlas resumes it after 30 days if you do not.","notes,cluster-management"
+mongodb+srv connection string (cluster management),a connection string format that finds replica set members through DNS SRV records.,"notes,cluster-management"
+Query targeting (cluster management),"the ratio of documents scanned to documents returned, where a high ratio points to a missing or inefficient index.","notes,cluster-management"
+Oplog window (cluster management),"the time range covered by the oplog, which sets how far back a point-in-time restore can go.","notes,cluster-management"
+IP access list (security access),"the list of IP addresses or CIDR ranges allowed to connect to a cluster, required even when private endpoints are used.","notes,security-access"
+VPC peering (security access),a private connection between the Atlas VPC and your VPC that needs non-overlapping CIDR ranges and route table changes.,"notes,security-access"
+Private endpoint (security access),"a PrivateLink, Private Link or Private Service Connect connection to Atlas with no CIDR overlap concerns and no route table changes.","notes,security-access"
+SCRAM (security access),"the default database user authentication, using a username and password with the SCRAM-SHA-256 mechanism.","notes,security-access"
+Client-side field level encryption (security access),"encrypts chosen fields in the application before they reach Atlas, so Atlas never sees the plaintext.","notes,security-access"
+Project API key (security access),"an API key scoped to one project, preferred over an organization key for least privilege.","notes,security-access"
+Project Cluster Manager (security access),"the project role that can create, modify and delete clusters.","notes,security-access"
+Cloud backup (monitoring backup),"snapshot-based backup for M10+ dedicated clusters, stored in the cluster's cloud provider and region.","notes,monitoring-backup"
+Point-in-time restore (monitoring backup),"restore to any second inside the oplog window, using continuously captured oplog entries.","notes,monitoring-backup"
+On-demand snapshot (monitoring backup),"a snapshot triggered by hand, useful before migrations or deployments.","notes,monitoring-backup"
+Backup Compliance Policy (monitoring backup),"a project-wide policy that stops anyone deleting snapshots or weakening backup settings, and that only MongoDB Support can help remove.","notes,monitoring-backup"
+Replication lag (monitoring backup),how many seconds a secondary is behind the primary.,"notes,monitoring-backup"

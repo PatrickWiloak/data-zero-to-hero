@@ -247,3 +247,13 @@ atlas organizations apiKeys list
 - Atlas never sees plaintext for encrypted fields
 - Application-level encryption using MongoDB drivers
 - Supports automatic and explicit encryption modes
+
+## Key terms
+
+- **IP access list** - the list of IP addresses or CIDR ranges allowed to connect to a cluster, required even when private endpoints are used.
+- **VPC peering** - a private connection between the Atlas VPC and your VPC that needs non-overlapping CIDR ranges and route table changes.
+- **Private endpoint** - a PrivateLink, Private Link or Private Service Connect connection to Atlas with no CIDR overlap concerns and no route table changes.
+- **SCRAM** - the default database user authentication, using a username and password with the SCRAM-SHA-256 mechanism.
+- **Client-side field level encryption** - encrypts chosen fields in the application before they reach Atlas, so Atlas never sees the plaintext.
+- **Project API key** - an API key scoped to one project, preferred over an organization key for least privilege.
+- **Project Cluster Manager** - the project role that can create, modify and delete clusters.
