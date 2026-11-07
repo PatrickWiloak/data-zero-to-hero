@@ -37,7 +37,7 @@ The diagram shows two lanes, Microsoft and Snowflake. Pick one lane first; you d
 | Step | Cert | What it adds |
 |---|---|---|
 | 1 | [PL-300 Power BI Data Analyst](../exams/azure/pl-300/README.md) | The reporting and modelling layer from the analyst side |
-| 2 | [DP-600 Fabric Analytics Engineer](../exams/azure/dp-600/README.md) | Semantic models, warehouses and lakehouses; SQL, KQL and DAX |
+| 2 | [DP-600 Fabric Analytics Engineer](../exams/azure/dp-600/README.md) | Semantic models, warehouses and lakehouses; SQL, DAX and PySpark |
 | 3 (optional) | [DP-700 Fabric Data Engineer](../exams/azure/dp-700/README.md) | The ingestion and pipeline side of the same platform |
 
 [DP-900](../exams/azure/dp-900/README.md) is a fine vocabulary warm-up before step 1.
@@ -50,7 +50,7 @@ The diagram shows two lanes, Microsoft and Snowflake. Pick one lane first; you d
 | 2 | [SnowPro Advanced Data Engineer](../exams/snowflake/snowpro-advanced-data-engineer/README.md) | Pipelines on Snowflake: Snowpipe, streams, tasks, dynamic tables |
 | 2 (alternative) | [SnowPro Advanced Architect](../exams/snowflake/snowpro-advanced-architect/README.md) | Designing accounts, security and performance at scale |
 
-SnowPro Core is a prerequisite for the Advanced exams, per the guides.
+The Advanced guides in this repo list an active SnowPro Core as a prerequisite. Snowflake's certification pages I could fetch do not state it, so confirm it before you book.
 
 ### Other warehouses
 

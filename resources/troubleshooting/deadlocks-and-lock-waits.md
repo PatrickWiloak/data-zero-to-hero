@@ -219,9 +219,9 @@ Vendor-documented starting points, **not run** for this guide.
 | Engine | Deadlock evidence | Lock waits |
 |---|---|---|
 | MySQL 8.4 (InnoDB) | `SHOW ENGINE INNODB STATUS` prints the latest deadlock; `innodb_print_all_deadlocks` logs every one | `performance_schema.data_lock_waits` |
-| SQL Server | The `xml_deadlock_report` event in the `system_health` Extended Events session | `sys.dm_tran_locks` and `sys.dm_os_waiting_tasks` |
+| SQL Server | The `system_health` Extended Events session records detected deadlocks with the deadlock graph | `sys.dm_tran_locks` and `sys.dm_os_waiting_tasks` |
 
-In MySQL the victim is the transaction that changed the fewest rows. In SQL Server the victim is the session with the lowest deadlock priority, otherwise the cheapest to roll back. Both are in the vendor pages below.
+In MySQL, InnoDB tries to pick the smaller transaction, measured by rows inserted, updated or deleted. In SQL Server the victim is the session with the lowest deadlock priority, otherwise the cheapest to roll back. Both are in the vendor pages below.
 
 ---
 

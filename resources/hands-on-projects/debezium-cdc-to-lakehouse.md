@@ -16,7 +16,7 @@ Capture every insert, update and delete from a PostgreSQL table with Debezium, c
 **Difficulty:** Advanced
 **Prerequisites:** Docker with Compose, Python 3.10+ and `uv` (or `venv`), basic SQL. Read [Change data capture](../../learn/concepts/change-data-capture.md) first, and do [Build an Iceberg lakehouse locally](./iceberg-lakehouse-local.md) so the table format is familiar. The design this implements is [CDC into a lakehouse](../architecture-patterns/cdc-to-lakehouse.md).
 **Cost:** Free. Everything runs in local containers and a local folder.
-**Tested:** 2026-11-07 end to end: PostgreSQL 17.11, Debezium Connect 3.6.3.Final (`quay.io/debezium/connect:3.6`, which reported Kafka Connect 4.3.0), Apache Kafka 4.3.1 (`apache/kafka:latest` on the test day, so pin a tag when you repeat this), pyiceberg 0.12.0, confluent-kafka 2.16.1, DuckDB 2.0.0. Every command and every output block below comes from that run.
+**Tested:** 2026-11-07 end to end: PostgreSQL 17.11, Debezium Connect 3.6.3.Final (debezium.io/releases lists 3.7.1.Final as the latest stable on 2026-11-07) (`quay.io/debezium/connect:3.6`, which reported Kafka Connect 4.3.0), Apache Kafka 4.3.1 (`apache/kafka:latest` on the test day, so pin a tag when you repeat this), pyiceberg 0.12.0, confluent-kafka 2.16.1, DuckDB 2.0.0. Every command and every output block below comes from that run.
 
 ---
 

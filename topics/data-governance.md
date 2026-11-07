@@ -62,7 +62,7 @@ The pieces of governance and how they depend on each other. Ownership and classi
 
 ## Certify
 
-- [Databricks Data Engineer Professional](../exams/databricks/data-engineer-professional/) - Unity Catalog permissions, lineage and masking
+- [Databricks Data Engineer Professional](../exams/databricks/data-engineer-professional/) - Unity Catalog permissions, masking and governance tags
 - [Databricks Data + AI Platform Administrator Accreditation](../exams/databricks/lakehouse-platform-administrator/)
 - [Snowflake SnowPro Advanced Administrator](../exams/snowflake/snowpro-advanced-administrator/) - roles, masking and row access policies
 - [Snowflake SnowPro Core (COF-C03)](../exams/snowflake/snowpro-core/)

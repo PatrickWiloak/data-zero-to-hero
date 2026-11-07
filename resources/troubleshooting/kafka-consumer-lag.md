@@ -61,7 +61,7 @@ Read it column by column:
 Two other views of the same group:
 
 ```bash
-# Group state: Stable, Empty, PreparingRebalance, CompletingRebalance, Dead
+# Group state (the test run showed Stable; the Kafka docs page does not list every state name)
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group g2 --state
 # Which client owns which partitions
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group g2 --members
@@ -74,7 +74,7 @@ GROUP  COORDINATOR (ID)  ASSIGNMENT-STRATEGY  STATE   #MEMBERS
 g2     localhost:9092 (1)  range              Stable  1
 ```
 
-Seeing `PreparingRebalance` over and over means the group keeps re-forming, which stalls consumption each time. List every group with `--list`, or describe all at once with `--all-groups`.
+Seeing `PreparingRebalance` over and over means the group keeps re-forming, which stalls consumption each time. List every group with `--list`, or describe all at once with `--all-groups` (`--all-groups` and `--dry-run` worked on the 4.3.1 test broker but are not listed on the Kafka operations docs page).
 
 A note on a surprise we hit: right after a new consumer joined from `--from-beginning`, the first `--describe` showed `-` for `CURRENT-OFFSET` and `LAG`. That is a group that has **not committed yet**. A few seconds later, once offsets were committed, the same command showed `LAG` 0 on all three partitions. A `-` is not an error; it is "no commit to compare against".
 
@@ -165,10 +165,10 @@ Vendor-documented starting points, **not run** for this guide.
 
 | Service | Where to look |
 |---|---|
-| Amazon MSK | The consumer lag metrics MSK publishes to CloudWatch (for example `MaxOffsetLag`, `SumOffsetLag`) at the right monitoring level; check the MSK monitoring page for the current list |
+| Amazon MSK | The consumer lag metrics MSK publishes to CloudWatch (`MaxOffsetLag` and `SumOffsetLag` are in the free DEFAULT level; per-partition `OffsetLag` needs `PER_TOPIC_PER_PARTITION`) |
 | Confluent Cloud | Consumer lag in the Cloud console and the Metrics API |
 | Amazon Kinesis | Not Kafka: the equivalent is `GetRecords.IteratorAgeMilliseconds`, how old the oldest read record is |
-| Azure Event Hubs | Not Kafka lag as such; check the consumer group's checkpoint against the partition's last enqueued sequence number |
+| Azure Event Hubs | Not Kafka lag as such; compare the consumer group's saved checkpoint (offset) with the partition's newest event; the Event Hubs features page defines offset and checkpointing but no lag metric |
 
 ---
 
@@ -206,7 +206,7 @@ We ran the producer with `--property`, which 4.3.1 accepted with a deprecation w
 - **[📖 Apache Kafka: Managing consumer groups](https://kafka.apache.org/documentation/#basic_ops_consumer_group)** - `kafka-consumer-groups.sh` describe, list and reset offsets
 - **[📖 Apache Kafka: Consumer configs](https://kafka.apache.org/documentation/#consumerconfigs)** - `max.poll.interval.ms`, `session.timeout.ms`, `max.poll.records`
 - **[📖 Apache Kafka: Quickstart](https://kafka.apache.org/quickstart)** - running a broker and the console tools
-- **[📖 Amazon MSK: Monitoring](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)** - metrics, including consumer lag
+- **[📖 Amazon MSK: Metrics for Standard brokers](https://docs.aws.amazon.com/msk/latest/developerguide/metrics-details.html)** - metrics, including consumer lag
 - **[📖 Amazon Kinesis Data Streams: Monitoring with CloudWatch](https://docs.aws.amazon.com/streams/latest/dev/monitoring-with-cloudwatch.html)** - `GetRecords.IteratorAgeMilliseconds`
 
 ## Related

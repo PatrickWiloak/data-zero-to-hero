@@ -65,7 +65,7 @@ The shape of a streaming system. A durable log decouples producers from consumer
 - [Confluent Certified Administrator for Apache Kafka](../exams/confluent/certified-administrator/)
 - [AWS Data Engineer Associate (DEA-C01)](../exams/aws/associate/data-engineer-dea-c01/) - Kinesis and MSK streaming
 - [GCP Professional Data Engineer](../exams/gcp/data-engineer/) - Pub/Sub and Dataflow
-- [Azure Fabric Data Engineer (DP-700)](../exams/azure/dp-700/) - Real-Time Intelligence and Eventstreams
+- [Azure Fabric Data Engineer (DP-700)](../exams/azure/dp-700/) - Eventstreams and Spark structured streaming
 
 ---
 
