@@ -49,5 +49,5 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 - [ ] 🟡 `glossary-add-anchors.py`, `glossary-autolink.py`, `glossary-upgrade-existing-links.py` are a documented manual pipeline (`.github/AUTOMATION.md`, CONTRIBUTING); delete only if that pipeline is retired.
 - [ ] Fold heading-anchor validation into `check-internal-links.py`, so a broken anchor is reported without a full site build.
 - [ ] No CI check for unbalanced code fences; the site build only catches them as missing anchors. A direct validator would name file and line.
-- [ ] markdownlint MD060 (table-column-style) fires repo-wide: disable it in `.markdownlint.json` or reformat every table.
+- [x] 2026-11-06 MD060 is already off in `.markdownlint.json`.
 - [ ] Judge after the first Monday link-check run on this repo: it opens or updates one `link-check` issue (not a new one each week) and lists no real 404s.
