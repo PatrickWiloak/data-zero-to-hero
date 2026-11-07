@@ -10,6 +10,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ### Added
 
+- **New cert guide: Databricks Certified Associate Developer for Apache Spark** (`exams/databricks/apache-spark-developer-associate/`): 7 section notes in the guide's order (published 2026-10-08), fact sheet, strategy, plan, scenarios, 24-question bank, flashcards. Exam facts read from the exam page and guide on 2026-11-07; the PySpark examples were run on PySpark 4.3.0 in local mode.
+
 - **New cert guide: Databricks Certified Data Analyst Associate** (`exams/databricks/data-analyst-associate/`): 9 section notes in the August 2026 guide's order, fact sheet, strategy, plan, scenarios, 25-question bank, flashcards. Exam facts read from the exam page and guide on 2026-11-07; SQL that does not need Databricks was run on Spark 4.3.0 locally.
 
 - **New cert guide: Google Cloud Associate Data Practitioner** (`exams/gcp/associate-data-practitioner/`): 4 section notes in the official guide order, fact sheet, strategy, plan, scenarios, 28-question bank, flashcards. Exam facts read from the exam page and guide v1.0 on 2026-11-07. Wave 5 of [the content gaps plan](./docs/content-gaps-2026-11-07.md).

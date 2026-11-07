@@ -4,10 +4,11 @@ Study guides for Databricks in this repo. For the full picture across every prov
 
 <!-- BEGIN GENERATED: provider-certs - edit .github/scripts/build-provider-indexes.py, not this block -->
 
-4 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
+5 certifications in this repo. Counts and statuses are generated from [docs/certs.json](../../docs/certs.json).
 
 | Cert | Code | Level | Status | Notes |
 |------|------|-------|--------|------:|
+| [Databricks Certified Associate Developer for Apache Spark](apache-spark-developer-associate/) | None published (no separate code) | Associate | Ready | 7 |
 | [Databricks Certified Data Analyst Associate](data-analyst-associate/) | None published (no separate code) | Associate | Ready | 9 |
 | [Databricks Certified Data Engineer Associate](data-engineer-associate/) | - | Associate | Ready | 7 |
 | [Databricks Certified Data Engineer Professional](data-engineer-professional/) | - | Professional | Ready | 10 |

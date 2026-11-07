@@ -69,3 +69,5 @@ Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert i
 - [ ] Judge 2027-01-15: recheck the Associate Data Practitioner exam page for a fee, length or guide revision, and the Renewal FAQ for its validity period.
 - [x] 2026-11-07 Wave 5: Databricks Data Analyst Associate guide added (exam page and August 2026 guide read; unverified: Genie embed/channel-app options, the Genie Code slash command names, the exact "trusted assets" label; Unity Catalog and dashboard syntax not run).
 - [ ] Judge 2027-01-15: recheck the Data Analyst Associate exam page and guide for a revision (the guide's update table shows terminology changes in Oct 2026).
+- [x] 2026-11-07 Wave 5: Databricks Associate Developer for Apache Spark guide added (exam page and guide read; PySpark examples run locally on 4.3.0; not run or not checked on a docs page: JDBC, Spark Connect, stateful UDF API names, Databricks-specific Spark Connect behaviour, pandas-on-Spark behaviour details).
+- [ ] Judge 2027-01-15: recheck the Spark Developer exam page and guide for a revision, and rerun the note examples on the then-current PySpark.

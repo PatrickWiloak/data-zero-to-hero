@@ -54,7 +54,7 @@ Built for **every kind of technologist**, across 21 role-targeted learning paths
 >
 > 🎥 [@patrickwiloak](https://youtube.com/@patrickwiloak) | 💼 [LinkedIn](https://www.linkedin.com/in/patricklukewilson/)
 
-![Certifications](https://img.shields.io/badge/Certifications-26-blue.svg)
+![Certifications](https://img.shields.io/badge/Certifications-27-blue.svg)
 ![Providers](https://img.shields.io/badge/Providers-7-orange.svg)
 ![Free to Use](https://img.shields.io/badge/Free%20to%20Use-Educational-0891b2.svg)
 
@@ -95,7 +95,7 @@ All four are free, by Nobler Works.
 |---|---|---|---|
 | 🎓 | **Learn** | Plain-English data concepts and the Data from Scratch path. No exam scaffolding. | [learn/](./learn/) |
 | 🛠️ | **Build** | Hands-on data builds and architecture patterns (pipelines, streaming, dbt, star schemas, lakehouse, data mesh). | [resources/hands-on-projects/](./resources/hands-on-projects/) |
-| 🎯 | **Certify** | 26 cert study guides across 7 providers. Fact sheets, practice plans, scenarios, practice questions. | [STUDY-HUB.md](./STUDY-HUB.md) |
+| 🎯 | **Certify** | 27 cert study guides across 7 providers. Fact sheets, practice plans, scenarios, practice questions. | [STUDY-HUB.md](./STUDY-HUB.md) |
 | 📚 | **Reference** | Cross-cloud database and messaging comparisons, career roadmaps, migration and interview guides. | [resources/](./resources/) |
 
 The **[topic indexes](./topics/)** tie all four pillars together by subject: databases, data engineering, streaming, analytics and BI, and data governance.
@@ -136,7 +136,7 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 
 - ✅ **[Data from Scratch](./learn/data-from-scratch.md)** - eight phases from zero to a data role
 - ✅ **[29 concept pages](./learn/concepts/)** - SQL joins, window functions, indexes, transactions, OLTP vs OLAP, replication and sharding, SQL vs NoSQL, ETL vs ELT, CDC, batch vs streaming, windows and watermarks, warehouses vs lakes vs lakehouses, modeling and slowly changing dimensions, dbt, partitioning, orchestration, quality, governance, data contracts, vector databases
-- ✅ **26 certification study guides** across 7 providers, with 2,000+ embedded vendor doc links
+- ✅ **27 certification study guides** across 7 providers, with 2,000+ embedded vendor doc links
 - ✅ **[5 cross-pillar topic indexes](./topics/)** - databases, data engineering, streaming, analytics and BI, data governance
 - ✅ **5 cross-cloud service comparisons** - databases, messaging and queues
 - ✅ **8 architecture patterns** - data pipeline and ETL, lakehouse, medallion, CDC into a lakehouse, data mesh, streaming analytics (Lambda vs Kappa), reverse ETL, semantic layer
@@ -161,11 +161,11 @@ Full per-provider breakdown lives in **[STUDY-HUB.md](./STUDY-HUB.md)**. Quick l
 | ☁️ [AWS](./exams/aws/) | 3 | **Data Engineer Associate (DEA-C01)**; retired Data Analytics (DAS-C01) and Database (DBS-C01) specialties retained for reference |
 | ☁️ [Azure](./exams/azure/) | 7 | DP-900, DP-300, DP-420 (Cosmos DB), DP-600 and DP-700 (Fabric), PL-300 (Power BI); retired DP-203 retained |
 | ☁️ [GCP](./exams/gcp/) | 3 | Associate Data Practitioner, Professional Data Engineer, Professional Cloud Database Engineer |
-| 🧱 [Databricks](./exams/databricks/) | 4 | Data Engineer (Associate + Professional), Data Analyst Associate, Platform Administrator accreditation |
+| 🧱 [Databricks](./exams/databricks/) | 5 | Data Engineer (Associate + Professional), Data Analyst Associate, Apache Spark Developer Associate, Platform Administrator accreditation |
 | ❄️ [Snowflake](./exams/snowflake/) | 4 | SnowPro Core + 3 Advanced (Architect, Data Eng, Admin) |
 | 📊 [Confluent/Kafka](./exams/confluent/) | 2 | Certified Developer, Certified Administrator |
 | 🍃 [MongoDB](./exams/mongodb/) | 3 | Associate Developer, DBA, Atlas Administrator |
-| **Total** | **26** | across 7 providers |
+| **Total** | **27** | across 7 providers |
 
 Highlights are a sample, not the full list - the Certs column is the total. Open a provider for everything it covers.
 
@@ -210,7 +210,7 @@ Other career paths live on the sibling sites: [cloud, DevOps and platform roadma
 
 ## 📊 Repository Statistics
 
-- **Certifications:** 26
+- **Certifications:** 27
 - **Providers:** 7
 - **Concept pages:** 29
 - **Service comparisons:** 5
@@ -235,7 +235,7 @@ data-zero-to-hero/
 │   ├── concepts/         # 29 bite-size concept pages
 │   ├── data-from-scratch.md
 │   └── glossary.md
-├── exams/                # 26 certs across 7 providers
+├── exams/                # 27 certs across 7 providers
 ├── resources/            # comparisons, patterns, roadmaps, projects, practice questions
 ├── topics/               # cross-pillar topic indexes
 └── docs/
