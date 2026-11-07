@@ -67,3 +67,5 @@ Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert i
 - [x] 2026-11-07: flashcard decks added for 4 Snowflake guides + associate-atlas-administrator. Left: none; dp-203 is retired (reference-only), so no deck by design.
 - [x] 2026-11-07 Wave 5: Google Associate Data Practitioner guide added (exam page and guide v1.0 read 2026-11-07; validity not stated on the page; BigQuery ML SQL and the Looker vs Looker Studio comparison not run or checked on a docs page).
 - [ ] Judge 2027-01-15: recheck the Associate Data Practitioner exam page for a fee, length or guide revision, and the Renewal FAQ for its validity period.
+- [x] 2026-11-07 Wave 5: Databricks Data Analyst Associate guide added (exam page and August 2026 guide read; unverified: Genie embed/channel-app options, the Genie Code slash command names, the exact "trusted assets" label; Unity Catalog and dashboard syntax not run).
+- [ ] Judge 2027-01-15: recheck the Data Analyst Associate exam page and guide for a revision (the guide's update table shows terminology changes in Oct 2026).
