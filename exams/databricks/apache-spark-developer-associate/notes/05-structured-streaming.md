@@ -75,7 +75,7 @@ A **watermark** tells the engine how late data may be, so it can finish old wind
 
 **[📖 Window operations and watermarking](https://spark.apache.org/docs/latest/streaming/apis-on-dataframes-and-datasets.html)** - tumbling, sliding and session windows, the watermark rule
 
-Other limits: streaming Datasets do not support `distinct`, `limit`/`take`, or `count()` directly (use `groupBy().count()`), and sorting is supported only after an aggregation in complete mode.
+Other limits (per the Structured Streaming guide): streaming Datasets do not support `distinct`, `limit`/`take`, or `count()` directly (use `groupBy().count()`), and sorting is supported only after an aggregation in complete mode.
 
 ## Streaming deduplication
 

@@ -139,7 +139,9 @@ def plus1(v):
 df.select(plus1("x").alias("y")).show()   # ran: 2, 3, 4
 ```
 
-The guide also mentions UDFs "with or without stateful operators, including StateStores". Stateful processing keeps information between rows or micro-batches in a **state store**; in PySpark the streaming operators for it are `applyInPandasWithState` and the `transformWithState` family (those API names are from general knowledge; I did not check them in the docs). Those operators belong to Structured Streaming (Section 5); the docs note that `transformWithState` is recommended since Spark 4.0 for complex stateful applications and that the HDFS-backed state store is the default while RocksDB is an option for large state. I did not run a stateful UDF.
+The guide also mentions UDFs "with or without stateful operators, including StateStores". Stateful processing keeps information between rows or micro-batches in a **state store**; the Structured Streaming guide names `transformWithState` (users are encouraged to use it since Spark 4.0 for complex stateful applications) and the legacy `mapGroupsWithState` and `flatMapGroupsWithState`. Those operators belong to Structured Streaming (Section 5). Unverified: the PySpark-specific names (`applyInPandasWithState`, `transformWithStateInPandas`) were not on the pages read, and so was the claim that the HDFS-backed state store is the default with RocksDB as the option for large state. I did not run a stateful UDF.
+
+**[📖 Arbitrary stateful operations](https://spark.apache.org/docs/latest/streaming/apis-on-dataframes-and-datasets.html#arbitrary-stateful-operations)** - `transformWithState` encouraged since Spark 4.0; `mapGroupsWithState` and `flatMapGroupsWithState` are legacy
 
 ## Broadcast variables and accumulators
 

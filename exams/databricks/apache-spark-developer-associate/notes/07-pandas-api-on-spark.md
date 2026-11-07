@@ -32,7 +32,7 @@ psdf.groupby("a")["b"].mean().sort_index()    # a=1 -> 4.5, a=2 -> 6.0
 psdf.to_spark()                                # a PySpark DataFrame
 ```
 
-Behaviours that differ from single-machine pandas, per the tutorial's section headings (I could read only the page's outline, so these are pointers to check, not detailed claims): rows have a configurable default index type (`sequence`, `distributed` or `distributed-sequence`); combining objects built on different DataFrames is restricted unless you enable `compute.ops_on_diff_frames`; not every pandas function is implemented; and operations that need a global order or a single partition can be slow. The best-practice rule is the same as for all Spark work: avoid shuffles and avoid pulling everything onto one partition.
+Behaviours that differ from single-machine pandas, per the tutorial's section headings (checked against the Options and Best Practices pages): rows have a configurable default index type (`sequence`, `distributed` or `distributed-sequence`; the default is `distributed-sequence`, and `sequence` computes on a single partition, so avoid it on large data); operations across different DataFrames are disallowed by default and enabled with `compute.ops_on_diff_frames` (the options table lists its default as True while the prose says disallowed by default, so check `ps.get_option` on your version); not every pandas function is implemented; and operations that need a global order or a single partition can be slow. The best-practice rule is the same as for all Spark work: avoid shuffles and avoid pulling everything onto one partition.
 
 **[📖 Pandas API on Spark tutorials](https://spark.apache.org/docs/latest/api/python/tutorial/pandas_on_spark/index.html)** - overview, index types, best practices, conversion to and from PySpark
 
@@ -54,7 +54,7 @@ def times2(s: pd.Series) -> pd.Series:      # Series to Series
 df.select(times2("x").alias("y")).show()    # x = 1,2,3  ->  y = 2,4,6
 ```
 
-The forms to recognise, all selected by **type hints** (the older `PandasUDFType` is deprecated):
+The forms to recognise, all selected by **type hints** (the docs say `PandasUDFType` will be deprecated in a future release):
 
 | Form | Signature | Use |
 |---|---|---|
