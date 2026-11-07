@@ -103,6 +103,7 @@
 
 - [Data from Scratch](learn/data-from-scratch.md) - zero to data engineer, analytics engineer or DBA
 - [Concepts](learn/concepts/) - {{concept_pages}} five-minute explainers, one idea each
+- [Cross-site learning paths](learn/learning-paths.md) - seven routes that span cloud, data, security and AI
 - [Topic indexes](topics/) - {{topic_indexes}} subjects tied across all four pillars
 - [Build a data pipeline](resources/hands-on-projects/build-data-pipeline.md) - ingest, transform, load, on a schedule
 - [Build a dbt project](resources/hands-on-projects/build-dbt-project.md) - a tested star schema, step by step

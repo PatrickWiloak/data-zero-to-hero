@@ -47,6 +47,7 @@ There's no single right order. Pick what fits:
 | Write your first SQL query today | [Day One](./day-one/README.md) |
 | Go from zero to a data job | [Data from Scratch](./data-from-scratch.md) |
 | Not sure which Zero to Hero site fits you | [Which site should I start with?](./which-site.md) |
+| Moving between cloud, data, security and AI | [Cross-site learning paths](./learning-paths.md) |
 | Understand one concept (ETL, lakehouse, streaming, ...) | [Concepts](./concepts/) |
 | Look up a term you keep seeing | [Glossary](./glossary.md) |
 | See how real data platforms are laid out | [Architecture patterns](../resources/architecture-patterns/) |
@@ -62,6 +63,7 @@ There's no single right order. Pick what fits:
 - **Need cloud basics for phase 6?** [Cloud from Scratch](https://cloud.noblerworks.com/learn/cloud-from-scratch/) covers compute, storage, networking and identity.
 - **Ready for machine learning?** [AI Zero to Hero](https://ai.noblerworks.com/learn/start-here/zero-to-hero-path/) picks up where data engineering hands off.
 - **Not sure data is the right site?** [Which site should I start with?](./which-site.md) compares all four Zero to Hero sites, with a starting page for each goal.
+- **Moving between fields?** [Cross-site learning paths](./learning-paths.md) are seven routes that cross cloud, data, security and AI, with matching certs.
 
 ---
 

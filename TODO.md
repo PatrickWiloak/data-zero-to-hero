@@ -16,6 +16,8 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 
 ## Content (2026-10-21 expansion)
 
+- [x] 2026-11-07 Cross-site learning paths (7 routes, `learn/learning-paths.md`, byte-identical in all four repos, linked from which-site, learn hub and home). Not pushed or deployed: ships with the train.
+- [ ] 2026-12-07 re-verify every link in `learn/learning-paths.md` against each repo's `git ls-files` (script: loop the URLs through the four trees) and the matching certs against current exam codes.
 - [ ] Judge 2026-11-21: rerun `build-dbt-project.md` on the current dbt release; if dbt v2 is the pip default by then, retest and update the pinned `dbt-core<2`. ✏️ 2026-11-06 early read: dbt-core is 1.12.6, so the `<2` pin holds; guide not rerun yet.
 - [x] 2026-11-06 lychee (#7, 11-02): 0 real 404s; 2 dead hosts removed. The rest are cloud.google.com refusing the runner.
 - [x] 2026-11-07 "Check yourself" sections (3-4 questions, collapsed answers) added to all 29 `learn/concepts/` pages; strict build renders the `<details>` blocks. Not pushed. New concept pages should get one too.
