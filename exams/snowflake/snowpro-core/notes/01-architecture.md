@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-07
+---
+
 # Snowflake Architecture
 
 **[📖 Key Concepts and Architecture](https://docs.snowflake.com/en/user-guide/intro-key-concepts)** - Complete architecture overview
@@ -11,7 +15,9 @@ Snowflake's architecture separates storage, compute, and cloud services into thr
 ### Storage Layer
 
 - All data stored as micro-partitions in cloud provider's object storage
-- Micro-partitions: 50-500 MB compressed, contiguous units of storage
+- Micro-partitions: 50-500 MB of uncompressed data (stored size is smaller because data is always compressed), contiguous units of storage
+
+**[📖 Micro-partitions and clustering](https://docs.snowflake.com/en/user-guide/tables-clustering-micropartitions)** - "between 50 MB and 500 MB of uncompressed data"
 - Columnar format - each column stored separately within partitions
 - Immutable - updates create new micro-partitions
 - Automatic compression (no manual tuning needed)

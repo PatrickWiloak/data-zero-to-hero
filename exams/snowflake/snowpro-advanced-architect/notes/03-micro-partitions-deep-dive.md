@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-07
+---
+
 # Micro-Partitions Deep Dive
 
 **[📖 Micro-Partitions](https://docs.snowflake.com/en/user-guide/tables-clustering-micropartitions)** - Partition internals
@@ -9,7 +13,7 @@ This document provides a deep dive into Snowflake's micro-partition architecture
 ## Micro-Partition Fundamentals
 
 ### Structure
-- Contiguous units of storage, 50-500 MB compressed
+- Contiguous units of storage, 50-500 MB of uncompressed data (stored size is smaller because data is always compressed)
 - Data stored in columnar format within each partition
 - Each column stored and compressed independently
 - Immutable - never updated in place, always replaced

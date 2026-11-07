@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-07
+---
+
 # SnowPro Advanced - Architect Certification
 
 ## Exam Overview
@@ -91,7 +95,7 @@ The SnowPro Advanced - Architect Certification validates expertise in designing 
 ### Multi-Account and Organization Strategy
 - **Organizations:** Central management of multiple accounts
 - **Account Replication:** Cross-region and cross-cloud database replication
-- **Failover Groups:** Business continuity with automated failover
+- **Failover Groups:** Business continuity; an admin promotes a secondary to primary
 - **Data Sharing:** Secure sharing across accounts without data copying
 - **Reader Accounts:** Sharing data with non-Snowflake customers
 

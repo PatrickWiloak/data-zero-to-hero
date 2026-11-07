@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-07
+---
+
 # Multi-Account Strategy
 
 **[📖 Organizations](https://docs.snowflake.com/en/user-guide/organizations)** - Organization management overview
@@ -77,12 +81,15 @@ SELECT * FROM TABLE(INFORMATION_SCHEMA.DATABASE_REPLICATION_USAGE_HISTORY());
 - **Data Transfer:** Cross-region/cross-cloud transfers incur network costs
 - **Latency:** Refresh creates a point-in-time copy, not real-time sync
 - **Objects Replicated:** Tables, views, stages, file formats, sequences, UDFs
-- **Objects NOT Replicated:** Pipes, tasks, streams (must be recreated manually)
+- **Pipes:** not replicated by database replication; group-based replication supports pipes (copy history only if the pipe and its target table are in the same group)
+- **Streams and tasks:** replicated, with conditions. Streams need source tables/views in the same replicated database (no shared databases, external tables or append-only streams on replicated sources). Tasks replicate suspended; with group replication they resume only if resumed on the primary and the owner role exists on the secondary; never-resumed tasks are not replicated by database replication
+
+**[📖 Replication considerations](https://docs.snowflake.com/en/user-guide/account-replication-considerations)** - what replicates for streams, tasks and pipes
 
 ## Failover Groups
 
 ### Failover Architecture
-- Failover groups extend replication groups with automatic failover capability
+- Failover groups extend replication groups with failover capability (an admin promotes the secondary)
 - Include databases, shares, and account-level objects
 - Primary group is read-write, secondary groups are read-only
 - Promotion makes a secondary group the new primary
@@ -96,12 +103,12 @@ ALTER ACCOUNT SET ENABLE_ACCOUNT_REDIRECT = TRUE;
 
 -- Connection URL uses organization-level URL
 -- snowflake://org-name-account-name.snowflakecomputing.com
--- Automatically redirects to active primary account
+-- Resolves to the account holding the promoted (primary) connection
 ```
 
 - Connection URLs use organization-level naming
-- Clients automatically redirect to the active primary
-- Transparent failover without application code changes
+- Once a secondary connection is promoted (`ALTER CONNECTION ... PRIMARY`), the connection URL resolves to the new primary
+- No application code change is needed, only an admin promotion (private connectivity also needs manual DNS CNAME updates)
 - DNS-based redirect with configurable TTL
 
 **[📖 Client Redirect](https://docs.snowflake.com/en/user-guide/client-redirect)** - Connection failover
@@ -110,10 +117,10 @@ ALTER ACCOUNT SET ENABLE_ACCOUNT_REDIRECT = TRUE;
 | Feature | Database Replication | Failover Group |
 |---------|---------------------|----------------|
 | Scope | Single database | Multiple objects |
-| Failover | Manual promotion | Automated with client redirect |
+| Failover | Manual promotion | Manual promotion (ALTER FAILOVER GROUP ... PRIMARY); client redirect then moves the URL |
 | Objects | Database only | Databases, shares, roles, users |
 | Use Case | Read replicas | Business continuity / DR |
-| Client Impact | Requires connection change | Transparent redirect |
+| Client Impact | Requires connection change | Connection URL moves once the connection is promoted |
 
 ## Data Sharing
 
@@ -188,7 +195,7 @@ GRANT SELECT ON VIEW weather_db.public.shared_forecasts TO SHARE weather_share;
 | Share with Snowflake users, same region | Direct Share | Zero copy, instant |
 | Share with non-Snowflake users | Reader Account | Provider pays compute |
 | Access data in another region | Database Replication | Data copy, transfer cost |
-| Business continuity / DR | Failover Group | Automated failover |
+| Business continuity / DR | Failover Group | Failover group (admin-promoted) |
 | Monetize datasets | Marketplace Listing | Auto-fulfillment |
 | Group collaboration | Data Exchange | Private, curated group |
 

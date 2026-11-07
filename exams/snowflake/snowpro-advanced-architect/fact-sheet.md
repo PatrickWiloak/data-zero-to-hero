@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-05-03
+last-updated: 2026-11-07
 ---
 
 # SnowPro Advanced - Architect - Fact Sheet
@@ -37,7 +37,7 @@ last-updated: 2026-05-03
 - Replicate databases, shares, users, roles across accounts
 - Cross-region and cross-cloud replication supported
 - Replication groups bundle multiple objects for coordinated replication
-- Failover groups enable automated failover for business continuity
+- Failover groups support business continuity: an admin promotes a secondary failover group to primary (ALTER FAILOVER GROUP ... PRIMARY); promotion is not described as automatic
 - Primary and secondary (read-only) database replicas
 - **[📖 Replication](https://docs.snowflake.com/en/user-guide/account-replication-intro)** - Replication overview
 - **[📖 Failover Groups](https://docs.snowflake.com/en/user-guide/account-replication-replication-groups)** - Failover configuration
@@ -108,7 +108,7 @@ ALTER TABLE customers SET TAG sensitivity = 'PII';
 ## Architecture Deep Dive
 
 ### Micro-Partitions
-- 50-500 MB compressed, immutable, columnar storage units
+- 50-500 MB of uncompressed data (stored compressed, so smaller on disk), immutable, columnar storage units
 - Metadata tracked per partition: min/max, null count, distinct count
 - Pruning skips partitions based on metadata during query execution
 - Natural clustering follows data ingestion order

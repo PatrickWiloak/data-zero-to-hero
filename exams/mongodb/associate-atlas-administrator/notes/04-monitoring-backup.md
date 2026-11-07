@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-07
+---
+
 # Monitoring, Alerts, and Backup
 
 **[📖 Atlas Monitoring](https://www.mongodb.com/docs/atlas/monitoring-alerts/)** - Monitoring documentation
@@ -218,7 +222,10 @@ atlas backups snapshots create <clusterName> \
 - Once enabled, cannot be disabled without support
 - Applies to all clusters in the project
 - Overrides individual cluster backup policies
-- Requires Organization Owner to enable
+- Requires Project Owner to enable (an Organization Owner must first add themselves as Project Owner on the project)
+- Disabling needs MongoDB Support approval, except on an empty project (no clusters or retained snapshots)
+
+Source: the Backup Compliance page above ("you must have `Project Owner` access" to configure it).
 
 ### Backup for Sharded Clusters
 - Snapshots capture all shards at the same point

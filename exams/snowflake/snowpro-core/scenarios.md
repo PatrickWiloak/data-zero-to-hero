@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-07
+---
+
 # SnowPro Core Exam Scenarios
 
 ## Scenario 1: Virtual Warehouse Sizing and Scaling
@@ -276,12 +280,12 @@ ALTER TASK transform_orders RESUME;
 
 **Why Business Critical:**
 - Enterprise meets requirements 1-3 but NOT requirement 4
-- Cross-region replication with automatic failover requires Business Critical
+- Failover/failback of replication and failover groups requires Business Critical (promotion is an admin action)
 - Standard edition is insufficient for all listed requirements
 - VPS would work but is more expensive than needed
 
 **Common Distractors:**
-- Enterprise edition (lacks automatic failover/failback for DR)
+- Enterprise edition (lacks failover/failback for DR)
 - Standard edition (lacks multi-cluster warehouses, 90-day Time Travel, and column security)
 - VPS (meets all requirements but exceeds minimum needed)
-- Selecting Enterprise with manual replication scripts (doesn't provide automatic failover)
+- Selecting Enterprise with manual replication scripts (doesn't provide failover groups)

@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-07
+---
+
 # SnowPro Advanced - Architect - High-Yield Scenarios and Patterns
 
 ## Multi-Account Architecture
@@ -8,9 +12,9 @@
 **Solution Pattern:**
 - **Replication:** Configure database replication from primary to secondary account
 - **Failover Groups:** Bundle databases, shares, and account objects into a failover group
-- **Client Redirect:** Configure connection URLs to automatically redirect on failover
+- **Client Redirect:** Configure a connection so the URL resolves to the new primary once an admin promotes it
 - **RPO:** Replication frequency determines recovery point objective (minutes to hours)
-- **Failover Trigger:** Promote secondary account when primary is unavailable
+- **Failover Trigger:** Admin promotes the secondary failover group (and the connection) to primary when the primary is unavailable
 
 **Common Distractors:**
 - Using data sharing instead of replication (wrong - sharing requires the source account to be available)

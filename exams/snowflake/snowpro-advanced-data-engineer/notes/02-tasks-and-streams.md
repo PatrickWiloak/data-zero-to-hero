@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-07
+---
+
 # Tasks and Streams
 
 **[📖 Tasks](https://docs.snowflake.com/en/user-guide/tasks-intro)** - Task orchestration
@@ -227,10 +231,12 @@ SELECT * FROM orders_stream;  -- Returns 0 rows
 ```
 
 ### Stream Staleness
-- Streams have a data retention period (matches source table Time Travel)
+- A stream goes stale when its offset falls outside the source table's data retention period
 - If stream is not consumed within retention period, it becomes stale
 - Stale streams cannot be consumed and must be recreated
-- Default retention: 1 day (Standard edition), up to 90 days (Enterprise+)
+- Snowflake extends the source table's retention to the stream's offset, up to 14 days by default (MAX_DATA_EXTENSION_TIME_IN_DAYS); consuming the stream ends the extension
+
+**[📖 Introduction to streams](https://docs.snowflake.com/en/user-guide/streams-intro)** - staleness and the data retention extension
 - Monitor stream freshness to avoid staleness
 
 ```sql

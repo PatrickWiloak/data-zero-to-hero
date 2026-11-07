@@ -1,5 +1,5 @@
 ---
-last-updated: 2026-10-22
+last-updated: 2026-11-07
 exam-version: COF-C03
 ---
 
@@ -52,7 +52,7 @@ This is the most heavily weighted domain covering Snowflake's unique architectur
 ### Three-Layer Architecture
 
 **Storage Layer:**
-- Data stored in micro-partitions (50-500 MB compressed)
+- Data stored in micro-partitions (50-500 MB of uncompressed data; stored size is smaller)
 - Columnar format for efficient compression and scanning
 - Automatic organization - no manual indexing needed
 - Stored in cloud provider's blob storage (S3, Azure Blob, GCS)

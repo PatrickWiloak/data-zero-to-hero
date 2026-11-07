@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-07
+---
+
 # Resource Monitors and Cost Management
 
 **[📖 Resource Monitors](https://docs.snowflake.com/en/user-guide/resource-monitors)** - Cost control documentation
@@ -82,9 +86,11 @@ DESCRIBE RESOURCE MONITOR production_monthly;
 ### Monitor Limitations
 - Do NOT track serverless credits (Snowpipe, serverless tasks, auto-clustering)
 - Do NOT track storage costs
-- Do NOT track cloud services credits
+- DO count cloud services credits toward the quota, even consumption that is never billed (the 10% adjustment does not exempt them)
 - Cannot set per-query credit limits
 - Notifications sent to account administrators only
+
+**[📖 Resource monitors](https://docs.snowflake.com/en/user-guide/resource-monitors)** - the credit quota counts cloud services consumption, even if never billed
 
 ## Credit Tracking
 
