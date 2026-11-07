@@ -134,7 +134,7 @@ See the **[CHANGELOG](./CHANGELOG.md)** for the rolling history. Recent batches:
 ## 🎯 What's Inside This Repository?
 
 - ✅ **[Data from Scratch](./learn/data-from-scratch.md)** - eight phases from zero to a data role
-- ✅ **[23 concept pages](./learn/concepts/)** - SQL joins, window functions, indexes, transactions, OLTP vs OLAP, replication and sharding, SQL vs NoSQL, ETL vs ELT, CDC, batch vs streaming, windows and watermarks, warehouses vs lakes vs lakehouses, modeling and slowly changing dimensions, dbt, partitioning, orchestration, quality, governance, data contracts, vector databases
+- ✅ **[29 concept pages](./learn/concepts/)** - SQL joins, window functions, indexes, transactions, OLTP vs OLAP, replication and sharding, SQL vs NoSQL, ETL vs ELT, CDC, batch vs streaming, windows and watermarks, warehouses vs lakes vs lakehouses, modeling and slowly changing dimensions, dbt, partitioning, orchestration, quality, governance, data contracts, vector databases
 - ✅ **24 certification study guides** across 7 providers, with 2,000+ embedded vendor doc links
 - ✅ **[2 cross-pillar topic indexes](./topics/)** - databases and data engineering
 - ✅ **5 cross-cloud service comparisons** - databases, messaging and queues
@@ -211,7 +211,7 @@ Other career paths live on the sibling sites: [cloud, DevOps and platform roadma
 
 - **Certifications:** 24
 - **Providers:** 7
-- **Concept pages:** 23
+- **Concept pages:** 29
 - **Service comparisons:** 5
 - **Architecture patterns:** 8
 - **Hands-on projects:** 4
@@ -231,7 +231,7 @@ data-zero-to-hero/
 ├── STUDY-HUB.md (full per-provider navigation)
 ├── CHANGELOG.md
 ├── learn/                # plain-English learning content
-│   ├── concepts/         # 23 bite-size concept pages
+│   ├── concepts/         # 29 bite-size concept pages
 │   ├── data-from-scratch.md
 │   └── glossary.md
 ├── exams/                # 24 certs across 7 providers

@@ -30,7 +30,7 @@ If you **do** want certifications, head to the **[Study Hub](../STUDY-HUB.md)** 
 - **[Day One](./day-one/README.md)** - six hands-on pages for strict beginners: your first SQL query, spreadsheets to SQL, a local DuckDB or PostgreSQL to practice on, Python and pandas (with Polars), notebooks, and CSV vs JSON vs Parquet. Every sample was run.
 
 ### 💡 Bite-size concept pages
-- **[Concepts](./concepts/)** - 23 topic pages, 5-15 min each. SQL joins, window functions, indexes, transactions and ACID, OLTP vs OLAP, replication and sharding, SQL vs NoSQL, ETL vs ELT, change data capture, batch vs streaming, windows and watermarks, queues vs streams, warehouses vs lakes vs lakehouses, modeling and slowly changing dimensions, dbt, file formats and partitioning, pipelines and orchestration, quality, governance, data contracts, vector databases, eventual consistency.
+- **[Concepts](./concepts/)** - 29 topic pages, 5-15 min each. SQL joins, window functions, indexes, transactions and ACID, OLTP vs OLAP, replication and sharding, SQL vs NoSQL, ETL vs ELT, change data capture, batch vs streaming, windows and watermarks, queues vs streams, warehouses vs lakes vs lakehouses, modeling and slowly changing dimensions, dbt, file formats and partitioning, pipelines and orchestration, quality, governance, data contracts, vector databases, eventual consistency.
 
 ### 📖 Reference
 - **[Glossary](./glossary.md)** - 200+ data terms in plain English

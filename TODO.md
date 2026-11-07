@@ -18,7 +18,7 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 
 - [ ] Judge 2026-11-21: rerun `build-dbt-project.md` on the current dbt release; if dbt v2 is the pip default by then, retest and update the pinned `dbt-core<2`. ✏️ 2026-11-06 early read: dbt-core is 1.12.6, so the `<2` pin holds; guide not rerun yet.
 - [x] 2026-11-06 lychee (#7, 11-02): 0 real 404s; 2 dead hosts removed. The rest are cloud.google.com refusing the runner.
-- [ ] Next concept candidates: backup and point-in-time restore. (Query plans, Spark shuffles and skew, and semantic layers now have long-form pages under `resources/troubleshooting/` and `resources/architecture-patterns/`; a 5-minute concept page each would still help.)
+- [ ] Next concept candidates (backup/PITR done 2026-11-07): Query plans, Spark shuffles and skew, and semantic layers now have long-form pages under `resources/troubleshooting/` and `resources/architecture-patterns/`; a 5-minute concept page each would still help.)
 - [x] 2026-10-22 Resources expansion: 4 patterns, 2 interview guides, 3 troubleshooting guides, warehouse migration guide (CHANGELOG 2026-10-22 (3)).
 - [ ] Judge 2026-12-22: re-verify version-sensitive facts in the 2026-10-22 pages - Debezium stable line (3.6), Lakeflow Connect sources, Fabric mirroring preview sources, Google "Lakehouse" (ex-BigLake) naming, Census-in-Fivetran branding.
 - [x] 2026-10-22 Postmortems (GitLab 2017, Atlassian 2022) and analytics engineer + DBA interview guides added (CHANGELOG 2026-10-22 (4)).
@@ -59,6 +59,6 @@ Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert i
 - [x] 2026-11-07 Wave 1: `learn/day-one/` on-ramp (7 pages, samples run; the DuckDB CLI, JupyterLab/VS Code UIs and `pd.read_parquet` were not run - stated on the pages).
 - [x] 2026-11-07 Wave 2: service comparisons (warehouses, ETL/orchestration, BI tools) + data analyst and analytics engineer roadmaps. Unverified items are marked on the pages (Tableau, Redshift/Databricks/Snowflake pricing models).
 - [ ] Judge 2026-12-22: re-read the vendor pages behind the Wave 2 comparisons (Quick Sight rename, Fabric vs Synapse, Fabric Data Factory, Composer "Managed Airflow Gen 3" naming, Redshift Python UDF end of support).
-- [ ] Wave 3: concept pages - data observability, warehouse cost control, OLTP normalisation, time-series + graph DBs, feature stores.
+- [x] 2026-11-07 Wave 3: concept pages - backup/PITR, data observability, warehouse cost control, OLTP normalization, time-series + graph DBs, feature stores. Left: query plans, Spark shuffles/skew, semantic layers 5-minute pages.
 - [ ] Wave 4: projects (Debezium CDC, Airflow/Dagster, Iceberg lakehouse, backup-restore drill); troubleshooting (replication lag, deadlocks, consumer lag); topic indexes (streaming, BI, governance).
 - [ ] Flashcard decks: 4 Snowflake guides, dp-203, associate-atlas-administrator.

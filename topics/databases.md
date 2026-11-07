@@ -33,6 +33,9 @@ flowchart LR
 - [Idempotency explained](https://cloud.noblerworks.com/learn/concepts/idempotency-explained/) - retries, idempotency keys, common patterns
 - [Queues vs streams](../learn/concepts/queues-vs-streams.md) - SQS vs Kinesis (and equivalents), ordering, replay
 - [Vector databases for data engineers](../learn/concepts/vector-databases-for-data-engineers.md) - where vectors can live and how to keep the index in sync
+- [Database normalization for OLTP](../learn/concepts/database-normalization-for-oltp.md) - first to third normal form, and when to stop
+- [Time-series and graph databases](../learn/concepts/time-series-and-graph-databases.md) - two specialized stores and when to pick them
+- [Backup and point-in-time restore](../learn/concepts/backup-and-point-in-time-restore.md) - base backup plus log replay
 - [Embeddings and vector search](https://ai.noblerworks.com/learn/concepts/embeddings-and-vector-search/) - vector DB basics, the AI side
 - [Warehouses, lakes, and lakehouses](../learn/concepts/warehouses-lakes-lakehouses.md) - the analytical stores
 - [Data modeling for analytics](../learn/concepts/data-modeling-for-analytics.md) - star schemas, grain, SCD types

@@ -45,6 +45,9 @@ The shape nearly every data platform ends up with, whatever the vendor names. Th
 - [Data contracts](../learn/concepts/data-contracts.md) - producer-consumer agreements enforced in CI
 - [OLTP vs OLAP](../learn/concepts/oltp-vs-olap.md) - why the data is copied out of the app database at all
 - [Vector databases for data engineers](../learn/concepts/vector-databases-for-data-engineers.md) - the embedding store as one more pipeline target
+- [Data observability](../learn/concepts/data-observability.md) - freshness, volume and schema monitoring
+- [Warehouse cost control](../learn/concepts/warehouse-cost-control.md) - scan and compute cost, with hard limits
+- [Feature stores for data engineers](../learn/concepts/feature-stores-for-data-engineers.md) - offline and online stores, point-in-time joins
 - [SQL vs NoSQL](../learn/concepts/sql-vs-nosql.md) - the operational stores most of this data is copied from
 - [Queues vs streams](../learn/concepts/queues-vs-streams.md) - the transport underneath streaming pipelines
 - [Eventual consistency](../learn/concepts/eventual-consistency.md) - why a replica read can disagree with the source

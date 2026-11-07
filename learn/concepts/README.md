@@ -39,6 +39,9 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [Replication and sharding](./replication-and-sharding.md) | One database server is no longer enough |
 | [Eventual consistency](./eventual-consistency.md) | A read returned stale data and you want to know why |
 | [Vector databases for data engineers](./vector-databases-for-data-engineers.md) | Someone asked you to run the embedding store |
+| [Database normalization for OLTP](./database-normalization-for-oltp.md) | The same fact is stored in five rows and they disagree |
+| [Time-series and graph databases](./time-series-and-graph-databases.md) | Your data is all timestamps, or all relationships |
+| [Backup and point-in-time restore](./backup-and-point-in-time-restore.md) | Someone ran a bad `DELETE` and you need yesterday back |
 
 ## 📊 Analytics and modeling
 
@@ -49,6 +52,8 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [Slowly changing dimensions](./slowly-changing-dimensions.md) | Last year's report changed when a customer moved |
 | [Analytics engineering and dbt](./analytics-engineering-and-dbt.md) | Your transformation SQL needs tests and code review |
 | [File formats and partitioning](./file-formats-and-partitioning.md) | A query is slow or a warehouse bill is high |
+| [Warehouse cost control](./warehouse-cost-control.md) | The bill moved and nobody knows why |
+| [Feature stores for data engineers](./feature-stores-for-data-engineers.md) | A data scientist asked for an online store and a point-in-time join |
 
 ## 🔧 Pipelines and integration
 
@@ -73,6 +78,7 @@ If you want exam coverage, head back to the [Study Hub](../../STUDY-HUB.md).
 | [Data quality and lineage](./data-quality-and-lineage.md) | A dashboard showed a wrong number and nothing errored |
 | [Data governance and catalogs](./data-governance-and-catalogs.md) | Nobody knows which `customers` table is the real one |
 | [Data contracts](./data-contracts.md) | An upstream rename broke your pipeline again |
+| [Data observability](./data-observability.md) | The pipeline was green and the table was empty |
 
 ---
 
