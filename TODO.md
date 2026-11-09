@@ -11,7 +11,7 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 - [x] 2026-10-27 topics + description set. After first deploy: `python3 .github/scripts/check-repo-metadata.py --fix` (description + topics; needs admin), then `--check` passes in CI.
 - [x] 2026-10-27 social preview uploaded (`assets/brand/social-preview-1280x640.png`; GitHub reports a custom image).
 - [ ] After first deploy: `https://data.noblerworks.com/<key>.txt` serves the key in `.github/site/indexnow-key.txt`; the deploy's "Notify IndexNow" step says `accepted` (a first-run 403 is normal; rerun `notify-indexnow.py --all`).
-- [ ] Patrick, after first deploy: Search Console `sc-domain:noblerworks.com` -> submit `https://data.noblerworks.com/sitemap.xml`.
+- [x] 2026-11-09 submitted `https://data.noblerworks.com/sitemap.xml` to Search Console via API.
 - [x] 2026-10-21 Glossary and YouTube page rewritten data-only (CHANGELOG 2026-10-21 (2)).
 
 ## Content (2026-10-21 expansion)
