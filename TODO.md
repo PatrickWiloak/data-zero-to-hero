@@ -50,7 +50,8 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 
 ## Tooling (shared with the sibling sites)
 
-- [ ] 2026-11-09 Freshness workflow built, not pushed: after the train pushes, run Actions > Freshness once (workflow_dispatch) and skim the step summary; advisory, fails only past 365 days. Script: `.github/scripts/check-freshness.py`.
+- [x] 2026-11-10 Freshness workflow on main; dispatched run 42795033183 green: 79 pages, 8 over 120 days (all `last-updated: 2026-05-03`, 191 d), 17 undated READMEs, none near the 365-day fail.
+- [ ] 2026-12-15 Re-verify the 8 fact-sheets (DP-900, Confluent x2, GCP x2, MongoDB x3) (2026-05-03) on vendor pages, bump `last-updated` (365-d fail: 2027-05-03); date or exempt the 17 undated READMEs. `python3 .github/scripts/check-freshness.py --days 120`.
 - [ ] 🟡 `.github/scripts/site_hooks.py` has drifted from ai-zero-to-hero's port - one canonical module the sites vendor (with a sync check), or record the fork. S-M, low.
 - [ ] 🟡 `glossary-add-anchors.py`, `glossary-autolink.py`, `glossary-upgrade-existing-links.py` are a documented manual pipeline (`.github/AUTOMATION.md`, CONTRIBUTING); delete only if that pipeline is retired.
 - [x] 2026-11-07 Heading-anchor validation folded into `check-internal-links.py` (640 anchors, 0 broken; ids match the strict build's on all 463 comparable pages).
