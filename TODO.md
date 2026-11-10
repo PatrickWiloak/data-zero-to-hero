@@ -37,7 +37,7 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 
 Confidence in brackets: H = vendor page read, M = vendor page plus search, L = third-party.
 
-- [ ] 2026-11-22: Snowflake COF-C03 / ADA-C02 / DEA-C02 objective-level outlines - get the form-gated study guide PDFs and remap topic sections.
+- [ ] 2026-11-22: Pat (form wants your details): download the COF-C03 / ADA-C02 / DEA-C02 study-guide PDFs from https://learn.snowflake.com/en/certifications/ into `exams/snowflake/`; then Claude remaps the topic sections to objective level.
 - [ ] 2026-11-29: DP-300 notes still lack database watcher, SQL DB in Fabric, elastic jobs, Resource Governor, IQP, compression, log shipping.
 - [x] 2026-10-22 Databricks DE Professional rebuilt for the 2026-10-09 outline: 10 section notes, README, fact sheet, strategy, plan; bank fully retagged. Page says 10 sections / 59 items, guide PDF 9 / 60.
 - [x] 2026-10-22 Databricks DE Associate rebuilt for the May 2026 7-section guide: 7 section notes, README, fact sheet, strategy, plan; bank retagged (no Section 5 question yet).
