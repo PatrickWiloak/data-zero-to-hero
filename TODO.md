@@ -4,6 +4,9 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 
 ---
 
+## ✍️ Content refill (loop content-refill; nobler-os docs/LOOPS.md)
+- [ ] 2026-11-15 Pat: first `content-z2h-data` run (Sundays, pilot since 2026-11-13) drafts into `drafts/`, never built; publish or delete each per [drafts/README.md](drafts/README.md).
+
 ## Split (2026-10-21)
 
 - [x] 2026-10-21 Split from cloud-data-ai-security-zero-to-hero: data scope, cyan accent, new IndexNow key, Data from Scratch path, family cross-links (CHANGELOG 2026-10-21).
