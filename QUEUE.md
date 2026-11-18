@@ -47,10 +47,11 @@ In `resources/migration-guides/database-migration.md`, add a new `## Cutover Run
 
 ## Q-002: DP-300 notes - add the missing administration topics
 
-- status: approved
+- status: done
 - added: 2026-11-16
 - source: TODO.md line "2026-11-29: DP-300 notes still lack database watcher, SQL DB in Fabric, elastic jobs, Resource Governor, IQP, compression, log shipping"
 - allow: `exams/azure/dp-300/notes/*.md`, `exams/azure/dp-300/README.md`, `exams/azure/dp-300/fact-sheet.md`
+- result: 2026-11-18 loop/queue-q-002 (not pushed) - done-when + gate passed, reviewer approved: Seven sections, all in scope, match the current DP-300 skills measured and the Learn pages checked (database watcher ret
 
 ### Spec
 
