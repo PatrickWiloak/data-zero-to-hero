@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-18
+---
+
 # SQL Server and Azure SQL Deployment and Management
 
 ## Table of Contents
@@ -80,6 +84,27 @@
 | SQL Agent | Limited | Yes | Yes |
 | Cross-database queries | Elastic query | Yes | Yes |
 | Linked servers | No | Yes | Yes |
+
+### SQL Database in Microsoft Fabric
+
+SQL database in Microsoft Fabric is a transactional (OLTP) database that lives inside a Fabric workspace. It is based on Azure SQL Database and uses the same SQL Database Engine. It is SaaS: you don't pick a service tier, compute scales and pauses automatically, and it bills against your Fabric capacity. Its data is automatically replicated in near real time into OneLake in Delta/Parquet format, with a read-only SQL analytics endpoint, so Spark, notebooks and Power BI can use it without an ETL step. The skills measured lists this as "Identify use cases for Azure SQL Database in Microsoft Fabric".
+
+| | Azure SQL Database | SQL database in Fabric |
+|---|---|---|
+| Model | PaaS, you choose tier, vCores or DTUs | SaaS on Fabric capacity, automatic scaling and pause |
+| Authentication | Microsoft Entra and SQL logins | Microsoft Entra only, no logins |
+| OneLake copy | Optional (Fabric mirroring, manually enabled) | Automatic for eligible tables |
+| Geo-replication, failover groups, LTR, geo-restore | Yes | No |
+| Elastic pools, elastic jobs | Yes | No (Fabric capacity plays the pooling role) |
+| Always Encrypted, ledger | Yes | No |
+| Max size | Set by the service tier you pick | Up to 32 vCores and 4 TB |
+
+**Decision rule:** choose SQL database in Fabric for an app database that feeds Fabric analytics (translytical apps, reverse ETL, an operational data store) when you want minimal administration. Choose Azure SQL Database when you need business continuity features such as geo-replication or failover groups, SQL authentication, Always Encrypted, ledger, or fine control over tier and size.
+
+**Portal steps:** you need a Fabric capacity (a trial works) and the Admin or Member role on the workspace. In the Fabric portal, select **Databases**, then under **New** select the **SQL database** tile, give it a name and select **Create**. Then query it with the built-in T-SQL editor, SSMS, or VS Code.
+
+- **[📖 SQL database in Microsoft Fabric overview](https://learn.microsoft.com/en-us/fabric/database/sql/overview)** - What it is, OneLake replication and best use cases
+- **[📖 Limitations for SQL database in Fabric](https://learn.microsoft.com/en-us/fabric/database/sql/limitations)** - Feature-by-feature comparison with Azure SQL Database and resource limits
 
 ---
 
@@ -243,6 +268,46 @@ Share resources among multiple databases.
 - Pool size (DTU/vCore)
 - Per-database min/max limits
 - Storage limits
+
+### Elastic Jobs
+
+Elastic jobs run T-SQL scripts on a schedule or on demand across one or many Azure SQL databases. They fill the gap left by Azure SQL Database having no SQL Server Agent. You need four things. The **elastic job agent** is the Azure resource that runs the jobs. The **job database** is an empty Azure SQL database (S1 or higher recommended, not Hyperscale and not auto-pausing serverless) that stores job definitions, history and the `jobs.*` stored procedures. A **job** holds one or more **job steps**, each with a T-SQL script. A **target group** lists the logical servers, elastic pools and single databases to run against, with include and exclude rules. Servers and pools are enumerated at run time, so new databases are picked up automatically. The agent connects with a user-assigned managed identity (recommended) or database-scoped credentials. Scripts should be idempotent because failed steps are retried.
+
+| | Elastic jobs | SQL Server Agent |
+|---|---|---|
+| Platform | Azure SQL Database | SQL Server, SQL Server on Azure VMs, Azure SQL Managed Instance |
+| Scope | Many databases across servers, pools, subscriptions | One instance |
+| New databases | Picked up at run time (dynamic enumeration) | Can't enumerate targets dynamically |
+
+**Decision rule:** Azure SQL Database, or a fleet of databases (SaaS tenants) -> elastic jobs. Managed Instance or SQL Server on a VM -> SQL Server Agent.
+
+The agent can't be created in T-SQL. In the portal, search for **Elastic Job agents**, select **Create**, pick the logical server and **Job database**, choose the **JA 100** service tier, and on **Next: Identity** add the user-assigned managed identity. The jobs are then defined in T-SQL in the job database:
+
+```sql
+-- Run in the job database
+EXEC jobs.sp_add_target_group 'PoolGroup';
+
+EXEC jobs.sp_add_target_group_member
+  @target_group_name = 'PoolGroup',
+  @target_type = 'SqlElasticPool',
+  @server_name = 'server1.database.windows.net',
+  @elastic_pool_name = 'ElasticPool-1';
+
+EXEC jobs.sp_add_job @job_name = 'CreateTableTest', @description = 'Create Table Test';
+
+EXEC jobs.sp_add_jobstep @job_name = 'CreateTableTest',
+  @command = N'IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = ''Test'')
+    CREATE TABLE dbo.Test (TestId int NOT NULL);',
+  @target_group_name = 'PoolGroup';
+
+EXEC jobs.sp_start_job 'CreateTableTest';
+
+-- Check progress
+SELECT * FROM jobs.job_executions WHERE job_name = 'CreateTableTest' ORDER BY start_time DESC;
+```
+
+- **[📖 Elastic jobs overview](https://learn.microsoft.com/en-us/azure/azure-sql/database/elastic-jobs-overview)** - Components, target groups, authentication, limits and comparison with SQL Agent
+- **[📖 Create and manage elastic jobs by using T-SQL](https://learn.microsoft.com/en-us/azure/azure-sql/database/elastic-jobs-tsql-create-manage)** - The `jobs.*` stored procedures and views with examples
 
 ---
 
@@ -421,6 +486,26 @@ Deploy multiple small instances cost-effectively.
 - Disaster recovery solution
 - Replicate VMs to secondary region
 - Automated failover and failback
+
+#### Log Shipping
+
+Log shipping is a SQL Server feature (on-premises or SQL Server on Azure VMs) that keeps a warm standby copy of a database. A SQL Server Agent **backup job** on the **primary server** backs up the transaction log to a share. On each **secondary server**, a **copy job** copies the backups and a **restore job** applies them to the secondary database. The secondary stays in `NORECOVERY` (restoring, no access) or `STANDBY` (limited read-only access between restores). An optional **monitor server** records backup and restore history and raises alerts when jobs fall behind. Failover is always manual. You can also set a restore delay, which protects you from an accidental change that you notice quickly. The skills measured lists "Configure log shipping" under HA/DR.
+
+| | Log shipping | Always On availability groups |
+|---|---|---|
+| Unit | One database per configuration | A group of databases that fail over together |
+| Failover | Manual | Automatic (synchronous commit) or manual |
+| Data loss | Up to the last shipped log backup | None with synchronous commit |
+| Secondary reads | Only in `STANDBY`, between restores | Readable secondary replicas |
+| Infrastructure | Agent jobs and a file share, no cluster | Windows Server Failover Cluster on Windows |
+| Delayed apply | Yes | No |
+
+**Decision rule:** need automatic failover or near-zero RPO -> availability groups (or failover groups in PaaS). A cheap, simple DR copy where minutes of data loss and manual failover are acceptable, or a deliberately delayed copy -> log shipping.
+
+**Steps in SSMS:** the primary database must use the full or bulk-logged recovery model, and you need a share for the log backups. On the primary, open the database **Properties** > **Transaction Log Shipping** and tick **Enable this as a primary database in a log shipping configuration**. Under **Backup Settings**, set the network path and schedule. Under **Secondary server instances and databases**, select **Add**, then set the **Initialize Secondary database**, **Copy Files** and **Restore** tabs (No recovery mode or Standby mode, optional restore delay). Tick **Use a monitor server instance** now if you want one, because adding it later means rebuilding the configuration. Select **OK**.
+
+- **[📖 About log shipping](https://learn.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server)** - Primary, secondary and monitor servers, and the backup, copy, restore and alert jobs
+- **[📖 Configure log shipping](https://learn.microsoft.com/en-us/sql/database-engine/log-shipping/configure-log-shipping-sql-server)** - SSMS and T-SQL setup steps
 
 ### Performance Optimization
 

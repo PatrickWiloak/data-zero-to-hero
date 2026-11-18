@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-18
+---
+
 # Performance Monitoring and Optimization
 
 ## Table of Contents
@@ -623,6 +627,43 @@ ON [schema].[table] ([column1], [column2])
 INCLUDE ([column3]);
 ```
 
+### Data Compression (Row and Page)
+
+Row and page compression shrink rowstore tables and indexes so data fits in fewer pages. Fewer pages means less storage and less I/O, but the server spends extra CPU to compress and decompress. SQL Server, Azure SQL Database and Azure SQL Managed Instance all support it. You set it per heap, clustered index, nonclustered index, indexed view, or per partition. Nonclustered indexes do not inherit the table's setting, so compress them explicitly. Columnstore data is always columnstore-compressed; `COLUMNSTORE_ARCHIVE` adds more compression for cold data. The skills measured lists this as "Configure data compression".
+
+**Decision rule:**
+
+| Choose | When |
+|--------|------|
+| **ROW** | Lighter CPU cost. Stores fixed-length types in variable-length format. A safe first step for busy OLTP tables |
+| **PAGE** | Row compression plus prefix and dictionary compression. Bigger savings, more CPU. Best for large, read-mostly or I/O-bound tables |
+| **NONE** | CPU is already the bottleneck, or the estimate shows little saving |
+| **COLUMNSTORE_ARCHIVE** | Old columnstore partitions you rarely read |
+
+Always estimate first, then rebuild:
+
+```sql
+-- Estimate savings for PAGE compression on every index of the table
+EXEC sp_estimate_data_compression_savings
+    @schema_name = 'dbo',
+    @object_name = 'Orders',
+    @index_id = NULL,
+    @partition_number = NULL,
+    @data_compression = 'PAGE';
+
+-- Apply it (table / clustered index), then the nonclustered index separately
+ALTER TABLE dbo.Orders REBUILD WITH (DATA_COMPRESSION = PAGE);
+ALTER INDEX IX_Orders_CustomerId ON dbo.Orders REBUILD WITH (DATA_COMPRESSION = ROW);
+
+-- Check the current setting
+SELECT OBJECT_NAME(object_id) AS table_name, index_id, partition_number, data_compression_desc
+FROM sys.partitions
+WHERE object_id = OBJECT_ID('dbo.Orders');
+```
+
+- **[📖 Data compression](https://learn.microsoft.com/en-us/sql/relational-databases/data-compression/data-compression)** - Row, page and columnstore archive compression, and which objects support them
+- **[📖 sp_estimate_data_compression_savings](https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql)** - Estimate the size of an object under a different compression setting
+
 ---
 
 ## Query Tuning Techniques
@@ -835,6 +876,35 @@ BEGIN
 END;
 ```
 
+### Intelligent Query Processing (IQP)
+
+IQP is a family of query optimizer features that make existing workloads faster without code changes. All IQP features are available in Azure SQL Database and Azure SQL Managed Instance. Most of them switch on when you raise the database compatibility level, so the exam angle is usually "which compatibility level unlocks which feature". Some feedback features also need Query Store on and in `READ_WRITE` mode. The skills measured asks you to "identify use cases for intelligent query processing (IQP) features".
+
+| Compatibility level | Features it unlocks (examples) |
+|---------------------|--------------------------------|
+| **140** | Batch mode adaptive joins, interleaved execution for multi-statement TVFs, batch mode memory grant feedback |
+| **150** | Batch mode on rowstore, row mode memory grant feedback, scalar UDF inlining, table variable deferred compilation |
+| **160** | Parameter Sensitive Plan (PSP) optimization, cardinality estimation (CE) feedback, degree of parallelism (DOP) feedback |
+| **170** | Optional parameter plan optimization (OPPO) |
+| Any level | Approximate Count Distinct (`APPROX_COUNT_DISTINCT`) |
+
+**Decision rule:** match the symptom to the feature.
+- One cached plan is bad for some parameter values -> PSP optimization (160).
+- Queries spill to tempdb or waste memory grants -> memory grant feedback.
+- Scalar UDFs called row by row are slow -> scalar UDF inlining (150).
+- Analytic queries on rowstore tables without columnstore -> batch mode on rowstore (150).
+- CE feedback and DOP feedback need Query Store enabled.
+
+```sql
+-- Make a database eligible for the newest IQP features
+ALTER DATABASE [SalesDB] SET COMPATIBILITY_LEVEL = 170;
+
+-- Check the current level
+SELECT name, compatibility_level FROM sys.databases WHERE name = 'SalesDB';
+```
+
+- **[📖 Intelligent query processing](https://learn.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing)** - Feature list per platform, compatibility level requirements and the Query Store requirement table
+
 ---
 
 ## Resource Monitoring and Management
@@ -992,6 +1062,37 @@ FROM sys.dm_xe_database_session_targets t
 JOIN sys.dm_xe_database_sessions s ON t.event_session_address = s.address
 WHERE s.name = 'Deadlock_Tracking';
 ```
+
+### Resource Governor
+
+Resource Governor lets you reserve or cap the CPU, memory and physical I/O that a workload can use on one instance. It applies to SQL Server (including SQL Server on Azure VMs) and Azure SQL Managed Instance. Azure SQL Database uses Resource Governor internally, but you can't configure your own pools or groups there. It has three parts. A **resource pool** holds a share of the server's resources; the `internal` and `default` pools always exist. A **workload group** sits inside a pool and holds sessions that are classified the same way. A **classifier function** is a scalar function in `master` that runs at login and returns the workload group name, based on attributes such as login name or application name.
+
+**Decision rule:**
+- Several workloads on one SQL Server or Managed Instance compete for CPU or memory (for example reporting vs OLTP) -> Resource Governor.
+- Need the same on Azure SQL Database -> not available; split databases, use elastic pool per-database limits, or scale the tier.
+- On SQL Server with availability groups, configure it on every replica; it does not propagate. On Managed Instance it propagates to secondaries because `master` is replicated.
+
+```sql
+USE master;
+GO
+CREATE RESOURCE POOL ReportingPool WITH (MAX_CPU_PERCENT = 30);
+CREATE WORKLOAD GROUP ReportingGroup USING ReportingPool;
+GO
+CREATE FUNCTION dbo.rg_classifier()
+RETURNS sysname
+WITH SCHEMABINDING
+AS
+BEGIN
+    IF APP_NAME() LIKE N'%ReportServer%'
+        RETURN N'ReportingGroup';
+    RETURN N'default';
+END;
+GO
+ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = dbo.rg_classifier);
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+```
+
+- **[📖 Resource governor](https://learn.microsoft.com/en-us/sql/relational-databases/resource-governor/resource-governor)** - Pools, workload groups, classification, and the note that user configuration isn't supported in Azure SQL Database
 
 ---
 

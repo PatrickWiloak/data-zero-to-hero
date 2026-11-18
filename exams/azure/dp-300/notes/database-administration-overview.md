@@ -1,3 +1,7 @@
+---
+last-updated: 2026-11-18
+---
+
 # Azure Database Administration Overview
 
 ## Overview
@@ -59,6 +63,25 @@ Azure Database Administration covers planning, implementing, and managing SQL Se
 - **Extended Events:** Lightweight tracing
 - **Azure Monitor:** Metrics and alerts
 - **Query Performance Insight:** Azure portal tool
+
+### Database Watcher
+
+> **Retiring:** Microsoft's page says database watcher retires on April 30, 2027 and won't reach general availability. Since November 9, 2026 you can't create new watchers or edit existing ones; existing watchers keep collecting data until retirement. Microsoft points to Database Hub in Microsoft Fabric as the replacement. The DP-300 skills measured as of October 27, 2026 still lists "Monitor by using database watcher", so know what it is.
+
+Database watcher is a managed monitoring service (in preview) for Azure SQL Database and Azure SQL Managed Instance. You create a **watcher** resource, pick **SQL targets** (databases, elastic pools or managed instances, up to 100 per watcher), and grant the watcher's managed identity limited read access to system views. It collects data from more than 70 catalog views and DMVs into a **data store** you own: an Azure Data Explorer cluster or a Real-Time Analytics database in Microsoft Fabric. You see it in Azure portal dashboards (estate-wide heatmaps, top queries, per-resource views), query it with KQL, and alert on it with Azure Monitor. It does not monitor SQL Server on VMs or on-premises.
+
+| Tool | Scope | Where data lives | Use it for |
+|------|-------|------------------|------------|
+| **Database watcher** | Many databases, pools and managed instances in one view | Your Azure Data Explorer or Fabric Real-Time Analytics database | Estate-wide, near real-time monitoring with long retention |
+| **Query Store** | One database | Inside that database | Query plan history, regressions and plan forcing |
+| **Azure SQL Analytics** | Many databases via diagnostic settings | Log Analytics workspace | Legacy only: Microsoft's page for it is archived and says it is no longer in active development |
+
+**Decision rule:** a question about plan regression or forcing a plan in one database -> Query Store. A question about one dashboard across a fleet of Azure SQL resources with data kept in Azure Data Explorer -> database watcher. For new monitoring work after November 9, 2026, Microsoft directs you to Database Hub in Fabric instead.
+
+**Portal steps (existing watcher):** open the watcher resource, check **Status** on the **Overview** page (a new watcher isn't started automatically, so select **Start** if needed), then open **Dashboards** to see the estate view and drill into a target.
+
+- **[📖 Monitor Azure SQL workloads with database watcher](https://learn.microsoft.com/en-us/azure/azure-sql/database-watcher-overview)** - What it collects, supported targets, data store options, limits and the retirement notice
+- **[📖 Azure SQL Analytics (preview)](https://learn.microsoft.com/en-us/previous-versions/azure/azure-monitor/insights/azure-sql)** - Archived page for the older Log Analytics solution
 
 ### Automatic Tuning
 - **Create index:** Automatically create missing indexes
