@@ -18,17 +18,17 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 - [x] 2026-10-27 live at data.noblerworks.com. Was: Not deployed: push to `main` deploys via docs-site.yml once the GitHub repo and Pages exist. Pages custom domain `data.noblerworks.com` + DNS CNAME are outside this repo.
 - [x] 2026-10-27 topics + description set. After first deploy: `python3 .github/scripts/check-repo-metadata.py --fix` (description + topics; needs admin), then `--check` passes in CI.
 - [x] 2026-10-27 social preview uploaded (`assets/brand/social-preview-1280x640.png`; GitHub reports a custom image).
-- [ ] After first deploy: `https://data.noblerworks.com/<key>.txt` serves the key in `.github/site/indexnow-key.txt`; the deploy's "Notify IndexNow" step says `accepted` (a first-run 403 is normal; rerun `notify-indexnow.py --all`).
+- [x] 2026-11-24 verified (docs audit): Pages run 45446547263 logged `IndexNow accepted: HTTP 200`. Was: After first deploy: `https://data.noblerworks.com/<key>.txt` serves the key in `.github/site/indexnow-key.txt`; the deploy's "Notify IndexNow" step says `accepted` (a first-run 403 is normal; rerun `notify-indexnow.py --all`).
 - [x] 2026-11-09 submitted `https://data.noblerworks.com/sitemap.xml` to Search Console via API.
 - [x] 2026-10-21 Glossary and YouTube page rewritten data-only (CHANGELOG 2026-10-21 (2)).
 
 ## Content (2026-10-21 expansion)
 
-- [x] 2026-11-07 Cross-site learning paths (7 routes, `learn/learning-paths.md`, byte-identical in all four repos, linked from which-site, learn hub and home). Not pushed or deployed: ships with the train.
+- [x] 2026-11-07 Cross-site learning paths (7 routes, `learn/learning-paths.md`, byte-identical in all four repos, linked from which-site, learn hub and home). Pushed and live (checked 2026-11-24).
 - [ ] 2026-12-07 re-verify every link in `learn/learning-paths.md` against each repo's `git ls-files` (script: loop the URLs through the four trees) and the matching certs against current exam codes.
 - [ ] Judge 2026-11-21: rerun `build-dbt-project.md` on the current dbt release; if dbt v2 is the pip default by then, retest and update the pinned `dbt-core<2`. ✏️ 2026-11-06 early read: dbt-core is 1.12.6, so the `<2` pin holds; guide not rerun yet.
 - [x] 2026-11-06 lychee (#7, 11-02): 0 real 404s; 2 dead hosts removed. The rest are cloud.google.com refusing the runner.
-- [x] 2026-11-07 "Check yourself" sections (3-4 questions, collapsed answers) added to all 29 `learn/concepts/` pages; strict build renders the `<details>` blocks. Not pushed. New concept pages should get one too.
+- [x] 2026-11-07 "Check yourself" sections (3-4 questions, collapsed answers) added to all 29 `learn/concepts/` pages; strict build renders the `<details>` blocks. Pushed (checked 2026-11-24). New concept pages should get one too.
 - [ ] Next concept candidates (backup/PITR done 2026-11-07): Query plans, Spark shuffles and skew, and semantic layers now have long-form pages under `resources/troubleshooting/` and `resources/architecture-patterns/`; a 5-minute concept page each would still help.)
 - [x] 2026-10-22 Resources expansion: 4 patterns, 2 interview guides, 3 troubleshooting guides, warehouse migration guide (CHANGELOG 2026-10-22 (3)).
 - [ ] Judge 2026-12-22: re-verify version-sensitive facts in the 2026-10-22 pages - Debezium stable line (3.6), Lakeflow Connect sources, Fabric mirroring preview sources, Google "Lakehouse" (ex-BigLake) naming, Census-in-Fivetran branding.
@@ -66,7 +66,7 @@ Confidence in brackets: H = vendor page read, M = vendor page plus search, L = t
 - [x] 2026-11-07 `check-code-fences.py` added (0 unclosed fences); both run in `structure-validate.yml`, blocking.
 - [x] 2026-11-07 Port `check-code-fences.py` and the anchor mode of `check-internal-links.py` to cloud-zero-to-hero and security-zero-to-hero (check each repo's slugify setting and emoji pinning first); not edited from this session. ✅ 2026-11-08: already ported; cloud 3258 links, security 2688, data 2042, 0 broken.
 - [x] 2026-11-06 MD060 is already off in `.markdownlint.json`.
-- [ ] Judge after the first Monday link-check run on this repo: it opens or updates one `link-check` issue (not a new one each week) and lists no real 404s.
+- [ ] Judge after the first Monday link-check run on this repo: it opens or updates one `link-check` issue (not a new one each week) and lists no real 404s. ✏️ 2026-11-24 (docs audit): the 2026-11-23 run updated open issue #7 (one issue, not a new one; #3 closed earlier) with 18 errors - triage those for real 404s, then tick.
 
 ## Content gaps (2026-11-07 review)
 
