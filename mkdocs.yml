@@ -175,6 +175,9 @@ validation:
   anchors: warn
 
 extra:
+  # Exam-change alerts box (.github/site-overrides/partials/z2h-alerts.html).
+  # Empty = off. Set to the noblerworks API base once POST /z2h-subscribe is live.
+  z2h_alerts_api: ""
   # Google Search Console HTML-tag token, inherited from the combined repo (issued
   # 2026-09-28 to the nobler-reporting service account for the old cloud URL).
   # Harmless here; the domain property sc-domain:noblerworks.com covers this host.
