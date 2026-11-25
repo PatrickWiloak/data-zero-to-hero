@@ -231,7 +231,10 @@ def classify_status(cert_dir, notes_count):
     head = ""
     if os.path.isfile(readme):
         head = open(readme, encoding="utf-8").read()[:2500].lower()
-    if "retired" in head and ("was retired" in head or "- retired" in head):
+    # Retired guides carry "- RETIRED" in the H1 title. Matching "was retired"
+    # anywhere in the head mislabelled DP-700, whose intro says DP-203 was retired.
+    title = head.lstrip().split("\n", 1)[0]
+    if title.startswith("#") and "retired" in title:
         return "retired"
     if "anticipated study track" in head or "not a currently-available certification" in head:
         return "anticipated"

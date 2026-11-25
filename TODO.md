@@ -92,4 +92,4 @@ Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert i
 ## Content gaps (2026-11-25 review)
 
 - [ ] 2026-11-25 Gap review [docs/content-gaps-2026-11-25.md](docs/content-gaps-2026-11-25.md): 5 waves; loop reads it once nobler-os content.json lists it.
-- [ ] 2026-11-25 🔴 DP-700 shows "Retired" on the live Azure index: `classify_status()` in `.github/scripts/build-certs-index.py` matches "was retired" (about DP-203) in its README; fix, rerun the index builders (gap review Wave 1).
+- [x] 2026-11-25 DP-700 showed "Retired" on the Azure index; `classify_status()` now reads only the H1 title (same fix in cloud + security). ✅ done 2026-11-25
