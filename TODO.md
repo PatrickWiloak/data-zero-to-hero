@@ -46,7 +46,7 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 Confidence in brackets: H = vendor page read, M = vendor page plus search, L = third-party.
 
 - [ ] 2026-11-22: Pat (form wants your details): download the COF-C03 / ADA-C02 / DEA-C02 study-guide PDFs from https://learn.snowflake.com/en/certifications/ into `exams/snowflake/`; then Claude remaps the topic sections to objective level.
-- [ ] 2026-11-29: DP-300 notes still lack database watcher, SQL DB in Fabric, elastic jobs, Resource Governor, IQP, compression, log shipping.
+- [x] 2026-11-25 verified on origin/main (Q-002, 7d5a1bb): DP-300 notes now cover database watcher, SQL DB in Fabric, elastic jobs, Resource Governor, IQP, compression, log shipping.
 - [x] 2026-10-22 Databricks DE Professional rebuilt for the 2026-10-09 outline: 10 section notes, README, fact sheet, strategy, plan; bank fully retagged. Page says 10 sections / 59 items, guide PDF 9 / 60.
 - [x] 2026-10-22 Databricks DE Associate rebuilt for the May 2026 7-section guide: 7 section notes, README, fact sheet, strategy, plan; bank retagged (no Section 5 question yet).
 - [ ] Judge 2027-01-15: recheck the DE Associate exam page and guide for a revision; recheck ABAC DENY policies (Beta) and `SET MANAGED` facts in notes/07.
@@ -88,3 +88,8 @@ Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert i
 - [x] 2026-11-07 Wave 5: Databricks Associate Developer for Apache Spark guide added (exam page and guide read; PySpark examples run locally on 4.3.0; not run or not checked on a docs page: JDBC, Spark Connect, stateful UDF API names, Databricks-specific Spark Connect behaviour, pandas-on-Spark behaviour details).
 - [ ] Judge 2027-01-15: recheck the Spark Developer exam page and guide for a revision, and rerun the note examples on the then-current PySpark.
 - [ ] 2026-11-21 MongoDB Associate Data Modeler: validity and retake rules are not published on the exam page; read the Certification Program Guide (gated download on learn.mongodb.com) and fill `exams/mongodb/associate-data-modeler/fact-sheet.md`. Also Google Associate Data Practitioner has no stated total validity (renewal FAQ only); recheck.
+
+## Content gaps (2026-11-25 review)
+
+- [ ] 2026-11-25 Gap review [docs/content-gaps-2026-11-25.md](docs/content-gaps-2026-11-25.md): 5 waves; loop reads it once nobler-os content.json lists it.
+- [ ] 2026-11-25 🔴 DP-700 shows "Retired" on the live Azure index: `classify_status()` in `.github/scripts/build-certs-index.py` matches "was retired" (about DP-203) in its README; fix, rerun the index builders (gap review Wave 1).
