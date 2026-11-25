@@ -91,5 +91,5 @@ Plan: [docs/content-gaps-2026-11-07.md](docs/content-gaps-2026-11-07.md). Cert i
 
 ## Content gaps (2026-11-25 review)
 
-- [ ] 2026-11-25 Gap review [docs/content-gaps-2026-11-25.md](docs/content-gaps-2026-11-25.md): 5 waves; loop reads it once nobler-os content.json lists it.
+- [x] 2026-11-25 Gap review [docs/content-gaps-2026-11-25.md](docs/content-gaps-2026-11-25.md): 5 waves ✅ 2026-11-25 listed in nobler-os content.json (`14b3b2568`), loop builds the waves; DP-700 fix already in `496e7b5`; freshness.md regenerated.
 - [x] 2026-11-25 DP-700 showed "Retired" on the Azure index; `classify_status()` now reads only the H1 title (same fix in cloud + security). ✅ done 2026-11-25
