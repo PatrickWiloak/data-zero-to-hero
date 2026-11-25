@@ -9,7 +9,7 @@ Working task list for **data-zero-to-hero** (Data Zero to Hero, https://data.nob
 
 ## ✍️ Content refill (loop content-refill; nobler-os docs/LOOPS.md)
 - [ ] 2026-11-15 Pat: review 1 loop-drafted guide page(s) ("Open table formats compared: Apache Iceberg vs Delta Lake vs Apache Hudi"), then `publish per drafts/README.md: drafts/resources/architecture-patterns/open-table-formats-compared.md`
-- [ ] 2026-11-15 Pat: from 11-15 the `queue-z2h-data` loop builds content items (gaps, deepening, new certs) from [QUEUE.md](QUEUE.md) on local `loop/queue-q-NNN` branches; read and land each per QUEUE.md "Landing a built item" (expires 14 days).
+- [ ] 2026-11-29 Pat: from 11-15 the `queue-z2h-data` loop builds content items (gaps, deepening, new certs) from [QUEUE.md](QUEUE.md) on local `loop/queue-q-NNN` branches; read and land each per QUEUE.md "Landing a built item" (expires 14 days). ✏️ 2026-11-25 not yet: no `loop/queue-q-*` branch waiting (QUEUE.md items are approved or done); re-dated to the 11-29 expiry.
 - [ ] 2026-11-15 Pat: first `content-z2h-data` run (Sundays, pilot since 2026-11-13) drafts into `drafts/`, never built; publish or delete each per [drafts/README.md](drafts/README.md).
 
 ## Split (2026-10-21)
